@@ -29,10 +29,11 @@
  */
 
 import Foundation
+import MetalKit
 
 class Camera: Node {
     
-    var fovDegrees: Float = 70
+    var fovDegrees: Float = 50
     var fovRadians: Float {
         return radians(fromDegrees: fovDegrees)
     }
@@ -52,5 +53,18 @@ class Camera: Node {
         let rotateMatrix = float4x4(rotation: rotation)
         let scaleMatrix = float4x4(scaling: scale)
         return translateMatrix * scaleMatrix * rotateMatrix
+    }
+}
+
+
+extension Renderer {
+    func zoomUsing(delta: CGFloat, sensitivity: Float) {
+        camera.position.z += Float(delta) * sensitivity
+    }
+    
+    func rotateUsing(translation: float2) {
+        let sensitivity: Float = 0.01
+        camera.rotation.x += Float(translation.y) * sensitivity
+        camera.rotation.y -= Float(translation.x) * sensitivity
     }
 }
