@@ -44,6 +44,12 @@ class Renderer: NSObject, MTKViewDelegate {
     
     var mesh: MTKMesh
     
+    lazy var camera: Camera = {
+        let camera = Camera()
+        camera.position = [0, 0, -8]
+        return camera
+    }()
+    
     init?(metalKitView: MTKView) {
         self.device = metalKitView.device!
         guard let queue = self.device.makeCommandQueue() else { return nil }
@@ -202,12 +208,14 @@ class Renderer: NSObject, MTKViewDelegate {
     private func updateGameState() {
         /// Update any game state before rendering
         
-        uniforms[0].projectionMatrix = projectionMatrix
+        uniforms[0].projectionMatrix = camera.projectionMatrix
         
         let rotationAxis = float3(1, 1, 0)
         let modelMatrix = matrix4x4_rotation(radians: rotation, axis: rotationAxis)
-        let viewMatrix = matrix4x4_translation(0.0, 0.0, -8.0)
+        let viewMatrix = camera.viewMatrix //matrix4x4_translation(0.0, 0.0, -8.0)
+        
         uniforms[0].modelViewMatrix = simd_mul(viewMatrix, modelMatrix)
+        
         rotation += 0.01
     }
     
@@ -289,6 +297,8 @@ class Renderer: NSObject, MTKViewDelegate {
         
         let aspect = Float(size.width) / Float(size.height)
         projectionMatrix = matrix_perspective_right_hand(fovyRadians: radians_from_degrees(65), aspectRatio:aspect, nearZ: 0.1, farZ: 100.0)
+        
+        camera.aspect = Float(view.bounds.width)/Float(view.bounds.height)
     }
 }
 

@@ -22,6 +22,20 @@
 		26C6134B21466DF300A7FD6E /* ShaderTypes.h in Resources */ = {isa = PBXBuildFile; fileRef = 26C6132421466DF300A7FD6E /* ShaderTypes.h */; };
 		26C6134C21466DF300A7FD6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26C6132521466DF300A7FD6E /* Assets.xcassets */; };
 		26C6134D21466DF300A7FD6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26C6132521466DF300A7FD6E /* Assets.xcassets */; };
+		26C613622148E22D00A7FD6E /* BrainStem.gltf in Resources */ = {isa = PBXBuildFile; fileRef = 26C6135F2148E22D00A7FD6E /* BrainStem.gltf */; };
+		26C613632148E22D00A7FD6E /* BrainStem.gltf in Resources */ = {isa = PBXBuildFile; fileRef = 26C6135F2148E22D00A7FD6E /* BrainStem.gltf */; };
+		26C613642148E22D00A7FD6E /* skeletonWave.bin in Resources */ = {isa = PBXBuildFile; fileRef = 26C613602148E22D00A7FD6E /* skeletonWave.bin */; };
+		26C613652148E22D00A7FD6E /* skeletonWave.bin in Resources */ = {isa = PBXBuildFile; fileRef = 26C613602148E22D00A7FD6E /* skeletonWave.bin */; };
+		26C613662148E22D00A7FD6E /* skeletonWave.gltf in Resources */ = {isa = PBXBuildFile; fileRef = 26C613612148E22D00A7FD6E /* skeletonWave.gltf */; };
+		26C613672148E22D00A7FD6E /* skeletonWave.gltf in Resources */ = {isa = PBXBuildFile; fileRef = 26C613612148E22D00A7FD6E /* skeletonWave.gltf */; };
+		26C613692148E5B700A7FD6E /* CharacterShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 26C613682148E5B700A7FD6E /* CharacterShader.metal */; };
+		26C6136A2148E5B700A7FD6E /* CharacterShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 26C613682148E5B700A7FD6E /* CharacterShader.metal */; };
+		26C6136F2148E79600A7FD6E /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6136E2148E79600A7FD6E /* Camera.swift */; };
+		26C613702148E79600A7FD6E /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6136E2148E79600A7FD6E /* Camera.swift */; };
+		26C613722148E89000A7FD6E /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C613712148E89000A7FD6E /* Node.swift */; };
+		26C613732148E89000A7FD6E /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C613712148E89000A7FD6E /* Node.swift */; };
+		26C613752148E94E00A7FD6E /* MathLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C613742148E94E00A7FD6E /* MathLibrary.swift */; };
+		26C613762148E94E00A7FD6E /* MathLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C613742148E94E00A7FD6E /* MathLibrary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +54,16 @@
 		26C6134021466DF300A7FD6E /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		26C6134321466DF300A7FD6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		26C6134521466DF300A7FD6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26C613582147EBBD00A7FD6E /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
+		26C613592147EBBD00A7FD6E /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		26C6135A2147EBBE00A7FD6E /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
+		26C6135F2148E22D00A7FD6E /* BrainStem.gltf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BrainStem.gltf; sourceTree = "<group>"; };
+		26C613602148E22D00A7FD6E /* skeletonWave.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = skeletonWave.bin; sourceTree = "<group>"; };
+		26C613612148E22D00A7FD6E /* skeletonWave.gltf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = skeletonWave.gltf; sourceTree = "<group>"; };
+		26C613682148E5B700A7FD6E /* CharacterShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = CharacterShader.metal; sourceTree = "<group>"; };
+		26C6136E2148E79600A7FD6E /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		26C613712148E89000A7FD6E /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		26C613742148E94E00A7FD6E /* MathLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathLibrary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,10 +97,11 @@
 		26C6132121466DF300A7FD6E /* AMglTF Shared */ = {
 			isa = PBXGroup;
 			children = (
-				26C6132221466DF300A7FD6E /* Shaders.metal */,
-				26C6132321466DF300A7FD6E /* Renderer.swift */,
-				26C6132421466DF300A7FD6E /* ShaderTypes.h */,
 				26C6132521466DF300A7FD6E /* Assets.xcassets */,
+				26C6132321466DF300A7FD6E /* Renderer.swift */,
+				26C613562147DBA500A7FD6E /* Shaders */,
+				26C613572147DBB400A7FD6E /* Utility */,
+				26C6135D2148E22D00A7FD6E /* resources */,
 			);
 			path = "AMglTF Shared";
 			sourceTree = "<group>";
@@ -111,6 +136,44 @@
 				26C6134521466DF300A7FD6E /* Info.plist */,
 			);
 			path = "AMglTF macOS";
+			sourceTree = "<group>";
+		};
+		26C613562147DBA500A7FD6E /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				26C6132421466DF300A7FD6E /* ShaderTypes.h */,
+				26C6132221466DF300A7FD6E /* Shaders.metal */,
+				26C613682148E5B700A7FD6E /* CharacterShader.metal */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
+		26C613572147DBB400A7FD6E /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				26C6136E2148E79600A7FD6E /* Camera.swift */,
+				26C613712148E89000A7FD6E /* Node.swift */,
+				26C613742148E94E00A7FD6E /* MathLibrary.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		26C6135D2148E22D00A7FD6E /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				26C6135E2148E22D00A7FD6E /* glTF */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		26C6135E2148E22D00A7FD6E /* glTF */ = {
+			isa = PBXGroup;
+			children = (
+				26C6135F2148E22D00A7FD6E /* BrainStem.gltf */,
+				26C613602148E22D00A7FD6E /* skeletonWave.bin */,
+				26C613612148E22D00A7FD6E /* skeletonWave.gltf */,
+			);
+			path = glTF;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +258,9 @@
 				26C6134A21466DF300A7FD6E /* ShaderTypes.h in Resources */,
 				26C6133321466DF300A7FD6E /* Main.storyboard in Resources */,
 				26C6134C21466DF300A7FD6E /* Assets.xcassets in Resources */,
+				26C613642148E22D00A7FD6E /* skeletonWave.bin in Resources */,
+				26C613662148E22D00A7FD6E /* skeletonWave.gltf in Resources */,
+				26C613622148E22D00A7FD6E /* BrainStem.gltf in Resources */,
 				26C6133621466DF300A7FD6E /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,9 +269,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26C613672148E22D00A7FD6E /* skeletonWave.gltf in Resources */,
 				26C6134421466DF300A7FD6E /* Main.storyboard in Resources */,
 				26C6134D21466DF300A7FD6E /* Assets.xcassets in Resources */,
+				26C613632148E22D00A7FD6E /* BrainStem.gltf in Resources */,
 				26C6134B21466DF300A7FD6E /* ShaderTypes.h in Resources */,
+				26C613652148E22D00A7FD6E /* skeletonWave.bin in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,8 +287,12 @@
 			files = (
 				26C6134821466DF300A7FD6E /* Renderer.swift in Sources */,
 				26C6134621466DF300A7FD6E /* Shaders.metal in Sources */,
+				26C6136F2148E79600A7FD6E /* Camera.swift in Sources */,
+				26C613752148E94E00A7FD6E /* MathLibrary.swift in Sources */,
+				26C613692148E5B700A7FD6E /* CharacterShader.metal in Sources */,
 				26C6133021466DF300A7FD6E /* GameViewController.swift in Sources */,
 				26C6132E21466DF300A7FD6E /* AppDelegate.swift in Sources */,
+				26C613722148E89000A7FD6E /* Node.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,8 +302,12 @@
 			files = (
 				26C6134921466DF300A7FD6E /* Renderer.swift in Sources */,
 				26C6134721466DF300A7FD6E /* Shaders.metal in Sources */,
+				26C613702148E79600A7FD6E /* Camera.swift in Sources */,
+				26C613762148E94E00A7FD6E /* MathLibrary.swift in Sources */,
+				26C6136A2148E5B700A7FD6E /* CharacterShader.metal in Sources */,
 				26C6134121466DF300A7FD6E /* GameViewController.swift in Sources */,
 				26C6133F21466DF300A7FD6E /* AppDelegate.swift in Sources */,
+				26C613732148E89000A7FD6E /* Node.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +318,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				26C6133221466DF300A7FD6E /* Base */,
+				26C613582147EBBD00A7FD6E /* ko */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -249,6 +327,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				26C6133521466DF300A7FD6E /* Base */,
+				26C613592147EBBD00A7FD6E /* ko */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -257,6 +336,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				26C6134321466DF300A7FD6E /* Base */,
+				26C6135A2147EBBE00A7FD6E /* ko */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -268,6 +348,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -326,6 +407,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -389,7 +471,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.p316.AMglTF;
 				PRODUCT_NAME = AMglTF;
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "AMglTF Shared/ShaderTypes.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "AMglTF Shared/Shaders/ShaderTypes.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -411,7 +493,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.p316.AMglTF;
 				PRODUCT_NAME = AMglTF;
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "AMglTF Shared/ShaderTypes.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "AMglTF Shared/Shaders/ShaderTypes.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -435,7 +517,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.p316.AMglTF;
 				PRODUCT_NAME = AMglTF;
 				SDKROOT = macosx;
-				SWIFT_OBJC_BRIDGING_HEADER = "AMglTF Shared/ShaderTypes.h";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "AMglTF Shared/Shaders/ShaderTypes.h";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -457,7 +541,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.p316.AMglTF;
 				PRODUCT_NAME = AMglTF;
 				SDKROOT = macosx;
-				SWIFT_OBJC_BRIDGING_HEADER = "AMglTF Shared/ShaderTypes.h";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "AMglTF Shared/Shaders/ShaderTypes.h";
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
