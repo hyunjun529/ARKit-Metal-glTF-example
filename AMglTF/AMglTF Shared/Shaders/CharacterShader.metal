@@ -54,8 +54,7 @@ vertex VertexOut character_vertex_main(const VertexIn vertexIn [[ stage_in ]],
                                        constant Uniforms &uniforms [[ buffer(BufferIndexUniforms) ]])
 {
     VertexOut out;
-//    float4x4 modelMatrix = uniforms.projectionMatrix * uniforms.viewMatrix * uniforms.modelMatrix;
-    float4x4 modelMatrix = uniforms.projectionMatrix * uniforms.modelViewMatrix;
+    float4x4 modelMatrix = uniforms.projectionMatrix * uniforms.viewMatrix * uniforms.modelMatrix;
 
     
     // skinning code

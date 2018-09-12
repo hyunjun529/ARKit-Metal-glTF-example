@@ -209,12 +209,11 @@ class Renderer: NSObject, MTKViewDelegate {
         /// Update any game state before rendering
         
         uniforms[0].projectionMatrix = camera.projectionMatrix
+        uniforms[0].viewMatrix = camera.viewMatrix
         
         let rotationAxis = float3(1, 1, 0)
         let modelMatrix = matrix4x4_rotation(radians: rotation, axis: rotationAxis)
-        let viewMatrix = camera.viewMatrix //matrix4x4_translation(0.0, 0.0, -8.0)
-        
-        uniforms[0].modelViewMatrix = simd_mul(viewMatrix, modelMatrix)
+        uniforms[0].modelMatrix = modelMatrix
         
         rotation += 0.01
     }
