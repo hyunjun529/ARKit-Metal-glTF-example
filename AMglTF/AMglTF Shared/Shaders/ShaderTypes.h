@@ -24,7 +24,7 @@ typedef NS_ENUM(NSInteger, BufferIndex)
 {
     BufferIndexMeshPositions = 0,
     BufferIndexMeshGenerics  = 1,
-    BufferIndexUniforms      = 2
+    BufferIndexUniforms2     = 2
 };
 
 typedef NS_ENUM(NSInteger, VertexAttribute)
@@ -80,6 +80,14 @@ typedef struct {
 
 
 // Character
+typedef enum {
+    BufferIndexVertices = 0,
+    BufferIndexUniforms = 11,
+    BufferIndexLights = 12,
+    BufferIndexFragmentUniforms = 13,
+    BufferIndexMaterials = 14
+} BufferIndices;
+
 typedef enum {
     Position = 0,
     Normal = 1,

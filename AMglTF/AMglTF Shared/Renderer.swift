@@ -44,11 +44,21 @@ class Renderer: NSObject, MTKViewDelegate {
     
     var mesh: MTKMesh
     
+    // Custom
     lazy var camera: Camera = {
         let camera = Camera()
         camera.position = [0, 0, -8]
         return camera
     }()
+    
+    var models: [Renderable] = []
+    
+    static var device: MTLDevice!
+    static var commandQueue: MTLCommandQueue!
+    static var colorPixelFormat: MTLPixelFormat!
+    static var library: MTLLibrary?
+    var depthStencilState: MTLDepthStencilState!
+    
     
     init?(metalKitView: MTKView) {
         self.device = metalKitView.device!
@@ -99,8 +109,18 @@ class Renderer: NSObject, MTKViewDelegate {
             return nil
         }
         
-        super.init()
+        // Custom
+        metalKitView.device = device
+        Renderer.device = device
+        Renderer.commandQueue = device.makeCommandQueue()!
+        Renderer.colorPixelFormat = metalKitView.colorPixelFormat
+        Renderer.library = device.makeDefaultLibrary()
         
+        // models
+        let skeleton = Character(name: "skeletonWave")
+        models.append(skeleton)
+        
+        super.init()
     }
     
     class func buildMetalVertexDescriptor() -> MTLVertexDescriptor {
@@ -247,14 +267,14 @@ class Renderer: NSObject, MTKViewDelegate {
                 
                 renderEncoder.setCullMode(.back)
                 
-                renderEncoder.setFrontFacing(.counterClockwise)
+                renderEncoder.setFrontFacing(.counterClockwise) // TODO
                 
                 renderEncoder.setRenderPipelineState(pipelineState)
                 
                 renderEncoder.setDepthStencilState(depthState)
                 
-                renderEncoder.setVertexBuffer(dynamicUniformBuffer, offset:uniformBufferOffset, index: BufferIndex.uniforms.rawValue)
-                renderEncoder.setFragmentBuffer(dynamicUniformBuffer, offset:uniformBufferOffset, index: BufferIndex.uniforms.rawValue)
+                renderEncoder.setVertexBuffer(dynamicUniformBuffer, offset:uniformBufferOffset, index: BufferIndex.uniforms2.rawValue)
+                renderEncoder.setFragmentBuffer(dynamicUniformBuffer, offset:uniformBufferOffset, index: BufferIndex.uniforms2.rawValue)
                 
                 for (index, element) in mesh.vertexDescriptor.layouts.enumerated() {
                     guard let layout = element as? MDLVertexBufferLayout else {
@@ -269,14 +289,20 @@ class Renderer: NSObject, MTKViewDelegate {
                 
                 renderEncoder.setFragmentTexture(colorMap, index: TextureIndex.color.rawValue)
                 
-                for submesh in mesh.submeshes {
-                    renderEncoder.drawIndexedPrimitives(type: submesh.primitiveType,
-                                                        indexCount: submesh.indexCount,
-                                                        indexType: submesh.indexType,
-                                                        indexBuffer: submesh.indexBuffer.buffer,
-                                                        indexBufferOffset: submesh.indexBuffer.offset)
-                    
+                for model in models {
+                    renderEncoder.pushDebugGroup(model.name)
+                    model.render(renderEncoder: renderEncoder, uniforms: uniforms[0])
+                    renderEncoder.popDebugGroup()
                 }
+                
+//                for submesh in mesh.submeshes {
+//                    renderEncoder.drawIndexedPrimitives(type: submesh.primitiveType,
+//                                                        indexCount: submesh.indexCount,
+//                                                        indexType: submesh.indexType,
+//                                                        indexBuffer: submesh.indexBuffer.buffer,
+//                                                        indexBufferOffset: submesh.indexBuffer.offset)
+//
+//                }
                 
                 renderEncoder.popDebugGroup()
                 
