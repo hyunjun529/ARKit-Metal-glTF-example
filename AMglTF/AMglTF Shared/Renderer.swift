@@ -44,20 +44,12 @@ class Renderer: NSObject, MTKViewDelegate {
     
     var mesh: MTKMesh
     
-    // Custom
+    // h529 : Camera
     lazy var camera: Camera = {
         let camera = Camera()
         camera.position = [0, 0, -8]
         return camera
     }()
-    
-    var models: [Renderable] = []
-    
-    static var device: MTLDevice!
-    static var commandQueue: MTLCommandQueue!
-    static var colorPixelFormat: MTLPixelFormat!
-    static var library: MTLLibrary?
-    var depthStencilState: MTLDepthStencilState!
     
     
     init?(metalKitView: MTKView) {
@@ -108,17 +100,6 @@ class Renderer: NSObject, MTKViewDelegate {
             print("Unable to load texture. Error info: \(error)")
             return nil
         }
-        
-        // Custom
-        metalKitView.device = device
-        Renderer.device = device
-        Renderer.commandQueue = device.makeCommandQueue()!
-        Renderer.colorPixelFormat = metalKitView.colorPixelFormat
-        Renderer.library = device.makeDefaultLibrary()
-        
-        // models
-        let skeleton = Character(name: "skeletonWave")
-        models.append(skeleton)
         
         super.init()
     }
@@ -178,11 +159,28 @@ class Renderer: NSObject, MTKViewDelegate {
         
         let metalAllocator = MTKMeshBufferAllocator(device: device)
         
-        let mdlMesh = MDLMesh.newBox(withDimensions: float3(4, 4, 4),
-                                     segments: uint3(2, 2, 2),
-                                     geometryType: MDLGeometryType.triangles,
-                                     inwardNormals:false,
-                                     allocator: metalAllocator)
+        // h529 load obj
+        
+        let assetURL = Bundle.main.url(forResource: "kizunaai",
+                                       withExtension: "obj")!
+        
+        let vertexDescriptor = MTLVertexDescriptor()
+        vertexDescriptor.attributes[0].format = .float3
+        vertexDescriptor.attributes[0].offset = 0
+        vertexDescriptor.attributes[0].bufferIndex = 0
+        
+        vertexDescriptor.layouts[0].stride = MemoryLayout<float3>.stride
+        let meshDescriptor = MTKModelIOVertexDescriptorFromMetal(vertexDescriptor)
+        (meshDescriptor.attributes[0] as! MDLVertexAttribute).name = MDLVertexAttributePosition
+        
+        let asset = MDLAsset(url: assetURL,
+                             vertexDescriptor: meshDescriptor,
+                             bufferAllocator: metalAllocator)
+        let mdlMesh = asset.object(at: 0) as! MDLMesh
+        
+        // end load obj
+        
+        let mesh = try MTKMesh(mesh: mdlMesh, device: device)
         
         let mdlVertexDescriptor = MTKModelIOVertexDescriptorFromMetal(mtlVertexDescriptor)
         
@@ -273,8 +271,8 @@ class Renderer: NSObject, MTKViewDelegate {
                 
                 renderEncoder.setDepthStencilState(depthState)
                 
-                renderEncoder.setVertexBuffer(dynamicUniformBuffer, offset:uniformBufferOffset, index: BufferIndex.uniforms2.rawValue)
-                renderEncoder.setFragmentBuffer(dynamicUniformBuffer, offset:uniformBufferOffset, index: BufferIndex.uniforms2.rawValue)
+                renderEncoder.setVertexBuffer(dynamicUniformBuffer, offset:uniformBufferOffset, index: BufferIndex.uniforms.rawValue)
+                renderEncoder.setFragmentBuffer(dynamicUniformBuffer, offset:uniformBufferOffset, index: BufferIndex.uniforms.rawValue)
                 
                 for (index, element) in mesh.vertexDescriptor.layouts.enumerated() {
                     guard let layout = element as? MDLVertexBufferLayout else {
@@ -289,20 +287,14 @@ class Renderer: NSObject, MTKViewDelegate {
                 
                 renderEncoder.setFragmentTexture(colorMap, index: TextureIndex.color.rawValue)
                 
-                for model in models {
-                    renderEncoder.pushDebugGroup(model.name)
-                    model.render(renderEncoder: renderEncoder, uniforms: uniforms[0])
-                    renderEncoder.popDebugGroup()
+                for submesh in mesh.submeshes {
+                    renderEncoder.drawIndexedPrimitives(type: submesh.primitiveType,
+                                                        indexCount: submesh.indexCount,
+                                                        indexType: submesh.indexType,
+                                                        indexBuffer: submesh.indexBuffer.buffer,
+                                                        indexBufferOffset: submesh.indexBuffer.offset)
+
                 }
-                
-//                for submesh in mesh.submeshes {
-//                    renderEncoder.drawIndexedPrimitives(type: submesh.primitiveType,
-//                                                        indexCount: submesh.indexCount,
-//                                                        indexType: submesh.indexType,
-//                                                        indexBuffer: submesh.indexBuffer.buffer,
-//                                                        indexBufferOffset: submesh.indexBuffer.offset)
-//
-//                }
                 
                 renderEncoder.popDebugGroup()
                 

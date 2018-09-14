@@ -22,40 +22,46 @@
 		26C6134B21466DF300A7FD6E /* ShaderTypes.h in Resources */ = {isa = PBXBuildFile; fileRef = 26C6132421466DF300A7FD6E /* ShaderTypes.h */; };
 		26C6134C21466DF300A7FD6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26C6132521466DF300A7FD6E /* Assets.xcassets */; };
 		26C6134D21466DF300A7FD6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26C6132521466DF300A7FD6E /* Assets.xcassets */; };
-		26C613692148E5B700A7FD6E /* CharacterShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 26C613682148E5B700A7FD6E /* CharacterShader.metal */; };
-		26C6136A2148E5B700A7FD6E /* CharacterShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 26C613682148E5B700A7FD6E /* CharacterShader.metal */; };
 		26C6136F2148E79600A7FD6E /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6136E2148E79600A7FD6E /* Camera.swift */; };
 		26C613702148E79600A7FD6E /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6136E2148E79600A7FD6E /* Camera.swift */; };
 		26C613722148E89000A7FD6E /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C613712148E89000A7FD6E /* Node.swift */; };
 		26C613732148E89000A7FD6E /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C613712148E89000A7FD6E /* Node.swift */; };
 		26C613752148E94E00A7FD6E /* MathLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C613742148E94E00A7FD6E /* MathLibrary.swift */; };
 		26C613762148E94E00A7FD6E /* MathLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C613742148E94E00A7FD6E /* MathLibrary.swift */; };
-		26C613A2214A57E300A7FD6E /* skeletonWave.bin in Resources */ = {isa = PBXBuildFile; fileRef = 26C6137B214A57E300A7FD6E /* skeletonWave.bin */; };
-		26C613A3214A57E300A7FD6E /* skeletonWave.bin in Resources */ = {isa = PBXBuildFile; fileRef = 26C6137B214A57E300A7FD6E /* skeletonWave.bin */; };
-		26C613A4214A57E300A7FD6E /* skeletonWave.gltf in Resources */ = {isa = PBXBuildFile; fileRef = 26C6137C214A57E300A7FD6E /* skeletonWave.gltf */; };
-		26C613A5214A57E300A7FD6E /* skeletonWave.gltf in Resources */ = {isa = PBXBuildFile; fileRef = 26C6137C214A57E300A7FD6E /* skeletonWave.gltf */; };
-		26C613A6214A57E300A7FD6E /* BrainStem.gltf in Resources */ = {isa = PBXBuildFile; fileRef = 26C6137E214A57E300A7FD6E /* BrainStem.gltf */; };
-		26C613A7214A57E300A7FD6E /* BrainStem.gltf in Resources */ = {isa = PBXBuildFile; fileRef = 26C6137E214A57E300A7FD6E /* BrainStem.gltf */; };
-		26C613E2214A57E300A7FD6E /* readme_kizunaai.txt in Resources */ = {isa = PBXBuildFile; fileRef = 26C613A1214A57E300A7FD6E /* readme_kizunaai.txt */; };
-		26C613E3214A57E300A7FD6E /* readme_kizunaai.txt in Resources */ = {isa = PBXBuildFile; fileRef = 26C613A1214A57E300A7FD6E /* readme_kizunaai.txt */; };
-		26C613E5214A59E300A7FD6E /* Renderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C613E4214A59E300A7FD6E /* Renderable.swift */; };
-		26C613E6214A59E300A7FD6E /* Renderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C613E4214A59E300A7FD6E /* Renderable.swift */; };
-		26C613E8214A5A0600A7FD6E /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C613E7214A5A0600A7FD6E /* Character.swift */; };
-		26C613E9214A5A0600A7FD6E /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C613E7214A5A0600A7FD6E /* Character.swift */; };
-		26C613EB214A5A1D00A7FD6E /* Submesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C613EA214A5A1D00A7FD6E /* Submesh.swift */; };
-		26C613EC214A5A1D00A7FD6E /* Submesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C613EA214A5A1D00A7FD6E /* Submesh.swift */; };
-		26C613EE214A5A9100A7FD6E /* Prop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C613ED214A5A9100A7FD6E /* Prop.swift */; };
-		26C613EF214A5A9100A7FD6E /* Prop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C613ED214A5A9100A7FD6E /* Prop.swift */; };
-		26C613F4214A5AE400A7FD6E /* GLTFMathLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C613F1214A5AE400A7FD6E /* GLTFMathLibrary.swift */; };
-		26C613F5214A5AE400A7FD6E /* GLTFMathLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C613F1214A5AE400A7FD6E /* GLTFMathLibrary.swift */; };
-		26C613F6214A5AE400A7FD6E /* GLTFAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C613F2214A5AE400A7FD6E /* GLTFAsset.swift */; };
-		26C613F7214A5AE400A7FD6E /* GLTFAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C613F2214A5AE400A7FD6E /* GLTFAsset.swift */; };
-		26C613F8214A5AE400A7FD6E /* GLTFTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C613F3214A5AE400A7FD6E /* GLTFTypes.swift */; };
-		26C613F9214A5AE400A7FD6E /* GLTFTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C613F3214A5AE400A7FD6E /* GLTFTypes.swift */; };
-		26C613FB214A5BAB00A7FD6E /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C613FA214A5BAB00A7FD6E /* Animation.swift */; };
-		26C613FC214A5BAB00A7FD6E /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C613FA214A5BAB00A7FD6E /* Animation.swift */; };
-		26C613FE214A5BC600A7FD6E /* Texturable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C613FD214A5BC600A7FD6E /* Texturable.swift */; };
-		26C613FF214A5BC600A7FD6E /* Texturable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C613FD214A5BC600A7FD6E /* Texturable.swift */; };
+		26C98A9D214B84AE0005A647 /* kizunaai.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A89214B84AE0005A647 /* kizunaai.mtl */; };
+		26C98A9E214B84AE0005A647 /* kizunaai.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A89214B84AE0005A647 /* kizunaai.mtl */; };
+		26C98A9F214B84AE0005A647 /* kizunaai.obj in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A8A214B84AE0005A647 /* kizunaai.obj */; };
+		26C98AA0214B84AE0005A647 /* kizunaai.obj in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A8A214B84AE0005A647 /* kizunaai.obj */; };
+		26C98AA1214B84AE0005A647 /* buffer_kizunaai.bin in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A8C214B84AE0005A647 /* buffer_kizunaai.bin */; };
+		26C98AA2214B84AE0005A647 /* buffer_kizunaai.bin in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A8C214B84AE0005A647 /* buffer_kizunaai.bin */; };
+		26C98AA3214B84AE0005A647 /* BrainStem.gltf in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A8D214B84AE0005A647 /* BrainStem.gltf */; };
+		26C98AA4214B84AE0005A647 /* BrainStem.gltf in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A8D214B84AE0005A647 /* BrainStem.gltf */; };
+		26C98AA5214B84AE0005A647 /* skeletonWave.bin in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A8E214B84AE0005A647 /* skeletonWave.bin */; };
+		26C98AA6214B84AE0005A647 /* skeletonWave.bin in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A8E214B84AE0005A647 /* skeletonWave.bin */; };
+		26C98AA7214B84AE0005A647 /* skeletonWave.gltf in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A8F214B84AE0005A647 /* skeletonWave.gltf */; };
+		26C98AA8214B84AE0005A647 /* skeletonWave.gltf in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A8F214B84AE0005A647 /* skeletonWave.gltf */; };
+		26C98AA9214B84AE0005A647 /* kizunaai.gltf in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A90214B84AE0005A647 /* kizunaai.gltf */; };
+		26C98AAA214B84AE0005A647 /* kizunaai.gltf in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A90214B84AE0005A647 /* kizunaai.gltf */; };
+		26C98AAB214B84AE0005A647 /* readme_kizunaai.txt in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A91214B84AE0005A647 /* readme_kizunaai.txt */; };
+		26C98AAC214B84AE0005A647 /* readme_kizunaai.txt in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A91214B84AE0005A647 /* readme_kizunaai.txt */; };
+		26C98AAD214B84AE0005A647 /* hair2.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A93214B84AE0005A647 /* hair2.png */; };
+		26C98AAE214B84AE0005A647 /* hair2.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A93214B84AE0005A647 /* hair2.png */; };
+		26C98AAF214B84AE0005A647 /* hair1.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A94214B84AE0005A647 /* hair1.png */; };
+		26C98AB0214B84AE0005A647 /* hair1.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A94214B84AE0005A647 /* hair1.png */; };
+		26C98AB1214B84AE0005A647 /* s_hair.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A95214B84AE0005A647 /* s_hair.bmp */; };
+		26C98AB2214B84AE0005A647 /* s_hair.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A95214B84AE0005A647 /* s_hair.bmp */; };
+		26C98AB3214B84AE0005A647 /* face.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A96214B84AE0005A647 /* face.png */; };
+		26C98AB4214B84AE0005A647 /* face.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A96214B84AE0005A647 /* face.png */; };
+		26C98AB5214B84AE0005A647 /* tops.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A97214B84AE0005A647 /* tops.png */; };
+		26C98AB6214B84AE0005A647 /* tops.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A97214B84AE0005A647 /* tops.png */; };
+		26C98AB7214B84AE0005A647 /* bottoms.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A98214B84AE0005A647 /* bottoms.png */; };
+		26C98AB8214B84AE0005A647 /* bottoms.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A98214B84AE0005A647 /* bottoms.png */; };
+		26C98AB9214B84AE0005A647 /* eye.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A99214B84AE0005A647 /* eye.png */; };
+		26C98ABA214B84AE0005A647 /* eye.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A99214B84AE0005A647 /* eye.png */; };
+		26C98ABB214B84AE0005A647 /* eye2.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A9A214B84AE0005A647 /* eye2.png */; };
+		26C98ABC214B84AE0005A647 /* eye2.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A9A214B84AE0005A647 /* eye2.png */; };
+		26C98ABD214B84AE0005A647 /* kizunaai.dae in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A9C214B84AE0005A647 /* kizunaai.dae */; };
+		26C98ABE214B84AE0005A647 /* kizunaai.dae in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A9C214B84AE0005A647 /* kizunaai.dae */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,23 +83,26 @@
 		26C613582147EBBD00A7FD6E /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
 		26C613592147EBBD00A7FD6E /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		26C6135A2147EBBE00A7FD6E /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
-		26C613682148E5B700A7FD6E /* CharacterShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = CharacterShader.metal; sourceTree = "<group>"; };
 		26C6136E2148E79600A7FD6E /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		26C613712148E89000A7FD6E /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		26C613742148E94E00A7FD6E /* MathLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathLibrary.swift; sourceTree = "<group>"; };
-		26C6137B214A57E300A7FD6E /* skeletonWave.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = skeletonWave.bin; sourceTree = "<group>"; };
-		26C6137C214A57E300A7FD6E /* skeletonWave.gltf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = skeletonWave.gltf; sourceTree = "<group>"; };
-		26C6137E214A57E300A7FD6E /* BrainStem.gltf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BrainStem.gltf; sourceTree = "<group>"; };
-		26C613A1214A57E300A7FD6E /* readme_kizunaai.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme_kizunaai.txt; sourceTree = "<group>"; };
-		26C613E4214A59E300A7FD6E /* Renderable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderable.swift; sourceTree = "<group>"; };
-		26C613E7214A5A0600A7FD6E /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
-		26C613EA214A5A1D00A7FD6E /* Submesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Submesh.swift; sourceTree = "<group>"; };
-		26C613ED214A5A9100A7FD6E /* Prop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prop.swift; sourceTree = "<group>"; };
-		26C613F1214A5AE400A7FD6E /* GLTFMathLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFMathLibrary.swift; sourceTree = "<group>"; };
-		26C613F2214A5AE400A7FD6E /* GLTFAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFAsset.swift; sourceTree = "<group>"; };
-		26C613F3214A5AE400A7FD6E /* GLTFTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFTypes.swift; sourceTree = "<group>"; };
-		26C613FA214A5BAB00A7FD6E /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
-		26C613FD214A5BC600A7FD6E /* Texturable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Texturable.swift; sourceTree = "<group>"; };
+		26C98A89214B84AE0005A647 /* kizunaai.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = kizunaai.mtl; sourceTree = "<group>"; };
+		26C98A8A214B84AE0005A647 /* kizunaai.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = kizunaai.obj; sourceTree = "<group>"; };
+		26C98A8C214B84AE0005A647 /* buffer_kizunaai.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = buffer_kizunaai.bin; sourceTree = "<group>"; };
+		26C98A8D214B84AE0005A647 /* BrainStem.gltf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BrainStem.gltf; sourceTree = "<group>"; };
+		26C98A8E214B84AE0005A647 /* skeletonWave.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = skeletonWave.bin; sourceTree = "<group>"; };
+		26C98A8F214B84AE0005A647 /* skeletonWave.gltf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = skeletonWave.gltf; sourceTree = "<group>"; };
+		26C98A90214B84AE0005A647 /* kizunaai.gltf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = kizunaai.gltf; sourceTree = "<group>"; };
+		26C98A91214B84AE0005A647 /* readme_kizunaai.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme_kizunaai.txt; sourceTree = "<group>"; };
+		26C98A93214B84AE0005A647 /* hair2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hair2.png; sourceTree = "<group>"; };
+		26C98A94214B84AE0005A647 /* hair1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hair1.png; sourceTree = "<group>"; };
+		26C98A95214B84AE0005A647 /* s_hair.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = s_hair.bmp; sourceTree = "<group>"; };
+		26C98A96214B84AE0005A647 /* face.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = face.png; sourceTree = "<group>"; };
+		26C98A97214B84AE0005A647 /* tops.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tops.png; sourceTree = "<group>"; };
+		26C98A98214B84AE0005A647 /* bottoms.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottoms.png; sourceTree = "<group>"; };
+		26C98A99214B84AE0005A647 /* eye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eye.png; sourceTree = "<group>"; };
+		26C98A9A214B84AE0005A647 /* eye2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eye2.png; sourceTree = "<group>"; };
+		26C98A9C214B84AE0005A647 /* kizunaai.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = kizunaai.dae; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,7 +182,6 @@
 			children = (
 				26C6132421466DF300A7FD6E /* ShaderTypes.h */,
 				26C6132221466DF300A7FD6E /* Shaders.metal */,
-				26C613682148E5B700A7FD6E /* CharacterShader.metal */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -181,16 +189,9 @@
 		26C613572147DBB400A7FD6E /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				26C613F0214A5AE400A7FD6E /* glTF Importer */,
-				26C613E4214A59E300A7FD6E /* Renderable.swift */,
 				26C613712148E89000A7FD6E /* Node.swift */,
-				26C613ED214A5A9100A7FD6E /* Prop.swift */,
-				26C613EA214A5A1D00A7FD6E /* Submesh.swift */,
-				26C613E7214A5A0600A7FD6E /* Character.swift */,
 				26C6136E2148E79600A7FD6E /* Camera.swift */,
 				26C613742148E94E00A7FD6E /* MathLibrary.swift */,
-				26C613FA214A5BAB00A7FD6E /* Animation.swift */,
-				26C613FD214A5BC600A7FD6E /* Texturable.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -198,46 +199,57 @@
 		26C6135D2148E22D00A7FD6E /* resources */ = {
 			isa = PBXGroup;
 			children = (
-				26C61379214A57E300A7FD6E /* glTF */,
-				26C613A1214A57E300A7FD6E /* readme_kizunaai.txt */,
+				26C98A9B214B84AE0005A647 /* dae */,
+				26C98A8B214B84AE0005A647 /* glTF */,
+				26C98A88214B84AE0005A647 /* obj */,
+				26C98A91214B84AE0005A647 /* readme_kizunaai.txt */,
+				26C98A92214B84AE0005A647 /* texture */,
 			);
 			path = resources;
 			sourceTree = "<group>";
 		};
-		26C61379214A57E300A7FD6E /* glTF */ = {
+		26C98A88214B84AE0005A647 /* obj */ = {
 			isa = PBXGroup;
 			children = (
-				26C6137A214A57E300A7FD6E /* skeletonWave */,
-				26C6137D214A57E300A7FD6E /* BrainStem */,
+				26C98A89214B84AE0005A647 /* kizunaai.mtl */,
+				26C98A8A214B84AE0005A647 /* kizunaai.obj */,
+			);
+			path = obj;
+			sourceTree = "<group>";
+		};
+		26C98A8B214B84AE0005A647 /* glTF */ = {
+			isa = PBXGroup;
+			children = (
+				26C98A8C214B84AE0005A647 /* buffer_kizunaai.bin */,
+				26C98A8D214B84AE0005A647 /* BrainStem.gltf */,
+				26C98A8E214B84AE0005A647 /* skeletonWave.bin */,
+				26C98A8F214B84AE0005A647 /* skeletonWave.gltf */,
+				26C98A90214B84AE0005A647 /* kizunaai.gltf */,
 			);
 			path = glTF;
 			sourceTree = "<group>";
 		};
-		26C6137A214A57E300A7FD6E /* skeletonWave */ = {
+		26C98A92214B84AE0005A647 /* texture */ = {
 			isa = PBXGroup;
 			children = (
-				26C6137B214A57E300A7FD6E /* skeletonWave.bin */,
-				26C6137C214A57E300A7FD6E /* skeletonWave.gltf */,
+				26C98A93214B84AE0005A647 /* hair2.png */,
+				26C98A94214B84AE0005A647 /* hair1.png */,
+				26C98A95214B84AE0005A647 /* s_hair.bmp */,
+				26C98A96214B84AE0005A647 /* face.png */,
+				26C98A97214B84AE0005A647 /* tops.png */,
+				26C98A98214B84AE0005A647 /* bottoms.png */,
+				26C98A99214B84AE0005A647 /* eye.png */,
+				26C98A9A214B84AE0005A647 /* eye2.png */,
 			);
-			path = skeletonWave;
+			path = texture;
 			sourceTree = "<group>";
 		};
-		26C6137D214A57E300A7FD6E /* BrainStem */ = {
+		26C98A9B214B84AE0005A647 /* dae */ = {
 			isa = PBXGroup;
 			children = (
-				26C6137E214A57E300A7FD6E /* BrainStem.gltf */,
+				26C98A9C214B84AE0005A647 /* kizunaai.dae */,
 			);
-			path = BrainStem;
-			sourceTree = "<group>";
-		};
-		26C613F0214A5AE400A7FD6E /* glTF Importer */ = {
-			isa = PBXGroup;
-			children = (
-				26C613F1214A5AE400A7FD6E /* GLTFMathLibrary.swift */,
-				26C613F2214A5AE400A7FD6E /* GLTFAsset.swift */,
-				26C613F3214A5AE400A7FD6E /* GLTFTypes.swift */,
-			);
-			path = "glTF Importer";
+			path = dae;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,14 +331,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26C613A4214A57E300A7FD6E /* skeletonWave.gltf in Resources */,
+				26C98AA5214B84AE0005A647 /* skeletonWave.bin in Resources */,
+				26C98AB5214B84AE0005A647 /* tops.png in Resources */,
+				26C98AA1214B84AE0005A647 /* buffer_kizunaai.bin in Resources */,
+				26C98AB1214B84AE0005A647 /* s_hair.bmp in Resources */,
+				26C98AAB214B84AE0005A647 /* readme_kizunaai.txt in Resources */,
+				26C98A9D214B84AE0005A647 /* kizunaai.mtl in Resources */,
+				26C98A9F214B84AE0005A647 /* kizunaai.obj in Resources */,
+				26C98ABD214B84AE0005A647 /* kizunaai.dae in Resources */,
+				26C98AA9214B84AE0005A647 /* kizunaai.gltf in Resources */,
+				26C98AA7214B84AE0005A647 /* skeletonWave.gltf in Resources */,
+				26C98AAF214B84AE0005A647 /* hair1.png in Resources */,
 				26C6134A21466DF300A7FD6E /* ShaderTypes.h in Resources */,
-				26C613E2214A57E300A7FD6E /* readme_kizunaai.txt in Resources */,
-				26C613A6214A57E300A7FD6E /* BrainStem.gltf in Resources */,
+				26C98AB3214B84AE0005A647 /* face.png in Resources */,
 				26C6133321466DF300A7FD6E /* Main.storyboard in Resources */,
 				26C6134C21466DF300A7FD6E /* Assets.xcassets in Resources */,
+				26C98AB9214B84AE0005A647 /* eye.png in Resources */,
+				26C98AA3214B84AE0005A647 /* BrainStem.gltf in Resources */,
+				26C98ABB214B84AE0005A647 /* eye2.png in Resources */,
 				26C6133621466DF300A7FD6E /* LaunchScreen.storyboard in Resources */,
-				26C613A2214A57E300A7FD6E /* skeletonWave.bin in Resources */,
+				26C98AB7214B84AE0005A647 /* bottoms.png in Resources */,
+				26C98AAD214B84AE0005A647 /* hair2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,13 +359,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26C98AAA214B84AE0005A647 /* kizunaai.gltf in Resources */,
+				26C98AB6214B84AE0005A647 /* tops.png in Resources */,
+				26C98AA8214B84AE0005A647 /* skeletonWave.gltf in Resources */,
+				26C98AAE214B84AE0005A647 /* hair2.png in Resources */,
+				26C98AA0214B84AE0005A647 /* kizunaai.obj in Resources */,
 				26C6134421466DF300A7FD6E /* Main.storyboard in Resources */,
+				26C98AB2214B84AE0005A647 /* s_hair.bmp in Resources */,
+				26C98AB8214B84AE0005A647 /* bottoms.png in Resources */,
+				26C98ABE214B84AE0005A647 /* kizunaai.dae in Resources */,
+				26C98AA4214B84AE0005A647 /* BrainStem.gltf in Resources */,
 				26C6134D21466DF300A7FD6E /* Assets.xcassets in Resources */,
+				26C98AB0214B84AE0005A647 /* hair1.png in Resources */,
+				26C98AA2214B84AE0005A647 /* buffer_kizunaai.bin in Resources */,
+				26C98ABC214B84AE0005A647 /* eye2.png in Resources */,
 				26C6134B21466DF300A7FD6E /* ShaderTypes.h in Resources */,
-				26C613E3214A57E300A7FD6E /* readme_kizunaai.txt in Resources */,
-				26C613A3214A57E300A7FD6E /* skeletonWave.bin in Resources */,
-				26C613A7214A57E300A7FD6E /* BrainStem.gltf in Resources */,
-				26C613A5214A57E300A7FD6E /* skeletonWave.gltf in Resources */,
+				26C98AB4214B84AE0005A647 /* face.png in Resources */,
+				26C98A9E214B84AE0005A647 /* kizunaai.mtl in Resources */,
+				26C98ABA214B84AE0005A647 /* eye.png in Resources */,
+				26C98AAC214B84AE0005A647 /* readme_kizunaai.txt in Resources */,
+				26C98AA6214B84AE0005A647 /* skeletonWave.bin in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,22 +389,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26C613EB214A5A1D00A7FD6E /* Submesh.swift in Sources */,
 				26C6134821466DF300A7FD6E /* Renderer.swift in Sources */,
-				26C613EE214A5A9100A7FD6E /* Prop.swift in Sources */,
 				26C6134621466DF300A7FD6E /* Shaders.metal in Sources */,
 				26C6136F2148E79600A7FD6E /* Camera.swift in Sources */,
-				26C613E5214A59E300A7FD6E /* Renderable.swift in Sources */,
 				26C613752148E94E00A7FD6E /* MathLibrary.swift in Sources */,
-				26C613692148E5B700A7FD6E /* CharacterShader.metal in Sources */,
 				26C6133021466DF300A7FD6E /* GameViewController.swift in Sources */,
-				26C613FE214A5BC600A7FD6E /* Texturable.swift in Sources */,
-				26C613E8214A5A0600A7FD6E /* Character.swift in Sources */,
-				26C613FB214A5BAB00A7FD6E /* Animation.swift in Sources */,
 				26C6132E21466DF300A7FD6E /* AppDelegate.swift in Sources */,
-				26C613F8214A5AE400A7FD6E /* GLTFTypes.swift in Sources */,
-				26C613F6214A5AE400A7FD6E /* GLTFAsset.swift in Sources */,
-				26C613F4214A5AE400A7FD6E /* GLTFMathLibrary.swift in Sources */,
 				26C613722148E89000A7FD6E /* Node.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,22 +403,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26C613EC214A5A1D00A7FD6E /* Submesh.swift in Sources */,
 				26C6134921466DF300A7FD6E /* Renderer.swift in Sources */,
-				26C613EF214A5A9100A7FD6E /* Prop.swift in Sources */,
 				26C6134721466DF300A7FD6E /* Shaders.metal in Sources */,
 				26C613702148E79600A7FD6E /* Camera.swift in Sources */,
-				26C613E6214A59E300A7FD6E /* Renderable.swift in Sources */,
 				26C613762148E94E00A7FD6E /* MathLibrary.swift in Sources */,
-				26C6136A2148E5B700A7FD6E /* CharacterShader.metal in Sources */,
 				26C6134121466DF300A7FD6E /* GameViewController.swift in Sources */,
-				26C613FF214A5BC600A7FD6E /* Texturable.swift in Sources */,
-				26C613E9214A5A0600A7FD6E /* Character.swift in Sources */,
-				26C613FC214A5BAB00A7FD6E /* Animation.swift in Sources */,
 				26C6133F21466DF300A7FD6E /* AppDelegate.swift in Sources */,
-				26C613F9214A5AE400A7FD6E /* GLTFTypes.swift in Sources */,
-				26C613F7214A5AE400A7FD6E /* GLTFAsset.swift in Sources */,
-				26C613F5214A5AE400A7FD6E /* GLTFMathLibrary.swift in Sources */,
 				26C613732148E89000A7FD6E /* Node.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
