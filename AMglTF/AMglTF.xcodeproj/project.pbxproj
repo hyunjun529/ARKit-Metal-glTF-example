@@ -64,6 +64,12 @@
 		26C98ABE214B84AE0005A647 /* kizunaai.dae in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A9C214B84AE0005A647 /* kizunaai.dae */; };
 		26C98B02214BA9C20005A647 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C98B01214BA9C20005A647 /* Model.swift */; };
 		26C98B03214BA9C30005A647 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C98B01214BA9C20005A647 /* Model.swift */; };
+		26C98B05214BBD600005A647 /* Submesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C98B04214BBD600005A647 /* Submesh.swift */; };
+		26C98B06214BBD600005A647 /* Submesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C98B04214BBD600005A647 /* Submesh.swift */; };
+		26C98B09214BCB2A0005A647 /* train.obj in Resources */ = {isa = PBXBuildFile; fileRef = 26C98B07214BCB2A0005A647 /* train.obj */; };
+		26C98B0A214BCB2A0005A647 /* train.obj in Resources */ = {isa = PBXBuildFile; fileRef = 26C98B07214BCB2A0005A647 /* train.obj */; };
+		26C98B0B214BCB2A0005A647 /* train.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 26C98B08214BCB2A0005A647 /* train.mtl */; };
+		26C98B0C214BCB2A0005A647 /* train.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 26C98B08214BCB2A0005A647 /* train.mtl */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +112,9 @@
 		26C98A9A214B84AE0005A647 /* eye2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eye2.png; sourceTree = "<group>"; };
 		26C98A9C214B84AE0005A647 /* kizunaai.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = kizunaai.dae; sourceTree = "<group>"; };
 		26C98B01214BA9C20005A647 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		26C98B04214BBD600005A647 /* Submesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Submesh.swift; sourceTree = "<group>"; };
+		26C98B07214BCB2A0005A647 /* train.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = train.obj; sourceTree = "<group>"; };
+		26C98B08214BCB2A0005A647 /* train.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = train.mtl; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +204,7 @@
 				26C613712148E89000A7FD6E /* Node.swift */,
 				26C6136E2148E79600A7FD6E /* Camera.swift */,
 				26C98B01214BA9C20005A647 /* Model.swift */,
+				26C98B04214BBD600005A647 /* Submesh.swift */,
 				26C613742148E94E00A7FD6E /* MathLibrary.swift */,
 			);
 			path = Utility;
@@ -215,6 +225,8 @@
 		26C98A88214B84AE0005A647 /* obj */ = {
 			isa = PBXGroup;
 			children = (
+				26C98B08214BCB2A0005A647 /* train.mtl */,
+				26C98B07214BCB2A0005A647 /* train.obj */,
 				26C98A89214B84AE0005A647 /* kizunaai.mtl */,
 				26C98A8A214B84AE0005A647 /* kizunaai.obj */,
 			);
@@ -341,6 +353,7 @@
 				26C98AB1214B84AE0005A647 /* s_hair.bmp in Resources */,
 				26C98AAB214B84AE0005A647 /* readme_kizunaai.txt in Resources */,
 				26C98A9D214B84AE0005A647 /* kizunaai.mtl in Resources */,
+				26C98B0B214BCB2A0005A647 /* train.mtl in Resources */,
 				26C98A9F214B84AE0005A647 /* kizunaai.obj in Resources */,
 				26C98ABD214B84AE0005A647 /* kizunaai.dae in Resources */,
 				26C98AA9214B84AE0005A647 /* kizunaai.gltf in Resources */,
@@ -355,6 +368,7 @@
 				26C98ABB214B84AE0005A647 /* eye2.png in Resources */,
 				26C6133621466DF300A7FD6E /* LaunchScreen.storyboard in Resources */,
 				26C98AB7214B84AE0005A647 /* bottoms.png in Resources */,
+				26C98B09214BCB2A0005A647 /* train.obj in Resources */,
 				26C98AAD214B84AE0005A647 /* hair2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,8 +383,10 @@
 				26C98AAE214B84AE0005A647 /* hair2.png in Resources */,
 				26C98AA0214B84AE0005A647 /* kizunaai.obj in Resources */,
 				26C6134421466DF300A7FD6E /* Main.storyboard in Resources */,
+				26C98B0C214BCB2A0005A647 /* train.mtl in Resources */,
 				26C98AB2214B84AE0005A647 /* s_hair.bmp in Resources */,
 				26C98AB8214B84AE0005A647 /* bottoms.png in Resources */,
+				26C98B0A214BCB2A0005A647 /* train.obj in Resources */,
 				26C98ABE214B84AE0005A647 /* kizunaai.dae in Resources */,
 				26C98AA4214B84AE0005A647 /* BrainStem.gltf in Resources */,
 				26C6134D21466DF300A7FD6E /* Assets.xcassets in Resources */,
@@ -397,6 +413,7 @@
 				26C6134621466DF300A7FD6E /* Shaders.metal in Sources */,
 				26C6136F2148E79600A7FD6E /* Camera.swift in Sources */,
 				26C613752148E94E00A7FD6E /* MathLibrary.swift in Sources */,
+				26C98B05214BBD600005A647 /* Submesh.swift in Sources */,
 				26C6133021466DF300A7FD6E /* GameViewController.swift in Sources */,
 				26C6132E21466DF300A7FD6E /* AppDelegate.swift in Sources */,
 				26C613722148E89000A7FD6E /* Node.swift in Sources */,
@@ -412,6 +429,7 @@
 				26C6134721466DF300A7FD6E /* Shaders.metal in Sources */,
 				26C613702148E79600A7FD6E /* Camera.swift in Sources */,
 				26C613762148E94E00A7FD6E /* MathLibrary.swift in Sources */,
+				26C98B06214BBD600005A647 /* Submesh.swift in Sources */,
 				26C6134121466DF300A7FD6E /* GameViewController.swift in Sources */,
 				26C6133F21466DF300A7FD6E /* AppDelegate.swift in Sources */,
 				26C613732148E89000A7FD6E /* Node.swift in Sources */,
