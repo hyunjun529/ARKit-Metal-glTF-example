@@ -11,7 +11,6 @@
 #include <simd/simd.h>
 
 
-// MVP, Uniforms, Vertex, Buffer ... etc
 typedef struct
 {
     matrix_float4x4 modelMatrix;
@@ -20,24 +19,30 @@ typedef struct
     matrix_float3x3 normalMatrix;
 } Uniforms;
 
+typedef struct
+{
+    uint lightCount;
+    vector_float3 cameraPosition;
+} FragmentUniforms;
+
 typedef NS_ENUM(NSInteger, BufferIndex)
 {
     BufferIndexMeshPositions = 0,
-    BufferIndexMeshGenerics  = 1,
-    BufferIndexUniforms     = 2
+    BufferIndexMeshTexcoord  = 1,
+    BufferIndexUniforms      = 2
 };
 
 typedef NS_ENUM(NSInteger, VertexAttribute)
 {
     VertexAttributePosition  = 0,
-    VertexAttributeTexcoord  = 1,
+    VertexAttributeTexcoord  = 1
 };
 
 typedef NS_ENUM(NSInteger, TextureIndex)
 {
-    TextureIndexColor    = 0,
-    TextureIndexNormal        = 1
+    TextureIndexColor        = 0,
+    TextureIndexNormal       = 1
 };
 
-#endif /* ShaderTypes_h */
 
+#endif /* ShaderTypes_h */

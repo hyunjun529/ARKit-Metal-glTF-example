@@ -62,6 +62,8 @@
 		26C98ABC214B84AE0005A647 /* eye2.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A9A214B84AE0005A647 /* eye2.png */; };
 		26C98ABD214B84AE0005A647 /* kizunaai.dae in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A9C214B84AE0005A647 /* kizunaai.dae */; };
 		26C98ABE214B84AE0005A647 /* kizunaai.dae in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A9C214B84AE0005A647 /* kizunaai.dae */; };
+		26C98B02214BA9C20005A647 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C98B01214BA9C20005A647 /* Model.swift */; };
+		26C98B03214BA9C30005A647 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C98B01214BA9C20005A647 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +105,7 @@
 		26C98A99214B84AE0005A647 /* eye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eye.png; sourceTree = "<group>"; };
 		26C98A9A214B84AE0005A647 /* eye2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eye2.png; sourceTree = "<group>"; };
 		26C98A9C214B84AE0005A647 /* kizunaai.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = kizunaai.dae; sourceTree = "<group>"; };
+		26C98B01214BA9C20005A647 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +194,7 @@
 			children = (
 				26C613712148E89000A7FD6E /* Node.swift */,
 				26C6136E2148E79600A7FD6E /* Camera.swift */,
+				26C98B01214BA9C20005A647 /* Model.swift */,
 				26C613742148E94E00A7FD6E /* MathLibrary.swift */,
 			);
 			path = Utility;
@@ -396,6 +400,7 @@
 				26C6133021466DF300A7FD6E /* GameViewController.swift in Sources */,
 				26C6132E21466DF300A7FD6E /* AppDelegate.swift in Sources */,
 				26C613722148E89000A7FD6E /* Node.swift in Sources */,
+				26C98B02214BA9C20005A647 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +415,7 @@
 				26C6134121466DF300A7FD6E /* GameViewController.swift in Sources */,
 				26C6133F21466DF300A7FD6E /* AppDelegate.swift in Sources */,
 				26C613732148E89000A7FD6E /* Node.swift in Sources */,
+				26C98B03214BA9C30005A647 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

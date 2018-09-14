@@ -1,11 +1,3 @@
-//
-//  Shaders.metal
-//  AMglTF Shared
-//
-//  Created by hyunjun529 on 10/09/2018.
-//  Copyright © 2018 hyunjun529. All rights reserved.
-//
-
 // File for Metal kernel and shader functions
 
 #include <metal_stdlib>
@@ -13,6 +5,7 @@
 
 // Including header shared between this Metal shader code and Swift/C code executing Metal API commands
 #import "ShaderTypes.h"
+
 
 using namespace metal;
 
@@ -26,6 +19,8 @@ typedef struct
 {
     float4 position [[position]];
     float2 texCoord;
+    float3 worldPosition;
+    float3 worldNormal;
 } ColorInOut;
 
 vertex ColorInOut vertexShader(Vertex in [[stage_in]],
@@ -34,9 +29,12 @@ vertex ColorInOut vertexShader(Vertex in [[stage_in]],
     ColorInOut out;
 
     float4 position = float4(in.position, 1.0);
+    
     out.position = uniforms.projectionMatrix * uniforms.viewMatrix * uniforms.modelMatrix * position;
     out.texCoord = in.texCoord;
 
+    out.worldPosition = (uniforms.modelMatrix * position).xyz;
+    
     return out;
 }
 
@@ -50,5 +48,6 @@ fragment float4 fragmentShader(ColorInOut in [[stage_in]],
 
     half4 colorSample   = colorMap.sample(colorSampler, in.texCoord.xy);
 
-    return float4(colorSample);
+    //return float4(colorSample);
+    return float4(0.5, 0.0, 0.0, 0.5);
 }

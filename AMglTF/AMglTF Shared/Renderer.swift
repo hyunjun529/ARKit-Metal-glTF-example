@@ -10,7 +10,6 @@
 
 import Metal
 import MetalKit
-import simd
 
 // The 256 byte aligned size of our uniform structure
 let alignedUniformsSize = (MemoryLayout<Uniforms>.size & ~0xFF) + 0x100
@@ -25,37 +24,36 @@ class Renderer: NSObject, MTKViewDelegate {
     
     public let device: MTLDevice
     let commandQueue: MTLCommandQueue
-    var dynamicUniformBuffer: MTLBuffer
     var pipelineState: MTLRenderPipelineState
     var depthState: MTLDepthStencilState
-    var colorMap: MTLTexture
+    
+    var dynamicUniformBuffer: MTLBuffer
+    var uniformBufferOffset = 0
+    var uniformBufferIndex = 0
+    var uniforms: UnsafeMutablePointer<Uniforms>
+    
+    var dynamicFragmentUniformBuffer: MTLBuffer
+    var fragmentUniformBufferOffset = 0
+    var fragmentUniformBufferIndex = 0
+    var fragmentUniforms: UnsafeMutablePointer<FragmentUniforms>
     
     let inFlightSemaphore = DispatchSemaphore(value: maxBuffersInFlight)
     
-    var uniformBufferOffset = 0
-    
-    var uniformBufferIndex = 0
-    
-    var uniforms: UnsafeMutablePointer<Uniforms>
-    
-    var projectionMatrix: matrix_float4x4 = matrix_float4x4()
-    
-    var rotation: Float = 0
-    
-    var mesh: MTKMesh
-    
-    // h529 : Camera
     lazy var camera: Camera = {
         let camera = Camera()
         camera.position = [0, 0, -8]
         return camera
     }()
     
+    var mesh: MTKMesh
+    var colorMap: MTLTexture
+    
     
     init?(metalKitView: MTKView) {
         self.device = metalKitView.device!
         guard let queue = self.device.makeCommandQueue() else { return nil }
         self.commandQueue = queue
+        
         
         let uniformBufferSize = alignedUniformsSize * maxBuffersInFlight
         
@@ -65,6 +63,17 @@ class Renderer: NSObject, MTKViewDelegate {
         self.dynamicUniformBuffer.label = "UniformBuffer"
         
         uniforms = UnsafeMutableRawPointer(dynamicUniformBuffer.contents()).bindMemory(to:Uniforms.self, capacity:1)
+        
+        
+        let fragmentUniformBufferSize = alignedUniformsSize * maxBuffersInFlight
+        
+        guard let fragmentBuffer = self.device.makeBuffer(length:fragmentUniformBufferSize, options:[MTLResourceOptions.storageModeShared]) else { return nil }
+        dynamicFragmentUniformBuffer = fragmentBuffer
+        
+        self.dynamicFragmentUniformBuffer.label = "FragmentUniformBuffer"
+        
+        fragmentUniforms = UnsafeMutableRawPointer(dynamicFragmentUniformBuffer.contents()).bindMemory(to: FragmentUniforms.self, capacity: 1)
+        
         
         metalKitView.depthStencilPixelFormat = MTLPixelFormat.depth32Float_stencil8
         metalKitView.colorPixelFormat = MTLPixelFormat.bgra8Unorm_srgb
@@ -95,7 +104,7 @@ class Renderer: NSObject, MTKViewDelegate {
         }
         
         do {
-            colorMap = try Renderer.loadTexture(device: device, textureName: "ColorMap")
+            colorMap = try Renderer.loadTexture(device: device, textureName: "tops")
         } catch {
             print("Unable to load texture. Error info: \(error)")
             return nil
@@ -110,21 +119,24 @@ class Renderer: NSObject, MTKViewDelegate {
         
         let mtlVertexDescriptor = MTLVertexDescriptor()
         
+        
         mtlVertexDescriptor.attributes[VertexAttribute.position.rawValue].format = MTLVertexFormat.float3
         mtlVertexDescriptor.attributes[VertexAttribute.position.rawValue].offset = 0
         mtlVertexDescriptor.attributes[VertexAttribute.position.rawValue].bufferIndex = BufferIndex.meshPositions.rawValue
         
         mtlVertexDescriptor.attributes[VertexAttribute.texcoord.rawValue].format = MTLVertexFormat.float2
         mtlVertexDescriptor.attributes[VertexAttribute.texcoord.rawValue].offset = 0
-        mtlVertexDescriptor.attributes[VertexAttribute.texcoord.rawValue].bufferIndex = BufferIndex.meshGenerics.rawValue
+        mtlVertexDescriptor.attributes[VertexAttribute.texcoord.rawValue].bufferIndex = BufferIndex.meshTexcoord.rawValue
+        
         
         mtlVertexDescriptor.layouts[BufferIndex.meshPositions.rawValue].stride = 12
         mtlVertexDescriptor.layouts[BufferIndex.meshPositions.rawValue].stepRate = 1
         mtlVertexDescriptor.layouts[BufferIndex.meshPositions.rawValue].stepFunction = MTLVertexStepFunction.perVertex
         
-        mtlVertexDescriptor.layouts[BufferIndex.meshGenerics.rawValue].stride = 8
-        mtlVertexDescriptor.layouts[BufferIndex.meshGenerics.rawValue].stepRate = 1
-        mtlVertexDescriptor.layouts[BufferIndex.meshGenerics.rawValue].stepFunction = MTLVertexStepFunction.perVertex
+        mtlVertexDescriptor.layouts[BufferIndex.meshTexcoord.rawValue].stride = 8
+        mtlVertexDescriptor.layouts[BufferIndex.meshTexcoord.rawValue].stepRate = 1
+        mtlVertexDescriptor.layouts[BufferIndex.meshTexcoord.rawValue].stepFunction = MTLVertexStepFunction.perVertex
+        
         
         return mtlVertexDescriptor
     }
@@ -165,28 +177,29 @@ class Renderer: NSObject, MTKViewDelegate {
                                        withExtension: "obj")!
         
         let vertexDescriptor = MTLVertexDescriptor()
+        
         vertexDescriptor.attributes[0].format = .float3
         vertexDescriptor.attributes[0].offset = 0
         vertexDescriptor.attributes[0].bufferIndex = 0
-        
         vertexDescriptor.layouts[0].stride = MemoryLayout<float3>.stride
+        
         let meshDescriptor = MTKModelIOVertexDescriptorFromMetal(vertexDescriptor)
         (meshDescriptor.attributes[0] as! MDLVertexAttribute).name = MDLVertexAttributePosition
         
         let asset = MDLAsset(url: assetURL,
                              vertexDescriptor: meshDescriptor,
                              bufferAllocator: metalAllocator)
+        
         let mdlMesh = asset.object(at: 0) as! MDLMesh
         
         // end load obj
-        
-        let mesh = try MTKMesh(mesh: mdlMesh, device: device)
         
         let mdlVertexDescriptor = MTKModelIOVertexDescriptorFromMetal(mtlVertexDescriptor)
         
         guard let attributes = mdlVertexDescriptor.attributes as? [MDLVertexAttribute] else {
             throw RendererError.badVertexDescriptor
         }
+        
         attributes[VertexAttribute.position.rawValue].name = MDLVertexAttributePosition
         attributes[VertexAttribute.texcoord.rawValue].name = MDLVertexAttributeTextureCoordinate
         
@@ -228,12 +241,7 @@ class Renderer: NSObject, MTKViewDelegate {
         
         uniforms[0].projectionMatrix = camera.projectionMatrix
         uniforms[0].viewMatrix = camera.viewMatrix
-        
-        let rotationAxis = float3(1, 1, 0)
-        let modelMatrix = matrix4x4_rotation(radians: rotation, axis: rotationAxis)
-        uniforms[0].modelMatrix = modelMatrix
-        
-        rotation += 0.01
+        uniforms[0].modelMatrix = matrix_float4x4(1.0)
     }
     
     func draw(in view: MTKView) {
@@ -314,38 +322,4 @@ class Renderer: NSObject, MTKViewDelegate {
         
         camera.aspect = Float(view.bounds.width)/Float(view.bounds.height)
     }
-}
-
-// Generic matrix math utility functions
-func matrix4x4_rotation(radians: Float, axis: float3) -> matrix_float4x4 {
-    let unitAxis = normalize(axis)
-    let ct = cosf(radians)
-    let st = sinf(radians)
-    let ci = 1 - ct
-    let x = unitAxis.x, y = unitAxis.y, z = unitAxis.z
-    return matrix_float4x4.init(columns:(vector_float4(    ct + x * x * ci, y * x * ci + z * st, z * x * ci - y * st, 0),
-                                         vector_float4(x * y * ci - z * st,     ct + y * y * ci, z * y * ci + x * st, 0),
-                                         vector_float4(x * z * ci + y * st, y * z * ci - x * st,     ct + z * z * ci, 0),
-                                         vector_float4(                  0,                   0,                   0, 1)))
-}
-
-func matrix4x4_translation(_ translationX: Float, _ translationY: Float, _ translationZ: Float) -> matrix_float4x4 {
-    return matrix_float4x4.init(columns:(vector_float4(1, 0, 0, 0),
-                                         vector_float4(0, 1, 0, 0),
-                                         vector_float4(0, 0, 1, 0),
-                                         vector_float4(translationX, translationY, translationZ, 1)))
-}
-
-func matrix_perspective_right_hand(fovyRadians fovy: Float, aspectRatio: Float, nearZ: Float, farZ: Float) -> matrix_float4x4 {
-    let ys = 1 / tanf(fovy * 0.5)
-    let xs = ys / aspectRatio
-    let zs = farZ / (nearZ - farZ)
-    return matrix_float4x4.init(columns:(vector_float4(xs,  0, 0,   0),
-                                         vector_float4( 0, ys, 0,   0),
-                                         vector_float4( 0,  0, zs, -1),
-                                         vector_float4( 0,  0, zs * nearZ, 0)))
-}
-
-func radians_from_degrees(_ degrees: Float) -> Float {
-    return (degrees / 180) * .pi
 }
