@@ -40,7 +40,7 @@ class Renderer: NSObject, MTKViewDelegate {
     
     lazy var camera: Camera = {
         let camera = Camera()
-        camera.position = [0, 0, -8]
+        camera.position = [0, 4, -8]
         return camera
     }()
     
@@ -175,12 +175,11 @@ class Renderer: NSObject, MTKViewDelegate {
                                                length: MemoryLayout<Light>.stride * lights.count,
                                                index: Int(BufferIndex.lights.rawValue))
                 
-                fragmentUniforms[0].cameraPosition = camera.position
-                fragmentUniforms[0].lightCount = UInt32(lights.count)
-                renderEncoder.setFragmentBuffer(dynamicFragmentUniformBuffer, offset:fragmentUniformBufferOffset, index: BufferIndex.fragmentUniforms.rawValue)
-                
                 
                 // render all the models in the array
+                fragmentUniforms[0].cameraPosition = camera.position
+                fragmentUniforms[0].lightCount = UInt32(lights.count)
+                
                 uniforms[0].projectionMatrix = camera.projectionMatrix
                 uniforms[0].viewMatrix = camera.viewMatrix
                 
@@ -188,14 +187,24 @@ class Renderer: NSObject, MTKViewDelegate {
                     // model matrix now comes from the Model's superclass: Node
                     uniforms[0].modelMatrix = model.modelMatrix
                     uniforms[0].normalMatrix = float3x3(normalFrom4x4: model.modelMatrix)
+                    fragmentUniforms[0].tiling = model.tiling // hmm...
                     
                     renderEncoder.setVertexBuffer(dynamicUniformBuffer, offset:uniformBufferOffset, index: BufferIndex.uniforms.rawValue)
+                    
+                    renderEncoder.setFragmentBuffer(dynamicFragmentUniformBuffer, offset:fragmentUniformBufferOffset, index: BufferIndex.fragmentUniforms.rawValue)
                     
                     renderEncoder.setRenderPipelineState(model.pipelineState)
                     renderEncoder.setVertexBuffer(model.vertexBuffer, offset: 0,
                                                   index: Int(BufferIndex.meshPositions.rawValue))
                     
-                    for submesh in model.mesh.submeshes {
+                    for modelSubmesh in model.submeshes {
+                        renderEncoder.setFragmentSamplerState(model.samplerState, index: 0)
+                        
+                        // set the fragment texture here
+                        renderEncoder.setFragmentTexture(modelSubmesh.textures.baseColor,
+                                                         index: Int(TextureIndex.color.rawValue))
+                        
+                        let submesh = modelSubmesh.submesh
                         renderEncoder.drawIndexedPrimitives(type: .triangle,
                                                             indexCount: submesh.indexCount,
                                                             indexType: submesh.indexType,

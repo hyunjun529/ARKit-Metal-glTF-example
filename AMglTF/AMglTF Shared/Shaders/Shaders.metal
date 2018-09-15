@@ -45,10 +45,15 @@ vertex ColorInOut vertexShader(Vertex in [[stage_in]],
 
 
 fragment float4 fragmentShader(ColorInOut in [[stage_in]],
+                               texture2d<float> baseColorTexture [[ texture(TextureIndexColor)]],
+                               sampler textureSampler [[sampler(0)]],
                                constant Light *lights [[ buffer(BufferIndexLights) ]],
                                constant FragmentUniforms &fragmentUniforms [[ buffer(BufferIndexFragmentUniforms) ]])
 {
-    float3 baseColor = float3(1, 1, 1);
+    float3 baseColor = baseColorTexture.sample(textureSampler,
+                                               in.texCoord * fragmentUniforms.tiling).rgb;
+//    return float4(baseColor, 1);
+    
     float3 diffuseColor = 0;
     float3 ambientColor = 0;
     float3 specularColor = 0;

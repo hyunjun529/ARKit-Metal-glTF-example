@@ -25,7 +25,7 @@ class Lighting: Node
     lazy var ambientLight: Light = {
         var light = buildDefaultLight()
         light.position = [1, -1, 1]
-        light.color = [0.5, 0.5, 0.5]
+        light.color = [0.0, 0.0, 0.0]
         light.intensity = 0.1
         light.type = LightType.ambientlight
         return light

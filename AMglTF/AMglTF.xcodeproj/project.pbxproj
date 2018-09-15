@@ -76,6 +76,8 @@
 		26C98B12214CFDB80005A647 /* DebugLighting.metal in Sources */ = {isa = PBXBuildFile; fileRef = 26C98B10214CFDB80005A647 /* DebugLighting.metal */; };
 		26C98B14214CFE030005A647 /* DebugLighting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C98B13214CFE030005A647 /* DebugLighting.swift */; };
 		26C98B15214CFE030005A647 /* DebugLighting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C98B13214CFE030005A647 /* DebugLighting.swift */; };
+		26C98B17214D08440005A647 /* Textureable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C98B16214D08440005A647 /* Textureable.swift */; };
+		26C98B18214D08440005A647 /* Textureable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C98B16214D08440005A647 /* Textureable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -124,6 +126,7 @@
 		26C98B0D214CEC230005A647 /* Lighting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lighting.swift; sourceTree = "<group>"; };
 		26C98B10214CFDB80005A647 /* DebugLighting.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = DebugLighting.metal; sourceTree = "<group>"; };
 		26C98B13214CFE030005A647 /* DebugLighting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLighting.swift; sourceTree = "<group>"; };
+		26C98B16214D08440005A647 /* Textureable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Textureable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +220,7 @@
 				26C98B13214CFE030005A647 /* DebugLighting.swift */,
 				26C98B01214BA9C20005A647 /* Model.swift */,
 				26C98B04214BBD600005A647 /* Submesh.swift */,
+				26C98B16214D08440005A647 /* Textureable.swift */,
 				26C613742148E94E00A7FD6E /* MathLibrary.swift */,
 			);
 			path = Utility;
@@ -428,6 +432,7 @@
 				26C613752148E94E00A7FD6E /* MathLibrary.swift in Sources */,
 				26C98B05214BBD600005A647 /* Submesh.swift in Sources */,
 				26C6133021466DF300A7FD6E /* GameViewController.swift in Sources */,
+				26C98B17214D08440005A647 /* Textureable.swift in Sources */,
 				26C98B14214CFE030005A647 /* DebugLighting.swift in Sources */,
 				26C6132E21466DF300A7FD6E /* AppDelegate.swift in Sources */,
 				26C613722148E89000A7FD6E /* Node.swift in Sources */,
@@ -447,6 +452,7 @@
 				26C613762148E94E00A7FD6E /* MathLibrary.swift in Sources */,
 				26C98B06214BBD600005A647 /* Submesh.swift in Sources */,
 				26C6134121466DF300A7FD6E /* GameViewController.swift in Sources */,
+				26C98B18214D08440005A647 /* Textureable.swift in Sources */,
 				26C98B15214CFE030005A647 /* DebugLighting.swift in Sources */,
 				26C6133F21466DF300A7FD6E /* AppDelegate.swift in Sources */,
 				26C613732148E89000A7FD6E /* Node.swift in Sources */,
