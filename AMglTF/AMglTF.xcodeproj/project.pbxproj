@@ -70,6 +70,12 @@
 		26C98B0A214BCB2A0005A647 /* train.obj in Resources */ = {isa = PBXBuildFile; fileRef = 26C98B07214BCB2A0005A647 /* train.obj */; };
 		26C98B0B214BCB2A0005A647 /* train.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 26C98B08214BCB2A0005A647 /* train.mtl */; };
 		26C98B0C214BCB2A0005A647 /* train.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 26C98B08214BCB2A0005A647 /* train.mtl */; };
+		26C98B0E214CEC230005A647 /* Lighting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C98B0D214CEC230005A647 /* Lighting.swift */; };
+		26C98B0F214CEC230005A647 /* Lighting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C98B0D214CEC230005A647 /* Lighting.swift */; };
+		26C98B11214CFDB80005A647 /* DebugLighting.metal in Sources */ = {isa = PBXBuildFile; fileRef = 26C98B10214CFDB80005A647 /* DebugLighting.metal */; };
+		26C98B12214CFDB80005A647 /* DebugLighting.metal in Sources */ = {isa = PBXBuildFile; fileRef = 26C98B10214CFDB80005A647 /* DebugLighting.metal */; };
+		26C98B14214CFE030005A647 /* DebugLighting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C98B13214CFE030005A647 /* DebugLighting.swift */; };
+		26C98B15214CFE030005A647 /* DebugLighting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C98B13214CFE030005A647 /* DebugLighting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,6 +121,9 @@
 		26C98B04214BBD600005A647 /* Submesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Submesh.swift; sourceTree = "<group>"; };
 		26C98B07214BCB2A0005A647 /* train.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = train.obj; sourceTree = "<group>"; };
 		26C98B08214BCB2A0005A647 /* train.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = train.mtl; sourceTree = "<group>"; };
+		26C98B0D214CEC230005A647 /* Lighting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lighting.swift; sourceTree = "<group>"; };
+		26C98B10214CFDB80005A647 /* DebugLighting.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = DebugLighting.metal; sourceTree = "<group>"; };
+		26C98B13214CFE030005A647 /* DebugLighting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLighting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +203,7 @@
 			children = (
 				26C6132421466DF300A7FD6E /* ShaderTypes.h */,
 				26C6132221466DF300A7FD6E /* Shaders.metal */,
+				26C98B10214CFDB80005A647 /* DebugLighting.metal */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -203,6 +213,8 @@
 			children = (
 				26C613712148E89000A7FD6E /* Node.swift */,
 				26C6136E2148E79600A7FD6E /* Camera.swift */,
+				26C98B0D214CEC230005A647 /* Lighting.swift */,
+				26C98B13214CFE030005A647 /* DebugLighting.swift */,
 				26C98B01214BA9C20005A647 /* Model.swift */,
 				26C98B04214BBD600005A647 /* Submesh.swift */,
 				26C613742148E94E00A7FD6E /* MathLibrary.swift */,
@@ -410,13 +422,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				26C6134821466DF300A7FD6E /* Renderer.swift in Sources */,
+				26C98B0E214CEC230005A647 /* Lighting.swift in Sources */,
 				26C6134621466DF300A7FD6E /* Shaders.metal in Sources */,
 				26C6136F2148E79600A7FD6E /* Camera.swift in Sources */,
 				26C613752148E94E00A7FD6E /* MathLibrary.swift in Sources */,
 				26C98B05214BBD600005A647 /* Submesh.swift in Sources */,
 				26C6133021466DF300A7FD6E /* GameViewController.swift in Sources */,
+				26C98B14214CFE030005A647 /* DebugLighting.swift in Sources */,
 				26C6132E21466DF300A7FD6E /* AppDelegate.swift in Sources */,
 				26C613722148E89000A7FD6E /* Node.swift in Sources */,
+				26C98B11214CFDB80005A647 /* DebugLighting.metal in Sources */,
 				26C98B02214BA9C20005A647 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,13 +441,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				26C6134921466DF300A7FD6E /* Renderer.swift in Sources */,
+				26C98B0F214CEC230005A647 /* Lighting.swift in Sources */,
 				26C6134721466DF300A7FD6E /* Shaders.metal in Sources */,
 				26C613702148E79600A7FD6E /* Camera.swift in Sources */,
 				26C613762148E94E00A7FD6E /* MathLibrary.swift in Sources */,
 				26C98B06214BBD600005A647 /* Submesh.swift in Sources */,
 				26C6134121466DF300A7FD6E /* GameViewController.swift in Sources */,
+				26C98B15214CFE030005A647 /* DebugLighting.swift in Sources */,
 				26C6133F21466DF300A7FD6E /* AppDelegate.swift in Sources */,
 				26C613732148E89000A7FD6E /* Node.swift in Sources */,
+				26C98B12214CFDB80005A647 /* DebugLighting.metal in Sources */,
 				26C98B03214BA9C30005A647 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

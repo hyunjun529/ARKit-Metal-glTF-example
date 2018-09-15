@@ -46,6 +46,13 @@ class Renderer: NSObject, MTKViewDelegate {
     
     var models: [Model] = []
     
+    var lights: [Light] = []
+    
+    // Debug drawing of lights
+    lazy var lightPipelineState: MTLRenderPipelineState = {
+        return buildLightPipelineState()
+    }()
+    
     
     init?(metalKitView: MTKView) {
         Renderer.device = metalKitView.device!
@@ -101,6 +108,15 @@ class Renderer: NSObject, MTKViewDelegate {
         kizunaai.position = [0, 0, 0]
         kizunaai.rotation = [0, radians(fromDegrees: 45), 0]
         models.append(kizunaai)
+        
+        
+        // init Lights
+        let lighting = Lighting()
+        lights.append(lighting.sunlight)
+        lights.append(lighting.ambientLight)
+        lights.append(lighting.redLight)
+        lights.append(lighting.blueLight)
+        fragmentUniforms[0].lightCount = UInt32(lights.count)
     }
     
     private func updateDynamicBufferState() {
@@ -148,22 +164,26 @@ class Renderer: NSObject, MTKViewDelegate {
                 
                 renderEncoder.pushDebugGroup("Draw Box")
                 
-                renderEncoder.setCullMode(.back)
+                renderEncoder.setCullMode(.front)
                 
                 renderEncoder.setFrontFacing(.counterClockwise)
                 
                 renderEncoder.setDepthStencilState(Renderer.depthStencilState)
                 
                 
-                uniforms[0].projectionMatrix = camera.projectionMatrix
-                uniforms[0].viewMatrix = camera.viewMatrix
+                renderEncoder.setFragmentBytes(&lights,
+                                               length: MemoryLayout<Light>.stride * lights.count,
+                                               index: Int(BufferIndex.lights.rawValue))
                 
                 fragmentUniforms[0].cameraPosition = camera.position
-                
-                renderEncoder.setFragmentBuffer(dynamicUniformBuffer, offset:uniformBufferOffset, index: BufferIndex.uniforms.rawValue)
+                fragmentUniforms[0].lightCount = UInt32(lights.count)
+                renderEncoder.setFragmentBuffer(dynamicFragmentUniformBuffer, offset:fragmentUniformBufferOffset, index: BufferIndex.fragmentUniforms.rawValue)
                 
                 
                 // render all the models in the array
+                uniforms[0].projectionMatrix = camera.projectionMatrix
+                uniforms[0].viewMatrix = camera.viewMatrix
+                
                 for model in models {
                     // model matrix now comes from the Model's superclass: Node
                     uniforms[0].modelMatrix = model.modelMatrix
@@ -183,6 +203,10 @@ class Renderer: NSObject, MTKViewDelegate {
                                                             indexBufferOffset: submesh.indexBuffer.offset)
                     }
                 }
+
+                
+                // Debug Lighting
+                debugLights(renderEncoder: renderEncoder, lightType: LightType.pointlight)
                 
                 renderEncoder.popDebugGroup()
                 
