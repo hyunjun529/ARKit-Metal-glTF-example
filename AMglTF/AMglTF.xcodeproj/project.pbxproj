@@ -13,6 +13,9 @@
 		26AF4CC2214F4B5800798F58 /* plane.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 26AF4CBE214F4B5800798F58 /* plane.mtl */; };
 		26AF4CC4214F4B7000798F58 /* ground.png in Resources */ = {isa = PBXBuildFile; fileRef = 26AF4CC3214F4B7000798F58 /* ground.png */; };
 		26AF4CC5214F4B7000798F58 /* ground.png in Resources */ = {isa = PBXBuildFile; fileRef = 26AF4CC3214F4B7000798F58 /* ground.png */; };
+		26AF4CC7214F4FB800798F58 /* RendererARKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AF4CC6214F4FB800798F58 /* RendererARKitExtensions.swift */; };
+		26AF4CCA214F53AC00798F58 /* ARKitRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AF4CC9214F53AC00798F58 /* ARKitRenderer.swift */; };
+		26AF4CCC214F55CD00798F58 /* ARKitShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 26AF4CCB214F55CD00798F58 /* ARKitShader.metal */; };
 		26C6132E21466DF300A7FD6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6132D21466DF300A7FD6E /* AppDelegate.swift */; };
 		26C6133021466DF300A7FD6E /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6132F21466DF300A7FD6E /* GameViewController.swift */; };
 		26C6133321466DF300A7FD6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26C6133121466DF300A7FD6E /* Main.storyboard */; };
@@ -90,6 +93,9 @@
 		26AF4CBD214F4B5800798F58 /* plane.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = plane.obj; path = "AMglTF Shared/resources/obj/plane.obj"; sourceTree = SOURCE_ROOT; };
 		26AF4CBE214F4B5800798F58 /* plane.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = plane.mtl; path = "AMglTF Shared/resources/obj/plane.mtl"; sourceTree = SOURCE_ROOT; };
 		26AF4CC3214F4B7000798F58 /* ground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ground.png; sourceTree = "<group>"; };
+		26AF4CC6214F4FB800798F58 /* RendererARKitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RendererARKitExtensions.swift; sourceTree = "<group>"; };
+		26AF4CC9214F53AC00798F58 /* ARKitRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARKitRenderer.swift; sourceTree = "<group>"; };
+		26AF4CCB214F55CD00798F58 /* ARKitShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = ARKitShader.metal; sourceTree = "<group>"; };
 		26C6132221466DF300A7FD6E /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 		26C6132321466DF300A7FD6E /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 		26C6132421466DF300A7FD6E /* ShaderTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderTypes.h; sourceTree = "<group>"; };
@@ -171,6 +177,7 @@
 			children = (
 				26C6132521466DF300A7FD6E /* Assets.xcassets */,
 				26C6132321466DF300A7FD6E /* Renderer.swift */,
+				26AF4CC9214F53AC00798F58 /* ARKitRenderer.swift */,
 				26C613562147DBA500A7FD6E /* Shaders */,
 				26C613572147DBB400A7FD6E /* Utility */,
 				26C6135D2148E22D00A7FD6E /* resources */,
@@ -192,6 +199,7 @@
 			children = (
 				26C6132D21466DF300A7FD6E /* AppDelegate.swift */,
 				26C6132F21466DF300A7FD6E /* GameViewController.swift */,
+				26AF4CC6214F4FB800798F58 /* RendererARKitExtensions.swift */,
 				26C6133121466DF300A7FD6E /* Main.storyboard */,
 				26C6133421466DF300A7FD6E /* LaunchScreen.storyboard */,
 				26C6133721466DF300A7FD6E /* Info.plist */,
@@ -215,6 +223,7 @@
 			children = (
 				26C6132421466DF300A7FD6E /* ShaderTypes.h */,
 				26C6132221466DF300A7FD6E /* Shaders.metal */,
+				26AF4CCB214F55CD00798F58 /* ARKitShader.metal */,
 				26C98B10214CFDB80005A647 /* DebugLighting.metal */,
 			);
 			path = Shaders;
@@ -447,6 +456,9 @@
 				26C98B0E214CEC230005A647 /* Lighting.swift in Sources */,
 				26C6134621466DF300A7FD6E /* Shaders.metal in Sources */,
 				26C6136F2148E79600A7FD6E /* Camera.swift in Sources */,
+				26AF4CCC214F55CD00798F58 /* ARKitShader.metal in Sources */,
+				26AF4CC7214F4FB800798F58 /* RendererARKitExtensions.swift in Sources */,
+				26AF4CCA214F53AC00798F58 /* ARKitRenderer.swift in Sources */,
 				26C613752148E94E00A7FD6E /* MathLibrary.swift in Sources */,
 				26C98B05214BBD600005A647 /* Submesh.swift in Sources */,
 				26C6133021466DF300A7FD6E /* GameViewController.swift in Sources */,

@@ -131,6 +131,12 @@ class Renderer: NSObject, MTKViewDelegate {
         uniformBufferOffset = alignedUniformsSize * uniformBufferIndex
         
         uniforms = UnsafeMutableRawPointer(dynamicUniformBuffer.contents() + uniformBufferOffset).bindMemory(to:Uniforms.self, capacity:1)
+        
+        fragmentUniformBufferIndex = (fragmentUniformBufferIndex + 1) % maxBuffersInFlight
+        
+        fragmentUniformBufferOffset = alignedUniformsSize * uniformBufferIndex
+        
+        fragmentUniforms = UnsafeMutableRawPointer(dynamicFragmentUniformBuffer.contents() + fragmentUniformBufferOffset).bindMemory(to:FragmentUniforms.self, capacity:1)
     }
     
     private func updateGameState() {
