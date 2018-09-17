@@ -40,7 +40,7 @@ class Renderer: NSObject, MTKViewDelegate {
     
     lazy var camera: Camera = {
         let camera = Camera()
-        camera.position = [0, 4, -8]
+        camera.position = [0, 2, -8]
         return camera
     }()
     
@@ -98,17 +98,21 @@ class Renderer: NSObject, MTKViewDelegate {
         super.init()
         
         
-        // metalKitView.clearColor = MTLClearColor(red: 1.0, green: 1.0, blue: 0.8, alpha: 1)
+        metalKitView.clearColor = MTLClearColor(red: 1.0, green: 1.0, blue: 0.8, alpha: 1)
         metalKitView.delegate = self
         mtkView(metalKitView, drawableSizeWillChange: metalKitView.bounds.size)
         
         
         // init Models
-        let kizunaai = Model(name: "kizunaai")
+        let kizunaai = Model(name: "kizunaai", format: "obj")
         kizunaai.position = [0, 0, 0]
         kizunaai.rotation = [0, radians(fromDegrees: 45), 0]
         models.append(kizunaai)
         
+        let ground = Model(name: "plane", format: "obj")
+        ground.scale = [40, 40, 40]
+        //ground.tiling = 16
+        models.append(ground)
         
         // init Lights
         let lighting = Lighting()

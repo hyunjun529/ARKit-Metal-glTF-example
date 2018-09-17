@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26AF4CBF214F4B5800798F58 /* plane.obj in Resources */ = {isa = PBXBuildFile; fileRef = 26AF4CBD214F4B5800798F58 /* plane.obj */; };
+		26AF4CC0214F4B5800798F58 /* plane.obj in Resources */ = {isa = PBXBuildFile; fileRef = 26AF4CBD214F4B5800798F58 /* plane.obj */; };
+		26AF4CC1214F4B5800798F58 /* plane.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 26AF4CBE214F4B5800798F58 /* plane.mtl */; };
+		26AF4CC2214F4B5800798F58 /* plane.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 26AF4CBE214F4B5800798F58 /* plane.mtl */; };
+		26AF4CC4214F4B7000798F58 /* ground.png in Resources */ = {isa = PBXBuildFile; fileRef = 26AF4CC3214F4B7000798F58 /* ground.png */; };
+		26AF4CC5214F4B7000798F58 /* ground.png in Resources */ = {isa = PBXBuildFile; fileRef = 26AF4CC3214F4B7000798F58 /* ground.png */; };
 		26C6132E21466DF300A7FD6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6132D21466DF300A7FD6E /* AppDelegate.swift */; };
 		26C6133021466DF300A7FD6E /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6132F21466DF300A7FD6E /* GameViewController.swift */; };
 		26C6133321466DF300A7FD6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26C6133121466DF300A7FD6E /* Main.storyboard */; };
@@ -81,6 +87,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		26AF4CBD214F4B5800798F58 /* plane.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = plane.obj; path = "AMglTF Shared/resources/obj/plane.obj"; sourceTree = SOURCE_ROOT; };
+		26AF4CBE214F4B5800798F58 /* plane.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = plane.mtl; path = "AMglTF Shared/resources/obj/plane.mtl"; sourceTree = SOURCE_ROOT; };
+		26AF4CC3214F4B7000798F58 /* ground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ground.png; sourceTree = "<group>"; };
 		26C6132221466DF300A7FD6E /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 		26C6132321466DF300A7FD6E /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 		26C6132421466DF300A7FD6E /* ShaderTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderTypes.h; sourceTree = "<group>"; };
@@ -243,6 +252,8 @@
 			children = (
 				26C98B08214BCB2A0005A647 /* train.mtl */,
 				26C98B07214BCB2A0005A647 /* train.obj */,
+				26AF4CBE214F4B5800798F58 /* plane.mtl */,
+				26AF4CBD214F4B5800798F58 /* plane.obj */,
 				26C98A89214B84AE0005A647 /* kizunaai.mtl */,
 				26C98A8A214B84AE0005A647 /* kizunaai.obj */,
 			);
@@ -264,6 +275,7 @@
 		26C98A92214B84AE0005A647 /* texture */ = {
 			isa = PBXGroup;
 			children = (
+				26AF4CC3214F4B7000798F58 /* ground.png */,
 				26C98A93214B84AE0005A647 /* hair2.png */,
 				26C98A94214B84AE0005A647 /* hair1.png */,
 				26C98A95214B84AE0005A647 /* s_hair.bmp */,
@@ -365,7 +377,9 @@
 			files = (
 				26C98AA5214B84AE0005A647 /* skeletonWave.bin in Resources */,
 				26C98AB5214B84AE0005A647 /* tops.png in Resources */,
+				26AF4CBF214F4B5800798F58 /* plane.obj in Resources */,
 				26C98AA1214B84AE0005A647 /* buffer_kizunaai.bin in Resources */,
+				26AF4CC4214F4B7000798F58 /* ground.png in Resources */,
 				26C98AB1214B84AE0005A647 /* s_hair.bmp in Resources */,
 				26C98AAB214B84AE0005A647 /* readme_kizunaai.txt in Resources */,
 				26C98A9D214B84AE0005A647 /* kizunaai.mtl in Resources */,
@@ -384,6 +398,7 @@
 				26C98ABB214B84AE0005A647 /* eye2.png in Resources */,
 				26C6133621466DF300A7FD6E /* LaunchScreen.storyboard in Resources */,
 				26C98AB7214B84AE0005A647 /* bottoms.png in Resources */,
+				26AF4CC1214F4B5800798F58 /* plane.mtl in Resources */,
 				26C98B09214BCB2A0005A647 /* train.obj in Resources */,
 				26C98AAD214B84AE0005A647 /* hair2.png in Resources */,
 			);
@@ -407,11 +422,14 @@
 				26C98AA4214B84AE0005A647 /* BrainStem.gltf in Resources */,
 				26C6134D21466DF300A7FD6E /* Assets.xcassets in Resources */,
 				26C98AB0214B84AE0005A647 /* hair1.png in Resources */,
+				26AF4CC5214F4B7000798F58 /* ground.png in Resources */,
 				26C98AA2214B84AE0005A647 /* buffer_kizunaai.bin in Resources */,
 				26C98ABC214B84AE0005A647 /* eye2.png in Resources */,
 				26C6134B21466DF300A7FD6E /* ShaderTypes.h in Resources */,
 				26C98AB4214B84AE0005A647 /* face.png in Resources */,
+				26AF4CC0214F4B5800798F58 /* plane.obj in Resources */,
 				26C98A9E214B84AE0005A647 /* kizunaai.mtl in Resources */,
+				26AF4CC2214F4B5800798F58 /* plane.mtl in Resources */,
 				26C98ABA214B84AE0005A647 /* eye.png in Resources */,
 				26C98AAC214B84AE0005A647 /* readme_kizunaai.txt in Resources */,
 				26C98AA6214B84AE0005A647 /* skeletonWave.bin in Resources */,

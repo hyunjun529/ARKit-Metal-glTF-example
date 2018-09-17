@@ -57,11 +57,12 @@ class Model: Node {
     var tiling: UInt32 = 1
     let samplerState: MTLSamplerState?
     
-    init(name: String) {
-        let assetURL = Bundle.main.url(forResource: name, withExtension: "obj")!
+    init(name: String, format: String) {
+        let assetURL = Bundle.main.url(forResource: name, withExtension: format)!
         let allocator = MTKMeshBufferAllocator(device: Renderer.device)
         let asset = MDLAsset(url: assetURL, vertexDescriptor: Model.defaultVertexDescriptor,
                              bufferAllocator: allocator)
+        
         let mdlMesh = asset.object(at: 0) as! MDLMesh
         
         let mesh = try! MTKMesh(mesh: mdlMesh, device: Renderer.device)
