@@ -52,7 +52,7 @@ class GameScene: Scene {
         
         
         orthoCamera.position = [0, 2, 0]
-        orthoCamera.rotation.x = .pi / 2
+        //orthoCamera.rotation.x = .pi / 2
         cameras.append(orthoCamera)
         
         let tpCamera = ThirdPersonCamera(focus: skeleton)

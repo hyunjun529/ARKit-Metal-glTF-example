@@ -10,6 +10,6 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.500000
 d 1.000000
 illum 2
-map_Kd racing-car-color
-map_bump racing-car-normal
+map_Kd Car_Diff.png
+map_bump Car_Normal.jpg
 
