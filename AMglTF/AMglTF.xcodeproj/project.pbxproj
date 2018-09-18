@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		26680C87215104280078624C /* Car_Normal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 26680C86215104280078624C /* Car_Normal.jpg */; };
-		26680C88215104280078624C /* Car_Normal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 26680C86215104280078624C /* Car_Normal.jpg */; };
-		26680C8A215104390078624C /* Car_Diff.png in Resources */ = {isa = PBXBuildFile; fileRef = 26680C89215104390078624C /* Car_Diff.png */; };
-		26680C8B215104390078624C /* Car_Diff.png in Resources */ = {isa = PBXBuildFile; fileRef = 26680C89215104390078624C /* Car_Diff.png */; };
-		26680C90215104530078624C /* car-roughness.png in Resources */ = {isa = PBXBuildFile; fileRef = 26680C8F215104530078624C /* car-roughness.png */; };
-		26680C91215104530078624C /* car-roughness.png in Resources */ = {isa = PBXBuildFile; fileRef = 26680C8F215104530078624C /* car-roughness.png */; };
+		26680C952151059C0078624C /* Car_Normal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 26680C922151059C0078624C /* Car_Normal.jpg */; };
+		26680C962151059C0078624C /* Car_Normal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 26680C922151059C0078624C /* Car_Normal.jpg */; };
+		26680C972151059C0078624C /* car-roughness.png in Resources */ = {isa = PBXBuildFile; fileRef = 26680C932151059C0078624C /* car-roughness.png */; };
+		26680C982151059C0078624C /* car-roughness.png in Resources */ = {isa = PBXBuildFile; fileRef = 26680C932151059C0078624C /* car-roughness.png */; };
+		26680C992151059C0078624C /* Car_Diff.png in Resources */ = {isa = PBXBuildFile; fileRef = 26680C942151059C0078624C /* Car_Diff.png */; };
+		26680C9A2151059C0078624C /* Car_Diff.png in Resources */ = {isa = PBXBuildFile; fileRef = 26680C942151059C0078624C /* Car_Diff.png */; };
 		26AF4CBF214F4B5800798F58 /* plane.obj in Resources */ = {isa = PBXBuildFile; fileRef = 26AF4CBD214F4B5800798F58 /* plane.obj */; };
 		26AF4CC0214F4B5800798F58 /* plane.obj in Resources */ = {isa = PBXBuildFile; fileRef = 26AF4CBD214F4B5800798F58 /* plane.obj */; };
 		26AF4CC1214F4B5800798F58 /* plane.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 26AF4CBE214F4B5800798F58 /* plane.mtl */; };
@@ -131,9 +131,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		26680C86215104280078624C /* Car_Normal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Car_Normal.jpg; path = "AMglTF Shared/Textures.xcassets/racing-car-normal.textureset/Universal.mipmapset/Car_Normal.jpg"; sourceTree = SOURCE_ROOT; };
-		26680C89215104390078624C /* Car_Diff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Car_Diff.png; path = "AMglTF Shared/Textures.xcassets/racing-car-color.textureset/Universal.mipmapset/Car_Diff.png"; sourceTree = SOURCE_ROOT; };
-		26680C8F215104530078624C /* car-roughness.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "car-roughness.png"; path = "AMglTF Shared/Textures.xcassets/racing-car-roughness.textureset/Universal.mipmapset/car-roughness.png"; sourceTree = SOURCE_ROOT; };
+		26680C922151059C0078624C /* Car_Normal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Car_Normal.jpg; sourceTree = "<group>"; };
+		26680C932151059C0078624C /* car-roughness.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "car-roughness.png"; sourceTree = "<group>"; };
+		26680C942151059C0078624C /* Car_Diff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Car_Diff.png; sourceTree = "<group>"; };
 		26AF4CBD214F4B5800798F58 /* plane.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = plane.obj; path = "AMglTF Shared/resources/obj/plane.obj"; sourceTree = SOURCE_ROOT; };
 		26AF4CBE214F4B5800798F58 /* plane.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = plane.mtl; path = "AMglTF Shared/resources/obj/plane.mtl"; sourceTree = SOURCE_ROOT; };
 		26AF4CC3214F4B7000798F58 /* ground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ground.png; sourceTree = "<group>"; };
@@ -242,9 +242,9 @@
 		26680C852151041D0078624C /* racing-car */ = {
 			isa = PBXGroup;
 			children = (
-				26680C89215104390078624C /* Car_Diff.png */,
-				26680C8F215104530078624C /* car-roughness.png */,
-				26680C86215104280078624C /* Car_Normal.jpg */,
+				26680C942151059C0078624C /* Car_Diff.png */,
+				26680C922151059C0078624C /* Car_Normal.jpg */,
+				26680C932151059C0078624C /* car-roughness.png */,
 			);
 			path = "racing-car";
 			sourceTree = "<group>";
@@ -515,22 +515,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26680C90215104530078624C /* car-roughness.png in Resources */,
 				26C98AA5214B84AE0005A647 /* skeletonWave.bin in Resources */,
+				26680C972151059C0078624C /* car-roughness.png in Resources */,
 				26C98AB5214B84AE0005A647 /* tops.png in Resources */,
 				26CA14E92150EC43001C04B8 /* buffer_skeleton.bin in Resources */,
 				26AF4CBF214F4B5800798F58 /* plane.obj in Resources */,
 				26C98AA1214B84AE0005A647 /* buffer_kizunaai.bin in Resources */,
 				26CA14D62150E975001C04B8 /* large-plane.mtl in Resources */,
+				26680C952151059C0078624C /* Car_Normal.jpg in Resources */,
 				26FC6CA82151009F003CDD0C /* Assets.xcassets in Resources */,
 				26CA14E72150EC43001C04B8 /* skeleton.gltf in Resources */,
 				26AF4CC4214F4B7000798F58 /* ground.png in Resources */,
 				26C98AB1214B84AE0005A647 /* s_hair.bmp in Resources */,
 				26CA14DA2150E975001C04B8 /* oilcan.mtl in Resources */,
 				26C98AAB214B84AE0005A647 /* readme_kizunaai.txt in Resources */,
+				26680C992151059C0078624C /* Car_Diff.png in Resources */,
 				26C98A9D214B84AE0005A647 /* kizunaai.mtl in Resources */,
 				26C98B0B214BCB2A0005A647 /* train.mtl in Resources */,
-				26680C8A215104390078624C /* Car_Diff.png in Resources */,
 				26C98A9F214B84AE0005A647 /* kizunaai.obj in Resources */,
 				26C98ABD214B84AE0005A647 /* kizunaai.dae in Resources */,
 				26C98AA9214B84AE0005A647 /* kizunaai.gltf in Resources */,
@@ -547,7 +548,6 @@
 				26C98ABB214B84AE0005A647 /* eye2.png in Resources */,
 				26C6133621466DF300A7FD6E /* LaunchScreen.storyboard in Resources */,
 				26C98AB7214B84AE0005A647 /* bottoms.png in Resources */,
-				26680C87215104280078624C /* Car_Normal.jpg in Resources */,
 				26AF4CC1214F4B5800798F58 /* plane.mtl in Resources */,
 				26C98B09214BCB2A0005A647 /* train.obj in Resources */,
 				26C98AAD214B84AE0005A647 /* hair2.png in Resources */,
@@ -564,20 +564,20 @@
 				26CA14EA2150EC43001C04B8 /* buffer_skeleton.bin in Resources */,
 				26C98AB6214B84AE0005A647 /* tops.png in Resources */,
 				26C98AA8214B84AE0005A647 /* skeletonWave.gltf in Resources */,
-				26680C88215104280078624C /* Car_Normal.jpg in Resources */,
 				26C98AAE214B84AE0005A647 /* hair2.png in Resources */,
 				26CA14D92150E975001C04B8 /* large-plane.obj in Resources */,
+				26680C962151059C0078624C /* Car_Normal.jpg in Resources */,
 				26C98AA0214B84AE0005A647 /* kizunaai.obj in Resources */,
+				26680C982151059C0078624C /* car-roughness.png in Resources */,
 				26C6134421466DF300A7FD6E /* Main.storyboard in Resources */,
 				26CA14DB2150E975001C04B8 /* oilcan.mtl in Resources */,
 				26CA14DF2150E975001C04B8 /* racing-car.mtl in Resources */,
-				26680C91215104530078624C /* car-roughness.png in Resources */,
 				26C98B0C214BCB2A0005A647 /* train.mtl in Resources */,
 				26C98AB2214B84AE0005A647 /* s_hair.bmp in Resources */,
 				26C98AB8214B84AE0005A647 /* bottoms.png in Resources */,
 				26C98B0A214BCB2A0005A647 /* train.obj in Resources */,
 				26CA14E82150EC43001C04B8 /* skeleton.gltf in Resources */,
-				26680C8B215104390078624C /* Car_Diff.png in Resources */,
+				26680C9A2151059C0078624C /* Car_Diff.png in Resources */,
 				26CA14DD2150E975001C04B8 /* oilcan.obj in Resources */,
 				26C98ABE214B84AE0005A647 /* kizunaai.dae in Resources */,
 				26C98AA4214B84AE0005A647 /* BrainStem.gltf in Resources */,
