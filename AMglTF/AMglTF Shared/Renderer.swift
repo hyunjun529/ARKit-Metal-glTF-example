@@ -42,7 +42,7 @@ class Renderer: NSObject, MTKViewDelegate {
         return camera
     }()
     
-    var models: [Model] = []
+    var scene: Scene?
     
     var lights: [Light] = []
     
@@ -50,7 +50,6 @@ class Renderer: NSObject, MTKViewDelegate {
     lazy var lightPipelineState: MTLRenderPipelineState = {
         return buildLightPipelineState()
     }()
-    
     
     init?(metalKitView: MTKView) {
         Renderer.device = metalKitView.device!
@@ -102,15 +101,15 @@ class Renderer: NSObject, MTKViewDelegate {
         
         
         // init Models
-        let kizunaai = Model(name: "kizunaai", format: "obj")
-        kizunaai.position = [0, 0, 0]
-        kizunaai.rotation = [0, radians(fromDegrees: 45), 0]
-        models.append(kizunaai)
-        
-        let ground = Model(name: "plane", format: "obj")
-        ground.scale = [40, 40, 40]
-        //ground.tiling = 16
-        models.append(ground)
+//        let kizunaai = Model(name: "kizunaai", format: "obj")
+//        kizunaai.position = [0, 0, 0]
+//        kizunaai.rotation = [0, radians(fromDegrees: 45), 0]
+//        models.append(kizunaai)
+//
+//        let ground = Model(name: "plane", format: "obj")
+//        ground.scale = [40, 40, 40]
+//        //ground.tiling = 16
+//        models.append(ground)
         
         // init Lights
         let lighting = Lighting()
@@ -165,6 +164,10 @@ class Renderer: NSObject, MTKViewDelegate {
             ///   holding onto the drawable and blocking the display pipeline any longer than necessary
             let renderPassDescriptor = view.currentRenderPassDescriptor
             
+            let deltaTime = 1 / Float(view.preferredFramesPerSecond)
+            guard let scene = scene else { return }
+            scene.update(deltaTime: deltaTime)
+            
             if let renderPassDescriptor = renderPassDescriptor, let renderEncoder = commandBuffer.makeRenderCommandEncoder(descriptor: renderPassDescriptor) {
                 
                 /// Final pass rendering code here
@@ -191,35 +194,35 @@ class Renderer: NSObject, MTKViewDelegate {
                 uniforms[0].projectionMatrix = camera.projectionMatrix
                 uniforms[0].viewMatrix = camera.viewMatrix
                 
-                for model in models {
-                    // model matrix now comes from the Model's superclass: Node
-                    uniforms[0].modelMatrix = model.modelMatrix
-                    uniforms[0].normalMatrix = float3x3(normalFrom4x4: model.modelMatrix)
-                    fragmentUniforms[0].tiling = model.tiling // hmm...
-                    
-                    renderEncoder.setVertexBuffer(dynamicUniformBuffer, offset:uniformBufferOffset, index: BufferIndex.uniforms.rawValue)
-                    
-                    renderEncoder.setFragmentBuffer(dynamicFragmentUniformBuffer, offset:fragmentUniformBufferOffset, index: BufferIndex.fragmentUniforms.rawValue)
-                    
-                    renderEncoder.setRenderPipelineState(model.pipelineState)
-                    renderEncoder.setVertexBuffer(model.vertexBuffer, offset: 0,
-                                                  index: Int(BufferIndex.meshPositions.rawValue))
-                    
-                    for modelSubmesh in model.submeshes {
-                        renderEncoder.setFragmentSamplerState(model.samplerState, index: 0)
-                        
-                        // set the fragment texture here
-                        renderEncoder.setFragmentTexture(modelSubmesh.textures.baseColor,
-                                                         index: Int(TextureIndex.color.rawValue))
-                        
-                        let submesh = modelSubmesh.submesh
-                        renderEncoder.drawIndexedPrimitives(type: .triangle,
-                                                            indexCount: submesh.indexCount,
-                                                            indexType: submesh.indexType,
-                                                            indexBuffer: submesh.indexBuffer.buffer,
-                                                            indexBufferOffset: submesh.indexBuffer.offset)
-                    }
-                }
+//                for model in models {
+//                    // model matrix now comes from the Model's superclass: Node
+//                    uniforms[0].modelMatrix = model.modelMatrix
+//                    uniforms[0].normalMatrix = float3x3(normalFrom4x4: model.modelMatrix)
+//                    fragmentUniforms[0].tiling = model.tiling // hmm...
+//
+//                    renderEncoder.setVertexBuffer(dynamicUniformBuffer, offset:uniformBufferOffset, index: BufferIndex.uniforms.rawValue)
+//
+//                    renderEncoder.setFragmentBuffer(dynamicFragmentUniformBuffer, offset:fragmentUniformBufferOffset, index: BufferIndex.fragmentUniforms.rawValue)
+//
+//                    renderEncoder.setRenderPipelineState(model.pipelineState)
+//                    renderEncoder.setVertexBuffer(model.vertexBuffer, offset: 0,
+//                                                  index: Int(BufferIndex.meshPositions.rawValue))
+//
+//                    for modelSubmesh in model.submeshes {
+//                        renderEncoder.setFragmentSamplerState(model.samplerState, index: 0)
+//
+//                        // set the fragment texture here
+//                        renderEncoder.setFragmentTexture(modelSubmesh.textures.baseColor,
+//                                                         index: Int(TextureIndex.color.rawValue))
+//
+//                        let submesh = modelSubmesh.submesh
+//                        renderEncoder.drawIndexedPrimitives(type: .triangle,
+//                                                            indexCount: submesh.indexCount,
+//                                                            indexType: submesh.indexType,
+//                                                            indexBuffer: submesh.indexBuffer.buffer,
+//                                                            indexBufferOffset: submesh.indexBuffer.offset)
+//                    }
+//                }
 
                 
                 // Debug Lighting
@@ -239,8 +242,7 @@ class Renderer: NSObject, MTKViewDelegate {
     }
     
     func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
-        /// Respond to drawable size or orientation changes here
-        
-        camera.aspect = Float(view.bounds.width)/Float(view.bounds.height)
+        scene?.sceneSizeWillChange(to: size)
+//        camera.aspect = Float(view.bounds.width)/Float(view.bounds.height)
     }
 }
