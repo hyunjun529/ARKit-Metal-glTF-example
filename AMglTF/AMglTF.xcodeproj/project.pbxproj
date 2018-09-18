@@ -105,6 +105,24 @@
 		26CA14C92150E272001C04B8 /* CharacterShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 26CA14C72150E272001C04B8 /* CharacterShader.metal */; };
 		26CA14CB2150E3BA001C04B8 /* Prop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CA14CA2150E3BA001C04B8 /* Prop.swift */; };
 		26CA14CC2150E3BA001C04B8 /* Prop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CA14CA2150E3BA001C04B8 /* Prop.swift */; };
+		26CA14D62150E975001C04B8 /* large-plane.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 26CA14CE2150E975001C04B8 /* large-plane.mtl */; };
+		26CA14D72150E975001C04B8 /* large-plane.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 26CA14CE2150E975001C04B8 /* large-plane.mtl */; };
+		26CA14D82150E975001C04B8 /* large-plane.obj in Resources */ = {isa = PBXBuildFile; fileRef = 26CA14CF2150E975001C04B8 /* large-plane.obj */; };
+		26CA14D92150E975001C04B8 /* large-plane.obj in Resources */ = {isa = PBXBuildFile; fileRef = 26CA14CF2150E975001C04B8 /* large-plane.obj */; };
+		26CA14DA2150E975001C04B8 /* oilcan.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 26CA14D12150E975001C04B8 /* oilcan.mtl */; };
+		26CA14DB2150E975001C04B8 /* oilcan.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 26CA14D12150E975001C04B8 /* oilcan.mtl */; };
+		26CA14DC2150E975001C04B8 /* oilcan.obj in Resources */ = {isa = PBXBuildFile; fileRef = 26CA14D22150E975001C04B8 /* oilcan.obj */; };
+		26CA14DD2150E975001C04B8 /* oilcan.obj in Resources */ = {isa = PBXBuildFile; fileRef = 26CA14D22150E975001C04B8 /* oilcan.obj */; };
+		26CA14DE2150E975001C04B8 /* racing-car.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 26CA14D42150E975001C04B8 /* racing-car.mtl */; };
+		26CA14DF2150E975001C04B8 /* racing-car.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 26CA14D42150E975001C04B8 /* racing-car.mtl */; };
+		26CA14E02150E975001C04B8 /* racing-car.obj in Resources */ = {isa = PBXBuildFile; fileRef = 26CA14D52150E975001C04B8 /* racing-car.obj */; };
+		26CA14E12150E975001C04B8 /* racing-car.obj in Resources */ = {isa = PBXBuildFile; fileRef = 26CA14D52150E975001C04B8 /* racing-car.obj */; };
+		26CA14E32150E991001C04B8 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CA14E22150E991001C04B8 /* GameScene.swift */; };
+		26CA14E42150E991001C04B8 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CA14E22150E991001C04B8 /* GameScene.swift */; };
+		26CA14E72150EC43001C04B8 /* skeleton.gltf in Resources */ = {isa = PBXBuildFile; fileRef = 26CA14E52150EC42001C04B8 /* skeleton.gltf */; };
+		26CA14E82150EC43001C04B8 /* skeleton.gltf in Resources */ = {isa = PBXBuildFile; fileRef = 26CA14E52150EC42001C04B8 /* skeleton.gltf */; };
+		26CA14E92150EC43001C04B8 /* buffer_skeleton.bin in Resources */ = {isa = PBXBuildFile; fileRef = 26CA14E62150EC42001C04B8 /* buffer_skeleton.bin */; };
+		26CA14EA2150EC43001C04B8 /* buffer_skeleton.bin in Resources */ = {isa = PBXBuildFile; fileRef = 26CA14E62150EC42001C04B8 /* buffer_skeleton.bin */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -169,6 +187,15 @@
 		26CA14C42150E225001C04B8 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		26CA14C72150E272001C04B8 /* CharacterShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = CharacterShader.metal; sourceTree = "<group>"; };
 		26CA14CA2150E3BA001C04B8 /* Prop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prop.swift; sourceTree = "<group>"; };
+		26CA14CE2150E975001C04B8 /* large-plane.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "large-plane.mtl"; sourceTree = "<group>"; };
+		26CA14CF2150E975001C04B8 /* large-plane.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "large-plane.obj"; sourceTree = "<group>"; };
+		26CA14D12150E975001C04B8 /* oilcan.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = oilcan.mtl; sourceTree = "<group>"; };
+		26CA14D22150E975001C04B8 /* oilcan.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = oilcan.obj; sourceTree = "<group>"; };
+		26CA14D42150E975001C04B8 /* racing-car.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "racing-car.mtl"; sourceTree = "<group>"; };
+		26CA14D52150E975001C04B8 /* racing-car.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "racing-car.obj"; sourceTree = "<group>"; };
+		26CA14E22150E991001C04B8 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		26CA14E52150EC42001C04B8 /* skeleton.gltf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = skeleton.gltf; sourceTree = "<group>"; };
+		26CA14E62150EC42001C04B8 /* buffer_skeleton.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = buffer_skeleton.bin; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +232,7 @@
 				26C6132521466DF300A7FD6E /* Assets.xcassets */,
 				26C6132321466DF300A7FD6E /* Renderer.swift */,
 				26AF4CC9214F53AC00798F58 /* ARKitRenderer.swift */,
+				26CA14E22150E991001C04B8 /* GameScene.swift */,
 				26C613562147DBA500A7FD6E /* Shaders */,
 				26C613572147DBB400A7FD6E /* Utility */,
 				26C6135D2148E22D00A7FD6E /* resources */,
@@ -272,8 +300,8 @@
 				26C98B01214BA9C20005A647 /* Model.swift */,
 				26C98B04214BBD600005A647 /* Submesh.swift */,
 				26C98B16214D08440005A647 /* Textureable.swift */,
-				26C613742148E94E00A7FD6E /* MathLibrary.swift */,
 				26CA14CA2150E3BA001C04B8 /* Prop.swift */,
+				26C613742148E94E00A7FD6E /* MathLibrary.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -293,6 +321,9 @@
 		26C98A88214B84AE0005A647 /* obj */ = {
 			isa = PBXGroup;
 			children = (
+				26CA14D32150E975001C04B8 /* Car */,
+				26CA14CD2150E975001C04B8 /* Ground */,
+				26CA14D02150E975001C04B8 /* Racetrack */,
 				26C98B08214BCB2A0005A647 /* train.mtl */,
 				26C98B07214BCB2A0005A647 /* train.obj */,
 				26AF4CBE214F4B5800798F58 /* plane.mtl */,
@@ -306,6 +337,8 @@
 		26C98A8B214B84AE0005A647 /* glTF */ = {
 			isa = PBXGroup;
 			children = (
+				26CA14E62150EC42001C04B8 /* buffer_skeleton.bin */,
+				26CA14E52150EC42001C04B8 /* skeleton.gltf */,
 				26C98A8C214B84AE0005A647 /* buffer_kizunaai.bin */,
 				26C98A8D214B84AE0005A647 /* BrainStem.gltf */,
 				26C98A8E214B84AE0005A647 /* skeletonWave.bin */,
@@ -347,6 +380,33 @@
 				26CA14BA2150E155001C04B8 /* GLTFTypes.swift */,
 			);
 			path = "glTF Importer";
+			sourceTree = "<group>";
+		};
+		26CA14CD2150E975001C04B8 /* Ground */ = {
+			isa = PBXGroup;
+			children = (
+				26CA14CE2150E975001C04B8 /* large-plane.mtl */,
+				26CA14CF2150E975001C04B8 /* large-plane.obj */,
+			);
+			path = Ground;
+			sourceTree = "<group>";
+		};
+		26CA14D02150E975001C04B8 /* Racetrack */ = {
+			isa = PBXGroup;
+			children = (
+				26CA14D12150E975001C04B8 /* oilcan.mtl */,
+				26CA14D22150E975001C04B8 /* oilcan.obj */,
+			);
+			path = Racetrack;
+			sourceTree = "<group>";
+		};
+		26CA14D32150E975001C04B8 /* Car */ = {
+			isa = PBXGroup;
+			children = (
+				26CA14D42150E975001C04B8 /* racing-car.mtl */,
+				26CA14D52150E975001C04B8 /* racing-car.obj */,
+			);
+			path = Car;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,16 +490,21 @@
 			files = (
 				26C98AA5214B84AE0005A647 /* skeletonWave.bin in Resources */,
 				26C98AB5214B84AE0005A647 /* tops.png in Resources */,
+				26CA14E92150EC43001C04B8 /* buffer_skeleton.bin in Resources */,
 				26AF4CBF214F4B5800798F58 /* plane.obj in Resources */,
 				26C98AA1214B84AE0005A647 /* buffer_kizunaai.bin in Resources */,
+				26CA14D62150E975001C04B8 /* large-plane.mtl in Resources */,
+				26CA14E72150EC43001C04B8 /* skeleton.gltf in Resources */,
 				26AF4CC4214F4B7000798F58 /* ground.png in Resources */,
 				26C98AB1214B84AE0005A647 /* s_hair.bmp in Resources */,
+				26CA14DA2150E975001C04B8 /* oilcan.mtl in Resources */,
 				26C98AAB214B84AE0005A647 /* readme_kizunaai.txt in Resources */,
 				26C98A9D214B84AE0005A647 /* kizunaai.mtl in Resources */,
 				26C98B0B214BCB2A0005A647 /* train.mtl in Resources */,
 				26C98A9F214B84AE0005A647 /* kizunaai.obj in Resources */,
 				26C98ABD214B84AE0005A647 /* kizunaai.dae in Resources */,
 				26C98AA9214B84AE0005A647 /* kizunaai.gltf in Resources */,
+				26CA14E02150E975001C04B8 /* racing-car.obj in Resources */,
 				26C98AA7214B84AE0005A647 /* skeletonWave.gltf in Resources */,
 				26C98AAF214B84AE0005A647 /* hair1.png in Resources */,
 				26C6134A21466DF300A7FD6E /* ShaderTypes.h in Resources */,
@@ -447,6 +512,8 @@
 				26C6133321466DF300A7FD6E /* Main.storyboard in Resources */,
 				26C6134C21466DF300A7FD6E /* Assets.xcassets in Resources */,
 				26C98AB9214B84AE0005A647 /* eye.png in Resources */,
+				26CA14DE2150E975001C04B8 /* racing-car.mtl in Resources */,
+				26CA14D82150E975001C04B8 /* large-plane.obj in Resources */,
 				26C98AA3214B84AE0005A647 /* BrainStem.gltf in Resources */,
 				26C98ABB214B84AE0005A647 /* eye2.png in Resources */,
 				26C6133621466DF300A7FD6E /* LaunchScreen.storyboard in Resources */,
@@ -454,6 +521,7 @@
 				26AF4CC1214F4B5800798F58 /* plane.mtl in Resources */,
 				26C98B09214BCB2A0005A647 /* train.obj in Resources */,
 				26C98AAD214B84AE0005A647 /* hair2.png in Resources */,
+				26CA14DC2150E975001C04B8 /* oilcan.obj in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,19 +530,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				26C98AAA214B84AE0005A647 /* kizunaai.gltf in Resources */,
+				26CA14EA2150EC43001C04B8 /* buffer_skeleton.bin in Resources */,
 				26C98AB6214B84AE0005A647 /* tops.png in Resources */,
 				26C98AA8214B84AE0005A647 /* skeletonWave.gltf in Resources */,
 				26C98AAE214B84AE0005A647 /* hair2.png in Resources */,
+				26CA14D92150E975001C04B8 /* large-plane.obj in Resources */,
 				26C98AA0214B84AE0005A647 /* kizunaai.obj in Resources */,
 				26C6134421466DF300A7FD6E /* Main.storyboard in Resources */,
+				26CA14DB2150E975001C04B8 /* oilcan.mtl in Resources */,
+				26CA14DF2150E975001C04B8 /* racing-car.mtl in Resources */,
 				26C98B0C214BCB2A0005A647 /* train.mtl in Resources */,
 				26C98AB2214B84AE0005A647 /* s_hair.bmp in Resources */,
 				26C98AB8214B84AE0005A647 /* bottoms.png in Resources */,
 				26C98B0A214BCB2A0005A647 /* train.obj in Resources */,
+				26CA14E82150EC43001C04B8 /* skeleton.gltf in Resources */,
+				26CA14DD2150E975001C04B8 /* oilcan.obj in Resources */,
 				26C98ABE214B84AE0005A647 /* kizunaai.dae in Resources */,
 				26C98AA4214B84AE0005A647 /* BrainStem.gltf in Resources */,
 				26C6134D21466DF300A7FD6E /* Assets.xcassets in Resources */,
 				26C98AB0214B84AE0005A647 /* hair1.png in Resources */,
+				26CA14E12150E975001C04B8 /* racing-car.obj in Resources */,
 				26AF4CC5214F4B7000798F58 /* ground.png in Resources */,
 				26C98AA2214B84AE0005A647 /* buffer_kizunaai.bin in Resources */,
 				26C98ABC214B84AE0005A647 /* eye2.png in Resources */,
@@ -485,6 +560,7 @@
 				26AF4CC2214F4B5800798F58 /* plane.mtl in Resources */,
 				26C98ABA214B84AE0005A647 /* eye.png in Resources */,
 				26C98AAC214B84AE0005A647 /* readme_kizunaai.txt in Resources */,
+				26CA14D72150E975001C04B8 /* large-plane.mtl in Resources */,
 				26C98AA6214B84AE0005A647 /* skeletonWave.bin in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -519,6 +595,7 @@
 				26C613722148E89000A7FD6E /* Node.swift in Sources */,
 				26C98B11214CFDB80005A647 /* DebugLighting.metal in Sources */,
 				26C98B02214BA9C20005A647 /* Model.swift in Sources */,
+				26CA14E32150E991001C04B8 /* GameScene.swift in Sources */,
 				26CA14BD2150E155001C04B8 /* GLTFAsset.swift in Sources */,
 				26CA14BF2150E155001C04B8 /* GLTFTypes.swift in Sources */,
 			);
@@ -534,6 +611,7 @@
 				26C6134721466DF300A7FD6E /* Shaders.metal in Sources */,
 				26CA14CC2150E3BA001C04B8 /* Prop.swift in Sources */,
 				26CA14B62150E117001C04B8 /* Renderable.swift in Sources */,
+				26CA14E42150E991001C04B8 /* GameScene.swift in Sources */,
 				26CA14C92150E272001C04B8 /* CharacterShader.metal in Sources */,
 				26C613702148E79600A7FD6E /* Camera.swift in Sources */,
 				26C613762148E94E00A7FD6E /* MathLibrary.swift in Sources */,

@@ -28,13 +28,14 @@ typedef struct
 
 typedef NS_ENUM(NSInteger, BufferIndex)
 {
-    BufferIndexMeshPositions     = 0,
-    BufferIndexMeshTexcoord      = 1,
-    BufferIndexMeshNormal        = 2,
-    BufferIndexLights            = 3,
-    BufferIndexUniforms          = 4,
-    BufferIndexFragmentUniforms  = 5,
-    BufferIndexMaterials         = 6
+    BufferIndexVertices          = 0,
+    BufferIndexMeshPositions     = 10,
+    BufferIndexMeshTexcoord      = 11,
+    BufferIndexMeshNormal        = 12,
+    BufferIndexLights            = 13,
+    BufferIndexUniforms          = 14,
+    BufferIndexFragmentUniforms  = 15,
+    BufferIndexMaterials         = 16
 };
 
 typedef NS_ENUM(NSInteger, VertexAttribute)

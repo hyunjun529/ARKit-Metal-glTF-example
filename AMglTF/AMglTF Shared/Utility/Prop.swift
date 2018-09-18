@@ -108,7 +108,9 @@ class Prop: Node {
         pipelineDescriptor.fragmentFunction = fragmentFunction
         pipelineDescriptor.vertexDescriptor = MTKMetalVertexDescriptorFromModelIO(vertexDescriptor)
         pipelineDescriptor.colorAttachments[0].pixelFormat = Renderer.colorPixelFormat
-        pipelineDescriptor.depthAttachmentPixelFormat = .depth32Float
+        pipelineDescriptor.depthAttachmentPixelFormat = .depth32Float_stencil8
+        pipelineDescriptor.stencilAttachmentPixelFormat = .depth32Float_stencil8
+        
         do {
             pipelineState = try Renderer.device.makeRenderPipelineState(descriptor: pipelineDescriptor)
         } catch let error {

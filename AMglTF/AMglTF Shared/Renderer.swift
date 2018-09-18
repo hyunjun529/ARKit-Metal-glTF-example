@@ -100,6 +100,10 @@ class Renderer: NSObject, MTKViewDelegate {
         mtkView(metalKitView, drawableSizeWillChange: metalKitView.bounds.size)
         
         
+        let scene = GameScene(sceneSize: metalKitView.bounds.size)
+        //    let scene = CarScene(sceneSize: metalView.bounds.size)
+        self.scene = scene
+        
         // init Models
 //        let kizunaai = Model(name: "kizunaai", format: "obj")
 //        kizunaai.position = [0, 0, 0]
@@ -182,17 +186,28 @@ class Renderer: NSObject, MTKViewDelegate {
                 renderEncoder.setDepthStencilState(Renderer.depthStencilState)
                 
                 
+                fragmentUniforms[0].cameraPosition = camera.position
+                fragmentUniforms[0].lightCount = UInt32(lights.count)
+                
                 renderEncoder.setFragmentBytes(&lights,
                                                length: MemoryLayout<Light>.stride * lights.count,
                                                index: Int(BufferIndex.lights.rawValue))
                 
+                renderEncoder.setFragmentBuffer(dynamicFragmentUniformBuffer, offset:fragmentUniformBufferOffset, index: BufferIndex.fragmentUniforms.rawValue)
                 
-                // render all the models in the array
-                fragmentUniforms[0].cameraPosition = camera.position
-                fragmentUniforms[0].lightCount = UInt32(lights.count)
                 
                 uniforms[0].projectionMatrix = camera.projectionMatrix
                 uniforms[0].viewMatrix = camera.viewMatrix
+                
+                renderEncoder.setVertexBuffer(dynamicUniformBuffer, offset:uniformBufferOffset, index: BufferIndex.uniforms.rawValue)
+                
+                
+                for renderable in scene.renderables {
+                    renderEncoder.pushDebugGroup(renderable.name)
+                    renderable.render(renderEncoder: renderEncoder,
+                                      uniforms: scene.uniforms)
+                    renderEncoder.popDebugGroup()
+                }
                 
 //                for model in models {
 //                    // model matrix now comes from the Model's superclass: Node

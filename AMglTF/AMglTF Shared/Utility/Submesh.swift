@@ -80,10 +80,10 @@ private extension Submesh {
         let functionConstants = makeFunctionConstants(textures: textures)
         
         let library = Renderer.library
-        let vertexFunction = library?.makeFunction(name: "vertex_main")
+        let vertexFunction = library?.makeFunction(name: "vertexShader")
         let fragmentFunction: MTLFunction?
         do {
-            fragmentFunction = try library?.makeFunction(name: "fragment_main",
+            fragmentFunction = try library?.makeFunction(name: "fragmentShader",
                                                          constantValues: functionConstants)
         } catch {
             fatalError("No Metal function exists")
@@ -96,7 +96,8 @@ private extension Submesh {
         
         pipelineDescriptor.vertexDescriptor = MTKMetalVertexDescriptorFromModelIO(Prop.defaultVertexDescriptor)
         pipelineDescriptor.colorAttachments[0].pixelFormat = Renderer.colorPixelFormat
-        pipelineDescriptor.depthAttachmentPixelFormat = .depth32Float
+        pipelineDescriptor.depthAttachmentPixelFormat = .depth32Float_stencil8
+        pipelineDescriptor.stencilAttachmentPixelFormat = .depth32Float_stencil8
         do {
             pipelineState = try Renderer.device.makeRenderPipelineState(descriptor: pipelineDescriptor)
         } catch let error {

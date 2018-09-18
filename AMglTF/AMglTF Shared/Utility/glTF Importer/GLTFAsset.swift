@@ -760,11 +760,13 @@ extension GLTFAsset {
       let vertexFunction = try library?.makeFunction(name: "character_vertex_main", constantValues: functionConstants)
       let fragmentFunction =  library?.makeFunction(name: "character_fragment_main")
       let descriptor = MTLRenderPipelineDescriptor()
-      descriptor.colorAttachments[0].pixelFormat = .bgra8Unorm
+      descriptor.colorAttachments[0].pixelFormat = .bgra8Unorm_srgb
       descriptor.vertexFunction = vertexFunction
       descriptor.fragmentFunction = fragmentFunction
       descriptor.vertexDescriptor = vertexDescriptor
-      descriptor.depthAttachmentPixelFormat = .depth32Float
+      descriptor.depthAttachmentPixelFormat = .depth32Float_stencil8
+      descriptor.stencilAttachmentPixelFormat = .depth32Float_stencil8
+        
       try pipelineState = Renderer.device.makeRenderPipelineState(descriptor: descriptor)
     } catch let error {
       fatalError(error.localizedDescription)
