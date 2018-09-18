@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Camera Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/Camera" class="dashAnchor"></a>
+    <a title="Camera Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">AMglTF Docs</a> (2% documented)</p>
+        <p class="header-right"><a href="https://github.com/hyunjun529/ARKit-Metal-glTF-example"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">AMglTF Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Camera Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/ARKitRenderer.html">ARKitRenderer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AppDelegate.html">AppDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Camera.html">Camera</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GameViewController.html">GameViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Lighting.html">Lighting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Model.html">Model</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Node.html">Node</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Renderer.html">Renderer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Submesh.html">Submesh</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Submesh/Textures.html">– Textures</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:6AMglTF19alignedUniformsSizeSivp">alignedUniformsSize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:6AMglTF28kAlignedInstanceUniformsSizeSivp">kAlignedInstanceUniformsSize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:6AMglTF26kAlignedSharedUniformsSizeSivp">kAlignedSharedUniformsSize</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:6AMglTF21kImagePlaneVertexDataSaySfGvp">kImagePlaneVertexData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:6AMglTF23kMaxAnchorInstanceCountSivp">kMaxAnchorInstanceCount</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:6AMglTF19kMaxBuffersInFlightSivp">kMaxBuffersInFlight</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:6AMglTF18maxBuffersInFlightSivp">maxBuffersInFlight</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:6AMglTF003BxaSfvp">π</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/RendererError.html">RendererError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Float.html">Float</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/float3x3.html">float3x3</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/float4.html">float4</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/float4x4.html">float4x4</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:6AMglTF7degrees11fromRadiansS2f_tF">degrees(fromRadians:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:6AMglTF18matrix4x4_rotation7radians4axisSo13simd_float4x4aSf_0G06float3VtF">matrix4x4_rotation(radians:axis:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:6AMglTF21matrix4x4_translationySo13simd_float4x4aSf_S2ftF">matrix4x4_translation(_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:6AMglTF29matrix_perspective_right_hand11fovyRadians11aspectRatio5nearZ4farZSo13simd_float4x4aSf_S3ftF">matrix_perspective_right_hand(fovyRadians:aspectRatio:nearZ:farZ:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:6AMglTF7radians11fromDegreesS2f_tF">radians(fromDegrees:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:6AMglTF20radians_from_degreesyS2fF">radians_from_degrees(_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/RenderDestinationProvider.html">RenderDestinationProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Texturable.html">Texturable</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Camera</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">Camera</span> <span class="p">:</span> <span class="kt"><a href="../Classes/Node.html">Node</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>this is Camera for virtual stage</p>
+
+<p>set position, rotation and scale then stored properties return View &amp; Projection Matrix</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF6CameraC10fovDegreesSfvp"></a>
+                    <a name="//apple_ref/swift/Property/fovDegrees" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF6CameraC10fovDegreesSfvp">fovDegrees</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">fovDegrees</span><span class="p">:</span> <span class="kt">Float</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF6CameraC10fovRadiansSfvp"></a>
+                    <a name="//apple_ref/swift/Property/fovRadians" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF6CameraC10fovRadiansSfvp">fovRadians</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">fovRadians</span><span class="p">:</span> <span class="kt">Float</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF6CameraC6aspectSfvp"></a>
+                    <a name="//apple_ref/swift/Property/aspect" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF6CameraC6aspectSfvp">aspect</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">aspect</span><span class="p">:</span> <span class="kt">Float</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF6CameraC4nearSfvp"></a>
+                    <a name="//apple_ref/swift/Property/near" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF6CameraC4nearSfvp">near</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">near</span><span class="p">:</span> <span class="kt">Float</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF6CameraC3farSfvp"></a>
+                    <a name="//apple_ref/swift/Property/far" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF6CameraC3farSfvp">far</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">far</span><span class="p">:</span> <span class="kt">Float</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF6CameraC16projectionMatrixSo13simd_float4x4avp"></a>
+                    <a name="//apple_ref/swift/Property/projectionMatrix" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF6CameraC16projectionMatrixSo13simd_float4x4avp">projectionMatrix</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">projectionMatrix</span><span class="p">:</span> <span class="n">float4x4</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF6CameraC10viewMatrixSo13simd_float4x4avp"></a>
+                    <a name="//apple_ref/swift/Property/viewMatrix" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF6CameraC10viewMatrixSo13simd_float4x4avp">viewMatrix</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">viewMatrix</span><span class="p">:</span> <span class="n">float4x4</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://github.com/hyunjun529/ARKit-Metal-glTF-example" target="_blank" rel="external">hyunjun529</a>. All rights reserved. (Last updated: 2018-09-18)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

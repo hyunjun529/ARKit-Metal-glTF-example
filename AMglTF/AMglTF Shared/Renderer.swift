@@ -1,5 +1,3 @@
-// Our platform independent renderer class
-
 import Metal
 import MetalKit
 

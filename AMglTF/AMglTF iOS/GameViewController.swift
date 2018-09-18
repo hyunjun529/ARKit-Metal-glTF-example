@@ -73,7 +73,6 @@ class GameViewController: UIViewController, MTKViewDelegate, ARSessionDelegate {
     }
     
     // MARK: - MTKViewDelegate
-    
     // Called whenever view changes orientation or layout is changed
     func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
         renderer.drawRectResized(size: size)

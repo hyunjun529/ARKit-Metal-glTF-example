@@ -1,6 +1,11 @@
 import Foundation
 import MetalKit
 
+/**
+ this is Camera for virtual stage
+
+ set position, rotation and scale then stored properties return View & Projection Matrix
+ */
 class Camera: Node {
     
     var fovDegrees: Float = 50

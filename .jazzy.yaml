@@ -1,0 +1,10 @@
+module: AMglTF
+author: hyunjun529
+author_url: https://github.com/hyunjun529/ARKit-Metal-glTF-example
+github_url: https://github.com/hyunjun529/ARKit-Metal-glTF-example
+
+min_acl: internal
+
+source_directory: ./AMglTF
+
+output: ./doc
