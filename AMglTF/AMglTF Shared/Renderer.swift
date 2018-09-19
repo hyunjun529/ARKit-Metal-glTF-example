@@ -91,14 +91,15 @@ class Renderer: NSObject, MTKViewDelegate {
                 semaphore.signal()
             }
             
-            dynamicBuffer.updateDynamicBufferState()
-            
             // Delay getting the currentRenderPassDescriptor until we absolutely need it to avoid
             // holding onto the drawable and blocking the display pipeline any longer than necessary
             let renderPassDescriptor = view.currentRenderPassDescriptor
             
+            dynamicBuffer.updateDynamicBufferState()
+            
             let deltaTime = 1 / Float(view.preferredFramesPerSecond)
             guard let scene = scene else { return }
+            scene.uniforms = dynamicBuffer.uniforms[dynamicBuffer.uniformBufferIndex]
             scene.update(deltaTime: deltaTime)
             
             
@@ -117,6 +118,7 @@ class Renderer: NSObject, MTKViewDelegate {
                 renderEncoder.setDepthStencilState(Renderer.depthStencilState)
                 
                 dynamicBuffer.setDynamicBufferInRenderEncoder(renderEncoder: renderEncoder)
+                
                 
                 // Set & Render(debug) light
                 dynamicBuffer.fragmentUniforms[dynamicBuffer.fragmentUniformBufferIndex].cameraPosition = camera.position

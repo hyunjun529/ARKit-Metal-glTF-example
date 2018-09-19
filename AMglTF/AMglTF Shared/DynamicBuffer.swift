@@ -73,15 +73,17 @@ class DynamicBuffer {
         
         fragmentUniformBufferIndex = (fragmentUniformBufferIndex + 1) % DynamicBuffer.maxBuffersInFlight
         
-        fragmentUniformBufferOffset = DynamicBuffer.alignedUniformsSize * uniformBufferIndex
+        fragmentUniformBufferOffset = DynamicBuffer.alignedUniformsSize * fragmentUniformBufferIndex
         
         fragmentUniforms = UnsafeMutableRawPointer(dynamicFragmentUniformBuffer.contents() + fragmentUniformBufferOffset).bindMemory(to:FragmentUniforms.self, capacity:1)
     }
  
-    
+    /**
+     
+     */
     public func setDynamicBufferInRenderEncoder(renderEncoder: MTLRenderCommandEncoder) {
-        renderEncoder.setFragmentBuffer(dynamicFragmentUniformBuffer, offset:fragmentUniformBufferOffset, index: BufferIndex.fragmentUniforms.rawValue)
+        renderEncoder.setVertexBuffer(dynamicUniformBuffer, offset:0, index: BufferIndex.uniforms.rawValue)
         
-        renderEncoder.setVertexBuffer(dynamicUniformBuffer, offset:uniformBufferOffset, index: BufferIndex.uniforms.rawValue)
+        renderEncoder.setFragmentBuffer(dynamicFragmentUniformBuffer, offset:0, index: BufferIndex.fragmentUniforms.rawValue)
     }
 }

@@ -41,7 +41,7 @@ class Scene {
     
     let rootNode = Node()
     var renderables: [Renderable] = []
-    var uniforms = Uniforms()
+    var uniforms: Uniforms!
     
     init(sceneSize: CGSize) {
         self.sceneSize = sceneSize
