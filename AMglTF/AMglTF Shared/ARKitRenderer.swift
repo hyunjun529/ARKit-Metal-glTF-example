@@ -150,7 +150,7 @@ class ARKitRenderer {
         
         // Set the default formats needed to render
         renderDestination.depthStencilPixelFormat = .depth32Float_stencil8
-        renderDestination.colorPixelFormat = .bgra8Unorm_srgb
+        renderDestination.colorPixelFormat = .bgra8Unorm
         renderDestination.sampleCount = 1
         
         // Calculate our uniform buffer sizes. We allocate kMaxBuffersInFlight instances for uniform
@@ -407,8 +407,8 @@ class ARKitRenderer {
             return
         }
         
-        capturedImageTextureY = createTexture(fromPixelBuffer: pixelBuffer, pixelFormat:.bgra8Unorm_srgb, planeIndex:0)
-        capturedImageTextureCbCr = createTexture(fromPixelBuffer: pixelBuffer, pixelFormat:.bgra8Unorm_srgb, planeIndex:1)
+        capturedImageTextureY = createTexture(fromPixelBuffer: pixelBuffer, pixelFormat:.r8Unorm, planeIndex:0)
+        capturedImageTextureCbCr = createTexture(fromPixelBuffer: pixelBuffer, pixelFormat:.rg8Unorm, planeIndex:1)
     }
     
     func createTexture(fromPixelBuffer pixelBuffer: CVPixelBuffer, pixelFormat: MTLPixelFormat, planeIndex: Int) -> CVMetalTexture? {

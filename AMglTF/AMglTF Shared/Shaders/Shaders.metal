@@ -70,13 +70,13 @@ fragment float4 fragmentShader(ColorInOut in [[stage_in]],
     } else {
         baseColor = material.baseColor;
     }
+    
     float materialShininess = material.shininess;
     float3 materialSpecularColor = material.specularColor;
     
     float3 normalValue;
     if (hasNormalTexture) {
-        normalValue = normalTexture.sample(textureSampler,
-                                           in.uv * fragmentUniforms.tiling).rgb;
+        normalValue = normalTexture.sample(textureSampler, in.uv * fragmentUniforms.tiling).rgb;
         normalValue = normalValue * 2 - 1;
     } else {
         normalValue = in.worldNormal;
@@ -87,11 +87,10 @@ fragment float4 fragmentShader(ColorInOut in [[stage_in]],
     float3 ambientColor = 0;
     float3 specularColor = 0;
     
+    float3 normalDirection = in.worldNormal * normalValue.z + in.worldTangent * normalValue.x + in.worldBitangent * normalValue.y;
     
-    float3 normalDirection = in.worldNormal * normalValue.z
-    + in.worldTangent * normalValue.x
-    + in.worldBitangent * normalValue.y;
     normalDirection = normalize(normalDirection);
+    
     for (uint i = 0; i < fragmentUniforms.lightCount; i++) {
         Light light = lights[i];
         if (light.type == LightTypeSunlight) {
@@ -133,7 +132,9 @@ fragment float4 fragmentShader(ColorInOut in [[stage_in]],
             }
         }
     }
+    
     float3 color = diffuseColor + ambientColor + specularColor;
+    
     return float4(color, 1);
 }
 
