@@ -97,8 +97,7 @@ class ARKitRenderer {
     }
     
     func update() {
-        // Wait to ensure only kMaxBuffersInFlight are getting proccessed by any stage in the Metal
-        //   pipeline (App, Metal, Drivers, GPU, etc)
+        // Wait to ensure only kMaxBuffersInFlight are getting proccessed by any stage in the Metal pipeline (App, Metal, Drivers, GPU, etc)
         let _ = inFlightSemaphore.wait(timeout: DispatchTime.distantFuture)
         
         // Create a new command buffer for each renderpass to the current drawable
@@ -153,17 +152,13 @@ class ARKitRenderer {
         renderDestination.colorPixelFormat = .bgra8Unorm
         renderDestination.sampleCount = 1
         
-        // Calculate our uniform buffer sizes. We allocate kMaxBuffersInFlight instances for uniform
-        //   storage in a single buffer. This allows us to update uniforms in a ring (i.e. triple
-        //   buffer the uniforms) so that the GPU reads from one slot in the ring wil the CPU writes
-        //   to another. Anchor uniforms should be specified with a max instance count for instancing.
-        //   Also uniform storage must be aligned (to 256 bytes) to meet the requirements to be an
-        //   argument in the constant address space of our shading functions.
+        // Calculate our uniform buffer sizes. We allocate kMaxBuffersInFlight instances for uniform storage in a single buffer.
+        // This allows us to update uniforms in a ring (i.e. triple buffer the uniforms) so that the GPU reads from one slot in the ring wil the CPU writes to another. Anchor uniforms should be specified with a max instance count for instancing.
+        //   Also uniform storage must be aligned (to 256 bytes) to meet the requirements to be an argument in the constant address space of our shading functions.
         let sharedUniformBufferSize = kAlignedSharedUniformsSize * kMaxBuffersInFlight
         let anchorUniformBufferSize = kAlignedInstanceUniformsSize * kMaxBuffersInFlight
         
-        // Create and allocate our uniform buffer objects. Indicate shared storage so that both the
-        //   CPU can access the buffer
+        // Create and allocate our uniform buffer objects. Indicate shared storage so that both the CPU can access the buffer
         sharedUniformBuffer = device.makeBuffer(length: sharedUniformBufferSize, options: .storageModeShared)
         sharedUniformBuffer.label = "SharedUniformBuffer"
         
@@ -229,10 +224,7 @@ class ARKitRenderer {
         let anchorGeometryVertexFunction = defaultLibrary.makeFunction(name: "anchorGeometryVertexTransform")!
         let anchorGeometryFragmentFunction = defaultLibrary.makeFunction(name: "anchorGeometryFragmentLighting")!
         
-        // Create a vertex descriptor for our Metal pipeline. Specifies the layout of vertices the
-        //   pipeline should expect. The layout below keeps attributes used to calculate vertex shader
-        //   output position separate (world position, skinning, tweening weights) separate from other
-        //   attributes (texture coordinates, normals).  This generally maximizes pipeline efficiency
+        // Create a vertex descriptor for our Metal pipeline. Specifies the layout of vertices the pipeline should expect. The layout below keeps attributes used to calculate vertex shader output position separate (world position, skinning, tweening weights) separate from other attributes (texture coordinates, normals).  This generally maximizes pipeline efficiency
         geometryVertexDescriptor = MTLVertexDescriptor()
         
         // Positions.

@@ -231,6 +231,20 @@
 			path = "racing-car";
 			sourceTree = "<group>";
 		};
+		266F88042152413500CFC34B /* ARKit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ARKit;
+			sourceTree = "<group>";
+		};
+		266F88052152414700CFC34B /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
 		26C6131C21466DF200A7FD6E = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +264,8 @@
 				26680C9D215205280078624C /* DynamicBuffer.swift */,
 				26CA14E22150E991001C04B8 /* GameScene.swift */,
 				26C613562147DBA500A7FD6E /* Shaders */,
+				266F88042152413500CFC34B /* ARKit */,
+				266F88052152414700CFC34B /* Scene */,
 				26C613572147DBB400A7FD6E /* Utility */,
 				26C6135D2148E22D00A7FD6E /* resources */,
 			);
