@@ -58,10 +58,7 @@ class Renderer: NSObject, MTKViewDelegate {
         
         
         let lighting = Lighting()
-        lights.append(lighting.sunlight)
-        lights.append(lighting.ambientLight)
-        lights.append(lighting.redLight)
-        lights.append(lighting.blueLight)
+        lights = lighting.lighting()
     }
     
     

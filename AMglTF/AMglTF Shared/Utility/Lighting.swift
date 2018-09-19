@@ -16,6 +16,27 @@ class Lighting: Node
         return light
     }
     
+    func lighting() -> [Light] {
+        var lights: [Light] = []
+        
+        var light = buildDefaultLight()
+        light.position = [-1, 0.5, -2]
+        light.intensity = 2.0
+        lights.append(light)
+        
+        light = buildDefaultLight()
+        light.position = [0, 1, 2]
+        light.intensity = 0.2
+        lights.append(light)
+        
+        light = buildDefaultLight()
+        light.type = LightType.ambientlight
+        light.intensity = 0.1
+        lights.append(light)
+        
+        return lights
+    }
+    
     lazy var sunlight: Light = {
         var light = buildDefaultLight()
         light.position = [1, 1, 1]

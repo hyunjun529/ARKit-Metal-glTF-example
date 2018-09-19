@@ -35,7 +35,7 @@ import CoreGraphics
 class GameScene: Scene {
     let ground = Prop(name: "large-plane")
     let car = Prop(name: "racing-car")
-    let kizuna = Prop(name: "kizunaai")
+    let train = Prop(name: "train")
     let skeleton = Character(name: "skeleton")
     var inCar = false
     let orthoCamera = OrthographicCamera()
@@ -44,16 +44,12 @@ class GameScene: Scene {
         ground.tiling = 32
         add(node: ground)
         
-        car.rotation = [0, radians(fromDegrees: 90), 0]
-        car.position = [-0.8, 0, 0]
-        add(node: car)
+        train.rotation = [0, radians(fromDegrees: 180), 0]
+        train.position = [2.2, 0, 1]
+        add(node: train)
         
-        kizuna.rotation = [0, radians(fromDegrees: 180), 0]
-        kizuna.position = [1.8, 0, 0]
-        add(node: kizuna)
-        
-        car.rotation = [0, radians(fromDegrees: 90), 0]
-        car.position = [-0.8, 0, 0]
+        car.rotation = [0, radians(fromDegrees: 180), 0]
+        car.position = [-0.8, 0, 0.5]
         add(node: car)
         
         skeleton.position = [1.2, 0, 0]
