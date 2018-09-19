@@ -29,6 +29,7 @@
  */
 
 import Foundation
+import CoreGraphics
 
 class Scene {
     var sceneSize: CGSize

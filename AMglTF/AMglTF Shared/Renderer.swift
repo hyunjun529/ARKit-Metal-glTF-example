@@ -1,6 +1,6 @@
 import Metal
 import MetalKit
-
+import CoreGraphics
 
 /**
  Renderer for Virtual Stage(no AR)
@@ -17,21 +17,10 @@ class Renderer: NSObject, MTKViewDelegate {
     static var library: MTLLibrary?
     
     var dynamicBuffer: DynamicBuffer
-
-    lazy var camera: Camera = {
-        let camera = Camera()
-        camera.position = [0, 2, -8]
-        return camera
-    }()
     
     var scene: Scene?
     
     var lights: [Light] = []
-    
-    /// Debug drawing of lights
-    lazy var lightPipelineState: MTLRenderPipelineState = {
-        return buildLightPipelineState()
-    }()
     
     
     init?(metalKitView: MTKView) {
@@ -119,17 +108,12 @@ class Renderer: NSObject, MTKViewDelegate {
                 
                 dynamicBuffer.setDynamicBufferInRenderEncoder(renderEncoder: renderEncoder)
                 
-                
-                // Set & Render(debug) light
-                dynamicBuffer.fragmentUniforms[dynamicBuffer.fragmentUniformBufferIndex].cameraPosition = camera.position
+                dynamicBuffer.fragmentUniforms[dynamicBuffer.fragmentUniformBufferIndex].cameraPosition = scene.camera.position
                 dynamicBuffer.fragmentUniforms[dynamicBuffer.fragmentUniformBufferIndex].lightCount = UInt32(lights.count)
                 
                 renderEncoder.setFragmentBytes(&lights,
                                                length: MemoryLayout<Light>.stride * lights.count,
                                                index: Int(BufferIndex.lights.rawValue))
-                
-                debugLights(renderEncoder: renderEncoder, lightType: LightType.pointlight)
-                
                 
                 // Render Scene
                 for renderable in scene.renderables {
@@ -155,6 +139,5 @@ class Renderer: NSObject, MTKViewDelegate {
     
     func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
         scene?.sceneSizeWillChange(to: size)
-        camera.aspect = Float(view.bounds.width)/Float(view.bounds.height)
     }
 }

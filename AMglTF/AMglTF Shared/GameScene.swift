@@ -29,6 +29,8 @@
  */
 
 import Foundation
+import CoreGraphics
+
 
 class GameScene: Scene {
     let ground = Prop(name: "large-plane")
