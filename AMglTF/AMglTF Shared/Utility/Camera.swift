@@ -109,5 +109,3 @@ extension Renderer {
         scene.camera.rotation.y -= Float(translation.x) * sensitivity
     }
 }
-
-

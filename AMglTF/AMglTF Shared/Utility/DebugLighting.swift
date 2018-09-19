@@ -84,8 +84,8 @@ extension Renderer {
         let buffer = Renderer.device.makeBuffer(bytes: &vertices,
                                                 length: MemoryLayout<float3>.stride * vertices.count,
                                                 options: [])
-        uniforms[0].modelMatrix = float4x4.identity()
-        renderEncoder.setVertexBytes(&uniforms,
+        dynamicBuffer.uniforms[dynamicBuffer.uniformBufferIndex].modelMatrix = float4x4.identity()
+        renderEncoder.setVertexBytes(&dynamicBuffer.uniforms,
                                      length: MemoryLayout<Uniforms>.stride, index: 1)
         var lightColor = color
         renderEncoder.setFragmentBytes(&lightColor, length: MemoryLayout<float3>.stride, index: 1)
@@ -109,8 +109,8 @@ extension Renderer {
         let buffer = Renderer.device.makeBuffer(bytes: &vertices,
                                                 length: MemoryLayout<float3>.stride * vertices.count,
                                                 options: [])
-        uniforms[0].modelMatrix = float4x4.identity()
-        renderEncoder.setVertexBytes(&uniforms,
+        dynamicBuffer.uniforms[dynamicBuffer.uniformBufferIndex].modelMatrix = float4x4.identity()
+        renderEncoder.setVertexBytes(&dynamicBuffer.uniforms,
                                      length: MemoryLayout<Uniforms>.stride, index: 1)
         var lightColor = color
         renderEncoder.setFragmentBytes(&lightColor, length: MemoryLayout<float3>.stride, index: 1)
@@ -128,8 +128,8 @@ extension Renderer {
         let buffer = Renderer.device.makeBuffer(bytes: &vertices,
                                                 length: MemoryLayout<float3>.stride * vertices.count,
                                                 options: [])
-        uniforms[0].modelMatrix = float4x4.identity()
-        renderEncoder.setVertexBytes(&uniforms,
+        dynamicBuffer.uniforms[dynamicBuffer.uniformBufferIndex].modelMatrix = float4x4.identity()
+        renderEncoder.setVertexBytes(&dynamicBuffer.uniforms,
                                      length: MemoryLayout<Uniforms>.stride, index: 1)
         var lightColor = color
         renderEncoder.setFragmentBytes(&lightColor, length: MemoryLayout<float3>.stride, index: 1)

@@ -33,6 +33,7 @@ import Foundation
 class GameScene: Scene {
     let ground = Prop(name: "large-plane")
     let car = Prop(name: "racing-car")
+    let kizuna = Prop(name: "kizunaai")
     let skeleton = Character(name: "skeleton")
     var inCar = false
     let orthoCamera = OrthographicCamera()
@@ -40,27 +41,40 @@ class GameScene: Scene {
     override func setupScene() {        
         ground.tiling = 32
         add(node: ground)
+        
         car.rotation = [0, radians(fromDegrees: 90), 0]
         car.position = [-0.8, 0, 0]
         add(node: car)
+        
+        kizuna.rotation = [0, radians(fromDegrees: 180), 0]
+        kizuna.position = [1.8, 0, 0]
+        add(node: kizuna)
+        
+        car.rotation = [0, radians(fromDegrees: 90), 0]
+        car.position = [-0.8, 0, 0]
+        add(node: car)
+        
         skeleton.position = [1.2, 0, 0]
         add(node: skeleton)
         skeleton.runAnimation(name: "Armature_walk")
         skeleton.currentAnimation?.speed = 3.0
         skeleton.pauseAnimation()
-        camera.position = [0, 1.2, -4]
-        
         
         orthoCamera.position = [0, 2, 0]
-        //orthoCamera.rotation.x = .pi / 2
+        orthoCamera.rotation.x = .pi / 2
         cameras.append(orthoCamera)
         
         let tpCamera = ThirdPersonCamera(focus: skeleton)
         cameras.append(tpCamera)
+        
+        let normalCamera = Camera()
+        cameras.append(normalCamera)
+        
         currentCameraIndex = 2
     }
     
     override func updateScene(deltaTime: Float) {
+        skeleton.resumeAnimation()
     }
     
     override func sceneSizeWillChange(to size: CGSize) {

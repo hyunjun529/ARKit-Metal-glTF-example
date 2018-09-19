@@ -13,6 +13,10 @@
 		26680C982151059C0078624C /* car-roughness.png in Resources */ = {isa = PBXBuildFile; fileRef = 26680C932151059C0078624C /* car-roughness.png */; };
 		26680C992151059C0078624C /* Car_Diff.png in Resources */ = {isa = PBXBuildFile; fileRef = 26680C942151059C0078624C /* Car_Diff.png */; };
 		26680C9A2151059C0078624C /* Car_Diff.png in Resources */ = {isa = PBXBuildFile; fileRef = 26680C942151059C0078624C /* Car_Diff.png */; };
+		26680C9B215106DA0078624C /* ShaderTypes.h in Sources */ = {isa = PBXBuildFile; fileRef = 26C6132421466DF300A7FD6E /* ShaderTypes.h */; };
+		26680C9C215106DA0078624C /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6136E2148E79600A7FD6E /* Camera.swift */; };
+		26680C9E215205280078624C /* DynamicBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26680C9D215205280078624C /* DynamicBuffer.swift */; };
+		26680C9F215205280078624C /* DynamicBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26680C9D215205280078624C /* DynamicBuffer.swift */; };
 		26AF4CBF214F4B5800798F58 /* plane.obj in Resources */ = {isa = PBXBuildFile; fileRef = 26AF4CBD214F4B5800798F58 /* plane.obj */; };
 		26AF4CC0214F4B5800798F58 /* plane.obj in Resources */ = {isa = PBXBuildFile; fileRef = 26AF4CBD214F4B5800798F58 /* plane.obj */; };
 		26AF4CC1214F4B5800798F58 /* plane.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 26AF4CBE214F4B5800798F58 /* plane.mtl */; };
@@ -35,7 +39,6 @@
 		26C6134921466DF300A7FD6E /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6132321466DF300A7FD6E /* Renderer.swift */; };
 		26C6134A21466DF300A7FD6E /* ShaderTypes.h in Resources */ = {isa = PBXBuildFile; fileRef = 26C6132421466DF300A7FD6E /* ShaderTypes.h */; };
 		26C6134B21466DF300A7FD6E /* ShaderTypes.h in Resources */ = {isa = PBXBuildFile; fileRef = 26C6132421466DF300A7FD6E /* ShaderTypes.h */; };
-		26C6136F2148E79600A7FD6E /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6136E2148E79600A7FD6E /* Camera.swift */; };
 		26C613702148E79600A7FD6E /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6136E2148E79600A7FD6E /* Camera.swift */; };
 		26C613722148E89000A7FD6E /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C613712148E89000A7FD6E /* Node.swift */; };
 		26C613732148E89000A7FD6E /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C613712148E89000A7FD6E /* Node.swift */; };
@@ -74,8 +77,6 @@
 		26C98ABC214B84AE0005A647 /* eye2.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A9A214B84AE0005A647 /* eye2.png */; };
 		26C98ABD214B84AE0005A647 /* kizunaai.dae in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A9C214B84AE0005A647 /* kizunaai.dae */; };
 		26C98ABE214B84AE0005A647 /* kizunaai.dae in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A9C214B84AE0005A647 /* kizunaai.dae */; };
-		26C98B02214BA9C20005A647 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C98B01214BA9C20005A647 /* Model.swift */; };
-		26C98B03214BA9C30005A647 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C98B01214BA9C20005A647 /* Model.swift */; };
 		26C98B05214BBD600005A647 /* Submesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C98B04214BBD600005A647 /* Submesh.swift */; };
 		26C98B06214BBD600005A647 /* Submesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C98B04214BBD600005A647 /* Submesh.swift */; };
 		26C98B09214BCB2A0005A647 /* train.obj in Resources */ = {isa = PBXBuildFile; fileRef = 26C98B07214BCB2A0005A647 /* train.obj */; };
@@ -134,6 +135,7 @@
 		26680C922151059C0078624C /* Car_Normal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Car_Normal.jpg; sourceTree = "<group>"; };
 		26680C932151059C0078624C /* car-roughness.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "car-roughness.png"; sourceTree = "<group>"; };
 		26680C942151059C0078624C /* Car_Diff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Car_Diff.png; sourceTree = "<group>"; };
+		26680C9D215205280078624C /* DynamicBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicBuffer.swift; sourceTree = "<group>"; };
 		26AF4CBD214F4B5800798F58 /* plane.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = plane.obj; path = "AMglTF Shared/resources/obj/plane.obj"; sourceTree = SOURCE_ROOT; };
 		26AF4CBE214F4B5800798F58 /* plane.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = plane.mtl; path = "AMglTF Shared/resources/obj/plane.mtl"; sourceTree = SOURCE_ROOT; };
 		26AF4CC3214F4B7000798F58 /* ground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ground.png; sourceTree = "<group>"; };
@@ -178,7 +180,6 @@
 		26C98A99214B84AE0005A647 /* eye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eye.png; sourceTree = "<group>"; };
 		26C98A9A214B84AE0005A647 /* eye2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eye2.png; sourceTree = "<group>"; };
 		26C98A9C214B84AE0005A647 /* kizunaai.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = kizunaai.dae; sourceTree = "<group>"; };
-		26C98B01214BA9C20005A647 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		26C98B04214BBD600005A647 /* Submesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Submesh.swift; sourceTree = "<group>"; };
 		26C98B07214BCB2A0005A647 /* train.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = train.obj; sourceTree = "<group>"; };
 		26C98B08214BCB2A0005A647 /* train.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = train.mtl; sourceTree = "<group>"; };
@@ -265,6 +266,7 @@
 				26C6132521466DF300A7FD6E /* Assets.xcassets */,
 				26C6132321466DF300A7FD6E /* Renderer.swift */,
 				26AF4CC9214F53AC00798F58 /* ARKitRenderer.swift */,
+				26680C9D215205280078624C /* DynamicBuffer.swift */,
 				26CA14E22150E991001C04B8 /* GameScene.swift */,
 				26C613562147DBA500A7FD6E /* Shaders */,
 				26C613572147DBB400A7FD6E /* Utility */,
@@ -330,7 +332,6 @@
 				26C98B0D214CEC230005A647 /* Lighting.swift */,
 				26C98B13214CFE030005A647 /* DebugLighting.swift */,
 				26CA14C42150E225001C04B8 /* Character.swift */,
-				26C98B01214BA9C20005A647 /* Model.swift */,
 				26C98B04214BBD600005A647 /* Submesh.swift */,
 				26C98B16214D08440005A647 /* Textureable.swift */,
 				26CA14CA2150E3BA001C04B8 /* Prop.swift */,
@@ -604,6 +605,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26680C9B215106DA0078624C /* ShaderTypes.h in Sources */,
+				26680C9C215106DA0078624C /* Camera.swift in Sources */,
 				26CA14CB2150E3BA001C04B8 /* Prop.swift in Sources */,
 				26CA14C22150E1F3001C04B8 /* Animation.swift in Sources */,
 				26C6134821466DF300A7FD6E /* Renderer.swift in Sources */,
@@ -611,7 +614,6 @@
 				26C98B0E214CEC230005A647 /* Lighting.swift in Sources */,
 				26C6134621466DF300A7FD6E /* Shaders.metal in Sources */,
 				26CA14B52150E117001C04B8 /* Renderable.swift in Sources */,
-				26C6136F2148E79600A7FD6E /* Camera.swift in Sources */,
 				26AF4CCC214F55CD00798F58 /* ARKitShader.metal in Sources */,
 				26AF4CC7214F4FB800798F58 /* RendererARKitExtensions.swift in Sources */,
 				26AF4CCA214F53AC00798F58 /* ARKitRenderer.swift in Sources */,
@@ -626,7 +628,7 @@
 				26C6132E21466DF300A7FD6E /* AppDelegate.swift in Sources */,
 				26C613722148E89000A7FD6E /* Node.swift in Sources */,
 				26C98B11214CFDB80005A647 /* DebugLighting.metal in Sources */,
-				26C98B02214BA9C20005A647 /* Model.swift in Sources */,
+				26680C9E215205280078624C /* DynamicBuffer.swift in Sources */,
 				26CA14E32150E991001C04B8 /* GameScene.swift in Sources */,
 				26CA14BD2150E155001C04B8 /* GLTFAsset.swift in Sources */,
 				26CA14BF2150E155001C04B8 /* GLTFTypes.swift in Sources */,
@@ -637,6 +639,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26680C9F215205280078624C /* DynamicBuffer.swift in Sources */,
 				26C6134921466DF300A7FD6E /* Renderer.swift in Sources */,
 				26C98B0F214CEC230005A647 /* Lighting.swift in Sources */,
 				26CA14BE2150E155001C04B8 /* GLTFAsset.swift in Sources */,
@@ -659,7 +662,6 @@
 				26CA14BC2150E155001C04B8 /* GLTFMathLibrary.swift in Sources */,
 				26C98B12214CFDB80005A647 /* DebugLighting.metal in Sources */,
 				26CA14B32150E0E9001C04B8 /* Scene.swift in Sources */,
-				26C98B03214BA9C30005A647 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
