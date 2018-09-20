@@ -13,20 +13,9 @@ protocol RenderDestinationProvider {
 // The max number of command buffers in flight
 let kMaxBuffersInFlight: Int = 3
 
-// The max number anchors our uniform buffer will hold
-let kMaxAnchorInstanceCount: Int = 64
-
 // The 16 byte aligned size of our uniform structures
 let kAlignedSharedUniformsSize: Int = (MemoryLayout<SharedUniforms>.size & ~0xFF) + 0x100
 let kAlignedInstanceUniformsSize: Int = ((MemoryLayout<InstanceUniforms>.size * kMaxAnchorInstanceCount) & ~0xFF) + 0x100
-
-// Vertex data for an image plane
-let kImagePlaneVertexData: [Float] = [
-    -1.0, -1.0,  0.0, 1.0,
-    1.0, -1.0,  1.0, 1.0,
-    -1.0,  1.0,  0.0, 0.0,
-    1.0,  1.0,  1.0, 0.0,
-]
 
 
 class ARKitRenderer {
@@ -61,16 +50,10 @@ class ARKitRenderer {
     //   This is the current frame number modulo kMaxBuffersInFlight
     var uniformBufferIndex: Int = 0
     
-    // Offset within _sharedUniformBuffer to set for the current frame
     var sharedUniformBufferOffset: Int = 0
-    
-    // Offset within _anchorUniformBuffer to set for the current frame
     var anchorUniformBufferOffset: Int = 0
     
-    // Addresses to write shared uniforms to each frame
     var sharedUniformBufferAddress: UnsafeMutableRawPointer!
-    
-    // Addresses to write anchor uniforms to each frame
     var anchorUniformBufferAddress: UnsafeMutableRawPointer!
     
     // The number of anchor instances to render
@@ -113,6 +96,7 @@ class ARKitRenderer {
             //   are retained. Since we may release our CVMetalTexture ivars during the rendering
             //   cycle, we must retain them separately here.
             var textures = [capturedImageTextureY, capturedImageTextureCbCr]
+            
             commandBuffer.addCompletedHandler{ [weak self] commandBuffer in
                 if let strongSelf = self {
                     strongSelf.inFlightSemaphore.signal()

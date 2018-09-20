@@ -27,7 +27,7 @@ class Renderer: NSObject, MTKViewDelegate {
         Renderer.device = metalKitView.device!
         
         metalKitView.depthStencilPixelFormat = MTLPixelFormat.depth32Float_stencil8
-        metalKitView.colorPixelFormat = MTLPixelFormat.bgra8Unorm_srgb
+        metalKitView.colorPixelFormat = MTLPixelFormat.bgra8Unorm
         metalKitView.sampleCount = 1
         
         let depthStateDesciptor = MTLDepthStencilDescriptor()
