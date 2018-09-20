@@ -266,11 +266,12 @@
 			children = (
 				26CA14B12150E0E9001C04B8 /* Scene.swift */,
 				26C613712148E89000A7FD6E /* Node.swift */,
-				26CA14C12150E1F3001C04B8 /* Animation.swift */,
+				26C6136E2148E79600A7FD6E /* Camera.swift */,
+				26CA14CA2150E3BA001C04B8 /* Prop.swift */,
 				26CA14C42150E225001C04B8 /* Character.swift */,
 				26C98B04214BBD600005A647 /* Submesh.swift */,
 				26C98B16214D08440005A647 /* Textureable.swift */,
-				26CA14CA2150E3BA001C04B8 /* Prop.swift */,
+				26CA14C12150E1F3001C04B8 /* Animation.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -352,7 +353,6 @@
 				26C613742148E94E00A7FD6E /* MathLibrary.swift */,
 				26680C9D215205280078624C /* DynamicBuffer.swift */,
 				26CA14B42150E117001C04B8 /* Renderable.swift */,
-				26C6136E2148E79600A7FD6E /* Camera.swift */,
 				26C98B0D214CEC230005A647 /* Lighting.swift */,
 				26C98B13214CFE030005A647 /* DebugLighting.swift */,
 			);

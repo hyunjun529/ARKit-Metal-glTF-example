@@ -73,19 +73,52 @@ extension GameViewController {
     func addGestureRecognizer(to view: NSView) {
         let pan = NSPanGestureRecognizer(target: self, action: #selector(handlePan(gesture:)))
         view.addGestureRecognizer(pan)
+        
+        let rot = NSRotationGestureRecognizer(target: self, action: #selector(handleRot(gesture:)))
+        view.addGestureRecognizer(rot)
+        
+        let click = NSClickGestureRecognizer(target: self, action: #selector(handleClick(gesture:)))
+        view.addGestureRecognizer(click)
+        
+        let pinch = NSMagnificationGestureRecognizer(target: self, action: #selector(handlePinch(gesture:)))
+        view.addGestureRecognizer(pinch)
     }
     
+    // dolly, truck
     @objc func handlePan(gesture: NSPanGestureRecognizer) {
+        // need to change rotation to translation
+        print("Pan!")
         let translation = float2(Float(gesture.translation(in: gesture.view).x),
                                  Float(gesture.translation(in: gesture.view).y))
         
-        renderer?.rotateUsing(translation: translation)
+        renderer?.translateUsing(translation: translation)
         gesture.setTranslation(.zero, in: gesture.view)
     }
     
-    override func scrollWheel(with event: NSEvent) {
+    // Rotation
+    @objc func handleRot(gesture: NSRotationGestureRecognizer) {
+        print("Rot!")
+    }
+    
+    // click
+    @objc func handleClick(gesture: NSClickGestureRecognizer) {
+        print("Click!")
+    }
+    
+    // zoom
+    @objc func handlePinch(gesture: NSMagnificationGestureRecognizer) {
+        print("Pinch!")
         let sensitivity: Float = 0.1
-        renderer?.zoomUsing(delta: event.deltaY,
+        renderer?.zoomUsing(delta: gesture.magnification,
                             sensitivity: sensitivity)
+    }
+    
+    // pan, tilt
+    override func scrollWheel(with event: NSEvent) {
+        print("Scroll!")
+        let translation = float2(Float(event.deltaX),
+                                 Float(event.deltaY))
+        
+        renderer?.rotateUsing(translation: translation)
     }
 }

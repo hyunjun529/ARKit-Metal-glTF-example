@@ -68,7 +68,7 @@ class GameScene: Scene {
         let normalCamera = Camera()
         cameras.append(normalCamera)
         
-        currentCameraIndex = 2
+        currentCameraIndex = 1
     }
     
     override func updateScene(deltaTime: Float) {

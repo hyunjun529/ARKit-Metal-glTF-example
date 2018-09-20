@@ -109,4 +109,11 @@ extension Renderer {
         scene.camera.rotation.x += Float(translation.y) * sensitivity
         scene.camera.rotation.y -= Float(translation.x) * sensitivity
     }
+    
+    func translateUsing(translation: float2) {
+        guard let scene = scene else { return }
+        let sensitivity: Float = 0.01
+        scene.camera.position.x += Float(translation.y) * sensitivity
+        scene.camera.position.y -= Float(translation.x) * sensitivity
+    }
 }

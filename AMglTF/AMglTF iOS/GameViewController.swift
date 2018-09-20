@@ -100,13 +100,25 @@ import ARKit
 //}
 
 // Our iOS specific view controller
-class GameViewController: UIViewController {
+class GameViewController: UIViewController, ARSessionDelegate {
     
     var renderer: Renderer!
     var mtkView: MTKView!
+    var session: ARSession!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Set the view's delegate
+        session = ARSession()
+        session.delegate = self
+        
+        // Create a session configuration
+        let configuration = ARWorldTrackingConfiguration()
+
+        // Run the view's session
+        session.run(configuration)
+        
         
         guard let mtkView = self.view as? MTKView else {
             print("View of Gameview controller is not an MTKView")
@@ -135,39 +147,24 @@ class GameViewController: UIViewController {
         
         mtkView.delegate = renderer
     }
+    
+    // MARK: - ARSessionDelegate
+    func session(_ session: ARSession, didFailWithError error: Error) {
+        // Present an error message to the user
+    }
+
+    func sessionWasInterrupted(_ session: ARSession) {
+        // Inform the user that the session has been interrupted, for example, by presenting an overlay
+    }
+
+    func sessionInterruptionEnded(_ session: ARSession) {
+        // Reset tracking and/or remove existing anchors if consistent tracking is required
+    }
 }
 
-
 /**
- * Copyright (c) 2018 Razeware LLC
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
- * distribute, sublicense, create a derivative work, and/or sell copies of the
- * Software in any work that is designed, intended, or marketed for pedagogical or
- * instructional purposes related to programming, coding, application development,
- * or information technology.  Permission for such use, copying, modification,
- * merger, publication, distribution, sublicensing, creation of derivative works,
- * or sale is expressly withheld.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
+ for Input Event
  */
-
 extension GameViewController {
     static var previousScale: CGFloat = 1
     
@@ -179,6 +176,10 @@ extension GameViewController {
         let pinch = UIPinchGestureRecognizer(target: self,
                                              action: #selector(handlePinch(gesture:)))
         view.addGestureRecognizer(pinch)
+        
+        let tap = UITapGestureRecognizer(target: self,
+                                                action: #selector(handleTap(gestureRecognize:)))
+        view.addGestureRecognizer(tap)
     }
     
     @objc func handlePan(gesture: UIPanGestureRecognizer) {
@@ -188,6 +189,23 @@ extension GameViewController {
         gesture.setTranslation(.zero, in: gesture.view)
     }
     
+    @objc func handleTap(gestureRecognize: UITapGestureRecognizer) {
+        // Create anchor using the camera's current position
+        if let currentFrame = session.currentFrame {
+
+            // Create a transform with a translation of 0.2 meters in front of the camera
+            var translation = matrix_identity_float4x4
+            translation.columns.3.z = -0.2
+            let transform = simd_mul(currentFrame.camera.transform, translation)
+
+            // Add a new anchor to the session
+            let anchor = ARAnchor(transform: transform)
+            session.add(anchor: anchor)
+            
+            print("TAP!", transform)
+        }
+    }
+
     @objc func handlePinch(gesture: UIPinchGestureRecognizer) {
         let sensitivity: Float = 0.8
         renderer?.zoomUsing(delta: gesture.scale - GameViewController.previousScale,
