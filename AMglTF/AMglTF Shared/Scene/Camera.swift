@@ -39,19 +39,27 @@ class Camera: Node {
 extension Renderer {
     func zoomUsing(delta: CGFloat, sensitivity: Float) {
         guard let scene = scene else { return }
-        scene.camera.position.z += Float(delta) * sensitivity
+        
+        
+        var current: float3 = scene.camera.position
+        current += scene.camera.quaternion.axis * float3(0, 0, Float(delta) * sensitivity)
+        scene.camera.position = current
     }
     
     func rotateUsing(translation: float2) {
         guard let scene = scene else { return }
+        
         let sensitivity: Float = 0.01
+        
         scene.camera.rotation.x += Float(translation.y) * sensitivity
         scene.camera.rotation.y -= Float(translation.x) * sensitivity
     }
     
     func translateUsing(translation: float2) {
         guard let scene = scene else { return }
+        
         let sensitivity: Float = 0.01
+        
         scene.camera.position.x += Float(translation.x) * sensitivity
         scene.camera.position.y -= Float(translation.y) * sensitivity
     }
