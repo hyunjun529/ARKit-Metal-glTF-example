@@ -183,10 +183,20 @@ extension GameViewController {
     }
     
     @objc func handlePan(gesture: UIPanGestureRecognizer) {
-        let translation = float2(Float(gesture.translation(in: gesture.view).x),
-                                 Float(gesture.translation(in: gesture.view).y))
-        renderer?.rotateUsing(translation: translation)
-        gesture.setTranslation(.zero, in: gesture.view)
+        if(gesture.numberOfTouches == 2)
+        {
+            let translation = float2(Float(gesture.translation(in: gesture.view).x),
+                                     Float(gesture.translation(in: gesture.view).y))
+            renderer?.translateUsing(translation: translation)
+            gesture.setTranslation(.zero, in: gesture.view)
+        }
+        else
+        {
+            let translation = float2(Float(gesture.translation(in: gesture.view).x),
+                                     Float(gesture.translation(in: gesture.view).y))
+            renderer?.rotateUsing(translation: translation)
+            gesture.setTranslation(.zero, in: gesture.view)
+        }
     }
     
     @objc func handleTap(gestureRecognize: UITapGestureRecognizer) {

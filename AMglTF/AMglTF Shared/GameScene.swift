@@ -38,7 +38,6 @@ class GameScene: Scene {
     let train = Prop(name: "train")
     let skeleton = Character(name: "skeleton")
     var inCar = false
-    let orthoCamera = OrthographicCamera()
     
     override func setupScene() {        
         ground.tiling = 32
@@ -58,14 +57,9 @@ class GameScene: Scene {
         skeleton.currentAnimation?.speed = 3.0
         skeleton.pauseAnimation()
         
-        orthoCamera.position = [0, 2, 0]
-        orthoCamera.rotation.x = .pi / 2
-        cameras.append(orthoCamera)
-        
-        let tpCamera = ThirdPersonCamera(focus: skeleton)
-        cameras.append(tpCamera)
         
         let normalCamera = Camera()
+        normalCamera.position = [0, 2, -4]
         cameras.append(normalCamera)
         
         currentCameraIndex = 1
@@ -77,11 +71,5 @@ class GameScene: Scene {
     
     override func sceneSizeWillChange(to size: CGSize) {
         super.sceneSizeWillChange(to: size)
-        let cameraSize: Float = 10
-        let ratio = Float(sceneSize.width / sceneSize.height)
-        let rect = Rectangle(left: -cameraSize * ratio,
-                             right: cameraSize * ratio,
-                             top: cameraSize, bottom: -cameraSize)
-        orthoCamera.rect = rect
     }
 }
