@@ -183,20 +183,17 @@ extension GameViewController {
     }
     
     @objc func handlePan(gesture: UIPanGestureRecognizer) {
-        if(gesture.numberOfTouches == 2)
-        {
-            let translation = float2(Float(gesture.translation(in: gesture.view).x),
-                                     Float(gesture.translation(in: gesture.view).y))
-            renderer?.translateUsing(translation: translation)
-            gesture.setTranslation(.zero, in: gesture.view)
+        let translation = float2(Float(gesture.translation(in: gesture.view).x),
+                                 Float(gesture.translation(in: gesture.view).y))
+        
+        if gesture.numberOfTouches == 2 {
+            renderer?.translateUsing(translation: translation,
+                                     sensitivity: 0.01)
         }
-        else
-        {
-            let translation = float2(Float(gesture.translation(in: gesture.view).x),
-                                     Float(gesture.translation(in: gesture.view).y))
+        else {
             renderer?.rotateUsing(translation: translation)
-            gesture.setTranslation(.zero, in: gesture.view)
         }
+        gesture.setTranslation(.zero, in: gesture.view)
     }
     
     @objc func handleTap(gestureRecognize: UITapGestureRecognizer) {
@@ -217,9 +214,9 @@ extension GameViewController {
     }
 
     @objc func handlePinch(gesture: UIPinchGestureRecognizer) {
-        let sensitivity: Float = 0.8
         renderer?.zoomUsing(delta: gesture.scale - GameViewController.previousScale,
-                            sensitivity: sensitivity)
+                            sensitivity: 3.0)
+        
         GameViewController.previousScale = gesture.scale
         if gesture.state == .ended {
             GameViewController.previousScale = 1

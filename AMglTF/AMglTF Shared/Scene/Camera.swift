@@ -40,10 +40,10 @@ extension Renderer {
     func zoomUsing(delta: CGFloat, sensitivity: Float) {
         guard let scene = scene else { return }
         
-        
-        var current: float3 = scene.camera.position
-        current += scene.camera.quaternion.axis * float3(0, 0, Float(delta) * sensitivity)
-        scene.camera.position = current
+        var current: float4 = float4(scene.camera.position, 1)
+        let translateVector: float4 = float4(0, 0, Float(delta) * sensitivity, 1)
+        current += float4x4(rotation: scene.camera.rotation) * translateVector
+        scene.camera.position = current.xyz
     }
     
     func rotateUsing(translation: float2) {
@@ -55,12 +55,15 @@ extension Renderer {
         scene.camera.rotation.y -= Float(translation.x) * sensitivity
     }
     
-    func translateUsing(translation: float2) {
+    func translateUsing(translation: float2, sensitivity: Float) {
         guard let scene = scene else { return }
         
-        let sensitivity: Float = 0.01
-        
-        scene.camera.position.x += Float(translation.x) * sensitivity
-        scene.camera.position.y -= Float(translation.y) * sensitivity
+        var current: float4 = float4(scene.camera.position, 1)
+        let translateVector: float4 = float4(Float(translation.x) * sensitivity,
+                                             Float(translation.y) * sensitivity,
+                                             0,
+                                             1)
+        current += float4x4(rotation: scene.camera.rotation) * translateVector
+        scene.camera.position = current.xyz
     }
 }

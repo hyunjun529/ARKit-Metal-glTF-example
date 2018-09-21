@@ -86,12 +86,14 @@ extension GameViewController {
     
     // dolly, truck
     @objc func handlePan(gesture: NSPanGestureRecognizer) {
-        // need to change rotation to translation
         print("Pan!")
+        
         let translation = float2(Float(gesture.translation(in: gesture.view).x),
                                  Float(gesture.translation(in: gesture.view).y))
         
-        renderer?.translateUsing(translation: translation)
+        renderer?.translateUsing(translation: translation,
+                                 sensitivity: 0.01)
+        
         gesture.setTranslation(.zero, in: gesture.view)
     }
     
@@ -108,9 +110,8 @@ extension GameViewController {
     // zoom
     @objc func handlePinch(gesture: NSMagnificationGestureRecognizer) {
         print("Pinch!")
-        let sensitivity: Float = 0.1
         renderer?.zoomUsing(delta: gesture.magnification,
-                            sensitivity: sensitivity)
+                            sensitivity: 0.5)
     }
     
     // pan, tilt
@@ -118,7 +119,6 @@ extension GameViewController {
         print("Scroll!")
         let translation = float2(Float(event.deltaX),
                                  Float(event.deltaY))
-        
         renderer?.rotateUsing(translation: translation)
     }
 }
