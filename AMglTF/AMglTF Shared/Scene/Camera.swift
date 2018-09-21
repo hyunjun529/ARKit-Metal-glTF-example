@@ -37,31 +37,33 @@ class Camera: Node {
 
 /// for Input Event in Controller
 extension Renderer {
-    func zoomUsing(delta: CGFloat, sensitivity: Float) {
+    func rotateUsing(translation: float2, sensitivity: Float) {
         guard let scene = scene else { return }
+
+//        let start = scene.camera.rotation
+//        let startNormal = simd_normalize(scene.camera.rotation)
+//
+//        let zNormal = float3(0, 0, 1)
         
-        var current: float4 = float4(scene.camera.position, 1)
-        let translateVector: float4 = float4(0, 0, Float(delta) * sensitivity, 1)
-        current += float4x4(rotation: scene.camera.rotation) * translateVector
-        scene.camera.position = current.xyz
+        // this yx-order is smae cross(zNormal, rotation)
+        let rotation = float3(Float(translation.y) * sensitivity,
+                              -Float(translation.x) * sensitivity,
+                              0)
+        
+        // make quat
+        // let rotationMatrix = float4x4(rotation: rotation)
+        // let quaternion = simd_quatf(rotationMatrix)
+        
+        scene.camera.rotation += rotation
     }
     
-    func rotateUsing(translation: float2) {
-        guard let scene = scene else { return }
-        
-        let sensitivity: Float = 0.01
-        
-        scene.camera.rotation.x += Float(translation.y) * sensitivity
-        scene.camera.rotation.y -= Float(translation.x) * sensitivity
-    }
-    
-    func translateUsing(translation: float2, sensitivity: Float) {
+    func translateUsing(translation: float3, sensitivity: Float) {
         guard let scene = scene else { return }
         
         var current: float4 = float4(scene.camera.position, 1)
         let translateVector: float4 = float4(Float(translation.x) * sensitivity,
                                              Float(translation.y) * sensitivity,
-                                             0,
+                                             Float(translation.z) * sensitivity,
                                              1)
         current += float4x4(rotation: scene.camera.rotation) * translateVector
         scene.camera.position = current.xyz

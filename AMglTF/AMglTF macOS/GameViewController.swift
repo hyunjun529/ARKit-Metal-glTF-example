@@ -86,10 +86,9 @@ extension GameViewController {
     
     // dolly, truck
     @objc func handlePan(gesture: NSPanGestureRecognizer) {
-        print("Pan!")
-        
-        let translation = float2(Float(gesture.translation(in: gesture.view).x),
-                                 Float(gesture.translation(in: gesture.view).y))
+        let translation = float3(-Float(gesture.translation(in: gesture.view).x),
+                                 -Float(gesture.translation(in: gesture.view).y),
+                                 0)
         
         renderer?.translateUsing(translation: translation,
                                  sensitivity: 0.01)
@@ -99,26 +98,24 @@ extension GameViewController {
     
     // Rotation
     @objc func handleRot(gesture: NSRotationGestureRecognizer) {
-        print("Rot!")
     }
     
     // click
     @objc func handleClick(gesture: NSClickGestureRecognizer) {
-        print("Click!")
     }
     
     // zoom
     @objc func handlePinch(gesture: NSMagnificationGestureRecognizer) {
-        print("Pinch!")
-        renderer?.zoomUsing(delta: gesture.magnification,
-                            sensitivity: 0.5)
+        renderer?.translateUsing(translation: float3(0, 0, Float(gesture.magnification)),
+                                 sensitivity: 0.5)
     }
     
     // pan, tilt
     override func scrollWheel(with event: NSEvent) {
-        print("Scroll!")
         let translation = float2(Float(event.deltaX),
                                  Float(event.deltaY))
-        renderer?.rotateUsing(translation: translation)
+        
+        renderer?.rotateUsing(translation: translation,
+                              sensitivity: 0.01)
     }
 }

@@ -60,6 +60,7 @@ class GameScene: Scene {
         
         let normalCamera = Camera()
         normalCamera.position = [0, 2, -4]
+        normalCamera.rotation = [0, 0.1, 0]
         cameras.append(normalCamera)
         
         currentCameraIndex = 1

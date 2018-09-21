@@ -187,11 +187,14 @@ extension GameViewController {
                                  Float(gesture.translation(in: gesture.view).y))
         
         if gesture.numberOfTouches == 2 {
-            renderer?.translateUsing(translation: translation,
+            renderer?.translateUsing(translation: float3(translation.x,
+                                                         translation.y,
+                                                         0),
                                      sensitivity: 0.01)
         }
         else {
-            renderer?.rotateUsing(translation: translation)
+            renderer?.rotateUsing(translation: translation,
+                                  sensitivity: 0.01)
         }
         gesture.setTranslation(.zero, in: gesture.view)
     }
@@ -214,8 +217,10 @@ extension GameViewController {
     }
 
     @objc func handlePinch(gesture: UIPinchGestureRecognizer) {
-        renderer?.zoomUsing(delta: gesture.scale - GameViewController.previousScale,
-                            sensitivity: 3.0)
+        renderer?.translateUsing(translation: float3(0,
+                                                     0,
+                                                     Float(gesture.scale - GameViewController.previousScale)),
+                                 sensitivity: 3.0)
         
         GameViewController.previousScale = gesture.scale
         if gesture.state == .ended {
