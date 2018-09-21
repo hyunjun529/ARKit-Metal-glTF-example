@@ -39,22 +39,26 @@ class Camera: Node {
 extension Renderer {
     func rotateUsing(translation: float2, sensitivity: Float) {
         guard let scene = scene else { return }
-
-//        let start = scene.camera.rotation
-//        let startNormal = simd_normalize(scene.camera.rotation)
+        
+//        let upVector = float3(0, 0, 1)
+//        let rotationVec = float3(Float(translation.y) * sensitivity,
+//                                 -Float(translation.x) * sensitivity,
+//                                 0) // this yx-order is same cross(upNormal, rotation)
+//        let cameraVec = scene.camera.rotation
 //
-//        let zNormal = float3(0, 0, 1)
+//        let targetAxis = cross(upVector, cameraVec)
+//        let targetRadian = dot(upVector, cameraVec)
+//        let targetMat = matrix4x4_rotation(radians: targetRadian, axis: targetAxis)
+//
+//        let targetVec = targetMat * float4(rotationVec, 0)
+//
+//        scene.camera.rotation += targetVec.xyz
         
-        // this yx-order is smae cross(zNormal, rotation)
-        let rotation = float3(Float(translation.y) * sensitivity,
-                              -Float(translation.x) * sensitivity,
-                              0)
-        
-        // make quat
-        // let rotationMatrix = float4x4(rotation: rotation)
-        // let quaternion = simd_quatf(rotationMatrix)
-        
-        scene.camera.rotation += rotation
+        let rotationVec = float3(Float(translation.y) * sensitivity,
+                                 -Float(translation.x) * sensitivity,
+                                 0) // this yx-order is same cross(upNormal, rotation)
+
+        scene.camera.rotation += rotationVec
     }
     
     func translateUsing(translation: float3, sensitivity: Float) {
