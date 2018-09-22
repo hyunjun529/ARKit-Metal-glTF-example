@@ -22,6 +22,8 @@ class Renderer: NSObject, MTKViewDelegate {
     
     var lights: [Light] = []
     
+    var managers: [Manager] = []
+    
     
     init?(metalKitView: MTKView) {
         Renderer.device = metalKitView.device!
@@ -62,6 +64,18 @@ class Renderer: NSObject, MTKViewDelegate {
     }
     
     
+    func attachManager(manager: Manager) {
+        self.managers.append(manager)
+    }
+    
+    
+    func updateManagers() {
+        for manager in managers {
+            manager.update()
+        }
+    }
+    
+    
     /// Per frame updates hare
     func draw(in view: MTKView) {
         
@@ -87,6 +101,8 @@ class Renderer: NSObject, MTKViewDelegate {
             guard let scene = scene else { return }
             scene.uniforms = dynamicBuffer.uniforms[dynamicBuffer.uniformBufferIndex]
             scene.update(deltaTime: deltaTime)
+            
+            updateManagers()
             
             
             // about renderEncoder https://developer.apple.com/library/archive/documentation/Miscellaneous/Conceptual/MetalProgrammingGuide/Render-Ctx/Render-Ctx.html

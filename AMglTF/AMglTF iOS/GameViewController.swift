@@ -112,17 +112,6 @@ class GameViewController: UIViewController, ARSessionDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Set the view's delegate
-        session = ARSession()
-        session.delegate = self
-        
-        // Create a session configuration
-        let configuration = ARWorldTrackingConfiguration()
-
-        // Run the view's session
-        session.run(configuration)
-        
-        
         guard let mtkView = self.view as? MTKView else {
             print("View of Gameview controller is not an MTKView")
             return
@@ -149,6 +138,27 @@ class GameViewController: UIViewController, ARSessionDelegate {
         addGestureRecognizer(to: mtkView)
         
         mtkView.delegate = renderer
+        
+        
+        // Set the view's delegate
+        session = ARSession()
+        session.delegate = self
+        
+        // Create a session configuration
+        let configuration = ARWorldTrackingConfiguration()
+        
+        // Run the view's session
+        session.run(configuration)
+        
+        guard let newSessionManager = ARSessionManager(session: session) else {
+            print("ARSessionManager cannot be initialized")
+            return
+        }
+        
+        sessionManager = newSessionManager
+        
+        
+        renderer.attachManager(manager: sessionManager)
     }
     
     // MARK: - ARSessionDelegate
