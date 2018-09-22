@@ -79,7 +79,7 @@ fragment float4 character_fragment_main(VertexOut in [[ stage_in ]],
                                         constant Material &material [[ buffer(BufferIndexMaterials) ]]) {
     float4 color;
     float3 normalDirection = normalize(in.worldNormal);
-    float3 lightPosition = float3(1, 2, -2);
+    float3 lightPosition = float3(-1, -3, 4);
     float3 lightDirection = normalize(lightPosition);
     float nDotl = max(0.001, saturate(dot(normalDirection, lightDirection)));
     float3 diffuseColor = material.baseColor + pow(material.baseColor * nDotl,  3);

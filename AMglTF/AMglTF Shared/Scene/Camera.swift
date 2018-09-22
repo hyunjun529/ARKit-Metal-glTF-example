@@ -39,37 +39,30 @@ class Camera: Node {
 extension Renderer {
     func rotateUsing(translation: float2, sensitivity: Float) {
         guard let scene = scene else { return }
-        
-//        let upVector = float3(0, 0, 1)
-//        let rotationVec = float3(Float(translation.y) * sensitivity,
-//                                 -Float(translation.x) * sensitivity,
-//                                 0) // this yx-order is same cross(upNormal, rotation)
-//        let cameraVec = scene.camera.rotation
-//
-//        let targetAxis = cross(upVector, cameraVec)
-//        let targetRadian = dot(upVector, cameraVec)
-//        let targetMat = matrix4x4_rotation(radians: targetRadian, axis: targetAxis)
-//
-//        let targetVec = targetMat * float4(rotationVec, 0)
-//
-//        scene.camera.rotation += targetVec.xyz
-        
-        let rotationVec = float3(Float(translation.y) * sensitivity,
+    
+        var rotationVec = float3(Float(translation.y) * sensitivity,
                                  -Float(translation.x) * sensitivity,
                                  0) // this yx-order is same cross(upNormal, rotation)
+        
+        let upVector = float3(0, 0, 1)
+        let cameraVec = normalize(scene.camera.rotation)
 
+        let targetRadian = dot(upVector, cameraVec)
+        let targetAxis = cross(upVector, cameraVec)
+        let targetMat = matrix4x4_rotation(radians: targetRadian, axis: targetAxis)
+
+        rotationVec = (targetMat * float4(rotationVec, 0)).xyz
+        
         scene.camera.rotation += rotationVec
     }
     
     func translateUsing(translation: float3, sensitivity: Float) {
         guard let scene = scene else { return }
         
-        var current: float4 = float4(scene.camera.position, 1)
         let translateVector: float4 = float4(Float(translation.x) * sensitivity,
                                              Float(translation.y) * sensitivity,
                                              Float(translation.z) * sensitivity,
                                              1)
-        current += float4x4(rotation: scene.camera.rotation) * translateVector
-        scene.camera.position = current.xyz
+        scene.camera.position += (float4x4(rotation: scene.camera.rotation) * translateVector).xyz
     }
 }

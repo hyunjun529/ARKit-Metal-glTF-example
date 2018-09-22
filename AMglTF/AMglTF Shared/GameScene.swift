@@ -40,14 +40,15 @@ class GameScene: Scene {
     var inCar = false
     
     override func setupScene() {        
-        ground.tiling = 32
+        ground.tiling = 4
+        ground.scale = float3(0.1, 0.1, 0.1)
         add(node: ground)
         
         train.rotation = [0, radians(fromDegrees: 180), 0]
         train.position = [2.2, 0, 1]
         add(node: train)
         
-        car.rotation = [0, radians(fromDegrees: 180), 0]
+        car.rotation = [0, radians(fromDegrees: 0), 0]
         car.position = [-0.8, 0, 0.5]
         add(node: car)
         
@@ -59,8 +60,8 @@ class GameScene: Scene {
         
         
         let normalCamera = Camera()
-        normalCamera.position = [0, 2, -4]
-        normalCamera.rotation = [0, 0.1, 0]
+        normalCamera.position = [0, 7.2, 11.5]
+        normalCamera.rotation = [-6.66, -3.14, 0]
         cameras.append(normalCamera)
         
         currentCameraIndex = 1

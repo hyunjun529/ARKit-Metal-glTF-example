@@ -20,8 +20,8 @@ class Lighting: Node
         var lights: [Light] = []
         
         var light = buildDefaultLight()
-        light.position = [-1, 0.5, -2]
-        light.intensity = 2.0
+        light.position = [1, 2.5, -4]
+        light.intensity = 3.0
         lights.append(light)
         
         light = buildDefaultLight()

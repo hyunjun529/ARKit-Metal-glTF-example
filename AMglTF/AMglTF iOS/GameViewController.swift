@@ -3,6 +3,7 @@ import Metal
 import MetalKit
 import ARKit
 
+/// Original ARKit Example
 //extension MTKView : RenderDestinationProvider {
 //}
 //
@@ -102,9 +103,11 @@ import ARKit
 // Our iOS specific view controller
 class GameViewController: UIViewController, ARSessionDelegate {
     
-    var renderer: Renderer!
     var mtkView: MTKView!
+    var renderer: Renderer!
+    
     var session: ARSession!
+    var sessionManager: ARSessionManager!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -187,7 +190,7 @@ extension GameViewController {
                                  Float(gesture.translation(in: gesture.view).y))
         
         if gesture.numberOfTouches == 2 {
-            renderer?.translateUsing(translation: float3(translation.x,
+            renderer?.translateUsing(translation: float3(-translation.x,
                                                          translation.y,
                                                          0),
                                      sensitivity: 0.01)
@@ -213,6 +216,9 @@ extension GameViewController {
             session.add(anchor: anchor)
             
             print("TAP!", transform)
+            
+            print("rotation", renderer?.scene?.camera.rotation)
+            print("position", renderer?.scene?.camera.position)
         }
     }
 
@@ -220,7 +226,7 @@ extension GameViewController {
         renderer?.translateUsing(translation: float3(0,
                                                      0,
                                                      Float(gesture.scale - GameViewController.previousScale)),
-                                 sensitivity: 3.0)
+                                 sensitivity: 5.0)
         
         GameViewController.previousScale = gesture.scale
         if gesture.state == .ended {
