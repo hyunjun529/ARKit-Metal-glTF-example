@@ -15,15 +15,12 @@
 		26680C9A2151059C0078624C /* Car_Diff.png in Resources */ = {isa = PBXBuildFile; fileRef = 26680C942151059C0078624C /* Car_Diff.png */; };
 		26680C9B215106DA0078624C /* ShaderTypes.h in Sources */ = {isa = PBXBuildFile; fileRef = 26C6132421466DF300A7FD6E /* ShaderTypes.h */; };
 		26680C9F215205280078624C /* DynamicBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26680C9D215205280078624C /* DynamicBuffer.swift */; };
-		266F880721534C8200CFC34B /* CapturedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266F880621534C8200CFC34B /* CapturedImage.swift */; };
-		266F880921534C9100CFC34B /* ARAnchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266F880821534C9100CFC34B /* ARAnchor.swift */; };
 		26AF4CBF214F4B5800798F58 /* plane.obj in Resources */ = {isa = PBXBuildFile; fileRef = 26AF4CBD214F4B5800798F58 /* plane.obj */; };
 		26AF4CC0214F4B5800798F58 /* plane.obj in Resources */ = {isa = PBXBuildFile; fileRef = 26AF4CBD214F4B5800798F58 /* plane.obj */; };
 		26AF4CC1214F4B5800798F58 /* plane.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 26AF4CBE214F4B5800798F58 /* plane.mtl */; };
 		26AF4CC2214F4B5800798F58 /* plane.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 26AF4CBE214F4B5800798F58 /* plane.mtl */; };
 		26AF4CC4214F4B7000798F58 /* ground.png in Resources */ = {isa = PBXBuildFile; fileRef = 26AF4CC3214F4B7000798F58 /* ground.png */; };
 		26AF4CC5214F4B7000798F58 /* ground.png in Resources */ = {isa = PBXBuildFile; fileRef = 26AF4CC3214F4B7000798F58 /* ground.png */; };
-		26AF4CCA214F53AC00798F58 /* ARKitRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AF4CC9214F53AC00798F58 /* ARKitRenderer.swift */; };
 		26AF4CCC214F55CD00798F58 /* ARKitShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 26AF4CCB214F55CD00798F58 /* ARKitShader.metal */; };
 		26C6132E21466DF300A7FD6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6132D21466DF300A7FD6E /* AppDelegate.swift */; };
 		26C6133021466DF300A7FD6E /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6132F21466DF300A7FD6E /* GameViewController.swift */; };
@@ -140,8 +137,6 @@
 		26680C932151059C0078624C /* car-roughness.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "car-roughness.png"; sourceTree = "<group>"; };
 		26680C942151059C0078624C /* Car_Diff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Car_Diff.png; sourceTree = "<group>"; };
 		26680C9D215205280078624C /* DynamicBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicBuffer.swift; sourceTree = "<group>"; };
-		266F880621534C8200CFC34B /* CapturedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapturedImage.swift; sourceTree = "<group>"; };
-		266F880821534C9100CFC34B /* ARAnchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARAnchor.swift; sourceTree = "<group>"; };
 		26AF4CBD214F4B5800798F58 /* plane.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = plane.obj; path = "AMglTF Shared/resources/obj/plane.obj"; sourceTree = SOURCE_ROOT; };
 		26AF4CBE214F4B5800798F58 /* plane.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = plane.mtl; path = "AMglTF Shared/resources/obj/plane.mtl"; sourceTree = SOURCE_ROOT; };
 		26AF4CC3214F4B7000798F58 /* ground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ground.png; sourceTree = "<group>"; };
@@ -261,8 +256,6 @@
 			isa = PBXGroup;
 			children = (
 				26D6BE862156282B008DD235 /* ARSessionManager.swift */,
-				266F880821534C9100CFC34B /* ARAnchor.swift */,
-				266F880621534C8200CFC34B /* CapturedImage.swift */,
 			);
 			path = ARKit;
 			sourceTree = "<group>";
@@ -655,12 +648,9 @@
 				26D6BE8521539CE6008DD235 /* DebugLighting.swift in Sources */,
 				26680C9B215106DA0078624C /* ShaderTypes.h in Sources */,
 				26AF4CCC214F55CD00798F58 /* ARKitShader.metal in Sources */,
-				266F880921534C9100CFC34B /* ARAnchor.swift in Sources */,
-				26AF4CCA214F53AC00798F58 /* ARKitRenderer.swift in Sources */,
 				26CA14BB2150E155001C04B8 /* GLTFMathLibrary.swift in Sources */,
 				26C6133021466DF300A7FD6E /* GameViewController.swift in Sources */,
 				26C6132E21466DF300A7FD6E /* AppDelegate.swift in Sources */,
-				266F880721534C8200CFC34B /* CapturedImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

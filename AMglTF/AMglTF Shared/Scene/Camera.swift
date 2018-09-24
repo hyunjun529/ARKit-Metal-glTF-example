@@ -44,14 +44,14 @@ extension Renderer {
                                  -Float(translation.x) * sensitivity,
                                  0) // this yx-order is same cross(upNormal, rotation)
         
-        let upVector = float3(0, 0, 1)
-        let cameraVec = normalize(scene.camera.rotation)
-
-        let targetRadian = dot(upVector, cameraVec)
-        let targetAxis = cross(upVector, cameraVec)
-        let targetMat = matrix4x4_rotation(radians: targetRadian, axis: targetAxis)
-
-        rotationVec = (targetMat * float4(rotationVec, 0)).xyz
+//        let upVector = float3(0, 0, 1)
+//        let cameraVec = normalize(scene.camera.rotation)
+//
+//        let targetRadian = dot(upVector, cameraVec)
+//        let targetAxis = cross(upVector, cameraVec)
+//        let targetMat = matrix4x4_rotation(radians: targetRadian, axis: targetAxis)
+//
+//        rotationVec = (targetMat * float4(rotationVec, 0)).xyz
         
         scene.camera.rotation += rotationVec
     }
