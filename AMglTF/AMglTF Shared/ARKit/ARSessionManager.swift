@@ -312,16 +312,20 @@ class ARSessionManager: Manager {
     
     func updateImagePlane(frame: ARFrame) {
         // Update the texture coordinates of our image plane to aspect fill the viewport
-        let displayToCameraTransform = frame.displayTransform(for: .landscapeRight, viewportSize: viewportSize).inverted()
+        let displayToCameraTransform = frame.displayTransform(for: .landscapeRight, viewportSize: viewportSize).inverted() // need find how to get UIInterfaceOrientation
+        
         
         let vertexData = imagePlaneVertexBuffer.contents().assumingMemoryBound(to: Float.self)
         for index in 0...3 {
             let textureCoordIndex = 4 * index + 2
-            let textureCoord = CGPoint(x: CGFloat(kImagePlaneVertexData[textureCoordIndex]), y: CGFloat(kImagePlaneVertexData[textureCoordIndex + 1]))
+            let textureCoord = CGPoint(x: CGFloat(kImagePlaneVertexData[textureCoordIndex]),
+                                       y: CGFloat(kImagePlaneVertexData[textureCoordIndex + 1]))
             let transformedCoord = textureCoord.applying(displayToCameraTransform)
             vertexData[textureCoordIndex] = Float(transformedCoord.x)
             vertexData[textureCoordIndex + 1] = Float(transformedCoord.y)
         }
+        
+        print("resize")
     }
     
     func drawCapturedImage(renderEncoder: MTLRenderCommandEncoder) {
@@ -334,6 +338,7 @@ class ARSessionManager: Manager {
         
         // Set render command encoder state
         renderEncoder.setCullMode(.none)
+        renderEncoder.setFrontFacing(.clockwise)
         renderEncoder.setRenderPipelineState(capturedImagePipelineState)
         renderEncoder.setDepthStencilState(capturedImageDepthState)
         
@@ -346,6 +351,38 @@ class ARSessionManager: Manager {
         
         // Draw each submesh of our mesh
         renderEncoder.drawPrimitives(type: .triangleStrip, vertexStart: 0, vertexCount: 4)
+        
+        renderEncoder.popDebugGroup()
+    }
+    
+    func drawAnchorGeometry(renderEncoder: MTLRenderCommandEncoder) {
+        guard anchorInstanceCount > 0 else {
+            return
+        }
+        
+        // Push a debug group allowing us to identify render commands in the GPU Frame Capture tool
+        renderEncoder.pushDebugGroup("DrawAnchors")
+        
+        // Set render command encoder state
+        renderEncoder.setCullMode(.back)
+        renderEncoder.setRenderPipelineState(anchorPipelineState)
+        renderEncoder.setDepthStencilState(anchorDepthState)
+        
+        // Set any buffers fed into our render pipeline
+        renderEncoder.setVertexBuffer(anchorUniformBuffer, offset: anchorUniformBufferOffset, index: Int(kBufferIndexInstanceUniforms.rawValue))
+        renderEncoder.setVertexBuffer(sharedUniformBuffer, offset: sharedUniformBufferOffset, index: Int(kBufferIndexSharedUniforms.rawValue))
+        renderEncoder.setFragmentBuffer(sharedUniformBuffer, offset: sharedUniformBufferOffset, index: Int(kBufferIndexSharedUniforms.rawValue))
+        
+        // Set mesh's vertex buffers
+        for bufferIndex in 0..<cubeMesh.vertexBuffers.count {
+            let vertexBuffer = cubeMesh.vertexBuffers[bufferIndex]
+            renderEncoder.setVertexBuffer(vertexBuffer.buffer, offset: vertexBuffer.offset, index:bufferIndex)
+        }
+        
+        // Draw each submesh of our mesh
+        for submesh in cubeMesh.submeshes {
+            renderEncoder.drawIndexedPrimitives(type: submesh.primitiveType, indexCount: submesh.indexCount, indexType: submesh.indexType, indexBuffer: submesh.indexBuffer.buffer, indexBufferOffset: submesh.indexBuffer.offset, instanceCount: anchorInstanceCount)
+        }
         
         renderEncoder.popDebugGroup()
     }
@@ -381,8 +418,17 @@ class ARSessionManager: Manager {
         LoadAssets()
     }
     
+    func drawableSizeWillChange(size: CGSize) {
+        drawRectResized(size: size)
+        print("device rotated")
+    }
     
     func update() {
         updateGameState()
+    }
+    
+    func render(renderEncoder: MTLRenderCommandEncoder) {
+        drawCapturedImage(renderEncoder: renderEncoder)
+        //drawAnchorGeometry(renderEncoder: renderEncoder)
     }
 }

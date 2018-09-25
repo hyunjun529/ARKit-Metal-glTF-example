@@ -130,6 +130,11 @@ class Renderer: NSObject, MTKViewDelegate {
                                                length: MemoryLayout<Light>.stride * lights.count,
                                                index: Int(BufferIndex.lights.rawValue))
                 
+                // Render Manager
+                for manager in managers {
+                    manager.render(renderEncoder: renderEncoder)
+                }
+                
                 // Render Scene
                 for renderable in scene.renderables {
                     renderEncoder.pushDebugGroup(renderable.name)
@@ -154,5 +159,9 @@ class Renderer: NSObject, MTKViewDelegate {
     
     func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
         scene?.sceneSizeWillChange(to: size)
+        
+        for manager in managers {
+            manager.drawableSizeWillChange(size: size)
+        }
     }
 }
