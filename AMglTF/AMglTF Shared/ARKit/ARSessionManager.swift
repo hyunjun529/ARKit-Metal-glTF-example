@@ -395,6 +395,7 @@ class ARSessionManager: Manager {
             return
         }
 
+        // it can improve to change ARcamera's coordinate system
         var transform = currentFrame.camera.transform
         var position = float3(transform[3][0], transform[3][1], -transform[3][2]) * 10
         var eulerAngle = currentFrame.camera.eulerAngles
