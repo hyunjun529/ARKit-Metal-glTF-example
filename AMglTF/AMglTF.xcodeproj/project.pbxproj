@@ -140,7 +140,6 @@
 		26AF4CBD214F4B5800798F58 /* plane.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = plane.obj; path = "AMglTF Shared/resources/obj/plane.obj"; sourceTree = SOURCE_ROOT; };
 		26AF4CBE214F4B5800798F58 /* plane.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = plane.mtl; path = "AMglTF Shared/resources/obj/plane.mtl"; sourceTree = SOURCE_ROOT; };
 		26AF4CC3214F4B7000798F58 /* ground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ground.png; sourceTree = "<group>"; };
-		26AF4CC9214F53AC00798F58 /* ARKitRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARKitRenderer.swift; sourceTree = "<group>"; };
 		26AF4CCB214F55CD00798F58 /* ARKitShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = ARKitShader.metal; sourceTree = "<group>"; };
 		26C6132221466DF300A7FD6E /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 		26C6132321466DF300A7FD6E /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
@@ -291,7 +290,6 @@
 			children = (
 				26C6132521466DF300A7FD6E /* Assets.xcassets */,
 				26C6132321466DF300A7FD6E /* Renderer.swift */,
-				26AF4CC9214F53AC00798F58 /* ARKitRenderer.swift */,
 				26D6BE88215633CF008DD235 /* Manager.swift */,
 				26CA14E22150E991001C04B8 /* GameScene.swift */,
 				26C613562147DBA500A7FD6E /* Shaders */,

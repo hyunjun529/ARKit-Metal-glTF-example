@@ -102,6 +102,8 @@ class Renderer: NSObject, MTKViewDelegate {
             scene.uniforms = dynamicBuffer.uniforms[dynamicBuffer.uniformBufferIndex]
             scene.update(deltaTime: deltaTime)
             
+            
+            // update manager
             updateManagers()
             
             
