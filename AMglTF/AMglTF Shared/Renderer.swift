@@ -1,17 +1,10 @@
 import Metal
 import MetalKit
+import CoreGraphics
 
-
-// The 256 byte aligned size of our uniform structure
-let alignedUniformsSize = (MemoryLayout<Uniforms>.size & ~0xFF) + 0x100
-
-let maxBuffersInFlight = 3
-
-enum RendererError: Error {
-    case badVertexDescriptor
-}
-
-
+/**
+ Renderer for Virtual Stage(no AR)
+ */
 class Renderer: NSObject, MTKViewDelegate {
     static var device: MTLDevice!
     
@@ -23,40 +16,20 @@ class Renderer: NSObject, MTKViewDelegate {
     
     static var library: MTLLibrary?
     
-    var dynamicUniformBuffer: MTLBuffer
-    var uniformBufferOffset = 0
-    var uniformBufferIndex = 0
-    var uniforms: UnsafeMutablePointer<Uniforms>
+    var dynamicBuffer: DynamicBuffer
     
-    var dynamicFragmentUniformBuffer: MTLBuffer
-    var fragmentUniformBufferOffset = 0
-    var fragmentUniformBufferIndex = 0
-    var fragmentUniforms: UnsafeMutablePointer<FragmentUniforms>
-    
-    let inFlightSemaphore = DispatchSemaphore(value: maxBuffersInFlight)
-    
-    
-    lazy var camera: Camera = {
-        let camera = Camera()
-        camera.position = [0, 2, -8]
-        return camera
-    }()
-    
-    var models: [Model] = []
+    var scene: Scene?
     
     var lights: [Light] = []
     
-    // Debug drawing of lights
-    lazy var lightPipelineState: MTLRenderPipelineState = {
-        return buildLightPipelineState()
-    }()
+    var managers: [Manager] = []
     
     
     init?(metalKitView: MTKView) {
         Renderer.device = metalKitView.device!
         
         metalKitView.depthStencilPixelFormat = MTLPixelFormat.depth32Float_stencil8
-        metalKitView.colorPixelFormat = MTLPixelFormat.bgra8Unorm_srgb
+        metalKitView.colorPixelFormat = MTLPixelFormat.bgra8Unorm
         metalKitView.sampleCount = 1
         
         let depthStateDesciptor = MTLDepthStencilDescriptor()
@@ -72,26 +45,7 @@ class Renderer: NSObject, MTKViewDelegate {
         
         Renderer.library = Renderer.device.makeDefaultLibrary()
         
-        
-        let uniformBufferSize = alignedUniformsSize * maxBuffersInFlight
-        
-        guard let buffer = Renderer.device.makeBuffer(length:uniformBufferSize, options:[MTLResourceOptions.storageModeShared]) else { return nil }
-        dynamicUniformBuffer = buffer
-        
-        self.dynamicUniformBuffer.label = "UniformBuffer"
-        
-        uniforms = UnsafeMutableRawPointer(dynamicUniformBuffer.contents()).bindMemory(to:Uniforms.self, capacity:1)
-        
-        
-        let fragmentUniformBufferSize = alignedUniformsSize * maxBuffersInFlight
-        
-        guard let fragmentBuffer = Renderer.device.makeBuffer(length:fragmentUniformBufferSize, options:[MTLResourceOptions.storageModeShared]) else { return nil }
-        dynamicFragmentUniformBuffer = fragmentBuffer
-        
-        self.dynamicFragmentUniformBuffer.label = "FragmentUniformBuffer"
-        
-        fragmentUniforms = UnsafeMutableRawPointer(dynamicFragmentUniformBuffer.contents()).bindMemory(to: FragmentUniforms.self, capacity: 1)
-        
+        dynamicBuffer = DynamicBuffer(device: Renderer.device)!
         
         super.init()
         
@@ -101,76 +55,73 @@ class Renderer: NSObject, MTKViewDelegate {
         mtkView(metalKitView, drawableSizeWillChange: metalKitView.bounds.size)
         
         
-        // init Models
-        let kizunaai = Model(name: "kizunaai", format: "obj")
-        kizunaai.position = [0, 0, 0]
-        kizunaai.rotation = [0, radians(fromDegrees: 45), 0]
-        models.append(kizunaai)
+        let scene = GameScene(sceneSize: metalKitView.bounds.size)
+        self.scene = scene
         
-        let ground = Model(name: "plane", format: "obj")
-        ground.scale = [40, 40, 40]
-        //ground.tiling = 16
-        models.append(ground)
         
-        // init Lights
         let lighting = Lighting()
-        lights.append(lighting.sunlight)
-        lights.append(lighting.ambientLight)
-        lights.append(lighting.redLight)
-        lights.append(lighting.blueLight)
-        fragmentUniforms[0].lightCount = UInt32(lights.count)
+        lights = lighting.lighting()
     }
     
-    private func updateDynamicBufferState() {
-        /// Update the state of our uniform buffers before rendering
-        
-        uniformBufferIndex = (uniformBufferIndex + 1) % maxBuffersInFlight
-        
-        uniformBufferOffset = alignedUniformsSize * uniformBufferIndex
-        
-        uniforms = UnsafeMutableRawPointer(dynamicUniformBuffer.contents() + uniformBufferOffset).bindMemory(to:Uniforms.self, capacity:1)
-        
-        fragmentUniformBufferIndex = (fragmentUniformBufferIndex + 1) % maxBuffersInFlight
-        
-        fragmentUniformBufferOffset = alignedUniformsSize * uniformBufferIndex
-        
-        fragmentUniforms = UnsafeMutableRawPointer(dynamicFragmentUniformBuffer.contents() + fragmentUniformBufferOffset).bindMemory(to:FragmentUniforms.self, capacity:1)
+    
+    func attachManager(manager: Manager) {
+        self.managers.append(manager)
     }
     
-    private func updateGameState() {
-        /// Update any game state before rendering
-        
-        uniforms[0].projectionMatrix = camera.projectionMatrix
-        uniforms[0].viewMatrix = camera.viewMatrix
-        uniforms[0].modelMatrix = matrix_float4x4(1.0)
+    
+    func updateManagers() {
+        for manager in managers {
+            manager.update()
+        }
     }
     
+    
+    /// Per frame updates hare
     func draw(in view: MTKView) {
-        /// Per frame updates hare
         
-        _ = inFlightSemaphore.wait(timeout: DispatchTime.distantFuture)
+        // Wait to ensure only kMaxBuffersInFlight are getting proccessed by any stage in the Metal
+        //   pipeline (App, Metal, Drivers, GPU, etc)
+        let _ = dynamicBuffer.inFlightSemaphore.wait(timeout: DispatchTime.distantFuture)
         
+        // Create a new command buffer for each renderpass to the current drawable
         if let commandBuffer = Renderer.commandQueue.makeCommandBuffer() {
             
-            let semaphore = inFlightSemaphore
+            let semaphore = dynamicBuffer.inFlightSemaphore
             commandBuffer.addCompletedHandler { (_ commandBuffer)-> Swift.Void in
                 semaphore.signal()
             }
             
-            self.updateDynamicBufferState()
-            
-            self.updateGameState()
-            
-            /// Delay getting the currentRenderPassDescriptor until we absolutely need it to avoid
-            ///   holding onto the drawable and blocking the display pipeline any longer than necessary
+            // Delay getting the currentRenderPassDescriptor until we absolutely need it to avoid
+            // holding onto the drawable and blocking the display pipeline any longer than necessary
             let renderPassDescriptor = view.currentRenderPassDescriptor
             
+            dynamicBuffer.updateDynamicBufferState()
+            
+            
+            // update manager
+            updateManagers()
+            
+            
+            let deltaTime = 1 / Float(view.preferredFramesPerSecond)
+            guard let scene = scene else { return }
+            scene.uniforms = dynamicBuffer.uniforms[dynamicBuffer.uniformBufferIndex]
+            scene.update(deltaTime: deltaTime)
+            
+            
+            // about renderEncoder https://developer.apple.com/library/archive/documentation/Miscellaneous/Conceptual/MetalProgrammingGuide/Render-Ctx/Render-Ctx.html
             if let renderPassDescriptor = renderPassDescriptor, let renderEncoder = commandBuffer.makeRenderCommandEncoder(descriptor: renderPassDescriptor) {
                 
                 /// Final pass rendering code here
-                renderEncoder.label = "Primary Render Encoder"
+                renderEncoder.label = "Main Loop"
                 
-                renderEncoder.pushDebugGroup("Draw Box")
+                renderEncoder.pushDebugGroup("Main Loop")
+                
+                
+                // Render Manager
+                for manager in managers {
+                    manager.render(renderEncoder: renderEncoder)
+                }
+                
                 
                 renderEncoder.setCullMode(.front)
                 
@@ -178,52 +129,24 @@ class Renderer: NSObject, MTKViewDelegate {
                 
                 renderEncoder.setDepthStencilState(Renderer.depthStencilState)
                 
+                dynamicBuffer.setDynamicBufferInRenderEncoder(renderEncoder: renderEncoder)
+                
+                
+                dynamicBuffer.fragmentUniforms[dynamicBuffer.fragmentUniformBufferIndex].cameraPosition = scene.camera.position
+                dynamicBuffer.fragmentUniforms[dynamicBuffer.fragmentUniformBufferIndex].lightCount = UInt32(lights.count)
                 
                 renderEncoder.setFragmentBytes(&lights,
                                                length: MemoryLayout<Light>.stride * lights.count,
                                                index: Int(BufferIndex.lights.rawValue))
                 
-                
-                // render all the models in the array
-                fragmentUniforms[0].cameraPosition = camera.position
-                fragmentUniforms[0].lightCount = UInt32(lights.count)
-                
-                uniforms[0].projectionMatrix = camera.projectionMatrix
-                uniforms[0].viewMatrix = camera.viewMatrix
-                
-                for model in models {
-                    // model matrix now comes from the Model's superclass: Node
-                    uniforms[0].modelMatrix = model.modelMatrix
-                    uniforms[0].normalMatrix = float3x3(normalFrom4x4: model.modelMatrix)
-                    fragmentUniforms[0].tiling = model.tiling // hmm...
-                    
-                    renderEncoder.setVertexBuffer(dynamicUniformBuffer, offset:uniformBufferOffset, index: BufferIndex.uniforms.rawValue)
-                    
-                    renderEncoder.setFragmentBuffer(dynamicFragmentUniformBuffer, offset:fragmentUniformBufferOffset, index: BufferIndex.fragmentUniforms.rawValue)
-                    
-                    renderEncoder.setRenderPipelineState(model.pipelineState)
-                    renderEncoder.setVertexBuffer(model.vertexBuffer, offset: 0,
-                                                  index: Int(BufferIndex.meshPositions.rawValue))
-                    
-                    for modelSubmesh in model.submeshes {
-                        renderEncoder.setFragmentSamplerState(model.samplerState, index: 0)
-                        
-                        // set the fragment texture here
-                        renderEncoder.setFragmentTexture(modelSubmesh.textures.baseColor,
-                                                         index: Int(TextureIndex.color.rawValue))
-                        
-                        let submesh = modelSubmesh.submesh
-                        renderEncoder.drawIndexedPrimitives(type: .triangle,
-                                                            indexCount: submesh.indexCount,
-                                                            indexType: submesh.indexType,
-                                                            indexBuffer: submesh.indexBuffer.buffer,
-                                                            indexBufferOffset: submesh.indexBuffer.offset)
-                    }
+                // Render Scene
+                for renderable in scene.renderables {
+                    renderEncoder.pushDebugGroup(renderable.name)
+                    renderable.render(renderEncoder: renderEncoder,
+                                      uniforms: scene.uniforms)
+                    renderEncoder.popDebugGroup()
                 }
-
                 
-                // Debug Lighting
-                debugLights(renderEncoder: renderEncoder, lightType: LightType.pointlight)
                 
                 renderEncoder.popDebugGroup()
                 
@@ -239,8 +162,10 @@ class Renderer: NSObject, MTKViewDelegate {
     }
     
     func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
-        /// Respond to drawable size or orientation changes here
+        scene?.sceneSizeWillChange(to: size)
         
-        camera.aspect = Float(view.bounds.width)/Float(view.bounds.height)
+        for manager in managers {
+            manager.drawableSizeWillChange(size: size)
+        }
     }
 }

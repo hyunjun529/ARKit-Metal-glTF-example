@@ -28,7 +28,7 @@
  * THE SOFTWARE.
  */
 
-// Math Library v0.06 6 Apr 2018
+// Math Library v0.07 8 May 2018
 // v0.02 changed projection to be LH or RH
 // v0.03 13 Feb 2018
 //       added LH LookAt matrix
@@ -40,6 +40,10 @@
 //       added orthographic projection matrix
 // v0.06 6 Apr 2018
 //       updated to Xcode 9.3 - self.init() required
+// v0.07 8 May 2018
+//       added new float4(float3, Float)
+//       replaced orthographic projection matrix
+//       with one that requires a `Rectangle`
 
 import simd
 
@@ -51,6 +55,13 @@ func radians(fromDegrees degrees: Float) -> Float {
 
 func degrees(fromRadians radians: Float) -> Float {
     return (radians / π) * 180
+}
+
+struct Rectangle {
+    var left: Float = 0
+    var right: Float = 0
+    var top: Float = 0
+    var bottom: Float = 0
 }
 
 extension Float {
@@ -152,12 +163,12 @@ extension float4x4 {
         columns = (X, Y, Z, W)
     }
     
-    init(orthoLeft left: Float, right: Float, bottom: Float, top: Float, near: Float, far: Float) {
-        let X = float4(2 / (right - left), 0, 0, 0)
-        let Y = float4(0, 2 / (top - bottom), 0, 0)
+    init(orthographic rect: Rectangle, near: Float, far: Float) {
+        let X = float4(2 / (rect.right - rect.left), 0, 0, 0)
+        let Y = float4(0, 2 / (rect.top - rect.bottom), 0, 0)
         let Z = float4(0, 0, 1 / (far - near), 0)
-        let W = float4((left + right) / (left - right),
-                       (top + bottom) / (bottom - top),
+        let W = float4((rect.left + rect.right) / (rect.left - rect.right),
+                       (rect.top + rect.bottom) / (rect.bottom - rect.top),
                        near / (near - far),
                        1)
         self.init()
@@ -183,7 +194,13 @@ extension float4 {
             z = newValue.z
         }
     }
+    
+    init(_ start: float3, _ end: Float) {
+        self.init(start.x, start.y, start.z, end)
+    }
 }
+
+
 
 
 /**

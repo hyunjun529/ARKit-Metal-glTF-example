@@ -3,18 +3,24 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26680C952151059C0078624C /* Car_Normal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 26680C922151059C0078624C /* Car_Normal.jpg */; };
+		26680C962151059C0078624C /* Car_Normal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 26680C922151059C0078624C /* Car_Normal.jpg */; };
+		26680C972151059C0078624C /* car-roughness.png in Resources */ = {isa = PBXBuildFile; fileRef = 26680C932151059C0078624C /* car-roughness.png */; };
+		26680C982151059C0078624C /* car-roughness.png in Resources */ = {isa = PBXBuildFile; fileRef = 26680C932151059C0078624C /* car-roughness.png */; };
+		26680C992151059C0078624C /* Car_Diff.png in Resources */ = {isa = PBXBuildFile; fileRef = 26680C942151059C0078624C /* Car_Diff.png */; };
+		26680C9A2151059C0078624C /* Car_Diff.png in Resources */ = {isa = PBXBuildFile; fileRef = 26680C942151059C0078624C /* Car_Diff.png */; };
+		26680C9B215106DA0078624C /* ShaderTypes.h in Sources */ = {isa = PBXBuildFile; fileRef = 26C6132421466DF300A7FD6E /* ShaderTypes.h */; };
+		26680C9F215205280078624C /* DynamicBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26680C9D215205280078624C /* DynamicBuffer.swift */; };
 		26AF4CBF214F4B5800798F58 /* plane.obj in Resources */ = {isa = PBXBuildFile; fileRef = 26AF4CBD214F4B5800798F58 /* plane.obj */; };
 		26AF4CC0214F4B5800798F58 /* plane.obj in Resources */ = {isa = PBXBuildFile; fileRef = 26AF4CBD214F4B5800798F58 /* plane.obj */; };
 		26AF4CC1214F4B5800798F58 /* plane.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 26AF4CBE214F4B5800798F58 /* plane.mtl */; };
 		26AF4CC2214F4B5800798F58 /* plane.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 26AF4CBE214F4B5800798F58 /* plane.mtl */; };
 		26AF4CC4214F4B7000798F58 /* ground.png in Resources */ = {isa = PBXBuildFile; fileRef = 26AF4CC3214F4B7000798F58 /* ground.png */; };
 		26AF4CC5214F4B7000798F58 /* ground.png in Resources */ = {isa = PBXBuildFile; fileRef = 26AF4CC3214F4B7000798F58 /* ground.png */; };
-		26AF4CC7214F4FB800798F58 /* RendererARKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AF4CC6214F4FB800798F58 /* RendererARKitExtensions.swift */; };
-		26AF4CCA214F53AC00798F58 /* ARKitRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26AF4CC9214F53AC00798F58 /* ARKitRenderer.swift */; };
 		26AF4CCC214F55CD00798F58 /* ARKitShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 26AF4CCB214F55CD00798F58 /* ARKitShader.metal */; };
 		26C6132E21466DF300A7FD6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6132D21466DF300A7FD6E /* AppDelegate.swift */; };
 		26C6133021466DF300A7FD6E /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6132F21466DF300A7FD6E /* GameViewController.swift */; };
@@ -23,19 +29,12 @@
 		26C6133F21466DF300A7FD6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6133E21466DF300A7FD6E /* AppDelegate.swift */; };
 		26C6134121466DF300A7FD6E /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6134021466DF300A7FD6E /* GameViewController.swift */; };
 		26C6134421466DF300A7FD6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26C6134221466DF300A7FD6E /* Main.storyboard */; };
-		26C6134621466DF300A7FD6E /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 26C6132221466DF300A7FD6E /* Shaders.metal */; };
 		26C6134721466DF300A7FD6E /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 26C6132221466DF300A7FD6E /* Shaders.metal */; };
-		26C6134821466DF300A7FD6E /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6132321466DF300A7FD6E /* Renderer.swift */; };
 		26C6134921466DF300A7FD6E /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6132321466DF300A7FD6E /* Renderer.swift */; };
 		26C6134A21466DF300A7FD6E /* ShaderTypes.h in Resources */ = {isa = PBXBuildFile; fileRef = 26C6132421466DF300A7FD6E /* ShaderTypes.h */; };
 		26C6134B21466DF300A7FD6E /* ShaderTypes.h in Resources */ = {isa = PBXBuildFile; fileRef = 26C6132421466DF300A7FD6E /* ShaderTypes.h */; };
-		26C6134C21466DF300A7FD6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26C6132521466DF300A7FD6E /* Assets.xcassets */; };
-		26C6134D21466DF300A7FD6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26C6132521466DF300A7FD6E /* Assets.xcassets */; };
-		26C6136F2148E79600A7FD6E /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6136E2148E79600A7FD6E /* Camera.swift */; };
 		26C613702148E79600A7FD6E /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6136E2148E79600A7FD6E /* Camera.swift */; };
-		26C613722148E89000A7FD6E /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C613712148E89000A7FD6E /* Node.swift */; };
 		26C613732148E89000A7FD6E /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C613712148E89000A7FD6E /* Node.swift */; };
-		26C613752148E94E00A7FD6E /* MathLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C613742148E94E00A7FD6E /* MathLibrary.swift */; };
 		26C613762148E94E00A7FD6E /* MathLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C613742148E94E00A7FD6E /* MathLibrary.swift */; };
 		26C98A9D214B84AE0005A647 /* kizunaai.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A89214B84AE0005A647 /* kizunaai.mtl */; };
 		26C98A9E214B84AE0005A647 /* kizunaai.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A89214B84AE0005A647 /* kizunaai.mtl */; };
@@ -52,7 +51,6 @@
 		26C98AA9214B84AE0005A647 /* kizunaai.gltf in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A90214B84AE0005A647 /* kizunaai.gltf */; };
 		26C98AAA214B84AE0005A647 /* kizunaai.gltf in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A90214B84AE0005A647 /* kizunaai.gltf */; };
 		26C98AAB214B84AE0005A647 /* readme_kizunaai.txt in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A91214B84AE0005A647 /* readme_kizunaai.txt */; };
-		26C98AAC214B84AE0005A647 /* readme_kizunaai.txt in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A91214B84AE0005A647 /* readme_kizunaai.txt */; };
 		26C98AAD214B84AE0005A647 /* hair2.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A93214B84AE0005A647 /* hair2.png */; };
 		26C98AAE214B84AE0005A647 /* hair2.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A93214B84AE0005A647 /* hair2.png */; };
 		26C98AAF214B84AE0005A647 /* hair1.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A94214B84AE0005A647 /* hair1.png */; };
@@ -71,30 +69,77 @@
 		26C98ABC214B84AE0005A647 /* eye2.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A9A214B84AE0005A647 /* eye2.png */; };
 		26C98ABD214B84AE0005A647 /* kizunaai.dae in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A9C214B84AE0005A647 /* kizunaai.dae */; };
 		26C98ABE214B84AE0005A647 /* kizunaai.dae in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A9C214B84AE0005A647 /* kizunaai.dae */; };
-		26C98B02214BA9C20005A647 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C98B01214BA9C20005A647 /* Model.swift */; };
-		26C98B03214BA9C30005A647 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C98B01214BA9C20005A647 /* Model.swift */; };
-		26C98B05214BBD600005A647 /* Submesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C98B04214BBD600005A647 /* Submesh.swift */; };
 		26C98B06214BBD600005A647 /* Submesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C98B04214BBD600005A647 /* Submesh.swift */; };
 		26C98B09214BCB2A0005A647 /* train.obj in Resources */ = {isa = PBXBuildFile; fileRef = 26C98B07214BCB2A0005A647 /* train.obj */; };
 		26C98B0A214BCB2A0005A647 /* train.obj in Resources */ = {isa = PBXBuildFile; fileRef = 26C98B07214BCB2A0005A647 /* train.obj */; };
 		26C98B0B214BCB2A0005A647 /* train.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 26C98B08214BCB2A0005A647 /* train.mtl */; };
 		26C98B0C214BCB2A0005A647 /* train.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 26C98B08214BCB2A0005A647 /* train.mtl */; };
-		26C98B0E214CEC230005A647 /* Lighting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C98B0D214CEC230005A647 /* Lighting.swift */; };
 		26C98B0F214CEC230005A647 /* Lighting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C98B0D214CEC230005A647 /* Lighting.swift */; };
-		26C98B11214CFDB80005A647 /* DebugLighting.metal in Sources */ = {isa = PBXBuildFile; fileRef = 26C98B10214CFDB80005A647 /* DebugLighting.metal */; };
 		26C98B12214CFDB80005A647 /* DebugLighting.metal in Sources */ = {isa = PBXBuildFile; fileRef = 26C98B10214CFDB80005A647 /* DebugLighting.metal */; };
-		26C98B14214CFE030005A647 /* DebugLighting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C98B13214CFE030005A647 /* DebugLighting.swift */; };
 		26C98B15214CFE030005A647 /* DebugLighting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C98B13214CFE030005A647 /* DebugLighting.swift */; };
-		26C98B17214D08440005A647 /* Textureable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C98B16214D08440005A647 /* Textureable.swift */; };
 		26C98B18214D08440005A647 /* Textureable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C98B16214D08440005A647 /* Textureable.swift */; };
+		26CA14B32150E0E9001C04B8 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CA14B12150E0E9001C04B8 /* Scene.swift */; };
+		26CA14B62150E117001C04B8 /* Renderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CA14B42150E117001C04B8 /* Renderable.swift */; };
+		26CA14BB2150E155001C04B8 /* GLTFMathLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CA14B82150E155001C04B8 /* GLTFMathLibrary.swift */; };
+		26CA14BC2150E155001C04B8 /* GLTFMathLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CA14B82150E155001C04B8 /* GLTFMathLibrary.swift */; };
+		26CA14BE2150E155001C04B8 /* GLTFAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CA14B92150E155001C04B8 /* GLTFAsset.swift */; };
+		26CA14C02150E155001C04B8 /* GLTFTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CA14BA2150E155001C04B8 /* GLTFTypes.swift */; };
+		26CA14C32150E1F3001C04B8 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CA14C12150E1F3001C04B8 /* Animation.swift */; };
+		26CA14C62150E225001C04B8 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CA14C42150E225001C04B8 /* Character.swift */; };
+		26CA14C92150E272001C04B8 /* CharacterShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 26CA14C72150E272001C04B8 /* CharacterShader.metal */; };
+		26CA14CC2150E3BA001C04B8 /* Prop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CA14CA2150E3BA001C04B8 /* Prop.swift */; };
+		26CA14D62150E975001C04B8 /* large-plane.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 26CA14CE2150E975001C04B8 /* large-plane.mtl */; };
+		26CA14D72150E975001C04B8 /* large-plane.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 26CA14CE2150E975001C04B8 /* large-plane.mtl */; };
+		26CA14D82150E975001C04B8 /* large-plane.obj in Resources */ = {isa = PBXBuildFile; fileRef = 26CA14CF2150E975001C04B8 /* large-plane.obj */; };
+		26CA14D92150E975001C04B8 /* large-plane.obj in Resources */ = {isa = PBXBuildFile; fileRef = 26CA14CF2150E975001C04B8 /* large-plane.obj */; };
+		26CA14DA2150E975001C04B8 /* oilcan.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 26CA14D12150E975001C04B8 /* oilcan.mtl */; };
+		26CA14DB2150E975001C04B8 /* oilcan.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 26CA14D12150E975001C04B8 /* oilcan.mtl */; };
+		26CA14DC2150E975001C04B8 /* oilcan.obj in Resources */ = {isa = PBXBuildFile; fileRef = 26CA14D22150E975001C04B8 /* oilcan.obj */; };
+		26CA14DD2150E975001C04B8 /* oilcan.obj in Resources */ = {isa = PBXBuildFile; fileRef = 26CA14D22150E975001C04B8 /* oilcan.obj */; };
+		26CA14DE2150E975001C04B8 /* racing-car.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 26CA14D42150E975001C04B8 /* racing-car.mtl */; };
+		26CA14DF2150E975001C04B8 /* racing-car.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 26CA14D42150E975001C04B8 /* racing-car.mtl */; };
+		26CA14E02150E975001C04B8 /* racing-car.obj in Resources */ = {isa = PBXBuildFile; fileRef = 26CA14D52150E975001C04B8 /* racing-car.obj */; };
+		26CA14E12150E975001C04B8 /* racing-car.obj in Resources */ = {isa = PBXBuildFile; fileRef = 26CA14D52150E975001C04B8 /* racing-car.obj */; };
+		26CA14E42150E991001C04B8 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CA14E22150E991001C04B8 /* GameScene.swift */; };
+		26CA14E72150EC43001C04B8 /* skeleton.gltf in Resources */ = {isa = PBXBuildFile; fileRef = 26CA14E52150EC42001C04B8 /* skeleton.gltf */; };
+		26CA14E82150EC43001C04B8 /* skeleton.gltf in Resources */ = {isa = PBXBuildFile; fileRef = 26CA14E52150EC42001C04B8 /* skeleton.gltf */; };
+		26CA14E92150EC43001C04B8 /* buffer_skeleton.bin in Resources */ = {isa = PBXBuildFile; fileRef = 26CA14E62150EC42001C04B8 /* buffer_skeleton.bin */; };
+		26CA14EA2150EC43001C04B8 /* buffer_skeleton.bin in Resources */ = {isa = PBXBuildFile; fileRef = 26CA14E62150EC42001C04B8 /* buffer_skeleton.bin */; };
+		26D6BE7221539CE6008DD235 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6132321466DF300A7FD6E /* Renderer.swift */; };
+		26D6BE7321539CE6008DD235 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CA14E22150E991001C04B8 /* GameScene.swift */; };
+		26D6BE7421539CE6008DD235 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 26C6132221466DF300A7FD6E /* Shaders.metal */; };
+		26D6BE7521539CE6008DD235 /* CharacterShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 26CA14C72150E272001C04B8 /* CharacterShader.metal */; };
+		26D6BE7621539CE6008DD235 /* DebugLighting.metal in Sources */ = {isa = PBXBuildFile; fileRef = 26C98B10214CFDB80005A647 /* DebugLighting.metal */; };
+		26D6BE7721539CE6008DD235 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CA14B12150E0E9001C04B8 /* Scene.swift */; };
+		26D6BE7821539CE6008DD235 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C613712148E89000A7FD6E /* Node.swift */; };
+		26D6BE7921539CE6008DD235 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CA14C12150E1F3001C04B8 /* Animation.swift */; };
+		26D6BE7A21539CE6008DD235 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CA14C42150E225001C04B8 /* Character.swift */; };
+		26D6BE7B21539CE6008DD235 /* Submesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C98B04214BBD600005A647 /* Submesh.swift */; };
+		26D6BE7C21539CE6008DD235 /* Textureable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C98B16214D08440005A647 /* Textureable.swift */; };
+		26D6BE7D21539CE6008DD235 /* Prop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CA14CA2150E3BA001C04B8 /* Prop.swift */; };
+		26D6BE7E21539CE6008DD235 /* GLTFAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CA14B92150E155001C04B8 /* GLTFAsset.swift */; };
+		26D6BE7F21539CE6008DD235 /* GLTFTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CA14BA2150E155001C04B8 /* GLTFTypes.swift */; };
+		26D6BE8021539CE6008DD235 /* MathLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C613742148E94E00A7FD6E /* MathLibrary.swift */; };
+		26D6BE8121539CE6008DD235 /* DynamicBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26680C9D215205280078624C /* DynamicBuffer.swift */; };
+		26D6BE8221539CE6008DD235 /* Renderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CA14B42150E117001C04B8 /* Renderable.swift */; };
+		26D6BE8321539CE6008DD235 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6136E2148E79600A7FD6E /* Camera.swift */; };
+		26D6BE8421539CE6008DD235 /* Lighting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C98B0D214CEC230005A647 /* Lighting.swift */; };
+		26D6BE8521539CE6008DD235 /* DebugLighting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C98B13214CFE030005A647 /* DebugLighting.swift */; };
+		26D6BE872156282B008DD235 /* ARSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D6BE862156282B008DD235 /* ARSessionManager.swift */; };
+		26D6BE89215633D0008DD235 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D6BE88215633CF008DD235 /* Manager.swift */; };
+		26D6BE8A215633D0008DD235 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D6BE88215633CF008DD235 /* Manager.swift */; };
+		26FC6CA42150FD3D003CDD0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26C6132521466DF300A7FD6E /* Assets.xcassets */; };
+		26FC6CA82151009F003CDD0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26C6132521466DF300A7FD6E /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		26680C922151059C0078624C /* Car_Normal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Car_Normal.jpg; sourceTree = "<group>"; };
+		26680C932151059C0078624C /* car-roughness.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "car-roughness.png"; sourceTree = "<group>"; };
+		26680C942151059C0078624C /* Car_Diff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Car_Diff.png; sourceTree = "<group>"; };
+		26680C9D215205280078624C /* DynamicBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicBuffer.swift; sourceTree = "<group>"; };
 		26AF4CBD214F4B5800798F58 /* plane.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = plane.obj; path = "AMglTF Shared/resources/obj/plane.obj"; sourceTree = SOURCE_ROOT; };
 		26AF4CBE214F4B5800798F58 /* plane.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = plane.mtl; path = "AMglTF Shared/resources/obj/plane.mtl"; sourceTree = SOURCE_ROOT; };
 		26AF4CC3214F4B7000798F58 /* ground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ground.png; sourceTree = "<group>"; };
-		26AF4CC6214F4FB800798F58 /* RendererARKitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RendererARKitExtensions.swift; sourceTree = "<group>"; };
-		26AF4CC9214F53AC00798F58 /* ARKitRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARKitRenderer.swift; sourceTree = "<group>"; };
 		26AF4CCB214F55CD00798F58 /* ARKitShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = ARKitShader.metal; sourceTree = "<group>"; };
 		26C6132221466DF300A7FD6E /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 		26C6132321466DF300A7FD6E /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
@@ -134,7 +179,6 @@
 		26C98A99214B84AE0005A647 /* eye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eye.png; sourceTree = "<group>"; };
 		26C98A9A214B84AE0005A647 /* eye2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eye2.png; sourceTree = "<group>"; };
 		26C98A9C214B84AE0005A647 /* kizunaai.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = kizunaai.dae; sourceTree = "<group>"; };
-		26C98B01214BA9C20005A647 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		26C98B04214BBD600005A647 /* Submesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Submesh.swift; sourceTree = "<group>"; };
 		26C98B07214BCB2A0005A647 /* train.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = train.obj; sourceTree = "<group>"; };
 		26C98B08214BCB2A0005A647 /* train.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = train.mtl; sourceTree = "<group>"; };
@@ -142,6 +186,26 @@
 		26C98B10214CFDB80005A647 /* DebugLighting.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = DebugLighting.metal; sourceTree = "<group>"; };
 		26C98B13214CFE030005A647 /* DebugLighting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLighting.swift; sourceTree = "<group>"; };
 		26C98B16214D08440005A647 /* Textureable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Textureable.swift; sourceTree = "<group>"; };
+		26CA14B12150E0E9001C04B8 /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		26CA14B42150E117001C04B8 /* Renderable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderable.swift; sourceTree = "<group>"; };
+		26CA14B82150E155001C04B8 /* GLTFMathLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFMathLibrary.swift; sourceTree = "<group>"; };
+		26CA14B92150E155001C04B8 /* GLTFAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFAsset.swift; sourceTree = "<group>"; };
+		26CA14BA2150E155001C04B8 /* GLTFTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GLTFTypes.swift; sourceTree = "<group>"; };
+		26CA14C12150E1F3001C04B8 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		26CA14C42150E225001C04B8 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		26CA14C72150E272001C04B8 /* CharacterShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = CharacterShader.metal; sourceTree = "<group>"; };
+		26CA14CA2150E3BA001C04B8 /* Prop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prop.swift; sourceTree = "<group>"; };
+		26CA14CE2150E975001C04B8 /* large-plane.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "large-plane.mtl"; sourceTree = "<group>"; };
+		26CA14CF2150E975001C04B8 /* large-plane.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "large-plane.obj"; sourceTree = "<group>"; };
+		26CA14D12150E975001C04B8 /* oilcan.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = oilcan.mtl; sourceTree = "<group>"; };
+		26CA14D22150E975001C04B8 /* oilcan.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = oilcan.obj; sourceTree = "<group>"; };
+		26CA14D42150E975001C04B8 /* racing-car.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "racing-car.mtl"; sourceTree = "<group>"; };
+		26CA14D52150E975001C04B8 /* racing-car.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "racing-car.obj"; sourceTree = "<group>"; };
+		26CA14E22150E991001C04B8 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		26CA14E52150EC42001C04B8 /* skeleton.gltf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = skeleton.gltf; sourceTree = "<group>"; };
+		26CA14E62150EC42001C04B8 /* buffer_skeleton.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = buffer_skeleton.bin; sourceTree = "<group>"; };
+		26D6BE862156282B008DD235 /* ARSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSessionManager.swift; sourceTree = "<group>"; };
+		26D6BE88215633CF008DD235 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +226,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26680C842151040C0078624C /* kizunaai */ = {
+			isa = PBXGroup;
+			children = (
+				26C98A93214B84AE0005A647 /* hair2.png */,
+				26C98A94214B84AE0005A647 /* hair1.png */,
+				26C98A95214B84AE0005A647 /* s_hair.bmp */,
+				26C98A96214B84AE0005A647 /* face.png */,
+				26C98A97214B84AE0005A647 /* tops.png */,
+				26C98A98214B84AE0005A647 /* bottoms.png */,
+				26C98A99214B84AE0005A647 /* eye.png */,
+				26C98A9A214B84AE0005A647 /* eye2.png */,
+			);
+			path = kizunaai;
+			sourceTree = "<group>";
+		};
+		26680C852151041D0078624C /* racing-car */ = {
+			isa = PBXGroup;
+			children = (
+				26680C942151059C0078624C /* Car_Diff.png */,
+				26680C922151059C0078624C /* Car_Normal.jpg */,
+				26680C932151059C0078624C /* car-roughness.png */,
+			);
+			path = "racing-car";
+			sourceTree = "<group>";
+		};
+		266F88042152413500CFC34B /* ARKit */ = {
+			isa = PBXGroup;
+			children = (
+				26D6BE862156282B008DD235 /* ARSessionManager.swift */,
+			);
+			path = ARKit;
+			sourceTree = "<group>";
+		};
+		266F88052152414700CFC34B /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				26CA14B12150E0E9001C04B8 /* Scene.swift */,
+				26C613712148E89000A7FD6E /* Node.swift */,
+				26C6136E2148E79600A7FD6E /* Camera.swift */,
+				26C98B0D214CEC230005A647 /* Lighting.swift */,
+				26CA14CA2150E3BA001C04B8 /* Prop.swift */,
+				26CA14C42150E225001C04B8 /* Character.swift */,
+				26C98B04214BBD600005A647 /* Submesh.swift */,
+				26C98B16214D08440005A647 /* Textureable.swift */,
+				26CA14C12150E1F3001C04B8 /* Animation.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
 		26C6131C21466DF200A7FD6E = {
 			isa = PBXGroup;
 			children = (
@@ -177,8 +290,11 @@
 			children = (
 				26C6132521466DF300A7FD6E /* Assets.xcassets */,
 				26C6132321466DF300A7FD6E /* Renderer.swift */,
-				26AF4CC9214F53AC00798F58 /* ARKitRenderer.swift */,
+				26D6BE88215633CF008DD235 /* Manager.swift */,
+				26CA14E22150E991001C04B8 /* GameScene.swift */,
 				26C613562147DBA500A7FD6E /* Shaders */,
+				266F88042152413500CFC34B /* ARKit */,
+				266F88052152414700CFC34B /* Scene */,
 				26C613572147DBB400A7FD6E /* Utility */,
 				26C6135D2148E22D00A7FD6E /* resources */,
 			);
@@ -199,7 +315,6 @@
 			children = (
 				26C6132D21466DF300A7FD6E /* AppDelegate.swift */,
 				26C6132F21466DF300A7FD6E /* GameViewController.swift */,
-				26AF4CC6214F4FB800798F58 /* RendererARKitExtensions.swift */,
 				26C6133121466DF300A7FD6E /* Main.storyboard */,
 				26C6133421466DF300A7FD6E /* LaunchScreen.storyboard */,
 				26C6133721466DF300A7FD6E /* Info.plist */,
@@ -224,6 +339,7 @@
 				26C6132421466DF300A7FD6E /* ShaderTypes.h */,
 				26C6132221466DF300A7FD6E /* Shaders.metal */,
 				26AF4CCB214F55CD00798F58 /* ARKitShader.metal */,
+				26CA14C72150E272001C04B8 /* CharacterShader.metal */,
 				26C98B10214CFDB80005A647 /* DebugLighting.metal */,
 			);
 			path = Shaders;
@@ -232,14 +348,11 @@
 		26C613572147DBB400A7FD6E /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				26C613712148E89000A7FD6E /* Node.swift */,
-				26C6136E2148E79600A7FD6E /* Camera.swift */,
-				26C98B0D214CEC230005A647 /* Lighting.swift */,
-				26C98B13214CFE030005A647 /* DebugLighting.swift */,
-				26C98B01214BA9C20005A647 /* Model.swift */,
-				26C98B04214BBD600005A647 /* Submesh.swift */,
-				26C98B16214D08440005A647 /* Textureable.swift */,
+				26CA14B72150E155001C04B8 /* glTF Importer */,
 				26C613742148E94E00A7FD6E /* MathLibrary.swift */,
+				26680C9D215205280078624C /* DynamicBuffer.swift */,
+				26CA14B42150E117001C04B8 /* Renderable.swift */,
+				26C98B13214CFE030005A647 /* DebugLighting.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -259,6 +372,9 @@
 		26C98A88214B84AE0005A647 /* obj */ = {
 			isa = PBXGroup;
 			children = (
+				26CA14D32150E975001C04B8 /* Car */,
+				26CA14CD2150E975001C04B8 /* Ground */,
+				26CA14D02150E975001C04B8 /* Racetrack */,
 				26C98B08214BCB2A0005A647 /* train.mtl */,
 				26C98B07214BCB2A0005A647 /* train.obj */,
 				26AF4CBE214F4B5800798F58 /* plane.mtl */,
@@ -272,6 +388,8 @@
 		26C98A8B214B84AE0005A647 /* glTF */ = {
 			isa = PBXGroup;
 			children = (
+				26CA14E62150EC42001C04B8 /* buffer_skeleton.bin */,
+				26CA14E52150EC42001C04B8 /* skeleton.gltf */,
 				26C98A8C214B84AE0005A647 /* buffer_kizunaai.bin */,
 				26C98A8D214B84AE0005A647 /* BrainStem.gltf */,
 				26C98A8E214B84AE0005A647 /* skeletonWave.bin */,
@@ -285,14 +403,8 @@
 			isa = PBXGroup;
 			children = (
 				26AF4CC3214F4B7000798F58 /* ground.png */,
-				26C98A93214B84AE0005A647 /* hair2.png */,
-				26C98A94214B84AE0005A647 /* hair1.png */,
-				26C98A95214B84AE0005A647 /* s_hair.bmp */,
-				26C98A96214B84AE0005A647 /* face.png */,
-				26C98A97214B84AE0005A647 /* tops.png */,
-				26C98A98214B84AE0005A647 /* bottoms.png */,
-				26C98A99214B84AE0005A647 /* eye.png */,
-				26C98A9A214B84AE0005A647 /* eye2.png */,
+				26680C852151041D0078624C /* racing-car */,
+				26680C842151040C0078624C /* kizunaai */,
 			);
 			path = texture;
 			sourceTree = "<group>";
@@ -303,6 +415,43 @@
 				26C98A9C214B84AE0005A647 /* kizunaai.dae */,
 			);
 			path = dae;
+			sourceTree = "<group>";
+		};
+		26CA14B72150E155001C04B8 /* glTF Importer */ = {
+			isa = PBXGroup;
+			children = (
+				26CA14B82150E155001C04B8 /* GLTFMathLibrary.swift */,
+				26CA14B92150E155001C04B8 /* GLTFAsset.swift */,
+				26CA14BA2150E155001C04B8 /* GLTFTypes.swift */,
+			);
+			path = "glTF Importer";
+			sourceTree = "<group>";
+		};
+		26CA14CD2150E975001C04B8 /* Ground */ = {
+			isa = PBXGroup;
+			children = (
+				26CA14CE2150E975001C04B8 /* large-plane.mtl */,
+				26CA14CF2150E975001C04B8 /* large-plane.obj */,
+			);
+			path = Ground;
+			sourceTree = "<group>";
+		};
+		26CA14D02150E975001C04B8 /* Racetrack */ = {
+			isa = PBXGroup;
+			children = (
+				26CA14D12150E975001C04B8 /* oilcan.mtl */,
+				26CA14D22150E975001C04B8 /* oilcan.obj */,
+			);
+			path = Racetrack;
+			sourceTree = "<group>";
+		};
+		26CA14D32150E975001C04B8 /* Car */ = {
+			isa = PBXGroup;
+			children = (
+				26CA14D42150E975001C04B8 /* racing-car.mtl */,
+				26CA14D52150E975001C04B8 /* racing-car.obj */,
+			);
+			path = Car;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,7 +510,7 @@
 				};
 			};
 			buildConfigurationList = 26C6132021466DF200A7FD6E /* Build configuration list for PBXProject "AMglTF" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -385,24 +534,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				26C98AA5214B84AE0005A647 /* skeletonWave.bin in Resources */,
+				26680C972151059C0078624C /* car-roughness.png in Resources */,
 				26C98AB5214B84AE0005A647 /* tops.png in Resources */,
+				26CA14E92150EC43001C04B8 /* buffer_skeleton.bin in Resources */,
 				26AF4CBF214F4B5800798F58 /* plane.obj in Resources */,
 				26C98AA1214B84AE0005A647 /* buffer_kizunaai.bin in Resources */,
+				26CA14D62150E975001C04B8 /* large-plane.mtl in Resources */,
+				26680C952151059C0078624C /* Car_Normal.jpg in Resources */,
+				26FC6CA82151009F003CDD0C /* Assets.xcassets in Resources */,
+				26CA14E72150EC43001C04B8 /* skeleton.gltf in Resources */,
 				26AF4CC4214F4B7000798F58 /* ground.png in Resources */,
 				26C98AB1214B84AE0005A647 /* s_hair.bmp in Resources */,
+				26CA14DA2150E975001C04B8 /* oilcan.mtl in Resources */,
 				26C98AAB214B84AE0005A647 /* readme_kizunaai.txt in Resources */,
+				26680C992151059C0078624C /* Car_Diff.png in Resources */,
 				26C98A9D214B84AE0005A647 /* kizunaai.mtl in Resources */,
 				26C98B0B214BCB2A0005A647 /* train.mtl in Resources */,
 				26C98A9F214B84AE0005A647 /* kizunaai.obj in Resources */,
 				26C98ABD214B84AE0005A647 /* kizunaai.dae in Resources */,
 				26C98AA9214B84AE0005A647 /* kizunaai.gltf in Resources */,
+				26CA14E02150E975001C04B8 /* racing-car.obj in Resources */,
 				26C98AA7214B84AE0005A647 /* skeletonWave.gltf in Resources */,
 				26C98AAF214B84AE0005A647 /* hair1.png in Resources */,
 				26C6134A21466DF300A7FD6E /* ShaderTypes.h in Resources */,
 				26C98AB3214B84AE0005A647 /* face.png in Resources */,
 				26C6133321466DF300A7FD6E /* Main.storyboard in Resources */,
-				26C6134C21466DF300A7FD6E /* Assets.xcassets in Resources */,
 				26C98AB9214B84AE0005A647 /* eye.png in Resources */,
+				26CA14DE2150E975001C04B8 /* racing-car.mtl in Resources */,
+				26CA14D82150E975001C04B8 /* large-plane.obj in Resources */,
 				26C98AA3214B84AE0005A647 /* BrainStem.gltf in Resources */,
 				26C98ABB214B84AE0005A647 /* eye2.png in Resources */,
 				26C6133621466DF300A7FD6E /* LaunchScreen.storyboard in Resources */,
@@ -410,6 +569,7 @@
 				26AF4CC1214F4B5800798F58 /* plane.mtl in Resources */,
 				26C98B09214BCB2A0005A647 /* train.obj in Resources */,
 				26C98AAD214B84AE0005A647 /* hair2.png in Resources */,
+				26CA14DC2150E975001C04B8 /* oilcan.obj in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,20 +577,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26FC6CA42150FD3D003CDD0C /* Assets.xcassets in Resources */,
 				26C98AAA214B84AE0005A647 /* kizunaai.gltf in Resources */,
+				26CA14EA2150EC43001C04B8 /* buffer_skeleton.bin in Resources */,
 				26C98AB6214B84AE0005A647 /* tops.png in Resources */,
 				26C98AA8214B84AE0005A647 /* skeletonWave.gltf in Resources */,
 				26C98AAE214B84AE0005A647 /* hair2.png in Resources */,
+				26CA14D92150E975001C04B8 /* large-plane.obj in Resources */,
+				26680C962151059C0078624C /* Car_Normal.jpg in Resources */,
 				26C98AA0214B84AE0005A647 /* kizunaai.obj in Resources */,
+				26680C982151059C0078624C /* car-roughness.png in Resources */,
 				26C6134421466DF300A7FD6E /* Main.storyboard in Resources */,
+				26CA14DB2150E975001C04B8 /* oilcan.mtl in Resources */,
+				26CA14DF2150E975001C04B8 /* racing-car.mtl in Resources */,
 				26C98B0C214BCB2A0005A647 /* train.mtl in Resources */,
 				26C98AB2214B84AE0005A647 /* s_hair.bmp in Resources */,
 				26C98AB8214B84AE0005A647 /* bottoms.png in Resources */,
 				26C98B0A214BCB2A0005A647 /* train.obj in Resources */,
+				26CA14E82150EC43001C04B8 /* skeleton.gltf in Resources */,
+				26680C9A2151059C0078624C /* Car_Diff.png in Resources */,
+				26CA14DD2150E975001C04B8 /* oilcan.obj in Resources */,
 				26C98ABE214B84AE0005A647 /* kizunaai.dae in Resources */,
 				26C98AA4214B84AE0005A647 /* BrainStem.gltf in Resources */,
-				26C6134D21466DF300A7FD6E /* Assets.xcassets in Resources */,
 				26C98AB0214B84AE0005A647 /* hair1.png in Resources */,
+				26CA14E12150E975001C04B8 /* racing-car.obj in Resources */,
 				26AF4CC5214F4B7000798F58 /* ground.png in Resources */,
 				26C98AA2214B84AE0005A647 /* buffer_kizunaai.bin in Resources */,
 				26C98ABC214B84AE0005A647 /* eye2.png in Resources */,
@@ -440,7 +610,7 @@
 				26C98A9E214B84AE0005A647 /* kizunaai.mtl in Resources */,
 				26AF4CC2214F4B5800798F58 /* plane.mtl in Resources */,
 				26C98ABA214B84AE0005A647 /* eye.png in Resources */,
-				26C98AAC214B84AE0005A647 /* readme_kizunaai.txt in Resources */,
+				26CA14D72150E975001C04B8 /* large-plane.mtl in Resources */,
 				26C98AA6214B84AE0005A647 /* skeletonWave.bin in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,22 +622,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26C6134821466DF300A7FD6E /* Renderer.swift in Sources */,
-				26C98B0E214CEC230005A647 /* Lighting.swift in Sources */,
-				26C6134621466DF300A7FD6E /* Shaders.metal in Sources */,
-				26C6136F2148E79600A7FD6E /* Camera.swift in Sources */,
+				26D6BE7221539CE6008DD235 /* Renderer.swift in Sources */,
+				26D6BE7321539CE6008DD235 /* GameScene.swift in Sources */,
+				26D6BE7421539CE6008DD235 /* Shaders.metal in Sources */,
+				26D6BE7521539CE6008DD235 /* CharacterShader.metal in Sources */,
+				26D6BE872156282B008DD235 /* ARSessionManager.swift in Sources */,
+				26D6BE7621539CE6008DD235 /* DebugLighting.metal in Sources */,
+				26D6BE7721539CE6008DD235 /* Scene.swift in Sources */,
+				26D6BE7821539CE6008DD235 /* Node.swift in Sources */,
+				26D6BE7921539CE6008DD235 /* Animation.swift in Sources */,
+				26D6BE7A21539CE6008DD235 /* Character.swift in Sources */,
+				26D6BE7B21539CE6008DD235 /* Submesh.swift in Sources */,
+				26D6BE7C21539CE6008DD235 /* Textureable.swift in Sources */,
+				26D6BE7D21539CE6008DD235 /* Prop.swift in Sources */,
+				26D6BE7E21539CE6008DD235 /* GLTFAsset.swift in Sources */,
+				26D6BE7F21539CE6008DD235 /* GLTFTypes.swift in Sources */,
+				26D6BE8021539CE6008DD235 /* MathLibrary.swift in Sources */,
+				26D6BE8121539CE6008DD235 /* DynamicBuffer.swift in Sources */,
+				26D6BE8221539CE6008DD235 /* Renderable.swift in Sources */,
+				26D6BE8321539CE6008DD235 /* Camera.swift in Sources */,
+				26D6BE89215633D0008DD235 /* Manager.swift in Sources */,
+				26D6BE8421539CE6008DD235 /* Lighting.swift in Sources */,
+				26D6BE8521539CE6008DD235 /* DebugLighting.swift in Sources */,
+				26680C9B215106DA0078624C /* ShaderTypes.h in Sources */,
 				26AF4CCC214F55CD00798F58 /* ARKitShader.metal in Sources */,
-				26AF4CC7214F4FB800798F58 /* RendererARKitExtensions.swift in Sources */,
-				26AF4CCA214F53AC00798F58 /* ARKitRenderer.swift in Sources */,
-				26C613752148E94E00A7FD6E /* MathLibrary.swift in Sources */,
-				26C98B05214BBD600005A647 /* Submesh.swift in Sources */,
+				26CA14BB2150E155001C04B8 /* GLTFMathLibrary.swift in Sources */,
 				26C6133021466DF300A7FD6E /* GameViewController.swift in Sources */,
-				26C98B17214D08440005A647 /* Textureable.swift in Sources */,
-				26C98B14214CFE030005A647 /* DebugLighting.swift in Sources */,
 				26C6132E21466DF300A7FD6E /* AppDelegate.swift in Sources */,
-				26C613722148E89000A7FD6E /* Node.swift in Sources */,
-				26C98B11214CFDB80005A647 /* DebugLighting.metal in Sources */,
-				26C98B02214BA9C20005A647 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,19 +656,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26680C9F215205280078624C /* DynamicBuffer.swift in Sources */,
 				26C6134921466DF300A7FD6E /* Renderer.swift in Sources */,
 				26C98B0F214CEC230005A647 /* Lighting.swift in Sources */,
+				26CA14BE2150E155001C04B8 /* GLTFAsset.swift in Sources */,
 				26C6134721466DF300A7FD6E /* Shaders.metal in Sources */,
+				26CA14CC2150E3BA001C04B8 /* Prop.swift in Sources */,
+				26CA14B62150E117001C04B8 /* Renderable.swift in Sources */,
+				26CA14E42150E991001C04B8 /* GameScene.swift in Sources */,
+				26CA14C92150E272001C04B8 /* CharacterShader.metal in Sources */,
 				26C613702148E79600A7FD6E /* Camera.swift in Sources */,
 				26C613762148E94E00A7FD6E /* MathLibrary.swift in Sources */,
+				26CA14C62150E225001C04B8 /* Character.swift in Sources */,
 				26C98B06214BBD600005A647 /* Submesh.swift in Sources */,
+				26CA14C02150E155001C04B8 /* GLTFTypes.swift in Sources */,
 				26C6134121466DF300A7FD6E /* GameViewController.swift in Sources */,
 				26C98B18214D08440005A647 /* Textureable.swift in Sources */,
 				26C98B15214CFE030005A647 /* DebugLighting.swift in Sources */,
 				26C6133F21466DF300A7FD6E /* AppDelegate.swift in Sources */,
 				26C613732148E89000A7FD6E /* Node.swift in Sources */,
+				26D6BE8A215633D0008DD235 /* Manager.swift in Sources */,
+				26CA14C32150E1F3001C04B8 /* Animation.swift in Sources */,
+				26CA14BC2150E155001C04B8 /* GLTFMathLibrary.swift in Sources */,
 				26C98B12214CFDB80005A647 /* DebugLighting.metal in Sources */,
-				26C98B03214BA9C30005A647 /* Model.swift in Sources */,
+				26CA14B32150E0E9001C04B8 /* Scene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

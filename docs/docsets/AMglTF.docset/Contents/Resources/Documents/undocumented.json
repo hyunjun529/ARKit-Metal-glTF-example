@@ -1,0 +1,1195 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 5,
+      "symbol": "RenderDestinationProvider",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 6,
+      "symbol": "RenderDestinationProvider.currentRenderPassDescriptor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 7,
+      "symbol": "RenderDestinationProvider.currentDrawable",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 8,
+      "symbol": "RenderDestinationProvider.colorPixelFormat",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 9,
+      "symbol": "RenderDestinationProvider.depthStencilPixelFormat",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 10,
+      "symbol": "RenderDestinationProvider.sampleCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 14,
+      "symbol": "kMaxBuffersInFlight",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 17,
+      "symbol": "kMaxAnchorInstanceCount",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 20,
+      "symbol": "kAlignedSharedUniformsSize",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 21,
+      "symbol": "kAlignedInstanceUniformsSize",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 24,
+      "symbol": "kImagePlaneVertexData",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 32,
+      "symbol": "ARKitRenderer",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 33,
+      "symbol": "ARKitRenderer.session",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 34,
+      "symbol": "ARKitRenderer.device",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 35,
+      "symbol": "ARKitRenderer.inFlightSemaphore",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 36,
+      "symbol": "ARKitRenderer.renderDestination",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 39,
+      "symbol": "ARKitRenderer.commandQueue",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 40,
+      "symbol": "ARKitRenderer.sharedUniformBuffer",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 41,
+      "symbol": "ARKitRenderer.anchorUniformBuffer",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 42,
+      "symbol": "ARKitRenderer.imagePlaneVertexBuffer",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 43,
+      "symbol": "ARKitRenderer.capturedImagePipelineState",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 44,
+      "symbol": "ARKitRenderer.capturedImageDepthState",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 45,
+      "symbol": "ARKitRenderer.anchorPipelineState",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 46,
+      "symbol": "ARKitRenderer.anchorDepthState",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 47,
+      "symbol": "ARKitRenderer.capturedImageTextureY",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 48,
+      "symbol": "ARKitRenderer.capturedImageTextureCbCr",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 51,
+      "symbol": "ARKitRenderer.capturedImageTextureCache",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 55,
+      "symbol": "ARKitRenderer.geometryVertexDescriptor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 58,
+      "symbol": "ARKitRenderer.cubeMesh",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 62,
+      "symbol": "ARKitRenderer.uniformBufferIndex",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 65,
+      "symbol": "ARKitRenderer.sharedUniformBufferOffset",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 68,
+      "symbol": "ARKitRenderer.anchorUniformBufferOffset",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 71,
+      "symbol": "ARKitRenderer.sharedUniformBufferAddress",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 74,
+      "symbol": "ARKitRenderer.anchorUniformBufferAddress",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 77,
+      "symbol": "ARKitRenderer.anchorInstanceCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 80,
+      "symbol": "ARKitRenderer.viewportSize",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 83,
+      "symbol": "ARKitRenderer.viewportSizeDidChange",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 86,
+      "symbol": "ARKitRenderer.init(session:metalDevice:renderDestination:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 94,
+      "symbol": "ARKitRenderer.drawRectResized(size:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 99,
+      "symbol": "ARKitRenderer.update()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 148,
+      "symbol": "ARKitRenderer.loadMetal()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 289,
+      "symbol": "ARKitRenderer.loadAssets()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 320,
+      "symbol": "ARKitRenderer.updateBufferStates()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 333,
+      "symbol": "ARKitRenderer.updateGameState()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 351,
+      "symbol": "ARKitRenderer.updateSharedUniforms(frame:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 379,
+      "symbol": "ARKitRenderer.updateAnchors(frame:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 402,
+      "symbol": "ARKitRenderer.updateCapturedImageTextures(frame:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 414,
+      "symbol": "ARKitRenderer.createTexture(fromPixelBuffer:pixelFormat:planeIndex:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 428,
+      "symbol": "ARKitRenderer.updateImagePlane(frame:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 442,
+      "symbol": "ARKitRenderer.drawCapturedImage(renderEncoder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/ARKitRenderer.swift",
+      "line": 468,
+      "symbol": "ARKitRenderer.drawAnchorGeometry(renderEncoder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Renderer.swift",
+      "line": null,
+      "symbol": "Renderer",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Renderer.swift",
+      "line": null,
+      "symbol": "Renderer",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Renderer.swift",
+      "line": 6,
+      "symbol": "alignedUniformsSize",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Renderer.swift",
+      "line": 8,
+      "symbol": "maxBuffersInFlight",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Renderer.swift",
+      "line": 10,
+      "symbol": "RendererError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Renderer.swift",
+      "line": 11,
+      "symbol": "RendererError.badVertexDescriptor",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Renderer.swift",
+      "line": 15,
+      "symbol": "Renderer",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Renderer.swift",
+      "line": 16,
+      "symbol": "Renderer.device",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Renderer.swift",
+      "line": 18,
+      "symbol": "Renderer.commandQueue",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Renderer.swift",
+      "line": 19,
+      "symbol": "Renderer.depthStencilState",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Renderer.swift",
+      "line": 21,
+      "symbol": "Renderer.depthStencilPixelFormat",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Renderer.swift",
+      "line": 22,
+      "symbol": "Renderer.colorPixelFormat",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Renderer.swift",
+      "line": 24,
+      "symbol": "Renderer.library",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Renderer.swift",
+      "line": 26,
+      "symbol": "Renderer.dynamicUniformBuffer",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Renderer.swift",
+      "line": 27,
+      "symbol": "Renderer.uniformBufferOffset",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Renderer.swift",
+      "line": 28,
+      "symbol": "Renderer.uniformBufferIndex",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Renderer.swift",
+      "line": 29,
+      "symbol": "Renderer.uniforms",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Renderer.swift",
+      "line": 31,
+      "symbol": "Renderer.dynamicFragmentUniformBuffer",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Renderer.swift",
+      "line": 32,
+      "symbol": "Renderer.fragmentUniformBufferOffset",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Renderer.swift",
+      "line": 33,
+      "symbol": "Renderer.fragmentUniformBufferIndex",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Renderer.swift",
+      "line": 34,
+      "symbol": "Renderer.fragmentUniforms",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Renderer.swift",
+      "line": 36,
+      "symbol": "Renderer.inFlightSemaphore",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Renderer.swift",
+      "line": 39,
+      "symbol": "Renderer.camera",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Renderer.swift",
+      "line": 45,
+      "symbol": "Renderer.models",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Renderer.swift",
+      "line": 47,
+      "symbol": "Renderer.lights",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Renderer.swift",
+      "line": 50,
+      "symbol": "Renderer.lightPipelineState",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Renderer.swift",
+      "line": 55,
+      "symbol": "Renderer.init(metalKitView:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Renderer.swift",
+      "line": 148,
+      "symbol": "Renderer.draw(in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Renderer.swift",
+      "line": 241,
+      "symbol": "Renderer.mtkView(_:drawableSizeWillChange:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/Camera.swift",
+      "line": 11,
+      "symbol": "Camera.fovDegrees",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/Camera.swift",
+      "line": 12,
+      "symbol": "Camera.fovRadians",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/Camera.swift",
+      "line": 15,
+      "symbol": "Camera.aspect",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/Camera.swift",
+      "line": 16,
+      "symbol": "Camera.near",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/Camera.swift",
+      "line": 17,
+      "symbol": "Camera.far",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/Camera.swift",
+      "line": 19,
+      "symbol": "Camera.projectionMatrix",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/Camera.swift",
+      "line": 26,
+      "symbol": "Camera.viewMatrix",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/Camera.swift",
+      "line": 36,
+      "symbol": "Renderer.zoomUsing(delta:sensitivity:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/Camera.swift",
+      "line": 40,
+      "symbol": "Renderer.rotateUsing(translation:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/DebugLighting.swift",
+      "line": 36,
+      "symbol": "Renderer.buildLightPipelineState()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/DebugLighting.swift",
+      "line": 59,
+      "symbol": "Renderer.debugLights(renderEncoder:lightType:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/DebugLighting.swift",
+      "line": 82,
+      "symbol": "Renderer.drawPointLight(renderEncoder:position:color:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/DebugLighting.swift",
+      "line": 99,
+      "symbol": "Renderer.drawDirectionalLight(renderEncoder:direction:color:count:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/DebugLighting.swift",
+      "line": 124,
+      "symbol": "Renderer.drawSpotLight(renderEncoder:position:direction:color:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/Lighting.swift",
+      "line": 3,
+      "symbol": "Lighting",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/Lighting.swift",
+      "line": 7,
+      "symbol": "Lighting.buildDefaultLight()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/Lighting.swift",
+      "line": 19,
+      "symbol": "Lighting.sunlight",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/Lighting.swift",
+      "line": 25,
+      "symbol": "Lighting.ambientLight",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/Lighting.swift",
+      "line": 34,
+      "symbol": "Lighting.redLight",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/Lighting.swift",
+      "line": 43,
+      "symbol": "Lighting.blueLight",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/Lighting.swift",
+      "line": 52,
+      "symbol": "Lighting.spotlight",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/MathLibrary.swift",
+      "line": 46,
+      "symbol": "π",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/MathLibrary.swift",
+      "line": 48,
+      "symbol": "radians(fromDegrees:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/MathLibrary.swift",
+      "line": 52,
+      "symbol": "degrees(fromRadians:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/MathLibrary.swift",
+      "line": 57,
+      "symbol": "Float.radiansToDegrees",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/MathLibrary.swift",
+      "line": 60,
+      "symbol": "Float.degreesToRadians",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/MathLibrary.swift",
+      "line": 66,
+      "symbol": "float4x4.init(translation:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/MathLibrary.swift",
+      "line": 73,
+      "symbol": "float4x4.init(scaling:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/MathLibrary.swift",
+      "line": 80,
+      "symbol": "float4x4.init(scaling:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/MathLibrary.swift",
+      "line": 85,
+      "symbol": "float4x4.init(rotationX:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/MathLibrary.swift",
+      "line": 93,
+      "symbol": "float4x4.init(rotationY:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/MathLibrary.swift",
+      "line": 101,
+      "symbol": "float4x4.init(rotationZ:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/MathLibrary.swift",
+      "line": 109,
+      "symbol": "float4x4.init(rotation:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/MathLibrary.swift",
+      "line": 116,
+      "symbol": "float4x4.identity()",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/MathLibrary.swift",
+      "line": 121,
+      "symbol": "float4x4.upperLeft()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/MathLibrary.swift",
+      "line": 128,
+      "symbol": "float4x4.init(projectionFov:near:far:aspect:lhs:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/MathLibrary.swift",
+      "line": 141,
+      "symbol": "float4x4.init(eye:center:up:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/MathLibrary.swift",
+      "line": 155,
+      "symbol": "float4x4.init(orthoLeft:right:bottom:top:near:far:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/MathLibrary.swift",
+      "line": 169,
+      "symbol": "float3x3.init(normalFrom4x4:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/MathLibrary.swift",
+      "line": 176,
+      "symbol": "float4.xyz",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/MathLibrary.swift",
+      "line": 206,
+      "symbol": "matrix4x4_translation(_:_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/MathLibrary.swift",
+      "line": 213,
+      "symbol": "matrix_perspective_right_hand(fovyRadians:aspectRatio:nearZ:farZ:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/MathLibrary.swift",
+      "line": 223,
+      "symbol": "radians_from_degrees(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/Model.swift",
+      "line": 33,
+      "symbol": "Model",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/Model.swift",
+      "line": 35,
+      "symbol": "Model.defaultVertexDescriptor",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/Model.swift",
+      "line": 53,
+      "symbol": "Model.vertexBuffer",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/Model.swift",
+      "line": 54,
+      "symbol": "Model.mesh",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/Model.swift",
+      "line": 55,
+      "symbol": "Model.pipelineState",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/Model.swift",
+      "line": 56,
+      "symbol": "Model.submeshes",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/Model.swift",
+      "line": 57,
+      "symbol": "Model.tiling",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/Model.swift",
+      "line": 58,
+      "symbol": "Model.samplerState",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/Model.swift",
+      "line": 60,
+      "symbol": "Model.init(name:format:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/Node.swift",
+      "line": 33,
+      "symbol": "Node",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/Node.swift",
+      "line": 34,
+      "symbol": "Node.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/Node.swift",
+      "line": 35,
+      "symbol": "Node.position",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/Node.swift",
+      "line": 36,
+      "symbol": "Node.rotation",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/Node.swift",
+      "line": 42,
+      "symbol": "Node.scale",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/Node.swift",
+      "line": 43,
+      "symbol": "Node.quaternion",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/Node.swift",
+      "line": 45,
+      "symbol": "Node.boundingBox",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/Node.swift",
+      "line": 46,
+      "symbol": "Node.size",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/Node.swift",
+      "line": 50,
+      "symbol": "Node.modelMatrix",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/Submesh.swift",
+      "line": 33,
+      "symbol": "Submesh",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/Submesh.swift",
+      "line": 34,
+      "symbol": "Submesh.submesh",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/Submesh.swift",
+      "line": 36,
+      "symbol": "Submesh.Textures",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/Submesh.swift",
+      "line": 37,
+      "symbol": "Submesh.Textures.baseColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/Submesh.swift",
+      "line": 39,
+      "symbol": "Submesh.textures",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/Submesh.swift",
+      "line": 42,
+      "symbol": "Submesh.init(submesh:mdlSubmesh:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/Textureable.swift",
+      "line": null,
+      "symbol": "Texturable",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/Textureable.swift",
+      "line": 33,
+      "symbol": "Texturable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF Shared/Utility/Textureable.swift",
+      "line": 36,
+      "symbol": "Texturable.loadTexture(imageName:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF iOS/AppDelegate.swift",
+      "line": 12,
+      "symbol": "AppDelegate",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF iOS/AppDelegate.swift",
+      "line": 14,
+      "symbol": "AppDelegate.window",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF iOS/AppDelegate.swift",
+      "line": 17,
+      "symbol": "AppDelegate.application(_:didFinishLaunchingWithOptions:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF iOS/AppDelegate.swift",
+      "line": 22,
+      "symbol": "AppDelegate.applicationWillResignActive(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF iOS/AppDelegate.swift",
+      "line": 27,
+      "symbol": "AppDelegate.applicationDidEnterBackground(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF iOS/AppDelegate.swift",
+      "line": 32,
+      "symbol": "AppDelegate.applicationWillEnterForeground(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF iOS/AppDelegate.swift",
+      "line": 36,
+      "symbol": "AppDelegate.applicationDidBecomeActive(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF iOS/AppDelegate.swift",
+      "line": 40,
+      "symbol": "AppDelegate.applicationWillTerminate(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF iOS/GameViewController.swift",
+      "line": 9,
+      "symbol": "GameViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF iOS/GameViewController.swift",
+      "line": 11,
+      "symbol": "GameViewController.session",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF iOS/GameViewController.swift",
+      "line": 12,
+      "symbol": "GameViewController.renderer",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF iOS/GameViewController.swift",
+      "line": 14,
+      "symbol": "GameViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF iOS/GameViewController.swift",
+      "line": 42,
+      "symbol": "GameViewController.viewWillAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF iOS/GameViewController.swift",
+      "line": 52,
+      "symbol": "GameViewController.viewWillDisappear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF iOS/GameViewController.swift",
+      "line": 60,
+      "symbol": "GameViewController.handleTap(gestureRecognize:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF iOS/GameViewController.swift",
+      "line": 77,
+      "symbol": "GameViewController.mtkView(_:drawableSizeWillChange:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF iOS/GameViewController.swift",
+      "line": 82,
+      "symbol": "GameViewController.draw(in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF iOS/GameViewController.swift",
+      "line": 88,
+      "symbol": "GameViewController.session(_:didFailWithError:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF iOS/GameViewController.swift",
+      "line": 93,
+      "symbol": "GameViewController.sessionWasInterrupted(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF/AMglTF iOS/GameViewController.swift",
+      "line": 98,
+      "symbol": "GameViewController.sessionInterruptionEnded(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/hyunjun529/ARKit-Metal-glTF-example/AMglTF"
+}

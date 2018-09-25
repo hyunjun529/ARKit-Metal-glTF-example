@@ -30,7 +30,13 @@
 
 import MetalKit
 
-// debug drawing
+/**
+ debug drawing
+ 
+ but current not using this function
+ 
+ need to move Scene - Node - light
+ */
 extension Renderer {
     
     func buildLightPipelineState() -> MTLRenderPipelineState {
@@ -56,27 +62,27 @@ extension Renderer {
     }
     
     
-    func debugLights(renderEncoder: MTLRenderCommandEncoder, lightType: LightType) {
-        for light in lights where light.type == lightType {
-            switch light.type {
-            case LightType.pointlight:
-                drawPointLight(renderEncoder: renderEncoder, position: light.position,
-                               color: light.color)
-            case LightType.spotlight:
-                drawPointLight(renderEncoder: renderEncoder, position: light.position,
-                               color: light.color)
-                
-                // leave this commented until you define spotlights
-                drawSpotLight(renderEncoder: renderEncoder, position: light.position,
-                              direction: light.coneDirection, color: light.color)
-            case LightType.sunlight:
-                drawDirectionalLight(renderEncoder: renderEncoder, direction: light.position,
-                                     color: float3(1, 0, 0), count: 5)
-            default:
-                break
-            }
-        }
-    }
+//    func debugLights(renderEncoder: MTLRenderCommandEncoder, lightType: LightType) {
+//        for light in lights where light.type == lightType {
+//            switch light.type {
+//            case LightType.pointlight:
+//                drawPointLight(renderEncoder: renderEncoder, position: light.position,
+//                               color: light.color)
+//            case LightType.spotlight:
+//                drawPointLight(renderEncoder: renderEncoder, position: light.position,
+//                               color: light.color)
+//                
+//                // leave this commented until you define spotlights
+//                drawSpotLight(renderEncoder: renderEncoder, position: light.position,
+//                              direction: light.coneDirection, color: light.color)
+//            case LightType.sunlight:
+//                drawDirectionalLight(renderEncoder: renderEncoder, direction: light.position,
+//                                     color: float3(1, 0, 0), count: 5)
+//            default:
+//                break
+//            }
+//        }
+//    }
     
     
     func drawPointLight(renderEncoder: MTLRenderCommandEncoder, position: float3, color: float3) {
@@ -84,13 +90,13 @@ extension Renderer {
         let buffer = Renderer.device.makeBuffer(bytes: &vertices,
                                                 length: MemoryLayout<float3>.stride * vertices.count,
                                                 options: [])
-        uniforms[0].modelMatrix = float4x4.identity()
-        renderEncoder.setVertexBytes(&uniforms,
+        dynamicBuffer.uniforms[dynamicBuffer.uniformBufferIndex].modelMatrix = float4x4.identity()
+        renderEncoder.setVertexBytes(&dynamicBuffer.uniforms,
                                      length: MemoryLayout<Uniforms>.stride, index: 1)
         var lightColor = color
         renderEncoder.setFragmentBytes(&lightColor, length: MemoryLayout<float3>.stride, index: 1)
         renderEncoder.setVertexBuffer(buffer, offset: 0, index: 0)
-        renderEncoder.setRenderPipelineState(lightPipelineState)
+        renderEncoder.setRenderPipelineState(buildLightPipelineState())
         renderEncoder.drawPrimitives(type: .point, vertexStart: 0,
                                      vertexCount: vertices.count)
         
@@ -109,13 +115,13 @@ extension Renderer {
         let buffer = Renderer.device.makeBuffer(bytes: &vertices,
                                                 length: MemoryLayout<float3>.stride * vertices.count,
                                                 options: [])
-        uniforms[0].modelMatrix = float4x4.identity()
-        renderEncoder.setVertexBytes(&uniforms,
+        dynamicBuffer.uniforms[dynamicBuffer.uniformBufferIndex].modelMatrix = float4x4.identity()
+        renderEncoder.setVertexBytes(&dynamicBuffer.uniforms,
                                      length: MemoryLayout<Uniforms>.stride, index: 1)
         var lightColor = color
         renderEncoder.setFragmentBytes(&lightColor, length: MemoryLayout<float3>.stride, index: 1)
         renderEncoder.setVertexBuffer(buffer, offset: 0, index: 0)
-        renderEncoder.setRenderPipelineState(lightPipelineState)
+        renderEncoder.setRenderPipelineState(buildLightPipelineState())
         renderEncoder.drawPrimitives(type: .line, vertexStart: 0,
                                      vertexCount: vertices.count)
         
@@ -128,13 +134,13 @@ extension Renderer {
         let buffer = Renderer.device.makeBuffer(bytes: &vertices,
                                                 length: MemoryLayout<float3>.stride * vertices.count,
                                                 options: [])
-        uniforms[0].modelMatrix = float4x4.identity()
-        renderEncoder.setVertexBytes(&uniforms,
+        dynamicBuffer.uniforms[dynamicBuffer.uniformBufferIndex].modelMatrix = float4x4.identity()
+        renderEncoder.setVertexBytes(&dynamicBuffer.uniforms,
                                      length: MemoryLayout<Uniforms>.stride, index: 1)
         var lightColor = color
         renderEncoder.setFragmentBytes(&lightColor, length: MemoryLayout<float3>.stride, index: 1)
         renderEncoder.setVertexBuffer(buffer, offset: 0, index: 0)
-        renderEncoder.setRenderPipelineState(lightPipelineState)
+        renderEncoder.setRenderPipelineState(buildLightPipelineState())
         renderEncoder.drawPrimitives(type: .line, vertexStart: 0,
                                      vertexCount: vertices.count)
     }

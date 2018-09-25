@@ -28,12 +28,14 @@ typedef struct
 
 typedef NS_ENUM(NSInteger, BufferIndex)
 {
-    BufferIndexMeshPositions     = 0,
-    BufferIndexMeshTexcoord      = 1,
-    BufferIndexMeshNormal        = 2,
-    BufferIndexLights            = 3,
-    BufferIndexUniforms          = 4,
-    BufferIndexFragmentUniforms  = 5
+    BufferIndexVertices          = 0,
+    BufferIndexMeshPositions     = 10,
+    BufferIndexMeshTexcoord      = 11,
+    BufferIndexMeshNormal        = 12,
+    BufferIndexLights            = 13,
+    BufferIndexUniforms          = 14,
+    BufferIndexFragmentUniforms  = 15,
+    BufferIndexMaterials         = 16
 };
 
 typedef NS_ENUM(NSInteger, VertexAttribute)
@@ -118,6 +120,33 @@ typedef struct {
 typedef struct {
     matrix_float4x4 modelMatrix;
 } InstanceUniforms;
+
+
+/// Character
+typedef enum {
+    Position = 0,
+    Normal = 1,
+    UV = 2,
+    Tangent = 3,
+    Bitangent = 4,
+    Color = 5,
+    Joints = 6,
+    Weights = 7
+} Attributes;
+
+typedef enum {
+    BaseColorTexture = 0,
+    NormalTexture = 1
+} Textures;
+
+struct Material {
+    vector_float3 baseColor;
+    vector_float3 specularColor;
+    float roughness;
+    float metalness;
+    vector_float3 ambientOcclusion;
+    float shininess;
+};
 
 
 #endif /* ShaderTypes_h */

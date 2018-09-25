@@ -1,11 +1,3 @@
-//
-//  GameViewController.swift
-//  AMglTF macOS
-//
-//  Created by hyunjun529 on 10/09/2018.
-//  Copyright © 2018 hyunjun529. All rights reserved.
-//
-
 import Cocoa
 import MetalKit
 
@@ -81,19 +73,49 @@ extension GameViewController {
     func addGestureRecognizer(to view: NSView) {
         let pan = NSPanGestureRecognizer(target: self, action: #selector(handlePan(gesture:)))
         view.addGestureRecognizer(pan)
+        
+        let rot = NSRotationGestureRecognizer(target: self, action: #selector(handleRot(gesture:)))
+        view.addGestureRecognizer(rot)
+        
+        let click = NSClickGestureRecognizer(target: self, action: #selector(handleClick(gesture:)))
+        view.addGestureRecognizer(click)
+        
+        let pinch = NSMagnificationGestureRecognizer(target: self, action: #selector(handlePinch(gesture:)))
+        view.addGestureRecognizer(pinch)
     }
     
+    // dolly, truck
     @objc func handlePan(gesture: NSPanGestureRecognizer) {
-        let translation = float2(Float(gesture.translation(in: gesture.view).x),
-                                 Float(gesture.translation(in: gesture.view).y))
+        let translation = float3(-Float(gesture.translation(in: gesture.view).x),
+                                 -Float(gesture.translation(in: gesture.view).y),
+                                 0)
         
-        renderer?.rotateUsing(translation: translation)
+        renderer?.translateUsing(translation: translation,
+                                 sensitivity: 0.01)
+        
         gesture.setTranslation(.zero, in: gesture.view)
     }
     
+    // Rotation
+    @objc func handleRot(gesture: NSRotationGestureRecognizer) {
+    }
+    
+    // click
+    @objc func handleClick(gesture: NSClickGestureRecognizer) {
+    }
+    
+    // zoom
+    @objc func handlePinch(gesture: NSMagnificationGestureRecognizer) {
+        renderer?.translateUsing(translation: float3(0, 0, Float(gesture.magnification)),
+                                 sensitivity: 0.5)
+    }
+    
+    // pan, tilt
     override func scrollWheel(with event: NSEvent) {
-        let sensitivity: Float = 0.1
-        renderer?.zoomUsing(delta: event.deltaY,
-                            sensitivity: sensitivity)
+        let translation = float2(Float(event.deltaX),
+                                 Float(event.deltaY))
+        
+        renderer?.rotateUsing(translation: translation,
+                              sensitivity: 0.01)
     }
 }
