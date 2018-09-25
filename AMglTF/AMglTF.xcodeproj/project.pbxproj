@@ -360,10 +360,10 @@
 		26C6135D2148E22D00A7FD6E /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				26C98A91214B84AE0005A647 /* readme_kizunaai.txt */,
 				26C98A9B214B84AE0005A647 /* dae */,
 				26C98A8B214B84AE0005A647 /* glTF */,
 				26C98A88214B84AE0005A647 /* obj */,
-				26C98A91214B84AE0005A647 /* readme_kizunaai.txt */,
 				26C98A92214B84AE0005A647 /* texture */,
 			);
 			path = resources;
