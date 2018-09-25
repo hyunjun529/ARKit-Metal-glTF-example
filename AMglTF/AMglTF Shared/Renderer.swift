@@ -97,14 +97,15 @@ class Renderer: NSObject, MTKViewDelegate {
             
             dynamicBuffer.updateDynamicBufferState()
             
+            
+            // update manager
+            updateManagers()
+            
+            
             let deltaTime = 1 / Float(view.preferredFramesPerSecond)
             guard let scene = scene else { return }
             scene.uniforms = dynamicBuffer.uniforms[dynamicBuffer.uniformBufferIndex]
             scene.update(deltaTime: deltaTime)
-            
-            
-            // update manager
-            updateManagers()
             
             
             // about renderEncoder https://developer.apple.com/library/archive/documentation/Miscellaneous/Conceptual/MetalProgrammingGuide/Render-Ctx/Render-Ctx.html
@@ -115,6 +116,13 @@ class Renderer: NSObject, MTKViewDelegate {
                 
                 renderEncoder.pushDebugGroup("Main Loop")
                 
+                
+                // Render Manager
+                for manager in managers {
+                    manager.render(renderEncoder: renderEncoder)
+                }
+                
+                
                 renderEncoder.setCullMode(.front)
                 
                 renderEncoder.setFrontFacing(.counterClockwise)
@@ -123,17 +131,13 @@ class Renderer: NSObject, MTKViewDelegate {
                 
                 dynamicBuffer.setDynamicBufferInRenderEncoder(renderEncoder: renderEncoder)
                 
+                
                 dynamicBuffer.fragmentUniforms[dynamicBuffer.fragmentUniformBufferIndex].cameraPosition = scene.camera.position
                 dynamicBuffer.fragmentUniforms[dynamicBuffer.fragmentUniformBufferIndex].lightCount = UInt32(lights.count)
                 
                 renderEncoder.setFragmentBytes(&lights,
                                                length: MemoryLayout<Light>.stride * lights.count,
                                                index: Int(BufferIndex.lights.rawValue))
-                
-                // Render Manager
-                for manager in managers {
-                    manager.render(renderEncoder: renderEncoder)
-                }
                 
                 // Render Scene
                 for renderable in scene.renderables {

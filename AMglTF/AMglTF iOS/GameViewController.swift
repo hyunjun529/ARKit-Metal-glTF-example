@@ -150,7 +150,7 @@ class GameViewController: UIViewController, ARSessionDelegate {
         // Run the view's session
         session.run(configuration)
         
-        guard let newSessionManager = ARSessionManager(session: session, device: Renderer.device) else {
+        guard let newSessionManager = ARSessionManager(session: session, device: Renderer.device, scene: renderer.scene!) else {
             print("ARSessionManager cannot be initialized")
             return
         }

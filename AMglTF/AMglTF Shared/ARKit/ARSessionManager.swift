@@ -27,8 +27,10 @@ class ARSessionManager: Manager {
     
     var session: ARSession?
     
-    
     var device: MTLDevice!
+    
+    var scene: Scene
+    
     
     var sharedUniformBuffer: MTLBuffer!
     var anchorUniformBuffer: MTLBuffer!
@@ -338,7 +340,6 @@ class ARSessionManager: Manager {
         
         // Set render command encoder state
         renderEncoder.setCullMode(.none)
-        renderEncoder.setFrontFacing(.clockwise)
         renderEncoder.setRenderPipelineState(capturedImagePipelineState)
         renderEncoder.setDepthStencilState(capturedImageDepthState)
         
@@ -393,6 +394,13 @@ class ARSessionManager: Manager {
         guard let currentFrame = session?.currentFrame else {
             return
         }
+
+        var transform = currentFrame.camera.transform
+        var position = float3(transform[3][0], transform[3][1], -transform[3][2]) * 10
+        var eulerAngle = currentFrame.camera.eulerAngles
+        var rotation = float3(-eulerAngle.x, -eulerAngle.y, eulerAngle.z)
+        scene.camera.position = position
+        scene.camera.rotation = rotation
         
         // not use now
         //updateSharedUniforms(frame: currentFrame)
@@ -407,12 +415,14 @@ class ARSessionManager: Manager {
     }
     
     
-    init?(session: ARSession, device: MTLDevice) {
+    init?(session: ARSession, device: MTLDevice, scene: Scene) {
         self.name = "ARSession"
         
         self.session = session
         
         self.device = device
+        
+        self.scene = scene
         
         LoadMetal()
         LoadAssets()
