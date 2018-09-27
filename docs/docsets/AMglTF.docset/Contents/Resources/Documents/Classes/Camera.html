@@ -14,7 +14,7 @@
     <a title="Camera Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">AMglTF Docs</a> (2% documented)</p>
+        <p><a href="../index.html">AMglTF Docs</a> (13% documented)</p>
         <p class="header-right"><a href="https://github.com/hyunjun529/ARKit-Metal-glTF-example"><img src="../img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -32,7 +32,10 @@
             <a href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Classes/ARKitRenderer.html">ARKitRenderer</a>
+                <a href="../Classes/ARSessionManager.html">ARSessionManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Animation.html">Animation</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AppDelegate.html">AppDelegate</a>
@@ -41,19 +44,34 @@
                 <a href="../Classes/Camera.html">Camera</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/Character.html">Character</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Character/CharacterSubmesh.html">– CharacterSubmesh</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DynamicBuffer.html">DynamicBuffer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GameScene.html">GameScene</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/GameViewController.html">GameViewController</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/Lighting.html">Lighting</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/Model.html">Model</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Classes/Node.html">Node</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/Prop.html">Prop</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/Renderer.html">Renderer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Scene.html">Scene</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/Submesh.html">Submesh</a>
@@ -67,36 +85,7 @@
             <a href="../Global Variables.html">Global Variables</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Global Variables.html#/s:6AMglTF19alignedUniformsSizeSivp">alignedUniformsSize</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Global Variables.html#/s:6AMglTF28kAlignedInstanceUniformsSizeSivp">kAlignedInstanceUniformsSize</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Global Variables.html#/s:6AMglTF26kAlignedSharedUniformsSizeSivp">kAlignedSharedUniformsSize</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Global Variables.html#/s:6AMglTF21kImagePlaneVertexDataSaySfGvp">kImagePlaneVertexData</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Global Variables.html#/s:6AMglTF23kMaxAnchorInstanceCountSivp">kMaxAnchorInstanceCount</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Global Variables.html#/s:6AMglTF19kMaxBuffersInFlightSivp">kMaxBuffersInFlight</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Global Variables.html#/s:6AMglTF18maxBuffersInFlightSivp">maxBuffersInFlight</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Global Variables.html#/s:6AMglTF003BxaSfvp">π</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="../Enums.html">Enumerations</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Enums/RendererError.html">RendererError</a>
               </li>
             </ul>
           </li>
@@ -144,10 +133,27 @@
             <a href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Protocols/RenderDestinationProvider.html">RenderDestinationProvider</a>
+                <a href="../Protocols/Manager.html">Manager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Renderable.html">Renderable</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/Texturable.html">Texturable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/KeyQuaternion.html">KeyQuaternion</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Keyframe.html">Keyframe</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Rectangle.html">Rectangle</a>
               </li>
             </ul>
           </li>
@@ -163,9 +169,12 @@
 
                 </div>
               </div>
-            <p>this is Camera for virtual stage</p>
+            <p>Camera</p>
 
-<p>set position, rotation and scale then stored properties return View &amp; Projection Matrix</p>
+<ul>
+<li><p>default structure with Node from <a href="https://store.raywenderlich.com/products/metal-by-tutorials">Metal by Tutorial</a></p></li>
+<li><p>Camera Calculation and Implement from <a href="https://learnopengl.com/Getting-started/Camera">LearnOpenGL</a></p></li>
+</ul>
 
           </section>
           <section class="section task-group-section">
@@ -365,7 +374,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://github.com/hyunjun529/ARKit-Metal-glTF-example" target="_blank" rel="external">hyunjun529</a>. All rights reserved. (Last updated: 2018-09-18)</p>
+          <p>&copy; 2018 <a class="link" href="https://github.com/hyunjun529/ARKit-Metal-glTF-example" target="_blank" rel="external">hyunjun529</a>. All rights reserved. (Last updated: 2018-09-27)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

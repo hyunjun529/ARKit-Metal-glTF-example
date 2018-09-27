@@ -1,7 +1,9 @@
 import Foundation
 import CoreGraphics
 
-
+/**
+ IN PROGRESS
+ */
 class GameScene: Scene {
     let ground = Prop(name: "large-plane")
     let car = Prop(name: "racing-car")

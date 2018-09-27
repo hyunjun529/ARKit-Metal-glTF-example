@@ -1,5 +1,8 @@
 import MetalKit
 
+/**
+ IN PROGRESS
+ */
 class Node {
     var name: String = "untitled"
     var position: float3 = [0, 0, 0]

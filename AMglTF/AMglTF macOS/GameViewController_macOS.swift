@@ -1,7 +1,10 @@
 import Cocoa
 import MetalKit
 
-// Our macOS specific view controller
+
+/**
+ IN PROGRESS
+ */
 class GameViewController: NSViewController {
 
     var renderer: Renderer!

@@ -3,6 +3,9 @@ import MetalKit
 import ARKit
 
 
+/**
+ IN PROGRESS
+ */
 class ARSessionManager: Manager {
     var name: String
     

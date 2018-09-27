@@ -1,5 +1,8 @@
 import MetalKit
 
+/**
+ IN PROGRESS
+ */
 class Prop: Node {
     
     static var defaultVertexDescriptor: MDLVertexDescriptor = {

@@ -2,6 +2,7 @@ import Metal
 import MetalKit
 import CoreGraphics
 
+
 /**
  Renderer for Virtual Stage(no AR)
  */

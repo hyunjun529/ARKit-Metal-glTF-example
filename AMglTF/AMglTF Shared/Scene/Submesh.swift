@@ -1,5 +1,8 @@
 import MetalKit
 
+/**
+ IN PROGRESS
+ */
 class Submesh {
     
     var submesh: MTKSubmesh?
@@ -27,6 +30,7 @@ class Submesh {
         pipelineState = Submesh.makePipelineState(textures: textures)
     }
 }
+
 
 // Pipeline state
 private extension Submesh {
@@ -77,6 +81,7 @@ private extension Submesh {
     }
 }
 
+
 extension Submesh: Texturable {}
 
 private extension Submesh.Textures {
@@ -95,6 +100,7 @@ private extension Submesh.Textures {
         roughness = property(with: .roughness)
     }
 }
+
 
 private extension Material {
     init(material: MDLMaterial?) {

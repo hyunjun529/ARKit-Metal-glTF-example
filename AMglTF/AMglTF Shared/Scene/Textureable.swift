@@ -1,6 +1,11 @@
 import MetalKit
 
+
+/**
+ IN PROGRESS
+ */
 protocol Texturable {}
+
 
 extension Texturable {
     static func loadTexture(imageName: String) throws -> MTLTexture? {

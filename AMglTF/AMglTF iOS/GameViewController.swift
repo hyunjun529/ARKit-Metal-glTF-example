@@ -4,7 +4,9 @@ import MetalKit
 import ARKit
 
 
-// Our iOS specific view controller
+/**
+ IN PROGRESS
+ */
 class GameViewController: UIViewController, ARSessionDelegate {
     var mtkView: MTKView!
     var renderer: Renderer!

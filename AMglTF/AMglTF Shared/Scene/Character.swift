@@ -1,5 +1,8 @@
 import MetalKit
 
+/**
+ IN PROGRESS
+ */
 class Character: Node {
     
     let buffers: [MTLBuffer]
@@ -10,6 +13,9 @@ class Character: Node {
     var currentAnimation: AnimationClip?
     var currentAnimationPlaying: Bool = false
     
+    /**
+     IN PROGRESS
+     */
     class CharacterSubmesh: Submesh {
         var attributes: [Attributes] = []
         var indexCount: Int = 0

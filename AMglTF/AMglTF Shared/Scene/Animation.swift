@@ -1,5 +1,6 @@
 import Foundation
 
+
 struct Keyframe {
     var time: Float = 0
     var value: float3 = [0, 0, 0]
@@ -11,6 +12,9 @@ struct KeyQuaternion {
 }
 
 
+/**
+ IN PROGRESS
+ */
 class Animation {
     var node: CharacterNode?
     

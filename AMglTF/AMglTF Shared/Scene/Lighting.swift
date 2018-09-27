@@ -1,5 +1,8 @@
 import MetalKit
 
+/**
+ IN PROGRESS
+ */
 class Lighting: Node
 {
     // !!! current not extend Node !!!
