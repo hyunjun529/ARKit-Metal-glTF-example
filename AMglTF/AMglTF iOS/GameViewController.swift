@@ -6,12 +6,12 @@ import ARKit
 
 // Our iOS specific view controller
 class GameViewController: UIViewController, ARSessionDelegate {
-    
     var mtkView: MTKView!
     var renderer: Renderer!
     
     var session: ARSession!
     var sessionManager: ARSessionManager!
+    var sessionConfig: ARConfiguration!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,10 +49,10 @@ class GameViewController: UIViewController, ARSessionDelegate {
         session.delegate = self
         
         // Create a session configuration
-        let configuration = ARWorldTrackingConfiguration()
+        sessionConfig = ARWorldTrackingConfiguration()
         
         // Run the view's session
-        session.run(configuration)
+        session.run(sessionConfig)
         
         guard let newSessionManager = ARSessionManager(session: session, device: Renderer.device, scene: renderer.scene!) else {
             print("ARSessionManager cannot be initialized")
@@ -64,6 +64,19 @@ class GameViewController: UIViewController, ARSessionDelegate {
         
         // attach rednerer to AR
         renderer.attachManager(manager: sessionManager)
+    }
+    
+    
+    @IBAction func onoffAR(_ sender: UIButton) {
+        print("on/off")
+        if renderer.managers.count > 0 {
+            renderer.managers.popLast()
+            session.pause()
+        }
+        else {
+            session.run(sessionConfig)
+            renderer.attachManager(manager: sessionManager)
+        }
     }
     
     // MARK: - ARSessionDelegate
@@ -108,10 +121,11 @@ extension GameViewController {
             renderer?.translateUsing(translation: float3(-translation.x,
                                                          translation.y,
                                                          0),
-                                     sensitivity: 0.01)
+                                     sensitivity: 0.02)
         }
         else {
-            renderer?.rotateUsing(translation: translation,
+            renderer?.rotateUsing(translation: float2(translation.x,
+                                                      -translation.y),
                                   sensitivity: 0.01)
         }
         gesture.setTranslation(.zero, in: gesture.view)

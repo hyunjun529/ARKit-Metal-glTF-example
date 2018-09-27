@@ -8,6 +8,7 @@ class GameViewController: NSViewController {
     var mtkView: MTKView!
 
     override func viewDidLoad() {
+        
         super.viewDidLoad()
 
         guard let mtkView = self.view as? MTKView else {
@@ -56,9 +57,15 @@ extension GameViewController {
     
     // dolly, truck
     @objc func handlePan(gesture: NSPanGestureRecognizer) {
+        @IBAction func onoff(_ sender: UIButton) {
+        }
         let translation = float3(-Float(gesture.translation(in: gesture.view).x),
-                                 -Float(gesture.translation(in: gesture.view).y),
+                                 @IBAction func OnOffAR(_ sender: Any) {
+        }
+        -Float(gesture.translation(in: gesture.view).y),
                                  0)
+        @IBOutlet weak var btnOnOffAR: UIButton!
+        @IBOutlet weak var btnOnOffAR: UIButton!
         
         renderer?.translateUsing(translation: translation,
                                  sensitivity: 0.01)
