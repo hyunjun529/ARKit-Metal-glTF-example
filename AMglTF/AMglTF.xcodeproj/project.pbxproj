@@ -15,6 +15,10 @@
 		26680C9A2151059C0078624C /* Car_Diff.png in Resources */ = {isa = PBXBuildFile; fileRef = 26680C942151059C0078624C /* Car_Diff.png */; };
 		26680C9B215106DA0078624C /* ShaderTypes.h in Sources */ = {isa = PBXBuildFile; fileRef = 26C6132421466DF300A7FD6E /* ShaderTypes.h */; };
 		26680C9F215205280078624C /* DynamicBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26680C9D215205280078624C /* DynamicBuffer.swift */; };
+		26AC0218215CE6AB0004EEFE /* RiggedSimple0.bin in Resources */ = {isa = PBXBuildFile; fileRef = 26AC0216215CE6AB0004EEFE /* RiggedSimple0.bin */; };
+		26AC0219215CE6AB0004EEFE /* RiggedSimple0.bin in Resources */ = {isa = PBXBuildFile; fileRef = 26AC0216215CE6AB0004EEFE /* RiggedSimple0.bin */; };
+		26AC021A215CE6AB0004EEFE /* RiggedSimple.gltf in Resources */ = {isa = PBXBuildFile; fileRef = 26AC0217215CE6AB0004EEFE /* RiggedSimple.gltf */; };
+		26AC021B215CE6AB0004EEFE /* RiggedSimple.gltf in Resources */ = {isa = PBXBuildFile; fileRef = 26AC0217215CE6AB0004EEFE /* RiggedSimple.gltf */; };
 		26AF4CBF214F4B5800798F58 /* plane.obj in Resources */ = {isa = PBXBuildFile; fileRef = 26AF4CBD214F4B5800798F58 /* plane.obj */; };
 		26AF4CC0214F4B5800798F58 /* plane.obj in Resources */ = {isa = PBXBuildFile; fileRef = 26AF4CBD214F4B5800798F58 /* plane.obj */; };
 		26AF4CC1214F4B5800798F58 /* plane.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 26AF4CBE214F4B5800798F58 /* plane.mtl */; };
@@ -36,39 +40,6 @@
 		26C613702148E79600A7FD6E /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6136E2148E79600A7FD6E /* Camera.swift */; };
 		26C613732148E89000A7FD6E /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C613712148E89000A7FD6E /* Node.swift */; };
 		26C613762148E94E00A7FD6E /* MathLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C613742148E94E00A7FD6E /* MathLibrary.swift */; };
-		26C98A9D214B84AE0005A647 /* kizunaai.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A89214B84AE0005A647 /* kizunaai.mtl */; };
-		26C98A9E214B84AE0005A647 /* kizunaai.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A89214B84AE0005A647 /* kizunaai.mtl */; };
-		26C98A9F214B84AE0005A647 /* kizunaai.obj in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A8A214B84AE0005A647 /* kizunaai.obj */; };
-		26C98AA0214B84AE0005A647 /* kizunaai.obj in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A8A214B84AE0005A647 /* kizunaai.obj */; };
-		26C98AA1214B84AE0005A647 /* buffer_kizunaai.bin in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A8C214B84AE0005A647 /* buffer_kizunaai.bin */; };
-		26C98AA2214B84AE0005A647 /* buffer_kizunaai.bin in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A8C214B84AE0005A647 /* buffer_kizunaai.bin */; };
-		26C98AA3214B84AE0005A647 /* BrainStem.gltf in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A8D214B84AE0005A647 /* BrainStem.gltf */; };
-		26C98AA4214B84AE0005A647 /* BrainStem.gltf in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A8D214B84AE0005A647 /* BrainStem.gltf */; };
-		26C98AA5214B84AE0005A647 /* skeletonWave.bin in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A8E214B84AE0005A647 /* skeletonWave.bin */; };
-		26C98AA6214B84AE0005A647 /* skeletonWave.bin in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A8E214B84AE0005A647 /* skeletonWave.bin */; };
-		26C98AA7214B84AE0005A647 /* skeletonWave.gltf in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A8F214B84AE0005A647 /* skeletonWave.gltf */; };
-		26C98AA8214B84AE0005A647 /* skeletonWave.gltf in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A8F214B84AE0005A647 /* skeletonWave.gltf */; };
-		26C98AA9214B84AE0005A647 /* kizunaai.gltf in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A90214B84AE0005A647 /* kizunaai.gltf */; };
-		26C98AAA214B84AE0005A647 /* kizunaai.gltf in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A90214B84AE0005A647 /* kizunaai.gltf */; };
-		26C98AAB214B84AE0005A647 /* readme_kizunaai.txt in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A91214B84AE0005A647 /* readme_kizunaai.txt */; };
-		26C98AAD214B84AE0005A647 /* hair2.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A93214B84AE0005A647 /* hair2.png */; };
-		26C98AAE214B84AE0005A647 /* hair2.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A93214B84AE0005A647 /* hair2.png */; };
-		26C98AAF214B84AE0005A647 /* hair1.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A94214B84AE0005A647 /* hair1.png */; };
-		26C98AB0214B84AE0005A647 /* hair1.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A94214B84AE0005A647 /* hair1.png */; };
-		26C98AB1214B84AE0005A647 /* s_hair.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A95214B84AE0005A647 /* s_hair.bmp */; };
-		26C98AB2214B84AE0005A647 /* s_hair.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A95214B84AE0005A647 /* s_hair.bmp */; };
-		26C98AB3214B84AE0005A647 /* face.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A96214B84AE0005A647 /* face.png */; };
-		26C98AB4214B84AE0005A647 /* face.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A96214B84AE0005A647 /* face.png */; };
-		26C98AB5214B84AE0005A647 /* tops.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A97214B84AE0005A647 /* tops.png */; };
-		26C98AB6214B84AE0005A647 /* tops.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A97214B84AE0005A647 /* tops.png */; };
-		26C98AB7214B84AE0005A647 /* bottoms.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A98214B84AE0005A647 /* bottoms.png */; };
-		26C98AB8214B84AE0005A647 /* bottoms.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A98214B84AE0005A647 /* bottoms.png */; };
-		26C98AB9214B84AE0005A647 /* eye.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A99214B84AE0005A647 /* eye.png */; };
-		26C98ABA214B84AE0005A647 /* eye.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A99214B84AE0005A647 /* eye.png */; };
-		26C98ABB214B84AE0005A647 /* eye2.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A9A214B84AE0005A647 /* eye2.png */; };
-		26C98ABC214B84AE0005A647 /* eye2.png in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A9A214B84AE0005A647 /* eye2.png */; };
-		26C98ABD214B84AE0005A647 /* kizunaai.dae in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A9C214B84AE0005A647 /* kizunaai.dae */; };
-		26C98ABE214B84AE0005A647 /* kizunaai.dae in Resources */ = {isa = PBXBuildFile; fileRef = 26C98A9C214B84AE0005A647 /* kizunaai.dae */; };
 		26C98B06214BBD600005A647 /* Submesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C98B04214BBD600005A647 /* Submesh.swift */; };
 		26C98B09214BCB2A0005A647 /* train.obj in Resources */ = {isa = PBXBuildFile; fileRef = 26C98B07214BCB2A0005A647 /* train.obj */; };
 		26C98B0A214BCB2A0005A647 /* train.obj in Resources */ = {isa = PBXBuildFile; fileRef = 26C98B07214BCB2A0005A647 /* train.obj */; };
@@ -133,6 +104,8 @@
 		26680C932151059C0078624C /* car-roughness.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "car-roughness.png"; sourceTree = "<group>"; };
 		26680C942151059C0078624C /* Car_Diff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Car_Diff.png; sourceTree = "<group>"; };
 		26680C9D215205280078624C /* DynamicBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicBuffer.swift; sourceTree = "<group>"; };
+		26AC0216215CE6AB0004EEFE /* RiggedSimple0.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = RiggedSimple0.bin; sourceTree = "<group>"; };
+		26AC0217215CE6AB0004EEFE /* RiggedSimple.gltf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RiggedSimple.gltf; sourceTree = "<group>"; };
 		26AF4CBD214F4B5800798F58 /* plane.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = plane.obj; path = "AMglTF Shared/resources/obj/plane.obj"; sourceTree = SOURCE_ROOT; };
 		26AF4CBE214F4B5800798F58 /* plane.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = plane.mtl; path = "AMglTF Shared/resources/obj/plane.mtl"; sourceTree = SOURCE_ROOT; };
 		26AF4CC3214F4B7000798F58 /* ground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ground.png; sourceTree = "<group>"; };
@@ -158,23 +131,6 @@
 		26C6136E2148E79600A7FD6E /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		26C613712148E89000A7FD6E /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		26C613742148E94E00A7FD6E /* MathLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathLibrary.swift; sourceTree = "<group>"; };
-		26C98A89214B84AE0005A647 /* kizunaai.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = kizunaai.mtl; sourceTree = "<group>"; };
-		26C98A8A214B84AE0005A647 /* kizunaai.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = kizunaai.obj; sourceTree = "<group>"; };
-		26C98A8C214B84AE0005A647 /* buffer_kizunaai.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = buffer_kizunaai.bin; sourceTree = "<group>"; };
-		26C98A8D214B84AE0005A647 /* BrainStem.gltf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BrainStem.gltf; sourceTree = "<group>"; };
-		26C98A8E214B84AE0005A647 /* skeletonWave.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = skeletonWave.bin; sourceTree = "<group>"; };
-		26C98A8F214B84AE0005A647 /* skeletonWave.gltf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = skeletonWave.gltf; sourceTree = "<group>"; };
-		26C98A90214B84AE0005A647 /* kizunaai.gltf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = kizunaai.gltf; sourceTree = "<group>"; };
-		26C98A91214B84AE0005A647 /* readme_kizunaai.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme_kizunaai.txt; sourceTree = "<group>"; };
-		26C98A93214B84AE0005A647 /* hair2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hair2.png; sourceTree = "<group>"; };
-		26C98A94214B84AE0005A647 /* hair1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hair1.png; sourceTree = "<group>"; };
-		26C98A95214B84AE0005A647 /* s_hair.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = s_hair.bmp; sourceTree = "<group>"; };
-		26C98A96214B84AE0005A647 /* face.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = face.png; sourceTree = "<group>"; };
-		26C98A97214B84AE0005A647 /* tops.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tops.png; sourceTree = "<group>"; };
-		26C98A98214B84AE0005A647 /* bottoms.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottoms.png; sourceTree = "<group>"; };
-		26C98A99214B84AE0005A647 /* eye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eye.png; sourceTree = "<group>"; };
-		26C98A9A214B84AE0005A647 /* eye2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eye2.png; sourceTree = "<group>"; };
-		26C98A9C214B84AE0005A647 /* kizunaai.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = kizunaai.dae; sourceTree = "<group>"; };
 		26C98B04214BBD600005A647 /* Submesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Submesh.swift; sourceTree = "<group>"; };
 		26C98B07214BCB2A0005A647 /* train.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = train.obj; sourceTree = "<group>"; };
 		26C98B08214BCB2A0005A647 /* train.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = train.mtl; sourceTree = "<group>"; };
@@ -220,21 +176,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		26680C842151040C0078624C /* kizunaai */ = {
-			isa = PBXGroup;
-			children = (
-				26C98A93214B84AE0005A647 /* hair2.png */,
-				26C98A94214B84AE0005A647 /* hair1.png */,
-				26C98A95214B84AE0005A647 /* s_hair.bmp */,
-				26C98A96214B84AE0005A647 /* face.png */,
-				26C98A97214B84AE0005A647 /* tops.png */,
-				26C98A98214B84AE0005A647 /* bottoms.png */,
-				26C98A99214B84AE0005A647 /* eye.png */,
-				26C98A9A214B84AE0005A647 /* eye2.png */,
-			);
-			path = kizunaai;
-			sourceTree = "<group>";
-		};
 		26680C852151041D0078624C /* racing-car */ = {
 			isa = PBXGroup;
 			children = (
@@ -352,8 +293,6 @@
 		26C6135D2148E22D00A7FD6E /* resources */ = {
 			isa = PBXGroup;
 			children = (
-				26C98A91214B84AE0005A647 /* readme_kizunaai.txt */,
-				26C98A9B214B84AE0005A647 /* dae */,
 				26C98A8B214B84AE0005A647 /* glTF */,
 				26C98A88214B84AE0005A647 /* obj */,
 				26C98A92214B84AE0005A647 /* texture */,
@@ -371,8 +310,6 @@
 				26C98B07214BCB2A0005A647 /* train.obj */,
 				26AF4CBE214F4B5800798F58 /* plane.mtl */,
 				26AF4CBD214F4B5800798F58 /* plane.obj */,
-				26C98A89214B84AE0005A647 /* kizunaai.mtl */,
-				26C98A8A214B84AE0005A647 /* kizunaai.obj */,
 			);
 			path = obj;
 			sourceTree = "<group>";
@@ -380,13 +317,10 @@
 		26C98A8B214B84AE0005A647 /* glTF */ = {
 			isa = PBXGroup;
 			children = (
+				26AC0216215CE6AB0004EEFE /* RiggedSimple0.bin */,
+				26AC0217215CE6AB0004EEFE /* RiggedSimple.gltf */,
 				26CA14E62150EC42001C04B8 /* buffer_skeleton.bin */,
 				26CA14E52150EC42001C04B8 /* skeleton.gltf */,
-				26C98A8C214B84AE0005A647 /* buffer_kizunaai.bin */,
-				26C98A8D214B84AE0005A647 /* BrainStem.gltf */,
-				26C98A8E214B84AE0005A647 /* skeletonWave.bin */,
-				26C98A8F214B84AE0005A647 /* skeletonWave.gltf */,
-				26C98A90214B84AE0005A647 /* kizunaai.gltf */,
 			);
 			path = glTF;
 			sourceTree = "<group>";
@@ -396,17 +330,8 @@
 			children = (
 				26AF4CC3214F4B7000798F58 /* ground.png */,
 				26680C852151041D0078624C /* racing-car */,
-				26680C842151040C0078624C /* kizunaai */,
 			);
 			path = texture;
-			sourceTree = "<group>";
-		};
-		26C98A9B214B84AE0005A647 /* dae */ = {
-			isa = PBXGroup;
-			children = (
-				26C98A9C214B84AE0005A647 /* kizunaai.dae */,
-			);
-			path = dae;
 			sourceTree = "<group>";
 		};
 		26CA14B72150E155001C04B8 /* glTF Importer */ = {
@@ -525,42 +450,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26C98AA5214B84AE0005A647 /* skeletonWave.bin in Resources */,
+				26AC0218215CE6AB0004EEFE /* RiggedSimple0.bin in Resources */,
 				26680C972151059C0078624C /* car-roughness.png in Resources */,
-				26C98AB5214B84AE0005A647 /* tops.png in Resources */,
 				26CA14E92150EC43001C04B8 /* buffer_skeleton.bin in Resources */,
 				26AF4CBF214F4B5800798F58 /* plane.obj in Resources */,
-				26C98AA1214B84AE0005A647 /* buffer_kizunaai.bin in Resources */,
 				26CA14D62150E975001C04B8 /* large-plane.mtl in Resources */,
 				26680C952151059C0078624C /* Car_Normal.jpg in Resources */,
 				26FC6CA82151009F003CDD0C /* Assets.xcassets in Resources */,
 				26CA14E72150EC43001C04B8 /* skeleton.gltf in Resources */,
 				26AF4CC4214F4B7000798F58 /* ground.png in Resources */,
-				26C98AB1214B84AE0005A647 /* s_hair.bmp in Resources */,
 				26CA14DA2150E975001C04B8 /* oilcan.mtl in Resources */,
-				26C98AAB214B84AE0005A647 /* readme_kizunaai.txt in Resources */,
 				26680C992151059C0078624C /* Car_Diff.png in Resources */,
-				26C98A9D214B84AE0005A647 /* kizunaai.mtl in Resources */,
 				26C98B0B214BCB2A0005A647 /* train.mtl in Resources */,
-				26C98A9F214B84AE0005A647 /* kizunaai.obj in Resources */,
-				26C98ABD214B84AE0005A647 /* kizunaai.dae in Resources */,
-				26C98AA9214B84AE0005A647 /* kizunaai.gltf in Resources */,
 				26CA14E02150E975001C04B8 /* racing-car.obj in Resources */,
-				26C98AA7214B84AE0005A647 /* skeletonWave.gltf in Resources */,
-				26C98AAF214B84AE0005A647 /* hair1.png in Resources */,
 				26C6134A21466DF300A7FD6E /* ShaderTypes.h in Resources */,
-				26C98AB3214B84AE0005A647 /* face.png in Resources */,
 				26C6133321466DF300A7FD6E /* Main.storyboard in Resources */,
-				26C98AB9214B84AE0005A647 /* eye.png in Resources */,
 				26CA14DE2150E975001C04B8 /* racing-car.mtl in Resources */,
 				26CA14D82150E975001C04B8 /* large-plane.obj in Resources */,
-				26C98AA3214B84AE0005A647 /* BrainStem.gltf in Resources */,
-				26C98ABB214B84AE0005A647 /* eye2.png in Resources */,
 				26C6133621466DF300A7FD6E /* LaunchScreen.storyboard in Resources */,
-				26C98AB7214B84AE0005A647 /* bottoms.png in Resources */,
+				26AC021A215CE6AB0004EEFE /* RiggedSimple.gltf in Resources */,
 				26AF4CC1214F4B5800798F58 /* plane.mtl in Resources */,
 				26C98B09214BCB2A0005A647 /* train.obj in Resources */,
-				26C98AAD214B84AE0005A647 /* hair2.png in Resources */,
 				26CA14DC2150E975001C04B8 /* oilcan.obj in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -569,41 +479,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26AC0219215CE6AB0004EEFE /* RiggedSimple0.bin in Resources */,
 				26FC6CA42150FD3D003CDD0C /* Assets.xcassets in Resources */,
-				26C98AAA214B84AE0005A647 /* kizunaai.gltf in Resources */,
 				26CA14EA2150EC43001C04B8 /* buffer_skeleton.bin in Resources */,
-				26C98AB6214B84AE0005A647 /* tops.png in Resources */,
-				26C98AA8214B84AE0005A647 /* skeletonWave.gltf in Resources */,
-				26C98AAE214B84AE0005A647 /* hair2.png in Resources */,
 				26CA14D92150E975001C04B8 /* large-plane.obj in Resources */,
 				26680C962151059C0078624C /* Car_Normal.jpg in Resources */,
-				26C98AA0214B84AE0005A647 /* kizunaai.obj in Resources */,
 				26680C982151059C0078624C /* car-roughness.png in Resources */,
 				26C6134421466DF300A7FD6E /* Main.storyboard in Resources */,
 				26CA14DB2150E975001C04B8 /* oilcan.mtl in Resources */,
 				26CA14DF2150E975001C04B8 /* racing-car.mtl in Resources */,
 				26C98B0C214BCB2A0005A647 /* train.mtl in Resources */,
-				26C98AB2214B84AE0005A647 /* s_hair.bmp in Resources */,
-				26C98AB8214B84AE0005A647 /* bottoms.png in Resources */,
 				26C98B0A214BCB2A0005A647 /* train.obj in Resources */,
 				26CA14E82150EC43001C04B8 /* skeleton.gltf in Resources */,
 				26680C9A2151059C0078624C /* Car_Diff.png in Resources */,
 				26CA14DD2150E975001C04B8 /* oilcan.obj in Resources */,
-				26C98ABE214B84AE0005A647 /* kizunaai.dae in Resources */,
-				26C98AA4214B84AE0005A647 /* BrainStem.gltf in Resources */,
-				26C98AB0214B84AE0005A647 /* hair1.png in Resources */,
+				26AC021B215CE6AB0004EEFE /* RiggedSimple.gltf in Resources */,
 				26CA14E12150E975001C04B8 /* racing-car.obj in Resources */,
 				26AF4CC5214F4B7000798F58 /* ground.png in Resources */,
-				26C98AA2214B84AE0005A647 /* buffer_kizunaai.bin in Resources */,
-				26C98ABC214B84AE0005A647 /* eye2.png in Resources */,
 				26C6134B21466DF300A7FD6E /* ShaderTypes.h in Resources */,
-				26C98AB4214B84AE0005A647 /* face.png in Resources */,
 				26AF4CC0214F4B5800798F58 /* plane.obj in Resources */,
-				26C98A9E214B84AE0005A647 /* kizunaai.mtl in Resources */,
 				26AF4CC2214F4B5800798F58 /* plane.mtl in Resources */,
-				26C98ABA214B84AE0005A647 /* eye.png in Resources */,
 				26CA14D72150E975001C04B8 /* large-plane.mtl in Resources */,
-				26C98AA6214B84AE0005A647 /* skeletonWave.bin in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
