@@ -57,15 +57,9 @@ extension GameViewController {
     
     // dolly, truck
     @objc func handlePan(gesture: NSPanGestureRecognizer) {
-        @IBAction func onoff(_ sender: UIButton) {
-        }
         let translation = float3(-Float(gesture.translation(in: gesture.view).x),
-                                 @IBAction func OnOffAR(_ sender: Any) {
-        }
-        -Float(gesture.translation(in: gesture.view).y),
+                                 -Float(gesture.translation(in: gesture.view).y),
                                  0)
-        @IBOutlet weak var btnOnOffAR: UIButton!
-        @IBOutlet weak var btnOnOffAR: UIButton!
         
         renderer?.translateUsing(translation: translation,
                                  sensitivity: 0.01)
