@@ -31,7 +31,6 @@ class ARSessionManager: Manager {
     
     var scene: Scene
     
-    
     var sharedUniformBuffer: MTLBuffer!
     var anchorUniformBuffer: MTLBuffer!
     var imagePlaneVertexBuffer: MTLBuffer!
@@ -71,11 +70,19 @@ class ARSessionManager: Manager {
     // Flag for viewport size changes
     var viewportSizeDidChange: Bool = false
     
+    // UIInterfaceOrientation
+    var orientation: UIInterfaceOrientation = UIInterfaceOrientation.portrait
     
     /// reset viewport size
     func drawRectResized(size: CGSize) {
         viewportSize = size
         viewportSizeDidChange = true
+        if size.width < size.height {
+            orientation = UIInterfaceOrientation.portrait
+        }
+        else {
+            orientation = UIInterfaceOrientation.landscapeRight
+        }
     }
     
     /// load Metal for AR
@@ -239,8 +246,8 @@ class ARSessionManager: Manager {
         
         let uniforms = sharedUniformBufferAddress.assumingMemoryBound(to: SharedUniforms.self)
         
-        uniforms.pointee.viewMatrix = frame.camera.viewMatrix(for: .landscapeRight)
-        uniforms.pointee.projectionMatrix = frame.camera.projectionMatrix(for: .landscapeRight, viewportSize: viewportSize, zNear: 0.001, zFar: 1000)
+        uniforms.pointee.viewMatrix = frame.camera.viewMatrix(for: orientation)
+        uniforms.pointee.projectionMatrix = frame.camera.projectionMatrix(for: orientation, viewportSize: viewportSize, zNear: 0.001, zFar: 1000)
         
         // Set up lighting for the scene using the ambient intensity if provided
         var ambientIntensity: Float = 1.0
@@ -314,7 +321,7 @@ class ARSessionManager: Manager {
     
     func updateImagePlane(frame: ARFrame) {
         // Update the texture coordinates of our image plane to aspect fill the viewport
-        let displayToCameraTransform = frame.displayTransform(for: .landscapeRight, viewportSize: viewportSize).inverted() // need find how to get UIInterfaceOrientation
+        let displayToCameraTransform = frame.displayTransform(for: orientation, viewportSize: viewportSize).inverted() // need find how to get UIInterfaceOrientation
         
         
         let vertexData = imagePlaneVertexBuffer.contents().assumingMemoryBound(to: Float.self)
@@ -431,7 +438,6 @@ class ARSessionManager: Manager {
     
     func drawableSizeWillChange(size: CGSize) {
         drawRectResized(size: size)
-        print("device rotated")
     }
     
     func update() {
