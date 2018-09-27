@@ -28,7 +28,7 @@ class Camera: Node {
     
     var viewMatrix: float4x4 {
         let translateMatrix = float4x4(translation: position)
-        let rotateMatrix = float4x4(rotation: rotation)
+        let rotateMatrix = float4x4(rotationY: rotation.y) * float4x4(rotationX: rotation.x)
         let scaleMatrix = float4x4(scaling: scale)
         return (translateMatrix * scaleMatrix * rotateMatrix).inverse
     }
@@ -40,18 +40,9 @@ extension Renderer {
     func rotateUsing(translation: float2, sensitivity: Float) {
         guard let scene = scene else { return }
     
-        var rotationVec = float3(Float(translation.y) * sensitivity,
+        let rotationVec = float3(Float(translation.y) * sensitivity,
                                  -Float(translation.x) * sensitivity,
                                  0) // this yx-order is same cross(upNormal, rotation)
-        
-//        let upVector = float3(0, 0, 1)
-//        let cameraVec = normalize(scene.camera.rotation)
-//
-//        let targetRadian = dot(upVector, cameraVec)
-//        let targetAxis = cross(upVector, cameraVec)
-//        let targetMat = matrix4x4_rotation(radians: targetRadian, axis: targetAxis)
-//
-//        rotationVec = (targetMat * float4(rotationVec, 0)).xyz
         
         scene.camera.rotation += rotationVec
     }
@@ -63,6 +54,6 @@ extension Renderer {
                                              Float(translation.y) * sensitivity,
                                              Float(translation.z) * sensitivity,
                                              1)
-        scene.camera.position += (float4x4(rotation: scene.camera.rotation) * translateVector).xyz
+        scene.camera.position += (float4x4(rotationY: scene.camera.rotation.y) * float4x4(rotationX: scene.camera.rotation.x) * translateVector).xyz
     }
 }

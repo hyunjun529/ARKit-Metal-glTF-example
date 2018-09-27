@@ -31,7 +31,7 @@ class GameScene: Scene {
         
         let normalCamera = Camera()
         normalCamera.position = [0, 7.2, 11.5]
-        normalCamera.rotation = [-6.66, -3.14, 0]
+        normalCamera.rotation = [-6.0, -3.14, 0]
         cameras.append(normalCamera)
         
         currentCameraIndex = 1
