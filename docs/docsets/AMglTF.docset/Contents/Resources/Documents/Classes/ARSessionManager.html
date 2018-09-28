@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ARSessionManager Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/ARSessionManager" class="dashAnchor"></a>
+    <a title="ARSessionManager Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">AMglTF Docs</a> (13% documented)</p>
+        <p class="header-right"><a href="https://github.com/hyunjun529/ARKit-Metal-glTF-example"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">AMglTF Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        ARSessionManager Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/ARSessionManager.html">ARSessionManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Animation.html">Animation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AppDelegate.html">AppDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Camera.html">Camera</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Character.html">Character</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Character/CharacterSubmesh.html">– CharacterSubmesh</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DynamicBuffer.html">DynamicBuffer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GameScene.html">GameScene</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GameViewController.html">GameViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Lighting.html">Lighting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Node.html">Node</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Prop.html">Prop</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Renderer.html">Renderer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Scene.html">Scene</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Submesh.html">Submesh</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Submesh/Textures.html">– Textures</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:6AMglTF003BxaSfvp">π</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Float.html">Float</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/float3x3.html">float3x3</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/float4.html">float4</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/float4x4.html">float4x4</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:6AMglTF7degrees11fromRadiansS2f_tF">degrees(fromRadians:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:6AMglTF18matrix4x4_rotation7radians4axisSo13simd_float4x4aSf_0G06float3VtF">matrix4x4_rotation(radians:axis:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:6AMglTF21matrix4x4_translationySo13simd_float4x4aSf_S2ftF">matrix4x4_translation(_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:6AMglTF29matrix_perspective_right_hand11fovyRadians11aspectRatio5nearZ4farZSo13simd_float4x4aSf_S3ftF">matrix_perspective_right_hand(fovyRadians:aspectRatio:nearZ:farZ:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:6AMglTF7radians11fromDegreesS2f_tF">radians(fromDegrees:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:6AMglTF20radians_from_degreesyS2fF">radians_from_degrees(_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Manager.html">Manager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Renderable.html">Renderable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Texturable.html">Texturable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/KeyQuaternion.html">KeyQuaternion</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Keyframe.html">Keyframe</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Rectangle.html">Rectangle</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>ARSessionManager</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">ARSessionManager</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/Manager.html">Manager</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>IN PROGRESS</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF16ARSessionManagerC4nameSSvp"></a>
+                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF16ARSessionManagerC4nameSSvp">name</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF16ARSessionManagerC7sessionSo0C0CSgvp"></a>
+                    <a name="//apple_ref/swift/Property/session" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF16ARSessionManagerC7sessionSo0C0CSgvp">session</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">ARSession</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF16ARSessionManagerC6deviceSo9MTLDevice_pSgvp"></a>
+                    <a name="//apple_ref/swift/Property/device" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF16ARSessionManagerC6deviceSo9MTLDevice_pSgvp">device</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">device</span><span class="p">:</span> <span class="kt">MTLDevice</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF16ARSessionManagerC5sceneAA5SceneCvp"></a>
+                    <a name="//apple_ref/swift/Property/scene" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF16ARSessionManagerC5sceneAA5SceneCvp">scene</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">scene</span><span class="p">:</span> <span class="kt"><a href="../Classes/Scene.html">Scene</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF16ARSessionManagerC22imagePlaneVertexBufferSo9MTLBuffer_pSgvp"></a>
+                    <a name="//apple_ref/swift/Property/imagePlaneVertexBuffer" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF16ARSessionManagerC22imagePlaneVertexBufferSo9MTLBuffer_pSgvp">imagePlaneVertexBuffer</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">imagePlaneVertexBuffer</span><span class="p">:</span> <span class="kt">MTLBuffer</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF16ARSessionManagerC26capturedImagePipelineStateSo09MTLRendergH0_pSgvp"></a>
+                    <a name="//apple_ref/swift/Property/capturedImagePipelineState" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF16ARSessionManagerC26capturedImagePipelineStateSo09MTLRendergH0_pSgvp">capturedImagePipelineState</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">capturedImagePipelineState</span><span class="p">:</span> <span class="kt">MTLRenderPipelineState</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF16ARSessionManagerC23capturedImageDepthStateSo015MTLDepthStencilH0_pSgvp"></a>
+                    <a name="//apple_ref/swift/Property/capturedImageDepthState" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF16ARSessionManagerC23capturedImageDepthStateSo015MTLDepthStencilH0_pSgvp">capturedImageDepthState</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">capturedImageDepthState</span><span class="p">:</span> <span class="kt">MTLDepthStencilState</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF16ARSessionManagerC21capturedImageTextureYSo11CVBufferRefaSgvp"></a>
+                    <a name="//apple_ref/swift/Property/capturedImageTextureY" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF16ARSessionManagerC21capturedImageTextureYSo11CVBufferRefaSgvp">capturedImageTextureY</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">capturedImageTextureY</span><span class="p">:</span> <span class="kt">CVMetalTexture</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF16ARSessionManagerC24capturedImageTextureCbCrSo11CVBufferRefaSgvp"></a>
+                    <a name="//apple_ref/swift/Property/capturedImageTextureCbCr" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF16ARSessionManagerC24capturedImageTextureCbCrSo11CVBufferRefaSgvp">capturedImageTextureCbCr</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">capturedImageTextureCbCr</span><span class="p">:</span> <span class="kt">CVMetalTexture</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF16ARSessionManagerC25capturedImageTextureCacheSo07CVMetalgH3RefaSgvp"></a>
+                    <a name="//apple_ref/swift/Property/capturedImageTextureCache" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF16ARSessionManagerC25capturedImageTextureCacheSo07CVMetalgH3RefaSgvp">capturedImageTextureCache</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">capturedImageTextureCache</span><span class="p">:</span> <span class="kt">CVMetalTextureCache</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF16ARSessionManagerC12viewportSizeSo6CGSizeVvp"></a>
+                    <a name="//apple_ref/swift/Property/viewportSize" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF16ARSessionManagerC12viewportSizeSo6CGSizeVvp">viewportSize</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">viewportSize</span><span class="p">:</span> <span class="kt">CGSize</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF16ARSessionManagerC21viewportSizeDidChangeSbvp"></a>
+                    <a name="//apple_ref/swift/Property/viewportSizeDidChange" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF16ARSessionManagerC21viewportSizeDidChangeSbvp">viewportSizeDidChange</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">viewportSizeDidChange</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF16ARSessionManagerC11orientationSo22UIInterfaceOrientationVvp"></a>
+                    <a name="//apple_ref/swift/Property/orientation" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF16ARSessionManagerC11orientationSo22UIInterfaceOrientationVvp">orientation</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">orientation</span><span class="p">:</span> <span class="kt">UIInterfaceOrientation</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF16ARSessionManagerC21kImagePlaneVertexDataSaySfGvp"></a>
+                    <a name="//apple_ref/swift/Property/kImagePlaneVertexData" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF16ARSessionManagerC21kImagePlaneVertexDataSaySfGvp">kImagePlaneVertexData</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">kImagePlaneVertexData</span><span class="p">:</span> <span class="p">[</span><span class="kt">Float</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF16ARSessionManagerC15drawRectResized4sizeySo6CGSizeV_tF"></a>
+                    <a name="//apple_ref/swift/Method/drawRectResized(size:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF16ARSessionManagerC15drawRectResized4sizeySo6CGSizeV_tF">drawRectResized(size:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>reset viewport size</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">drawRectResized</span><span class="p">(</span><span class="nv">size</span><span class="p">:</span> <span class="kt">CGSize</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF16ARSessionManagerC9LoadMetalyyF"></a>
+                    <a name="//apple_ref/swift/Method/LoadMetal()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF16ARSessionManagerC9LoadMetalyyF">LoadMetal()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>load Metal for AR</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">LoadMetal</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF16ARSessionManagerC27updateCapturedImageTextures5frameySo7ARFrameC_tF"></a>
+                    <a name="//apple_ref/swift/Method/updateCapturedImageTextures(frame:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF16ARSessionManagerC27updateCapturedImageTextures5frameySo7ARFrameC_tF">updateCapturedImageTextures(frame:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">updateCapturedImageTextures</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="kt">ARFrame</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF16ARSessionManagerC13createTexture15fromPixelBuffer11pixelFormat10planeIndexSo11CVBufferRefaSgAI_So08MTLPixelK0VSitF"></a>
+                    <a name="//apple_ref/swift/Method/createTexture(fromPixelBuffer:pixelFormat:planeIndex:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF16ARSessionManagerC13createTexture15fromPixelBuffer11pixelFormat10planeIndexSo11CVBufferRefaSgAI_So08MTLPixelK0VSitF">createTexture(fromPixelBuffer:pixelFormat:planeIndex:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">createTexture</span><span class="p">(</span><span class="n">fromPixelBuffer</span> <span class="nv">pixelBuffer</span><span class="p">:</span> <span class="kt">CVPixelBuffer</span><span class="p">,</span> <span class="nv">pixelFormat</span><span class="p">:</span> <span class="kt">MTLPixelFormat</span><span class="p">,</span> <span class="nv">planeIndex</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CVMetalTexture</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF16ARSessionManagerC16updateImagePlane5frameySo7ARFrameC_tF"></a>
+                    <a name="//apple_ref/swift/Method/updateImagePlane(frame:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF16ARSessionManagerC16updateImagePlane5frameySo7ARFrameC_tF">updateImagePlane(frame:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">updateImagePlane</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="kt">ARFrame</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF16ARSessionManagerC17drawCapturedImage13renderEncoderySo016MTLRenderCommandI0_p_tF"></a>
+                    <a name="//apple_ref/swift/Method/drawCapturedImage(renderEncoder:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF16ARSessionManagerC17drawCapturedImage13renderEncoderySo016MTLRenderCommandI0_p_tF">drawCapturedImage(renderEncoder:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">drawCapturedImage</span><span class="p">(</span><span class="nv">renderEncoder</span><span class="p">:</span> <span class="kt">MTLRenderCommandEncoder</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF16ARSessionManagerC15updateGameStateyyF"></a>
+                    <a name="//apple_ref/swift/Method/updateGameState()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF16ARSessionManagerC15updateGameStateyyF">updateGameState()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">updateGameState</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF16ARSessionManagerC7session6device5sceneACSgSo0C0C_So9MTLDevice_pAA5SceneCtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(session:device:scene:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF16ARSessionManagerC7session6device5sceneACSgSo0C0C_So9MTLDevice_pAA5SceneCtcfc">init(session:device:scene:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">?(</span><span class="nv">session</span><span class="p">:</span> <span class="kt">ARSession</span><span class="p">,</span> <span class="nv">device</span><span class="p">:</span> <span class="kt">MTLDevice</span><span class="p">,</span> <span class="nv">scene</span><span class="p">:</span> <span class="kt"><a href="../Classes/Scene.html">Scene</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF16ARSessionManagerC22drawableSizeWillChange4sizeySo6CGSizeV_tF"></a>
+                    <a name="//apple_ref/swift/Method/drawableSizeWillChange(size:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF16ARSessionManagerC22drawableSizeWillChange4sizeySo6CGSizeV_tF">drawableSizeWillChange(size:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">drawableSizeWillChange</span><span class="p">(</span><span class="nv">size</span><span class="p">:</span> <span class="kt">CGSize</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF16ARSessionManagerC6updateyyF"></a>
+                    <a name="//apple_ref/swift/Method/update()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF16ARSessionManagerC6updateyyF">update()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">update</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF16ARSessionManagerC6render0E7EncoderySo016MTLRenderCommandF0_p_tF"></a>
+                    <a name="//apple_ref/swift/Method/render(renderEncoder:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF16ARSessionManagerC6render0E7EncoderySo016MTLRenderCommandF0_p_tF">render(renderEncoder:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">render</span><span class="p">(</span><span class="nv">renderEncoder</span><span class="p">:</span> <span class="kt">MTLRenderCommandEncoder</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://github.com/hyunjun529/ARKit-Metal-glTF-example" target="_blank" rel="external">hyunjun529</a>. All rights reserved. (Last updated: 2018-09-27)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

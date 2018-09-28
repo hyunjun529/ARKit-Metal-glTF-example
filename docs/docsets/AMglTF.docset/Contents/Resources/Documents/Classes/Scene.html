@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Scene Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/Scene" class="dashAnchor"></a>
+    <a title="Scene Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">AMglTF Docs</a> (13% documented)</p>
+        <p class="header-right"><a href="https://github.com/hyunjun529/ARKit-Metal-glTF-example"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">AMglTF Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Scene Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/ARSessionManager.html">ARSessionManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Animation.html">Animation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AppDelegate.html">AppDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Camera.html">Camera</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Character.html">Character</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Character/CharacterSubmesh.html">– CharacterSubmesh</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DynamicBuffer.html">DynamicBuffer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GameScene.html">GameScene</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GameViewController.html">GameViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Lighting.html">Lighting</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Node.html">Node</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Prop.html">Prop</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Renderer.html">Renderer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Scene.html">Scene</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Submesh.html">Submesh</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Submesh/Textures.html">– Textures</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:6AMglTF003BxaSfvp">π</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Float.html">Float</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/float3x3.html">float3x3</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/float4.html">float4</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/float4x4.html">float4x4</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:6AMglTF7degrees11fromRadiansS2f_tF">degrees(fromRadians:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:6AMglTF18matrix4x4_rotation7radians4axisSo13simd_float4x4aSf_0G06float3VtF">matrix4x4_rotation(radians:axis:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:6AMglTF21matrix4x4_translationySo13simd_float4x4aSf_S2ftF">matrix4x4_translation(_:_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:6AMglTF29matrix_perspective_right_hand11fovyRadians11aspectRatio5nearZ4farZSo13simd_float4x4aSf_S3ftF">matrix_perspective_right_hand(fovyRadians:aspectRatio:nearZ:farZ:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:6AMglTF7radians11fromDegreesS2f_tF">radians(fromDegrees:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:6AMglTF20radians_from_degreesyS2fF">radians_from_degrees(_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Manager.html">Manager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Renderable.html">Renderable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Texturable.html">Texturable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/KeyQuaternion.html">KeyQuaternion</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Keyframe.html">Keyframe</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Rectangle.html">Rectangle</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Scene</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">Scene</span></code></pre>
+
+                </div>
+              </div>
+            <p>IN PROGRESS</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF5SceneC9sceneSizeSo6CGSizeVvp"></a>
+                    <a name="//apple_ref/swift/Property/sceneSize" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF5SceneC9sceneSizeSo6CGSizeVvp">sceneSize</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">sceneSize</span><span class="p">:</span> <span class="kt">CGSize</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF5SceneC7camerasSayAA6CameraCGvp"></a>
+                    <a name="//apple_ref/swift/Property/cameras" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF5SceneC7camerasSayAA6CameraCGvp">cameras</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">cameras</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/Camera.html">Camera</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF5SceneC18currentCameraIndexSivp"></a>
+                    <a name="//apple_ref/swift/Property/currentCameraIndex" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF5SceneC18currentCameraIndexSivp">currentCameraIndex</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">currentCameraIndex</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF5SceneC6cameraAA6CameraCvp"></a>
+                    <a name="//apple_ref/swift/Property/camera" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF5SceneC6cameraAA6CameraCvp">camera</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">camera</span><span class="p">:</span> <span class="kt"><a href="../Classes/Camera.html">Camera</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF5SceneC8rootNodeAA0E0Cvp"></a>
+                    <a name="//apple_ref/swift/Property/rootNode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF5SceneC8rootNodeAA0E0Cvp">rootNode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">rootNode</span><span class="p">:</span> <span class="kt"><a href="../Classes/Node.html">Node</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF5SceneC11renderablesSayAA10Renderable_pGvp"></a>
+                    <a name="//apple_ref/swift/Property/renderables" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF5SceneC11renderablesSayAA10Renderable_pGvp">renderables</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">renderables</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/Renderable.html">Renderable</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF5SceneC8uniformsSo8UniformsaSgvp"></a>
+                    <a name="//apple_ref/swift/Property/uniforms" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF5SceneC8uniformsSo8UniformsaSgvp">uniforms</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">uniforms</span><span class="p">:</span> <span class="kt">Uniforms</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF5SceneC9sceneSizeACSo6CGSizeV_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(sceneSize:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF5SceneC9sceneSizeACSo6CGSizeV_tcfc">init(sceneSize:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">sceneSize</span><span class="p">:</span> <span class="kt">CGSize</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF5SceneC6update9deltaTimeySf_tF"></a>
+                    <a name="//apple_ref/swift/Method/update(deltaTime:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF5SceneC6update9deltaTimeySf_tF">update(deltaTime:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">final</span> <span class="kd">func</span> <span class="nf">update</span><span class="p">(</span><span class="nv">deltaTime</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF5SceneC20updateCollidedPlayerSbyF"></a>
+                    <a name="//apple_ref/swift/Method/updateCollidedPlayer()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF5SceneC20updateCollidedPlayerSbyF">updateCollidedPlayer()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">updateCollidedPlayer</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF5SceneC06updateC09deltaTimeySf_tF"></a>
+                    <a name="//apple_ref/swift/Method/updateScene(deltaTime:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF5SceneC06updateC09deltaTimeySf_tF">updateScene(deltaTime:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">updateScene</span><span class="p">(</span><span class="nv">deltaTime</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF5SceneC3add4node6parent6renderyAA4NodeC_AISgSbtF"></a>
+                    <a name="//apple_ref/swift/Method/add(node:parent:render:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF5SceneC3add4node6parent6renderyAA4NodeC_AISgSbtF">add(node:parent:render:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">final</span> <span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="nv">node</span><span class="p">:</span> <span class="kt"><a href="../Classes/Node.html">Node</a></span><span class="p">,</span> <span class="nv">parent</span><span class="p">:</span> <span class="kt"><a href="../Classes/Node.html">Node</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">render</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF5SceneC6remove4nodeyAA4NodeC_tF"></a>
+                    <a name="//apple_ref/swift/Method/remove(node:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF5SceneC6remove4nodeyAA4NodeC_tF">remove(node:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">final</span> <span class="kd">func</span> <span class="nf">remove</span><span class="p">(</span><span class="nv">node</span><span class="p">:</span> <span class="kt"><a href="../Classes/Node.html">Node</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF5SceneC05setupC0yyF"></a>
+                    <a name="//apple_ref/swift/Method/setupScene()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF5SceneC05setupC0yyF">setupScene()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setupScene</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF5SceneC19sceneSizeWillChange2toySo6CGSizeV_tF"></a>
+                    <a name="//apple_ref/swift/Method/sceneSizeWillChange(to:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF5SceneC19sceneSizeWillChange2toySo6CGSizeV_tF">sceneSizeWillChange(to:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">sceneSizeWillChange</span><span class="p">(</span><span class="n">to</span> <span class="nv">size</span><span class="p">:</span> <span class="kt">CGSize</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://github.com/hyunjun529/ARKit-Metal-glTF-example" target="_blank" rel="external">hyunjun529</a>. All rights reserved. (Last updated: 2018-09-27)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
