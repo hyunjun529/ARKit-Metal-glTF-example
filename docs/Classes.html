@@ -14,7 +14,7 @@
     <a title="Classes  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">AMglTF Docs</a> (2% documented)</p>
+        <p><a href="index.html">AMglTF Docs</a> (13% documented)</p>
         <p class="header-right"><a href="https://github.com/hyunjun529/ARKit-Metal-glTF-example"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -32,7 +32,10 @@
             <a href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Classes/ARKitRenderer.html">ARKitRenderer</a>
+                <a href="Classes/ARSessionManager.html">ARSessionManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Animation.html">Animation</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/AppDelegate.html">AppDelegate</a>
@@ -41,19 +44,34 @@
                 <a href="Classes/Camera.html">Camera</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/Character.html">Character</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Character/CharacterSubmesh.html">– CharacterSubmesh</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/DynamicBuffer.html">DynamicBuffer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/GameScene.html">GameScene</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/GameViewController.html">GameViewController</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/Lighting.html">Lighting</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/Model.html">Model</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Classes/Node.html">Node</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/Prop.html">Prop</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/Renderer.html">Renderer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Scene.html">Scene</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/Submesh.html">Submesh</a>
@@ -67,36 +85,7 @@
             <a href="Global Variables.html">Global Variables</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Global Variables.html#/s:6AMglTF19alignedUniformsSizeSivp">alignedUniformsSize</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Global Variables.html#/s:6AMglTF28kAlignedInstanceUniformsSizeSivp">kAlignedInstanceUniformsSize</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Global Variables.html#/s:6AMglTF26kAlignedSharedUniformsSizeSivp">kAlignedSharedUniformsSize</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Global Variables.html#/s:6AMglTF21kImagePlaneVertexDataSaySfGvp">kImagePlaneVertexData</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Global Variables.html#/s:6AMglTF23kMaxAnchorInstanceCountSivp">kMaxAnchorInstanceCount</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Global Variables.html#/s:6AMglTF19kMaxBuffersInFlightSivp">kMaxBuffersInFlight</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Global Variables.html#/s:6AMglTF18maxBuffersInFlightSivp">maxBuffersInFlight</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Global Variables.html#/s:6AMglTF003BxaSfvp">π</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="Enums.html">Enumerations</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="Enums/RendererError.html">RendererError</a>
               </li>
             </ul>
           </li>
@@ -144,10 +133,27 @@
             <a href="Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Protocols/RenderDestinationProvider.html">RenderDestinationProvider</a>
+                <a href="Protocols/Manager.html">Manager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/Renderable.html">Renderable</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/Texturable.html">Texturable</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/KeyQuaternion.html">KeyQuaternion</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Keyframe.html">Keyframe</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Rectangle.html">Rectangle</a>
               </li>
             </ul>
           </li>
@@ -166,9 +172,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6AMglTF13ARKitRendererC"></a>
-                    <a name="//apple_ref/swift/Class/ARKitRenderer" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6AMglTF13ARKitRendererC">ARKitRenderer</a>
+                    <a name="/s:6AMglTF16ARSessionManagerC"></a>
+                    <a name="//apple_ref/swift/Class/ARSessionManager" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF16ARSessionManagerC">ARSessionManager</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -176,15 +182,47 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>IN PROGRESS</p>
 
-                        <a href="Classes/ARKitRenderer.html" class="slightly-smaller">See more</a>
+                        <a href="Classes/ARSessionManager.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">ARKitRenderer</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">ARSessionManager</span> <span class="p">:</span> <span class="kt"><a href="Protocols/Manager.html">Manager</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF9GameSceneC"></a>
+                    <a name="//apple_ref/swift/Class/GameScene" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF9GameSceneC">GameScene</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>IN PROGRESS</p>
+
+                        <a href="Classes/GameScene.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">GameScene</span> <span class="p">:</span> <span class="kt"><a href="Classes/Scene.html">Scene</a></span></code></pre>
 
                         </div>
                       </div>
@@ -208,7 +246,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Renderer for Virtual Stage(no AR)</p>
 
                         <a href="Classes/Renderer.html" class="slightly-smaller">See more</a>
                       </div>
@@ -217,6 +255,38 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">Renderer</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">MTKViewDelegate</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF9AnimationC"></a>
+                    <a name="//apple_ref/swift/Class/Animation" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF9AnimationC">Animation</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>IN PROGRESS</p>
+
+                        <a href="Classes/Animation.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">Animation</span></code></pre>
 
                         </div>
                       </div>
@@ -240,9 +310,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>this is Camera for virtual stage</p>
+                        <p>Camera</p>
 
-<p>set position, rotation and scale then stored properties return View &amp; Projection Matrix</p>
+<ul>
+<li><p>default structure with Node from <a href="https://store.raywenderlich.com/products/metal-by-tutorials">Metal by Tutorial</a></p></li>
+<li><p>Camera Calculation and Implement from <a href="https://learnopengl.com/Getting-started/Camera">LearnOpenGL</a></p></li>
+</ul>
 
                         <a href="Classes/Camera.html" class="slightly-smaller">See more</a>
                       </div>
@@ -251,6 +324,38 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">Camera</span> <span class="p">:</span> <span class="kt"><a href="Classes/Node.html">Node</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF9CharacterC"></a>
+                    <a name="//apple_ref/swift/Class/Character" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF9CharacterC">Character</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>IN PROGRESS</p>
+
+                        <a href="Classes/Character.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">Character</span> <span class="p">:</span> <span class="kt"><a href="Classes/Node.html">Node</a></span></code></pre>
 
                         </div>
                       </div>
@@ -274,7 +379,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>IN PROGRESS</p>
 
                         <a href="Classes/Lighting.html" class="slightly-smaller">See more</a>
                       </div>
@@ -283,38 +388,6 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">Lighting</span> <span class="p">:</span> <span class="kt"><a href="Classes/Node.html">Node</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:6AMglTF5ModelC"></a>
-                    <a name="//apple_ref/swift/Class/Model" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6AMglTF5ModelC">Model</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                        <a href="Classes/Model.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">Model</span> <span class="p">:</span> <span class="kt"><a href="Classes/Node.html">Node</a></span></code></pre>
 
                         </div>
                       </div>
@@ -338,7 +411,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>IN PROGRESS</p>
 
                         <a href="Classes/Node.html" class="slightly-smaller">See more</a>
                       </div>
@@ -347,6 +420,70 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">Node</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF4PropC"></a>
+                    <a name="//apple_ref/swift/Class/Prop" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF4PropC">Prop</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>IN PROGRESS</p>
+
+                        <a href="Classes/Prop.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">Prop</span> <span class="p">:</span> <span class="kt"><a href="Classes/Node.html">Node</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF5SceneC"></a>
+                    <a name="//apple_ref/swift/Class/Scene" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF5SceneC">Scene</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>IN PROGRESS</p>
+
+                        <a href="Classes/Scene.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">Scene</span></code></pre>
 
                         </div>
                       </div>
@@ -370,7 +507,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>IN PROGRESS</p>
 
                         <a href="Classes/Submesh.html" class="slightly-smaller">See more</a>
                       </div>
@@ -379,6 +516,44 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">Submesh</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6AMglTF13DynamicBufferC"></a>
+                    <a name="//apple_ref/swift/Class/DynamicBuffer" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6AMglTF13DynamicBufferC">DynamicBuffer</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Dynamic Buffer for Tirple Buffering,</p>
+
+<p>Dynamic buffer data refers to frequently updated data stored in a buffer. To avoid creating new buffers per frame and to minimize processor idle time between frames, implement a triple buffering model.</p>
+
+<p>for management Renderer ~ Scene Uniforms, i seperate Renederer and DynamicBuffer from XCode10 default Metal Template</p>
+
+<p>see also <a href="https://developer.apple.com/library/archive/documentation/3DDrawing/Conceptual/MTLBestPracticesGuide/TripleBuffering.html">Metal Best Practices Guide/Resource Management/Triple Buffering</a></p>
+
+                        <a href="Classes/DynamicBuffer.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">DynamicBuffer</span></code></pre>
 
                         </div>
                       </div>
@@ -435,7 +610,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>IN PROGRESS</p>
 
                         <a href="Classes/GameViewController.html" class="slightly-smaller">See more</a>
                       </div>
@@ -443,7 +618,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">GameViewController</span> <span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">MTKViewDelegate</span><span class="p">,</span> <span class="kt">ARSessionDelegate</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">GameViewController</span> <span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">ARSessionDelegate</span></code></pre>
 
                         </div>
                       </div>
@@ -455,7 +630,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://github.com/hyunjun529/ARKit-Metal-glTF-example" target="_blank" rel="external">hyunjun529</a>. All rights reserved. (Last updated: 2018-09-18)</p>
+          <p>&copy; 2018 <a class="link" href="https://github.com/hyunjun529/ARKit-Metal-glTF-example" target="_blank" rel="external">hyunjun529</a>. All rights reserved. (Last updated: 2018-09-27)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

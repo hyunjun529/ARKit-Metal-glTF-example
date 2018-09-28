@@ -7,4 +7,6 @@ min_acl: internal
 
 source_directory: ./AMglTF
 
+exclude: "./AMglTF/AMglTF Shared/Utility/glTF Importer/*"
+
 output: ./docs

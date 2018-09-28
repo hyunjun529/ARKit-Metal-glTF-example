@@ -3,111 +3,17 @@ import Metal
 import MetalKit
 import ARKit
 
-/// Original ARKit Example
-//extension MTKView : RenderDestinationProvider {
-//}
-//
-//class GameViewController: UIViewController, MTKViewDelegate, ARSessionDelegate {
-//
-//    var session: ARSession!
-//    var renderer: ARKitRenderer!
-//
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//        // Set the view's delegate
-//        session = ARSession()
-//        session.delegate = self
-//
-//        // Set the view to use the default device
-//        if let view = self.view as? MTKView {
-//            view.device = MTLCreateSystemDefaultDevice()
-//            view.backgroundColor = UIColor.clear
-//            view.delegate = self
-//
-//            guard view.device != nil else {
-//                print("Metal is not supported on this device")
-//                return
-//            }
-//
-//            // Configure the renderer to draw to the view
-//            renderer = ARKitRenderer(session: session, metalDevice: view.device!, renderDestination: view)
-//
-//            renderer.drawRectResized(size: view.bounds.size)
-//        }
-//
-//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(GameViewController.handleTap(gestureRecognize:)))
-//        view.addGestureRecognizer(tapGesture)
-//    }
-//
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//
-//        // Create a session configuration
-//        let configuration = ARWorldTrackingConfiguration()
-//
-//        // Run the view's session
-//        session.run(configuration)
-//    }
-//
-//    override func viewWillDisappear(_ animated: Bool) {
-//        super.viewWillDisappear(animated)
-//
-//        // Pause the view's session
-//        session.pause()
-//    }
-//
-//    @objc
-//    func handleTap(gestureRecognize: UITapGestureRecognizer) {
-//        // Create anchor using the camera's current position
-//        if let currentFrame = session.currentFrame {
-//
-//            // Create a transform with a translation of 0.2 meters in front of the camera
-//            var translation = matrix_identity_float4x4
-//            translation.columns.3.z = -0.2
-//            let transform = simd_mul(currentFrame.camera.transform, translation)
-//
-//            // Add a new anchor to the session
-//            let anchor = ARAnchor(transform: transform)
-//            session.add(anchor: anchor)
-//        }
-//    }
-//
-//
-//    // MARK: - MTKViewDelegate
-//    // Called whenever view changes orientation or layout is changed
-//    func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) {
-//        renderer.drawRectResized(size: size)
-//    }
-//
-//    // Called whenever the view needs to render
-//    func draw(in view: MTKView) {
-//        renderer.update()
-//    }
-//
-//
-//    // MARK: - ARSessionDelegate
-//    func session(_ session: ARSession, didFailWithError error: Error) {
-//        // Present an error message to the user
-//    }
-//
-//    func sessionWasInterrupted(_ session: ARSession) {
-//        // Inform the user that the session has been interrupted, for example, by presenting an overlay
-//    }
-//
-//    func sessionInterruptionEnded(_ session: ARSession) {
-//        // Reset tracking and/or remove existing anchors if consistent tracking is required
-//    }
-//}
 
-// Our iOS specific view controller
+/**
+ IN PROGRESS
+ */
 class GameViewController: UIViewController, ARSessionDelegate {
-    
     var mtkView: MTKView!
     var renderer: Renderer!
     
     var session: ARSession!
     var sessionManager: ARSessionManager!
+    var sessionConfig: ARConfiguration!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -145,10 +51,10 @@ class GameViewController: UIViewController, ARSessionDelegate {
         session.delegate = self
         
         // Create a session configuration
-        let configuration = ARWorldTrackingConfiguration()
+        sessionConfig = ARWorldTrackingConfiguration()
         
         // Run the view's session
-        session.run(configuration)
+        session.run(sessionConfig)
         
         guard let newSessionManager = ARSessionManager(session: session, device: Renderer.device, scene: renderer.scene!) else {
             print("ARSessionManager cannot be initialized")
@@ -160,6 +66,19 @@ class GameViewController: UIViewController, ARSessionDelegate {
         
         // attach rednerer to AR
         renderer.attachManager(manager: sessionManager)
+    }
+    
+    
+    @IBAction func onoffAR(_ sender: UIButton) {
+        print("on/off")
+        if renderer.managers.count > 0 {
+            renderer.managers.popLast()
+            session.pause()
+        }
+        else {
+            session.run(sessionConfig)
+            renderer.attachManager(manager: sessionManager)
+        }
     }
     
     // MARK: - ARSessionDelegate
@@ -204,10 +123,11 @@ extension GameViewController {
             renderer?.translateUsing(translation: float3(-translation.x,
                                                          translation.y,
                                                          0),
-                                     sensitivity: 0.01)
+                                     sensitivity: 0.02)
         }
         else {
-            renderer?.rotateUsing(translation: translation,
+            renderer?.rotateUsing(translation: float2(translation.x,
+                                                      -translation.y),
                                   sensitivity: 0.01)
         }
         gesture.setTranslation(.zero, in: gesture.view)

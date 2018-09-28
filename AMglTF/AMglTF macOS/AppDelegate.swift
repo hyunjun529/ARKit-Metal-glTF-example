@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  AMglTF macOS
-//
-//  Created by hyunjun529 on 10/09/2018.
-//  Copyright © 2018 hyunjun529. All rights reserved.
-//
-
 import Cocoa
 
 @NSApplicationMain

@@ -1,6 +1,7 @@
 import Metal
 import CoreGraphics
 
+
 /**
  for define Protocol of Manager
  */
