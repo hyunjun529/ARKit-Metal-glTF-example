@@ -29,7 +29,7 @@ class Camera: Node {
     
     var viewMatrix: float4x4 {
         let translateMatrix = float4x4(translation: position)
-        let rotateMatrix = float4x4(rotationY: rotation.y) * float4x4(rotationX: rotation.x)
+        let rotateMatrix = float4x4(rotationY: rotation.y) * float4x4(rotationZ: rotation.z) * float4x4(rotationX: rotation.x)
         let scaleMatrix = float4x4(scaling: scale)
         return (translateMatrix * scaleMatrix * rotateMatrix).inverse
     }
