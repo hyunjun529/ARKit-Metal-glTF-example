@@ -11,7 +11,7 @@ import CoreGraphics
  */
 class Camera: Node {
     
-    var fovDegrees: Float = 70
+    var fovDegrees: Float = 45
     var fovRadians: Float {
         return radians(fromDegrees: fovDegrees)
     }
