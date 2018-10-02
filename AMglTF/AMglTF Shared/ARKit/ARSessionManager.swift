@@ -28,7 +28,7 @@ class ARSessionManager: Manager {
     var viewportSize: CGSize = CGSize()
     
     // Flag for viewport size changes
-    var viewportSizeDidChange: Bool = false
+    var viewportSizeDidChange: Bool = true
     
     // UIInterfaceOrientation
     var orientation: UIInterfaceOrientation = UIInterfaceOrientation.portrait
@@ -201,13 +201,12 @@ class ARSessionManager: Manager {
         
         if viewportSizeDidChange {
             viewportSizeDidChange = false
-            
             updateImagePlane(frame: currentFrame)
         }
     }
     
     
-    init?(session: ARSession, device: MTLDevice, scene: Scene) {
+    init?(session: ARSession, device: MTLDevice, scene: Scene, size: CGSize) {
         self.name = "ARSession"
         
         self.session = session
@@ -215,6 +214,8 @@ class ARSessionManager: Manager {
         self.device = device
         
         self.scene = scene
+        
+        self.viewportSize = size
         
         LoadMetal()
     }
