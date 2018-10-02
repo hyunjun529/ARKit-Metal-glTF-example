@@ -102,6 +102,10 @@ extension GameViewController {
     static var previousScale: CGFloat = 1
     
     func addGestureRecognizer(to view: UIView) {
+        let tap = UITapGestureRecognizer(target: self,
+                                         action: #selector(handleTap(gestureRecognize:)))
+        view.addGestureRecognizer(tap)
+        
         let pan = UIPanGestureRecognizer(target: self,
                                          action: #selector(handlePan(gesture:)))
         view.addGestureRecognizer(pan)
@@ -110,9 +114,29 @@ extension GameViewController {
                                              action: #selector(handlePinch(gesture:)))
         view.addGestureRecognizer(pinch)
         
-        let tap = UITapGestureRecognizer(target: self,
-                                                action: #selector(handleTap(gestureRecognize:)))
-        view.addGestureRecognizer(tap)
+        let rotate = UIRotationGestureRecognizer(target: self,
+                                                 action: #selector(handleRotate(gesture:)))
+        view.addGestureRecognizer(rotate)
+    }
+    
+    @objc func handleTap(gestureRecognize: UITapGestureRecognizer) {
+        // Create anchor using the camera's current position
+        if let currentFrame = session.currentFrame {
+            
+            // Create a transform with a translation of 0.2 meters in front of the camera
+            var translation = matrix_identity_float4x4
+            translation.columns.3.z = -0.2
+            let transform = simd_mul(currentFrame.camera.transform, translation)
+            
+            // Add a new anchor to the session
+            let anchor = ARAnchor(transform: transform)
+            session.add(anchor: anchor)
+            
+            print("TAP!", transform)
+            
+            print("rotation", renderer?.scene?.camera.rotation)
+            print("position", renderer?.scene?.camera.position)
+        }
     }
     
     @objc func handlePan(gesture: UIPanGestureRecognizer) {
@@ -132,26 +156,6 @@ extension GameViewController {
         }
         gesture.setTranslation(.zero, in: gesture.view)
     }
-    
-    @objc func handleTap(gestureRecognize: UITapGestureRecognizer) {
-        // Create anchor using the camera's current position
-        if let currentFrame = session.currentFrame {
-
-            // Create a transform with a translation of 0.2 meters in front of the camera
-            var translation = matrix_identity_float4x4
-            translation.columns.3.z = -0.2
-            let transform = simd_mul(currentFrame.camera.transform, translation)
-
-            // Add a new anchor to the session
-            let anchor = ARAnchor(transform: transform)
-            session.add(anchor: anchor)
-            
-            print("TAP!", transform)
-            
-            print("rotation", renderer?.scene?.camera.rotation)
-            print("position", renderer?.scene?.camera.position)
-        }
-    }
 
     @objc func handlePinch(gesture: UIPinchGestureRecognizer) {
         renderer?.translateUsing(translation: float3(0,
@@ -163,5 +167,9 @@ extension GameViewController {
         if gesture.state == .ended {
             GameViewController.previousScale = 1
         }
+    }
+    
+    @objc func handleRotate(gesture: UIRotationGestureRecognizer) {
+        renderer?.rotateZUsing(translationZ: Float(gesture.rotation), sensitivity: 0.02)
     }
 }

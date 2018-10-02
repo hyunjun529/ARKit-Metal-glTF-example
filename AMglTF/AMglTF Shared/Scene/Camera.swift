@@ -48,6 +48,16 @@ extension Renderer {
         scene.camera.rotation += rotationVec
     }
     
+    func rotateZUsing(translationZ: Float, sensitivity: Float) {
+        guard let scene = scene else { return }
+        
+        let rotationVec = float3(0,
+                                 0,
+                                 translationZ * sensitivity) // this yx-order is same cross(upNormal, rotation)
+        
+        scene.camera.rotation += rotationVec
+    }
+    
     func translateUsing(translation: float3, sensitivity: Float) {
         guard let scene = scene else { return }
         
