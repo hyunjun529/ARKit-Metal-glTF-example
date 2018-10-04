@@ -30,8 +30,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
-                                    <tabBarItem systemItem="favorites" id="TkV-RJ-Kvc"/>
-                                    <tabBarItem systemItem="more" id="qnX-Lz-HK4"/>
+                                    <tabBarItem systemItem="featured" id="TkV-RJ-Kvc"/>
+                                    <tabBarItem systemItem="search" id="Ex2-cr-ghc"/>
+                                    <tabBarItem systemItem="history" id="9LZ-P1-lQ2"/>
+                                    <tabBarItem systemItem="mostViewed" id="dHg-2N-sQ8"/>
+                                    <tabBarItem systemItem="contacts" id="qnX-Lz-HK4"/>
                                 </items>
                             </tabBar>
                         </subviews>
