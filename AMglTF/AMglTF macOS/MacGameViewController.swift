@@ -5,7 +5,7 @@ import MetalKit
 /**
  IN PROGRESS
  */
-class GameViewController: NSViewController {
+class MacGameViewController: NSViewController {
 
     var renderer: Renderer!
     var mtkView: MTKView!
@@ -43,7 +43,7 @@ class GameViewController: NSViewController {
 }
 
 
-extension GameViewController {
+extension MacGameViewController {
     func addGestureRecognizer(to view: NSView) {
         let pan = NSPanGestureRecognizer(target: self, action: #selector(handlePan(gesture:)))
         view.addGestureRecognizer(pan)

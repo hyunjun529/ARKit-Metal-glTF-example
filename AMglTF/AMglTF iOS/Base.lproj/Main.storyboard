@@ -17,34 +17,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O1P-eM-RD9">
-                                <rect key="frame" x="16" y="40" width="92" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="AR on/off"/>
-                                <connections>
-                                    <action selector="onoffAR:" destination="BV1-FR-VrT" eventType="touchUpInside" id="TDz-Nl-QGA"/>
-                                </connections>
-                            </button>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G8j-84-f69">
-                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                            <toolbar clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Fe-mt-dm5">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <viewLayoutGuide key="safeArea" id="ixP-LO-xb0"/>
                                 <items>
-                                    <tabBarItem title="Scene" image="Scene" selectedImage="AR" id="TkV-RJ-Kvc"/>
-                                    <tabBarItem title="Light" image="Light" id="Ex2-cr-ghc"/>
-                                    <tabBarItem title="Debug" image="Debug" id="9LZ-P1-lQ2"/>
-                                    <tabBarItem title="AR" image="AR" id="dHg-2N-sQ8"/>
-                                    <tabBarItem title="Screenshot" image="Screenshot" id="qnX-Lz-HK4"/>
+                                    <barButtonItem title="Scene" image="Scene" id="XL6-08-9zB">
+                                        <connections>
+                                            <action selector="ToolbarActionScene:" destination="BV1-FR-VrT" id="gVA-J7-b1l"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="yiC-kT-kp7"/>
+                                    <barButtonItem tag="1" title="Light" image="Light" id="sUE-7F-sh6">
+                                        <connections>
+                                            <action selector="ToolbarActionLight:" destination="BV1-FR-VrT" id="gG6-J3-TqE"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Uvk-Os-chr"/>
+                                    <barButtonItem tag="2" title="Debug" image="Debug" id="fqo-Df-fCh">
+                                        <connections>
+                                            <action selector="ToolbarActionDebug:" destination="BV1-FR-VrT" id="7dC-UX-pDg"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="MqG-V6-UPX"/>
+                                    <barButtonItem tag="3" title="AR" image="AR" id="M6m-SH-hM5">
+                                        <connections>
+                                            <action selector="ToolbarActionAR:" destination="BV1-FR-VrT" id="fzF-K3-DCu"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Kt4-59-CHZ"/>
+                                    <barButtonItem tag="4" title="Screenshot" image="Screenshot" id="rhI-Zq-aD5">
+                                        <connections>
+                                            <action selector="ToolbarActionScreenshot:" destination="BV1-FR-VrT" id="ab1-2I-RRv"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
-                            </tabBar>
+                            </toolbar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Mco-ZT-GhP" userLabel="Text Debug">
+                                <rect key="frame" x="16" y="20" width="200" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="BKg-qs-eN0"/>
                     </view>
+                    <connections>
+                        <outlet property="TextDebug" destination="Mco-ZT-GhP" id="Gsk-4h-bNR"/>
+                        <outlet property="ToolbarMain" destination="4Fe-mt-dm5" id="lRQ-5n-nNY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53.600000000000001" y="26.53673163418291"/>
+            <point key="canvasLocation" x="-55.200000000000003" y="26.53673163418291"/>
         </scene>
     </scenes>
     <resources>

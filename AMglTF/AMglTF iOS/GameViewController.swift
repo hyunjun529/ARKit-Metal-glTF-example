@@ -15,6 +15,10 @@ class GameViewController: UIViewController, ARSessionDelegate {
     var sessionManager: ARSessionManager!
     var sessionConfig: ARConfiguration!
     
+    @IBOutlet weak var ToolbarMain: UIToolbar!
+    @IBOutlet weak var TextDebug: UITextView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -68,19 +72,6 @@ class GameViewController: UIViewController, ARSessionDelegate {
         renderer.attachManager(manager: sessionManager)
     }
     
-    
-    @IBAction func onoffAR(_ sender: UIButton) {
-        print("on/off")
-        if renderer.managers.count > 0 {
-            renderer.managers.popLast()
-            session.pause()
-        }
-        else {
-            session.run(sessionConfig)
-            renderer.attachManager(manager: sessionManager)
-        }
-    }
-    
     // MARK: - ARSessionDelegate
     func session(_ session: ARSession, didFailWithError error: Error) {
         // Present an error message to the user
@@ -92,6 +83,31 @@ class GameViewController: UIViewController, ARSessionDelegate {
 
     func sessionInterruptionEnded(_ session: ARSession) {
         // Reset tracking and/or remove existing anchors if consistent tracking is required
+    }
+    
+    
+    @IBAction func ToolbarActionScene(_ sender: UIBarButtonItem) {
+    }
+    
+    @IBAction func ToolbarActionLight(_ sender: UIBarButtonItem) {
+    }
+    
+    @IBAction func ToolbarActionDebug(_ sender: UIBarButtonItem) {
+        TextDebug.isHidden = !TextDebug.isHidden
+    }
+    
+    @IBAction func ToolbarActionAR(_ sender: UIBarButtonItem) {
+        if renderer.managers.count > 0 {
+            renderer.managers.popLast()
+            session.pause()
+        }
+        else {
+            session.run(sessionConfig)
+            renderer.attachManager(manager: sessionManager)
+        }
+    }
+    
+    @IBAction func ToolbarActionScreenshot(_ sender: UIBarButtonItem) {
     }
 }
 
