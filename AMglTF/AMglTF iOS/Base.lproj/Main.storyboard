@@ -30,11 +30,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
-                                    <tabBarItem systemItem="featured" id="TkV-RJ-Kvc"/>
-                                    <tabBarItem systemItem="search" id="Ex2-cr-ghc"/>
-                                    <tabBarItem systemItem="history" id="9LZ-P1-lQ2"/>
-                                    <tabBarItem systemItem="mostViewed" id="dHg-2N-sQ8"/>
-                                    <tabBarItem systemItem="contacts" id="qnX-Lz-HK4"/>
+                                    <tabBarItem title="Scene" image="Scene" selectedImage="AR" id="TkV-RJ-Kvc"/>
+                                    <tabBarItem title="Light" image="Light" id="Ex2-cr-ghc"/>
+                                    <tabBarItem title="Debug" image="Debug" id="9LZ-P1-lQ2"/>
+                                    <tabBarItem title="AR" image="AR" id="dHg-2N-sQ8"/>
+                                    <tabBarItem title="Screenshot" image="Screenshot" id="qnX-Lz-HK4"/>
                                 </items>
                             </tabBar>
                         </subviews>
@@ -47,4 +47,11 @@
             <point key="canvasLocation" x="53.600000000000001" y="26.53673163418291"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AR" width="30" height="30"/>
+        <image name="Debug" width="30" height="30"/>
+        <image name="Light" width="30" height="30"/>
+        <image name="Scene" width="30" height="30"/>
+        <image name="Screenshot" width="30" height="30"/>
+    </resources>
 </document>
