@@ -6,10 +6,9 @@ import MetalKit
  IN PROGRESS
  */
 class MacGameViewController: NSViewController {
-
     var renderer: Renderer!
     var mtkView: MTKView!
-
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -39,6 +38,10 @@ class MacGameViewController: NSViewController {
         addGestureRecognizer(to: mtkView)
         
         mtkView.delegate = renderer
+    }
+    
+    @IBAction func MenuDebugField(_ sender: NSMenuItem) {
+        print("asdf")
     }
 }
 
