@@ -33,7 +33,7 @@
 		26C6133621466DF300A7FD6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26C6133421466DF300A7FD6E /* LaunchScreen.storyboard */; };
 		26C6133F21466DF300A7FD6E /* MacAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6133E21466DF300A7FD6E /* MacAppDelegate.swift */; };
 		26C6134121466DF300A7FD6E /* MacGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6134021466DF300A7FD6E /* MacGameViewController.swift */; };
-		26C6134421466DF300A7FD6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26C6134221466DF300A7FD6E /* Main.storyboard */; };
+		26C6134421466DF300A7FD6E /* MacMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26C6134221466DF300A7FD6E /* MacMain.storyboard */; };
 		26C6134721466DF300A7FD6E /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 26C6132221466DF300A7FD6E /* Shaders.metal */; };
 		26C6134921466DF300A7FD6E /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6132321466DF300A7FD6E /* Renderer.swift */; };
 		26C6134A21466DF300A7FD6E /* ShaderTypes.h in Resources */ = {isa = PBXBuildFile; fileRef = 26C6132421466DF300A7FD6E /* ShaderTypes.h */; };
@@ -96,6 +96,9 @@
 		26D6BE872156282B008DD235 /* ARSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D6BE862156282B008DD235 /* ARSessionManager.swift */; };
 		26D6BE89215633D0008DD235 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D6BE88215633CF008DD235 /* Manager.swift */; };
 		26D6BE8A215633D0008DD235 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D6BE88215633CF008DD235 /* Manager.swift */; };
+		26E000E5216A0770000F10BF /* DebugManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E000E4216A0770000F10BF /* DebugManager.swift */; };
+		26E000E6216A0770000F10BF /* DebugManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E000E4216A0770000F10BF /* DebugManager.swift */; };
+		26E000E9216A0B9A000F10BF /* DebugModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E000E8216A0B9A000F10BF /* DebugModalViewController.swift */; };
 		26FC6CA42150FD3D003CDD0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26C6132521466DF300A7FD6E /* Assets.xcassets */; };
 		26FC6CA82151009F003CDD0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26C6132521466DF300A7FD6E /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -125,7 +128,7 @@
 		26C6133C21466DF300A7FD6E /* AMglTF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AMglTF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26C6133E21466DF300A7FD6E /* MacAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacAppDelegate.swift; sourceTree = "<group>"; };
 		26C6134021466DF300A7FD6E /* MacGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacGameViewController.swift; sourceTree = "<group>"; };
-		26C6134321466DF300A7FD6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		26C6134321466DF300A7FD6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MacMain.storyboard; sourceTree = "<group>"; };
 		26C6134521466DF300A7FD6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26C613582147EBBD00A7FD6E /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
 		26C613592147EBBD00A7FD6E /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -157,7 +160,9 @@
 		26CA14E62150EC42001C04B8 /* buffer_skeleton.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = buffer_skeleton.bin; sourceTree = "<group>"; };
 		26D6BE862156282B008DD235 /* ARSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSessionManager.swift; sourceTree = "<group>"; };
 		26D6BE88215633CF008DD235 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
-		26E000E32168D7ED000F10BF /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
+		26E000E32168D7ED000F10BF /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/MacMain.strings; sourceTree = "<group>"; };
+		26E000E4216A0770000F10BF /* DebugManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugManager.swift; sourceTree = "<group>"; };
+		26E000E8216A0B9A000F10BF /* DebugModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugModalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +234,7 @@
 				26C6132321466DF300A7FD6E /* Renderer.swift */,
 				26D6BE88215633CF008DD235 /* Manager.swift */,
 				26CA14E22150E991001C04B8 /* GameScene.swift */,
+				26E000E4216A0770000F10BF /* DebugManager.swift */,
 				26C613562147DBA500A7FD6E /* Shaders */,
 				266F88042152413500CFC34B /* ARKit */,
 				266F88052152414700CFC34B /* Scene */,
@@ -265,7 +271,8 @@
 			children = (
 				26C6133E21466DF300A7FD6E /* MacAppDelegate.swift */,
 				26C6134021466DF300A7FD6E /* MacGameViewController.swift */,
-				26C6134221466DF300A7FD6E /* Main.storyboard */,
+				26E000E8216A0B9A000F10BF /* DebugModalViewController.swift */,
+				26C6134221466DF300A7FD6E /* MacMain.storyboard */,
 				26C6134521466DF300A7FD6E /* Info.plist */,
 			);
 			path = "AMglTF macOS";
@@ -490,7 +497,7 @@
 				26CA14D92150E975001C04B8 /* large-plane.obj in Resources */,
 				26680C962151059C0078624C /* Car_Normal.jpg in Resources */,
 				26680C982151059C0078624C /* car-roughness.png in Resources */,
-				26C6134421466DF300A7FD6E /* Main.storyboard in Resources */,
+				26C6134421466DF300A7FD6E /* MacMain.storyboard in Resources */,
 				26CA14DB2150E975001C04B8 /* oilcan.mtl in Resources */,
 				26CA14DF2150E975001C04B8 /* racing-car.mtl in Resources */,
 				26C98B0C214BCB2A0005A647 /* train.mtl in Resources */,
@@ -540,6 +547,7 @@
 				26CA14BB2150E155001C04B8 /* GLTFMathLibrary.swift in Sources */,
 				26C6133021466DF300A7FD6E /* GameViewController.swift in Sources */,
 				26C6132E21466DF300A7FD6E /* AppDelegate.swift in Sources */,
+				26E000E5216A0770000F10BF /* DebugManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,11 +567,13 @@
 				26C613702148E79600A7FD6E /* Camera.swift in Sources */,
 				26C613762148E94E00A7FD6E /* MathLibrary.swift in Sources */,
 				26CA14C62150E225001C04B8 /* Character.swift in Sources */,
+				26E000E9216A0B9A000F10BF /* DebugModalViewController.swift in Sources */,
 				26C98B06214BBD600005A647 /* Submesh.swift in Sources */,
 				26CA14C02150E155001C04B8 /* GLTFTypes.swift in Sources */,
 				26C6134121466DF300A7FD6E /* MacGameViewController.swift in Sources */,
 				26C98B18214D08440005A647 /* Textureable.swift in Sources */,
 				26C6133F21466DF300A7FD6E /* MacAppDelegate.swift in Sources */,
+				26E000E6216A0770000F10BF /* DebugManager.swift in Sources */,
 				26C613732148E89000A7FD6E /* Node.swift in Sources */,
 				26D6BE8A215633D0008DD235 /* Manager.swift in Sources */,
 				26CA14C32150E1F3001C04B8 /* Animation.swift in Sources */,
@@ -593,13 +603,13 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		26C6134221466DF300A7FD6E /* Main.storyboard */ = {
+		26C6134221466DF300A7FD6E /* MacMain.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				26C6134321466DF300A7FD6E /* Base */,
 				26E000E32168D7ED000F10BF /* ko */,
 			);
-			name = Main.storyboard;
+			name = MacMain.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

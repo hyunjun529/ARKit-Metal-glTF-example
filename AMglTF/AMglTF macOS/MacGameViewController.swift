@@ -9,6 +9,8 @@ class MacGameViewController: NSViewController {
     var renderer: Renderer!
     var mtkView: MTKView!
     
+    var debugManager: DebugManager!
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -42,6 +44,19 @@ class MacGameViewController: NSViewController {
     
     @IBAction func MenuDebugField(_ sender: NSMenuItem) {
         print("asdf")
+        
+        let storyboard = NSStoryboard(name: "MacMain", bundle: nil)
+        let debugModalWindowController = storyboard.instantiateController(withIdentifier: "asdf") as! NSWindowController
+        
+        if let debugModalWindow = debugModalWindowController.window {
+            let debugModalViewController = debugModalWindow.contentViewController as! DebugModalViewController
+//            wordCountViewController.wordCount = textStorage.words.count
+//            wordCountViewController.paragraphCount = textStorage.paragraphs.count
+            
+            let application = NSApplication.shared
+            application.runModal(for: debugModalWindow)
+            debugModalWindow.close()
+        }
     }
 }
 
