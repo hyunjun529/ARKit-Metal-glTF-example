@@ -11,6 +11,7 @@ class MacGameViewController: NSViewController {
     
     var debugManager: DebugManager!
     
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -40,23 +41,32 @@ class MacGameViewController: NSViewController {
         addGestureRecognizer(to: mtkView)
         
         mtkView.delegate = renderer
+        
+        
+        // Debug Window
+        guard let newDebugManager = DebugManager() else {
+            print("Debug Manager cannot be initialized")
+            return
+        }
+        
+        debugManager = newDebugManager
+        
+        renderer.attachManager(manager: debugManager)
     }
     
     @IBAction func MenuDebugField(_ sender: NSMenuItem) {
-        print("asdf")
-        
         let storyboard = NSStoryboard(name: "MacMain", bundle: nil)
-        let debugModalWindowController = storyboard.instantiateController(withIdentifier: "asdf") as! NSWindowController
+        let debugWindowController = storyboard.instantiateController(withIdentifier: "DebugWindow") as! NSWindowController
         
-        if let debugModalWindow = debugModalWindowController.window {
-            let debugModalViewController = debugModalWindow.contentViewController as! DebugModalViewController
+        if let debugWindow = debugWindowController.window {
+            let debugViewController = debugWindow.contentViewController as! DebugViewController
+            
+            debugViewController.setDebugManager(manager: debugManager)
 //            wordCountViewController.wordCount = textStorage.words.count
 //            wordCountViewController.paragraphCount = textStorage.paragraphs.count
-            
-            let application = NSApplication.shared
-            application.runModal(for: debugModalWindow)
-            debugModalWindow.close()
         }
+        
+        debugWindowController.showWindow(self)
     }
 }
 

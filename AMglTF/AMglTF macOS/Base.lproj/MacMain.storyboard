@@ -161,11 +161,11 @@
         <!--Window Controller-->
         <scene sceneID="xan-38-QDJ">
             <objects>
-                <windowController storyboardIdentifier="asdf" id="zhp-t1-teH" sceneMemberID="viewController">
+                <windowController storyboardIdentifier="DebugWindow" id="zhp-t1-teH" sceneMemberID="viewController">
                     <window key="window" title="Debug Modal" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" tabbingIdentifier="DDD" id="aoj-Bz-cUN">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="294" y="362" width="480" height="270"/>
+                        <rect key="contentRect" x="1400" y="600" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
                         <connections>
                             <outlet property="delegate" destination="zhp-t1-teH" id="RmQ-TP-Yve"/>
@@ -179,10 +179,10 @@
             </objects>
             <point key="canvasLocation" x="790" y="250"/>
         </scene>
-        <!--Debug Modal View Controller-->
+        <!--Debug View Controller-->
         <scene sceneID="I1G-7r-9Ob">
             <objects>
-                <viewController storyboardIdentifier="DMVC" id="QJa-r2-ljE" customClass="DebugModalViewController" customModule="AMglTF" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="QJa-r2-ljE" customClass="DebugViewController" customModule="AMglTF" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="YXB-pc-uYU">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -195,28 +195,42 @@
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                     <connections>
-                                        <binding destination="QJa-r2-ljE" name="value" keyPath="strTest" id="icj-6U-C9I"/>
+                                        <binding destination="QJa-r2-ljE" name="value" keyPath="strTest" id="Hkh-UR-pRE"/>
                                     </connections>
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4W7-xK-AUL">
-                                <rect key="frame" x="162" y="13" width="75" height="32"/>
+                                <rect key="frame" x="217" y="13" width="85" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Reset" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="khp-fp-x7E">
+                                <buttonCell key="cell" type="push" title="Update" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="khp-fp-x7E">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
+                                    <connections>
+                                        <action selector="btnUpdate:" target="QJa-r2-ljE" id="75s-gI-eRj"/>
+                                    </connections>
                                 </buttonCell>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5pV-jr-oe3">
-                                <rect key="frame" x="255" y="14" width="63" height="32"/>
+                                <rect key="frame" x="302" y="14" width="63" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Exit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="YPt-Xq-mgU">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l8B-yF-WDO">
+                                <rect key="frame" x="119" y="22" width="98" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Auto Update" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="mIb-GA-9nV">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="chkAutoUpdate" destination="l8B-yF-WDO" id="nIu-TN-ztE"/>
+                    </connections>
                 </viewController>
                 <customObject id="hE5-mh-SJM" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController representsSharedInstance="YES" id="tKr-MN-YSj"/>

@@ -8,6 +8,8 @@ Debug Manager for Debug mode
 class DebugManager: Manager {
     var name: String
     
+    var test: Float = 0.0
+    
     init?() {
         self.name = "Debug Manager"
     }
@@ -17,7 +19,7 @@ class DebugManager: Manager {
     }
     
     func update() {
-        
+        test = test + 0.01
     }
     
     func render(renderEncoder: MTLRenderCommandEncoder) {

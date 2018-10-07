@@ -98,7 +98,7 @@
 		26D6BE8A215633D0008DD235 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D6BE88215633CF008DD235 /* Manager.swift */; };
 		26E000E5216A0770000F10BF /* DebugManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E000E4216A0770000F10BF /* DebugManager.swift */; };
 		26E000E6216A0770000F10BF /* DebugManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E000E4216A0770000F10BF /* DebugManager.swift */; };
-		26E000E9216A0B9A000F10BF /* DebugModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E000E8216A0B9A000F10BF /* DebugModalViewController.swift */; };
+		26E000E9216A0B9A000F10BF /* DebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E000E8216A0B9A000F10BF /* DebugViewController.swift */; };
 		26FC6CA42150FD3D003CDD0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26C6132521466DF300A7FD6E /* Assets.xcassets */; };
 		26FC6CA82151009F003CDD0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26C6132521466DF300A7FD6E /* Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -162,7 +162,7 @@
 		26D6BE88215633CF008DD235 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		26E000E32168D7ED000F10BF /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/MacMain.strings; sourceTree = "<group>"; };
 		26E000E4216A0770000F10BF /* DebugManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugManager.swift; sourceTree = "<group>"; };
-		26E000E8216A0B9A000F10BF /* DebugModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugModalViewController.swift; sourceTree = "<group>"; };
+		26E000E8216A0B9A000F10BF /* DebugViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,7 +271,7 @@
 			children = (
 				26C6133E21466DF300A7FD6E /* MacAppDelegate.swift */,
 				26C6134021466DF300A7FD6E /* MacGameViewController.swift */,
-				26E000E8216A0B9A000F10BF /* DebugModalViewController.swift */,
+				26E000E8216A0B9A000F10BF /* DebugViewController.swift */,
 				26C6134221466DF300A7FD6E /* MacMain.storyboard */,
 				26C6134521466DF300A7FD6E /* Info.plist */,
 			);
@@ -567,7 +567,7 @@
 				26C613702148E79600A7FD6E /* Camera.swift in Sources */,
 				26C613762148E94E00A7FD6E /* MathLibrary.swift in Sources */,
 				26CA14C62150E225001C04B8 /* Character.swift in Sources */,
-				26E000E9216A0B9A000F10BF /* DebugModalViewController.swift in Sources */,
+				26E000E9216A0B9A000F10BF /* DebugViewController.swift in Sources */,
 				26C98B06214BBD600005A647 /* Submesh.swift in Sources */,
 				26CA14C02150E155001C04B8 /* GLTFTypes.swift in Sources */,
 				26C6134121466DF300A7FD6E /* MacGameViewController.swift in Sources */,
