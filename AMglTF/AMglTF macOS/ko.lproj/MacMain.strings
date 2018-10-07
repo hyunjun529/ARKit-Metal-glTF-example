@@ -1,0 +1,108 @@
+
+/* Class = "NSMenuItem"; title = "Look at Center"; ObjectID = "1UK-8n-QPP"; */
+"1UK-8n-QPP.title" = "중심 보기";
+
+/* Class = "NSMenuItem"; title = "AMglTF macOS"; ObjectID = "1Xt-HY-uBw"; */
+"1Xt-HY-uBw.title" = "AMglTF macOS";
+
+/* Class = "NSMenuItem"; title = "Quit AMglTF macOS"; ObjectID = "4sb-4s-VLi"; */
+"4sb-4s-VLi.title" = "Quit AMglTF macOS";
+
+/* Class = "NSMenuItem"; title = "Scene"; ObjectID = "5QF-Oa-p0T"; */
+"5QF-Oa-p0T.title" = "Scene";
+
+/* Class = "NSMenuItem"; title = "About AMglTF macOS"; ObjectID = "5kV-Vb-QxS"; */
+"5kV-Vb-QxS.title" = "About AMglTF macOS";
+
+/* Class = "NSMenuItem"; title = "on/off Characters"; ObjectID = "6dh-zS-Vam"; */
+"6dh-zS-Vam.title" = "on/off Characters";
+
+/* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
+"AYu-sK-qS6.title" = "Main Menu";
+
+/* Class = "NSMenuItem"; title = "on/off Debug Field"; ObjectID = "Afm-SZ-1gu"; */
+"Afm-SZ-1gu.title" = "on/off Debug Field";
+
+/* Class = "NSMenuItem"; title = "Preferences…"; ObjectID = "BOF-NM-1cW"; */
+"BOF-NM-1cW.title" = "Preferences…";
+
+/* Class = "NSMenu"; title = "Light"; ObjectID = "GEO-Iw-cKr"; */
+"GEO-Iw-cKr.title" = "Light";
+
+/* Class = "NSMenuItem"; title = "on/off Light Source Visualization"; ObjectID = "Gi5-1S-RQB"; */
+"Gi5-1S-RQB.title" = "on/off Light Source Visualization";
+
+/* Class = "NSMenuItem"; title = "Camera"; ObjectID = "H8h-7b-M4v"; */
+"H8h-7b-M4v.title" = "Camera";
+
+/* Class = "NSMenu"; title = "Camera"; ObjectID = "HyV-fh-RgO"; */
+"HyV-fh-RgO.title" = "Camera";
+
+/* Class = "NSMenuItem"; title = "Open (WIP)"; ObjectID = "IAo-SY-fd9"; */
+"IAo-SY-fd9.title" = "Open (WIP)";
+
+/* Class = "NSWindow"; title = "AMglTF macOS"; ObjectID = "IQv-IB-iLA"; */
+"IQv-IB-iLA.title" = "AMglTF macOS";
+
+/* Class = "NSMenuItem"; title = "Scene 2"; ObjectID = "K6M-rr-zuq"; */
+"K6M-rr-zuq.title" = "Scene 2";
+
+/* Class = "NSMenuItem"; title = "on/off Point light"; ObjectID = "KKp-uN-9pv"; */
+"KKp-uN-9pv.title" = "on/off Point light";
+
+/* Class = "NSMenuItem"; title = "Show All"; ObjectID = "Kd2-mp-pUS"; */
+"Kd2-mp-pUS.title" = "Show All";
+
+/* Class = "NSMenuItem"; title = "Services"; ObjectID = "NMo-om-nkz"; */
+"NMo-om-nkz.title" = "Services";
+
+/* Class = "NSMenuItem"; title = "show Debug Window"; ObjectID = "OY7-WF-poV"; */
+"OY7-WF-poV.title" = "show Debug Window";
+
+/* Class = "NSMenuItem"; title = "Hide AMglTF macOS"; ObjectID = "Olw-nP-bQN"; */
+"Olw-nP-bQN.title" = "Hide AMglTF macOS";
+
+/* Class = "NSMenu"; title = "Debug"; ObjectID = "Td7-aD-5lo"; */
+"Td7-aD-5lo.title" = "Debug";
+
+/* Class = "NSMenuItem"; title = "Scene 1"; ObjectID = "VYv-fb-R9c"; */
+"VYv-fb-R9c.title" = "Scene 1";
+
+/* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "Vdr-fp-XzO"; */
+"Vdr-fp-XzO.title" = "Hide Others";
+
+/* Class = "NSMenu"; title = "Scene"; ObjectID = "W48-6f-4Dl"; */
+"W48-6f-4Dl.title" = "Scene";
+
+/* Class = "NSMenuItem"; title = "on/off Directional light"; ObjectID = "Wv8-GH-uqJ"; */
+"Wv8-GH-uqJ.title" = "on/off Directional light";
+
+/* Class = "NSMenuItem"; title = "Exit"; ObjectID = "aTl-1u-JFS"; */
+"aTl-1u-JFS.title" = "Exit";
+
+/* Class = "NSMenuItem"; title = "Debug"; ObjectID = "aUF-d1-5bR"; */
+"aUF-d1-5bR.title" = "Debug";
+
+/* Class = "NSMenu"; title = "File"; ObjectID = "bib-Uj-vzu"; */
+"bib-Uj-vzu.title" = "File";
+
+/* Class = "NSMenuItem"; title = "File"; ObjectID = "dMs-cI-mzQ"; */
+"dMs-cI-mzQ.title" = "File";
+
+/* Class = "NSMenuItem"; title = "on/off Plane"; ObjectID = "dRJ-4n-Yzg"; */
+"dRJ-4n-Yzg.title" = "on/off Plane";
+
+/* Class = "NSMenu"; title = "Services"; ObjectID = "hz9-B4-Xy5"; */
+"hz9-B4-Xy5.title" = "Services";
+
+/* Class = "NSMenuItem"; title = "Light"; ObjectID = "jxT-CU-nIS"; */
+"jxT-CU-nIS.title" = "Light";
+
+/* Class = "NSMenuItem"; title = "Default Position"; ObjectID = "snW-S8-Cw5"; */
+"snW-S8-Cw5.title" = "Default Position";
+
+/* Class = "NSMenu"; title = "AMglTF macOS"; ObjectID = "uQy-DD-JDr"; */
+"uQy-DD-JDr.title" = "AMglTF macOS";
+
+/* Class = "NSMenuItem"; title = "on/off Props"; ObjectID = "uRl-iY-unG"; */
+"uRl-iY-unG.title" = "on/off Props";

@@ -11,7 +11,7 @@ import CoreGraphics
  */
 class Camera: Node {
     
-    var fovDegrees: Float = 70
+    var fovDegrees: Float = 45
     var fovRadians: Float {
         return radians(fromDegrees: fovDegrees)
     }
@@ -29,7 +29,7 @@ class Camera: Node {
     
     var viewMatrix: float4x4 {
         let translateMatrix = float4x4(translation: position)
-        let rotateMatrix = float4x4(rotationY: rotation.y) * float4x4(rotationX: rotation.x)
+        let rotateMatrix = float4x4(rotationY: rotation.y) * float4x4(rotationZ: rotation.z) * float4x4(rotationX: rotation.x)
         let scaleMatrix = float4x4(scaling: scale)
         return (translateMatrix * scaleMatrix * rotateMatrix).inverse
     }
@@ -44,6 +44,16 @@ extension Renderer {
         let rotationVec = float3(Float(translation.y) * sensitivity,
                                  -Float(translation.x) * sensitivity,
                                  0) // this yx-order is same cross(upNormal, rotation)
+        
+        scene.camera.rotation += rotationVec
+    }
+    
+    func rotateZUsing(translationZ: Float, sensitivity: Float) {
+        guard let scene = scene else { return }
+        
+        let rotationVec = float3(0,
+                                 0,
+                                 translationZ * sensitivity) // this yx-order is same cross(upNormal, rotation)
         
         scene.camera.rotation += rotationVec
     }

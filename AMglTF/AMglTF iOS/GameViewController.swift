@@ -15,6 +15,14 @@ class GameViewController: UIViewController, ARSessionDelegate {
     var sessionManager: ARSessionManager!
     var sessionConfig: ARConfiguration!
     
+    var debugManager: DebugManager!
+    var timer = Timer()
+    var tickInterval: Double = 1/30
+    
+    @IBOutlet weak var ToolbarMain: UIToolbar!
+    @IBOutlet weak var TextDebug: UITextView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -56,7 +64,7 @@ class GameViewController: UIViewController, ARSessionDelegate {
         // Run the view's session
         session.run(sessionConfig)
         
-        guard let newSessionManager = ARSessionManager(session: session, device: Renderer.device, scene: renderer.scene!) else {
+        guard let newSessionManager = ARSessionManager(session: session, device: Renderer.device, scene: renderer.scene!, size: mtkView.drawableSize) else {
             print("ARSessionManager cannot be initialized")
             return
         }
@@ -64,20 +72,26 @@ class GameViewController: UIViewController, ARSessionDelegate {
         sessionManager = newSessionManager
         
         
-        // attach rednerer to AR
+        // attach renderer to AR
         renderer.attachManager(manager: sessionManager)
+        
+        
+        // attach renderer to Debug Manager
+        guard let newDebugManager = DebugManager() else {
+            print("Debug Manager cannot be initialized")
+            return
+        }
+        
+        debugManager = newDebugManager
+        
+        renderer.attachManager(manager: debugManager)
+        
+        timer = Timer.scheduledTimer(timeInterval: self.tickInterval, target: self, selector:#selector(self.tick) , userInfo: nil, repeats: true)
     }
     
-    
-    @IBAction func onoffAR(_ sender: UIButton) {
-        print("on/off")
-        if renderer.managers.count > 0 {
-            renderer.managers.popLast()
-            session.pause()
-        }
-        else {
-            session.run(sessionConfig)
-            renderer.attachManager(manager: sessionManager)
+    @objc func tick() {
+        if !TextDebug.isHidden {
+            TextDebug.text = String(self.debugManager.test)
         }
     }
     
@@ -93,6 +107,31 @@ class GameViewController: UIViewController, ARSessionDelegate {
     func sessionInterruptionEnded(_ session: ARSession) {
         // Reset tracking and/or remove existing anchors if consistent tracking is required
     }
+    
+    
+    @IBAction func ToolbarActionScene(_ sender: UIBarButtonItem) {
+    }
+    
+    @IBAction func ToolbarActionLight(_ sender: UIBarButtonItem) {
+    }
+    
+    @IBAction func ToolbarActionDebug(_ sender: UIBarButtonItem) {
+        TextDebug.isHidden = !TextDebug.isHidden
+    }
+    
+    @IBAction func ToolbarActionAR(_ sender: UIBarButtonItem) {
+        if renderer.managers.count > 0 {
+            renderer.managers.popLast()
+            session.pause()
+        }
+        else {
+            session.run(sessionConfig)
+            renderer.attachManager(manager: sessionManager)
+        }
+    }
+    
+    @IBAction func ToolbarActionScreenshot(_ sender: UIBarButtonItem) {
+    }
 }
 
 /**
@@ -102,6 +141,10 @@ extension GameViewController {
     static var previousScale: CGFloat = 1
     
     func addGestureRecognizer(to view: UIView) {
+        let tap = UITapGestureRecognizer(target: self,
+                                         action: #selector(handleTap(gestureRecognize:)))
+        view.addGestureRecognizer(tap)
+        
         let pan = UIPanGestureRecognizer(target: self,
                                          action: #selector(handlePan(gesture:)))
         view.addGestureRecognizer(pan)
@@ -110,9 +153,29 @@ extension GameViewController {
                                              action: #selector(handlePinch(gesture:)))
         view.addGestureRecognizer(pinch)
         
-        let tap = UITapGestureRecognizer(target: self,
-                                                action: #selector(handleTap(gestureRecognize:)))
-        view.addGestureRecognizer(tap)
+        let rotate = UIRotationGestureRecognizer(target: self,
+                                                 action: #selector(handleRotate(gesture:)))
+        view.addGestureRecognizer(rotate)
+    }
+    
+    @objc func handleTap(gestureRecognize: UITapGestureRecognizer) {
+        // Create anchor using the camera's current position
+        if let currentFrame = session.currentFrame {
+            
+            // Create a transform with a translation of 0.2 meters in front of the camera
+            var translation = matrix_identity_float4x4
+            translation.columns.3.z = -0.2
+            let transform = simd_mul(currentFrame.camera.transform, translation)
+            
+            // Add a new anchor to the session
+            let anchor = ARAnchor(transform: transform)
+            session.add(anchor: anchor)
+            
+            print("TAP!", transform)
+            
+            print("rotation", renderer?.scene?.camera.rotation)
+            print("position", renderer?.scene?.camera.position)
+        }
     }
     
     @objc func handlePan(gesture: UIPanGestureRecognizer) {
@@ -132,26 +195,6 @@ extension GameViewController {
         }
         gesture.setTranslation(.zero, in: gesture.view)
     }
-    
-    @objc func handleTap(gestureRecognize: UITapGestureRecognizer) {
-        // Create anchor using the camera's current position
-        if let currentFrame = session.currentFrame {
-
-            // Create a transform with a translation of 0.2 meters in front of the camera
-            var translation = matrix_identity_float4x4
-            translation.columns.3.z = -0.2
-            let transform = simd_mul(currentFrame.camera.transform, translation)
-
-            // Add a new anchor to the session
-            let anchor = ARAnchor(transform: transform)
-            session.add(anchor: anchor)
-            
-            print("TAP!", transform)
-            
-            print("rotation", renderer?.scene?.camera.rotation)
-            print("position", renderer?.scene?.camera.position)
-        }
-    }
 
     @objc func handlePinch(gesture: UIPinchGestureRecognizer) {
         renderer?.translateUsing(translation: float3(0,
@@ -163,5 +206,9 @@ extension GameViewController {
         if gesture.state == .ended {
             GameViewController.previousScale = 1
         }
+    }
+    
+    @objc func handleRotate(gesture: UIRotationGestureRecognizer) {
+        renderer?.rotateZUsing(translationZ: Float(gesture.rotation), sensitivity: 0.02)
     }
 }

@@ -5,11 +5,13 @@ import MetalKit
 /**
  IN PROGRESS
  */
-class GameViewController: NSViewController {
-
+class MacGameViewController: NSViewController {
     var renderer: Renderer!
     var mtkView: MTKView!
-
+    
+    var debugManager: DebugManager!
+    
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -39,11 +41,37 @@ class GameViewController: NSViewController {
         addGestureRecognizer(to: mtkView)
         
         mtkView.delegate = renderer
+        
+        
+        // Debug Window
+        guard let newDebugManager = DebugManager() else {
+            print("Debug Manager cannot be initialized")
+            return
+        }
+        
+        debugManager = newDebugManager
+        
+        renderer.attachManager(manager: debugManager)
+    }
+    
+    @IBAction func MenuDebugField(_ sender: NSMenuItem) {
+        let storyboard = NSStoryboard(name: "MacMain", bundle: nil)
+        let debugWindowController = storyboard.instantiateController(withIdentifier: "DebugWindow") as! NSWindowController
+        
+        if let debugWindow = debugWindowController.window {
+            let debugViewController = debugWindow.contentViewController as! DebugViewController
+            
+            debugViewController.setDebugManager(manager: debugManager)
+//            wordCountViewController.wordCount = textStorage.words.count
+//            wordCountViewController.paragraphCount = textStorage.paragraphs.count
+        }
+        
+        debugWindowController.showWindow(self)
     }
 }
 
 
-extension GameViewController {
+extension MacGameViewController {
     func addGestureRecognizer(to view: NSView) {
         let pan = NSPanGestureRecognizer(target: self, action: #selector(handlePan(gesture:)))
         view.addGestureRecognizer(pan)
