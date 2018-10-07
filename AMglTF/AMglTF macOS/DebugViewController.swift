@@ -12,7 +12,7 @@ class DebugViewController: NSViewController {
     var timer = Timer()
     var tickInterval: Double = 1/30
     
-    var debugManger: DebugManager!
+    var debugManager: DebugManager!
     
     
     override func viewDidLoad() {
@@ -23,17 +23,17 @@ class DebugViewController: NSViewController {
     
     @objc func tick() {
         if chkAutoUpdate.state == NSControl.StateValue.on {
-            strTest = String(self.debugManger.test)
+            strTest = String(self.debugManager.test)
         }
     }
     
     func setDebugManager(manager: DebugManager) {
-        self.debugManger = manager
+        self.debugManager = manager
         
-        strTest = String(self.debugManger.test)
+        strTest = String(self.debugManager.test)
     }
     
     @IBAction func btnUpdate(_ sender: NSButtonCell) {
-        strTest = String(self.debugManger.test)
+        strTest = String(self.debugManager.test)
     }
 }

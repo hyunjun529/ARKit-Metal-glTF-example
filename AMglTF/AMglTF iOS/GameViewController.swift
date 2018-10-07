@@ -15,6 +15,10 @@ class GameViewController: UIViewController, ARSessionDelegate {
     var sessionManager: ARSessionManager!
     var sessionConfig: ARConfiguration!
     
+    var debugManager: DebugManager!
+    var timer = Timer()
+    var tickInterval: Double = 1/30
+    
     @IBOutlet weak var ToolbarMain: UIToolbar!
     @IBOutlet weak var TextDebug: UITextView!
     
@@ -68,8 +72,27 @@ class GameViewController: UIViewController, ARSessionDelegate {
         sessionManager = newSessionManager
         
         
-        // attach rednerer to AR
+        // attach renderer to AR
         renderer.attachManager(manager: sessionManager)
+        
+        
+        // attach renderer to Debug Manager
+        guard let newDebugManager = DebugManager() else {
+            print("Debug Manager cannot be initialized")
+            return
+        }
+        
+        debugManager = newDebugManager
+        
+        renderer.attachManager(manager: debugManager)
+        
+        timer = Timer.scheduledTimer(timeInterval: self.tickInterval, target: self, selector:#selector(self.tick) , userInfo: nil, repeats: true)
+    }
+    
+    @objc func tick() {
+        if !TextDebug.isHidden {
+            TextDebug.text = String(self.debugManager.test)
+        }
     }
     
     // MARK: - ARSessionDelegate
