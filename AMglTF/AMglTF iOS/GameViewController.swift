@@ -77,7 +77,7 @@ class GameViewController: UIViewController, ARSessionDelegate {
         
         
         // attach renderer to Debug Manager
-        guard let newDebugManager = DebugManager() else {
+        guard let newDebugManager = DebugManager(scene: renderer.scene!) else {
             print("Debug Manager cannot be initialized")
             return
         }
@@ -122,11 +122,12 @@ class GameViewController: UIViewController, ARSessionDelegate {
     @IBAction func ToolbarActionAR(_ sender: UIBarButtonItem) {
         if renderer.managers.count > 0 {
             renderer.managers.popLast()
-            session.pause()
+            //session.pause()
         }
         else {
             session.run(sessionConfig)
             renderer.attachManager(manager: sessionManager)
+            renderer.attachManager(manager: debugManager)
         }
     }
     

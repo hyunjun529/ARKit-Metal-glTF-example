@@ -44,7 +44,7 @@ class MacGameViewController: NSViewController {
         
         
         // Debug Window
-        guard let newDebugManager = DebugManager() else {
+        guard let newDebugManager = DebugManager(scene: renderer.scene!) else {
             print("Debug Manager cannot be initialized")
             return
         }
