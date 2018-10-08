@@ -120,14 +120,13 @@ class GameViewController: UIViewController, ARSessionDelegate {
     }
     
     @IBAction func ToolbarActionAR(_ sender: UIBarButtonItem) {
-        if renderer.managers.count > 0 {
-            renderer.managers.popLast()
-            //session.pause()
+        if let arIndex = renderer.managers.firstIndex(where: {$0.name == sessionManager.name}) {
+            renderer.managers.remove(at: arIndex)
+            session.pause()
         }
         else {
             session.run(sessionConfig)
             renderer.attachManager(manager: sessionManager)
-            renderer.attachManager(manager: debugManager)
         }
     }
     
