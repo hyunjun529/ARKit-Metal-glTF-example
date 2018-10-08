@@ -23,12 +23,14 @@
                                 <viewLayoutGuide key="safeArea" id="ixP-LO-xb0"/>
                                 <items>
                                     <barButtonItem title="Scene" image="Scene" id="XL6-08-9zB">
+                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <action selector="ToolbarActionScene:" destination="BV1-FR-VrT" id="gVA-J7-b1l"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="yiC-kT-kp7"/>
                                     <barButtonItem tag="1" title="Light" image="Light" id="sUE-7F-sh6">
+                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <action selector="ToolbarActionLight:" destination="BV1-FR-VrT" id="gG6-J3-TqE"/>
                                         </connections>
@@ -47,11 +49,13 @@
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Kt4-59-CHZ"/>
                                     <barButtonItem tag="4" title="Screenshot" image="Screenshot" id="rhI-Zq-aD5">
+                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <action selector="ToolbarActionScreenshot:" destination="BV1-FR-VrT" id="ab1-2I-RRv"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </toolbar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mco-ZT-GhP" userLabel="Text Debug">
                                 <rect key="frame" x="16" y="36" width="200" height="250"/>
