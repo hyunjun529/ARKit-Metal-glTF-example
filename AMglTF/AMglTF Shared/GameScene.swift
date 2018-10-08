@@ -6,6 +6,7 @@ import CoreGraphics
  */
 class GameScene: Scene {
     let ground = Prop(name: "large-plane")
+    let worldOrientation = Prop(name: "axis")
     let car = Prop(name: "racing-car")
     let train = Prop(name: "train")
     let skeleton = Character(name: "skeleton")
@@ -17,12 +18,16 @@ class GameScene: Scene {
         ground.scale = float3(0.1, 0.1, 0.1)
         add(node: ground)
         
-        train.rotation = [0, radians(fromDegrees: 180), 0]
-        train.position = [2.2, 0, 1]
+        worldOrientation.position = float3(0)
+        add(node: worldOrientation)
+        
+        train.rotation = [0, radians(fromDegrees: 270), 0]
+        train.position = [2.2, 0, -1.5]
         add(node: train)
         
         car.rotation = [0, radians(fromDegrees: 0), 0]
-        car.position = [-0.8, 0, 0.5]
+        car.scale = float3(0.8, 0.8, 0.8)
+        car.position = [-1.8, 0, -1.5]
         add(node: car)
         
         riggedSimple.position = [2.2, 0.5, 2]
@@ -33,7 +38,7 @@ class GameScene: Scene {
         riggedSimple.currentAnimation?.speed = 3.0
         riggedSimple.pauseAnimation()
         
-        skeleton.position = [1.2, 0, 0]
+        skeleton.position = [-1.2, 0, 1.5]
         add(node: skeleton)
         skeleton.runAnimation(name: "Armature_walk")
         skeleton.currentAnimation?.speed = 3.0
