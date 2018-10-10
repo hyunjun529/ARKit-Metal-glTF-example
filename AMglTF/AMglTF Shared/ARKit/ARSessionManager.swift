@@ -54,6 +54,10 @@ class ARSessionManager: Manager {
         }
     }
     
+    var anchors: [ARAnchor]
+    
+    let nodeAxis = Prop(name: "axis")
+    
     
     /// load Metal for AR
     func LoadMetal() {
@@ -210,6 +214,20 @@ class ARSessionManager: Manager {
         }
     }
     
+    func updateAnchors() {
+//        guard let imageAnchor = anchor as? ARImageAnchor else { return }
+//        let referenceImage = imageAnchor.referenceImage
+        
+        for anchor in anchors {
+            var transform = anchor.transform
+            let position = float3(transform[3][0], transform[3][1], -transform[3][2]) * 10
+            
+            nodeAxis.position = position
+            
+            scene.add(node: nodeAxis)
+        }
+    }
+    
     
     init?(session: ARSession, device: MTLDevice, scene: Scene, size: CGSize) {
         self.name = "ARSession"
@@ -222,6 +240,8 @@ class ARSessionManager: Manager {
         
         self.viewportSize = size
         
+        self.anchors = []
+        
         LoadMetal()
     }
     
@@ -233,6 +253,8 @@ class ARSessionManager: Manager {
     
     func update() {
         updateGameState()
+        
+        updateAnchors()
     }
     
     

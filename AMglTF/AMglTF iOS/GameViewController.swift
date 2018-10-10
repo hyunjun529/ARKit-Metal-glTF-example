@@ -106,6 +106,10 @@ class GameViewController: UIViewController, ARSessionDelegate {
     
     
     // MARK: - ARSessionDelegate
+    func session(_ session: ARSession, didUpdate anchors: [ARAnchor]) {
+        sessionManager.anchors = anchors
+    }
+    
     func session(_ session: ARSession, didFailWithError error: Error) {
         // Present an error message to the user
     }
