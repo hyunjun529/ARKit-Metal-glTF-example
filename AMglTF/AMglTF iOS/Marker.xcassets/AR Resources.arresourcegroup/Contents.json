@@ -5,22 +5,13 @@
   },
   "resources" : [
     {
-      "filename" : "Marker_about.arreferenceimage"
+      "filename" : "Marker_0.arreferenceimage"
     },
     {
-      "filename" : "Marker_AR.arreferenceimage"
+      "filename" : "Marker_2.arreferenceimage"
     },
     {
-      "filename" : "Marker_attension.arreferenceimage"
-    },
-    {
-      "filename" : "Marker_error.arreferenceimage"
-    },
-    {
-      "filename" : "Marker_high_priority.arreferenceimage"
-    },
-    {
-      "filename" : "Marker_info.arreferenceimage"
+      "filename" : "Marker_10.arreferenceimage"
     }
   ]
 }

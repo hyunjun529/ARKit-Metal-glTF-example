@@ -107,7 +107,22 @@ class GameViewController: UIViewController, ARSessionDelegate {
     
     // MARK: - ARSessionDelegate
     func session(_ session: ARSession, didUpdate anchors: [ARAnchor]) {
-        sessionManager.anchors = anchors
+        sessionManager.markersExist[0] = false
+        sessionManager.markersExist[1] = false
+        sessionManager.markersExist[2] = false
+        
+        for anchor in anchors {
+            guard let imageAnchor = anchor as? ARImageAnchor else { continue }
+            
+            if sessionManager.markers.contains(imageAnchor.name!) {
+                let idx = sessionManager.markers.firstIndex(of: imageAnchor.name!)
+                var transform = anchor.transform
+                let position = float3(transform[3][0], transform[3][1], -transform[3][2]) * 10
+                sessionManager.markersPosition[idx!] = position
+                sessionManager.markersExist[idx!] = true
+            }
+        }
+        //sessionManager.anchors = anchors
     }
     
     func session(_ session: ARSession, didFailWithError error: Error) {

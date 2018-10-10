@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Marker_high_priority.png"
+      "filename" : "Marker_2.png"
     }
   ],
   "info" : {
@@ -10,7 +10,8 @@
     "author" : "xcode"
   },
   "properties" : {
-    "width" : 2,
-    "unit":"inches"
+    "width" : 7,
+    "height" : 10,
+    "unit" : "inches"
   }
 }

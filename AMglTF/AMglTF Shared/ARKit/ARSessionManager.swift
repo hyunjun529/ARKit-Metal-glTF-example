@@ -54,9 +54,30 @@ class ARSessionManager: Manager {
         }
     }
     
-    var anchors: [ARAnchor]
-    
     let nodeAxis = Prop(name: "axis")
+    let node001 = Prop(name: "watercraftPack_001")
+    let node003 = Prop(name: "watercraftPack_003")
+    let node005 = Prop(name: "watercraftPack_005")
+    
+    var markers: [String] = [
+        "Marker_0",
+        "Marker_2",
+        "Marker_10",
+    ]
+    
+    var markersExist: [Bool] = [
+        false,
+        false,
+        false,
+    ]
+    
+    var markersNode: [Prop]
+    
+    var markersPosition: [float3] = [
+        float3(0, 0, 0),
+        float3(0, 0, 0),
+        float3(0, 0, 0),
+    ]
     
     
     /// load Metal for AR
@@ -215,16 +236,14 @@ class ARSessionManager: Manager {
     }
     
     func updateAnchors() {
-//        guard let imageAnchor = anchor as? ARImageAnchor else { return }
-//        let referenceImage = imageAnchor.referenceImage
-        
-        for anchor in anchors {
-            var transform = anchor.transform
-            let position = float3(transform[3][0], transform[3][1], -transform[3][2]) * 10
-            
-            nodeAxis.position = position
-            
-            scene.add(node: nodeAxis)
+        for i in 0...2 {
+            if markersExist[i] {
+                markersNode[i].position = markersPosition[i]
+                scene.add(node: markersNode[i])
+            }
+            else {
+                scene.remove(node: markersNode[i])
+            }
         }
     }
     
@@ -240,7 +259,15 @@ class ARSessionManager: Manager {
         
         self.viewportSize = size
         
-        self.anchors = []
+        self.markersNode = [
+            node001,
+            node003,
+            node005,
+        ]
+        
+        node001.scale = float3(0.2, 0.2, 0.2)
+        node003.scale = float3(0.2, 0.2, 0.2)
+        node005.scale = float3(0.2, 0.2, 0.2)
         
         LoadMetal()
     }

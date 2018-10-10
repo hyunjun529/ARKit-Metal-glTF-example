@@ -36,6 +36,20 @@
 		26AF4CC5214F4B7000798F58 /* ground.png in Resources */ = {isa = PBXBuildFile; fileRef = 26AF4CC3214F4B7000798F58 /* ground.png */; };
 		26AF4CCC214F55CD00798F58 /* ARKitShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 26AF4CCB214F55CD00798F58 /* ARKitShader.metal */; };
 		26B2CC16216DC6A300219AEC /* Marker.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26B2CC15216DC6A300219AEC /* Marker.xcassets */; };
+		26B2CC24216DE11C00219AEC /* watercraftPack_001.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 26B2CC19216DE11C00219AEC /* watercraftPack_001.mtl */; };
+		26B2CC25216DE11C00219AEC /* watercraftPack_001.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 26B2CC19216DE11C00219AEC /* watercraftPack_001.mtl */; };
+		26B2CC26216DE11C00219AEC /* watercraftPack_003.obj in Resources */ = {isa = PBXBuildFile; fileRef = 26B2CC1A216DE11C00219AEC /* watercraftPack_003.obj */; };
+		26B2CC27216DE11C00219AEC /* watercraftPack_003.obj in Resources */ = {isa = PBXBuildFile; fileRef = 26B2CC1A216DE11C00219AEC /* watercraftPack_003.obj */; };
+		26B2CC2C216DE11C00219AEC /* watercraftPack_001.obj in Resources */ = {isa = PBXBuildFile; fileRef = 26B2CC1D216DE11C00219AEC /* watercraftPack_001.obj */; };
+		26B2CC2D216DE11C00219AEC /* watercraftPack_001.obj in Resources */ = {isa = PBXBuildFile; fileRef = 26B2CC1D216DE11C00219AEC /* watercraftPack_001.obj */; };
+		26B2CC2E216DE11C00219AEC /* watercraftPack_003.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 26B2CC1E216DE11C00219AEC /* watercraftPack_003.mtl */; };
+		26B2CC2F216DE11C00219AEC /* watercraftPack_003.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 26B2CC1E216DE11C00219AEC /* watercraftPack_003.mtl */; };
+		26B2CC32216DE11C00219AEC /* watercraftPack_005.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 26B2CC20216DE11C00219AEC /* watercraftPack_005.mtl */; };
+		26B2CC33216DE11C00219AEC /* watercraftPack_005.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 26B2CC20216DE11C00219AEC /* watercraftPack_005.mtl */; };
+		26B2CC34216DE11C00219AEC /* watercraftPack_005.obj in Resources */ = {isa = PBXBuildFile; fileRef = 26B2CC21216DE11C00219AEC /* watercraftPack_005.obj */; };
+		26B2CC35216DE11C00219AEC /* watercraftPack_005.obj in Resources */ = {isa = PBXBuildFile; fileRef = 26B2CC21216DE11C00219AEC /* watercraftPack_005.obj */; };
+		26B2CC37216DE12400219AEC /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 26B2CC36216DE12400219AEC /* License.txt */; };
+		26B2CC38216DE12400219AEC /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 26B2CC36216DE12400219AEC /* License.txt */; };
 		26C6132E21466DF300A7FD6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6132D21466DF300A7FD6E /* AppDelegate.swift */; };
 		26C6133021466DF300A7FD6E /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C6132F21466DF300A7FD6E /* GameViewController.swift */; };
 		26C6133321466DF300A7FD6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26C6133121466DF300A7FD6E /* Main.storyboard */; };
@@ -125,6 +139,13 @@
 		26AF4CC3214F4B7000798F58 /* ground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ground.png; sourceTree = "<group>"; };
 		26AF4CCB214F55CD00798F58 /* ARKitShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = ARKitShader.metal; sourceTree = "<group>"; };
 		26B2CC15216DC6A300219AEC /* Marker.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Marker.xcassets; sourceTree = "<group>"; };
+		26B2CC19216DE11C00219AEC /* watercraftPack_001.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = watercraftPack_001.mtl; sourceTree = "<group>"; };
+		26B2CC1A216DE11C00219AEC /* watercraftPack_003.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = watercraftPack_003.obj; sourceTree = "<group>"; };
+		26B2CC1D216DE11C00219AEC /* watercraftPack_001.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = watercraftPack_001.obj; sourceTree = "<group>"; };
+		26B2CC1E216DE11C00219AEC /* watercraftPack_003.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = watercraftPack_003.mtl; sourceTree = "<group>"; };
+		26B2CC20216DE11C00219AEC /* watercraftPack_005.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = watercraftPack_005.mtl; sourceTree = "<group>"; };
+		26B2CC21216DE11C00219AEC /* watercraftPack_005.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = watercraftPack_005.obj; sourceTree = "<group>"; };
+		26B2CC36216DE12400219AEC /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
 		26C6132221466DF300A7FD6E /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 		26C6132321466DF300A7FD6E /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 		26C6132421466DF300A7FD6E /* ShaderTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderTypes.h; sourceTree = "<group>"; };
@@ -225,6 +246,20 @@
 			path = Scene;
 			sourceTree = "<group>";
 		};
+		26B2CC17216DE10C00219AEC /* watercraft */ = {
+			isa = PBXGroup;
+			children = (
+				26B2CC36216DE12400219AEC /* License.txt */,
+				26B2CC19216DE11C00219AEC /* watercraftPack_001.mtl */,
+				26B2CC1D216DE11C00219AEC /* watercraftPack_001.obj */,
+				26B2CC1E216DE11C00219AEC /* watercraftPack_003.mtl */,
+				26B2CC1A216DE11C00219AEC /* watercraftPack_003.obj */,
+				26B2CC20216DE11C00219AEC /* watercraftPack_005.mtl */,
+				26B2CC21216DE11C00219AEC /* watercraftPack_005.obj */,
+			);
+			path = watercraft;
+			sourceTree = "<group>";
+		};
 		26C6131C21466DF200A7FD6E = {
 			isa = PBXGroup;
 			children = (
@@ -322,6 +357,7 @@
 		26C98A88214B84AE0005A647 /* obj */ = {
 			isa = PBXGroup;
 			children = (
+				26B2CC17216DE10C00219AEC /* watercraft */,
 				26CA14D32150E975001C04B8 /* Car */,
 				26CA14CD2150E975001C04B8 /* Ground */,
 				26CA14D02150E975001C04B8 /* Racetrack */,
@@ -472,14 +508,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26B2CC26216DE11C00219AEC /* watercraftPack_003.obj in Resources */,
+				26B2CC2C216DE11C00219AEC /* watercraftPack_001.obj in Resources */,
 				26AC0218215CE6AB0004EEFE /* RiggedSimple0.bin in Resources */,
 				261B5CA3216B895F00036EEC /* train.obj in Resources */,
+				26B2CC32216DE11C00219AEC /* watercraftPack_005.mtl in Resources */,
 				261B5C9D216B867400036EEC /* axis.mtl in Resources */,
 				261B5CA1216B895F00036EEC /* train.mtl in Resources */,
 				26680C972151059C0078624C /* car-roughness.png in Resources */,
 				26CA14E92150EC43001C04B8 /* buffer_skeleton.bin in Resources */,
 				26AF4CBF214F4B5800798F58 /* plane.obj in Resources */,
 				26CA14D62150E975001C04B8 /* large-plane.mtl in Resources */,
+				26B2CC37216DE12400219AEC /* License.txt in Resources */,
+				26B2CC34216DE11C00219AEC /* watercraftPack_005.obj in Resources */,
 				26680C952151059C0078624C /* Car_Normal.jpg in Resources */,
 				261B5C9B216B867400036EEC /* axis.obj in Resources */,
 				26FC6CA82151009F003CDD0C /* Assets.xcassets in Resources */,
@@ -492,8 +533,10 @@
 				26C6134A21466DF300A7FD6E /* ShaderTypes.h in Resources */,
 				26C6133321466DF300A7FD6E /* Main.storyboard in Resources */,
 				26CA14DE2150E975001C04B8 /* racing-car.mtl in Resources */,
+				26B2CC2E216DE11C00219AEC /* watercraftPack_003.mtl in Resources */,
 				26CA14D82150E975001C04B8 /* large-plane.obj in Resources */,
 				26B2CC16216DC6A300219AEC /* Marker.xcassets in Resources */,
+				26B2CC24216DE11C00219AEC /* watercraftPack_001.mtl in Resources */,
 				26C6133621466DF300A7FD6E /* LaunchScreen.storyboard in Resources */,
 				26AC021A215CE6AB0004EEFE /* RiggedSimple.gltf in Resources */,
 				26AF4CC1214F4B5800798F58 /* plane.mtl in Resources */,
@@ -507,26 +550,33 @@
 			files = (
 				26AC0219215CE6AB0004EEFE /* RiggedSimple0.bin in Resources */,
 				26FC6CA42150FD3D003CDD0C /* Assets.xcassets in Resources */,
+				26B2CC2D216DE11C00219AEC /* watercraftPack_001.obj in Resources */,
 				26CA14EA2150EC43001C04B8 /* buffer_skeleton.bin in Resources */,
+				26B2CC38216DE12400219AEC /* License.txt in Resources */,
 				26CA14D92150E975001C04B8 /* large-plane.obj in Resources */,
 				26680C962151059C0078624C /* Car_Normal.jpg in Resources */,
 				26680C982151059C0078624C /* car-roughness.png in Resources */,
 				261B5CA2216B895F00036EEC /* train.mtl in Resources */,
+				26B2CC27216DE11C00219AEC /* watercraftPack_003.obj in Resources */,
 				26C6134421466DF300A7FD6E /* MacMain.storyboard in Resources */,
 				26CA14DB2150E975001C04B8 /* oilcan.mtl in Resources */,
 				26CA14DF2150E975001C04B8 /* racing-car.mtl in Resources */,
 				261B5C9E216B867400036EEC /* axis.mtl in Resources */,
 				261B5CA4216B895F00036EEC /* train.obj in Resources */,
+				26B2CC2F216DE11C00219AEC /* watercraftPack_003.mtl in Resources */,
 				26CA14E82150EC43001C04B8 /* skeleton.gltf in Resources */,
 				26680C9A2151059C0078624C /* Car_Diff.png in Resources */,
+				26B2CC25216DE11C00219AEC /* watercraftPack_001.mtl in Resources */,
 				26CA14DD2150E975001C04B8 /* oilcan.obj in Resources */,
 				261B5C9C216B867400036EEC /* axis.obj in Resources */,
+				26B2CC33216DE11C00219AEC /* watercraftPack_005.mtl in Resources */,
 				26AC021B215CE6AB0004EEFE /* RiggedSimple.gltf in Resources */,
 				26CA14E12150E975001C04B8 /* racing-car.obj in Resources */,
 				26AF4CC5214F4B7000798F58 /* ground.png in Resources */,
 				26C6134B21466DF300A7FD6E /* ShaderTypes.h in Resources */,
 				26AF4CC0214F4B5800798F58 /* plane.obj in Resources */,
 				26AF4CC2214F4B5800798F58 /* plane.mtl in Resources */,
+				26B2CC35216DE11C00219AEC /* watercraftPack_005.obj in Resources */,
 				26CA14D72150E975001C04B8 /* large-plane.mtl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
