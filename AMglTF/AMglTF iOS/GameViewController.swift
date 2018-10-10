@@ -59,7 +59,16 @@ class GameViewController: UIViewController, ARSessionDelegate {
         session.delegate = self
         
         // Create a session configuration
-        sessionConfig = ARWorldTrackingConfiguration()
+        let config = ARWorldTrackingConfiguration()
+
+        // Recognize Image
+        // https://developer.apple.com/documentation/arkit/recognizing_images_in_an_ar_experience
+        guard let referenceImages = ARReferenceImage.referenceImages(inGroupNamed: "AR Resources", bundle: nil) else {
+            fatalError("Missing expected asset catalog resources.")
+        }
+        config.detectionImages = referenceImages
+
+        sessionConfig = config
         
         // Run the view's session
         session.run(sessionConfig)
@@ -95,6 +104,7 @@ class GameViewController: UIViewController, ARSessionDelegate {
         }
     }
     
+    
     // MARK: - ARSessionDelegate
     func session(_ session: ARSession, didFailWithError error: Error) {
         // Present an error message to the user
@@ -109,6 +119,7 @@ class GameViewController: UIViewController, ARSessionDelegate {
     }
     
     
+    // toolbar
     @IBAction func ToolbarActionScene(_ sender: UIBarButtonItem) {
     }
     
@@ -133,6 +144,7 @@ class GameViewController: UIViewController, ARSessionDelegate {
     @IBAction func ToolbarActionScreenshot(_ sender: UIBarButtonItem) {
     }
 }
+
 
 /**
  for Input Event
