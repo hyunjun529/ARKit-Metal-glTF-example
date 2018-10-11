@@ -5,13 +5,49 @@
   },
   "resources" : [
     {
-      "filename" : "Marker_0.arreferenceimage"
+      "filename" : "battle_net.arreferenceimage"
     },
     {
-      "filename" : "Marker_2.arreferenceimage"
+      "filename" : "filemaker_pro.arreferenceimage"
     },
     {
-      "filename" : "Marker_10.arreferenceimage"
+      "filename" : "final_cut_pro.arreferenceimage"
+    },
+    {
+      "filename" : "gprojector.arreferenceimage"
+    },
+    {
+      "filename" : "iphoto.arreferenceimage"
+    },
+    {
+      "filename" : "istat_menus.arreferenceimage"
+    },
+    {
+      "filename" : "kakaotalk.arreferenceimage"
+    },
+    {
+      "filename" : "maps.arreferenceimage"
+    },
+    {
+      "filename" : "photos.arreferenceimage"
+    },
+    {
+      "filename" : "pixelmator.arreferenceimage"
+    },
+    {
+      "filename" : "rar_expander.arreferenceimage"
+    },
+    {
+      "filename" : "sixtyforce.arreferenceimage"
+    },
+    {
+      "filename" : "tf2.arreferenceimage"
+    },
+    {
+      "filename" : "transmit.arreferenceimage"
+    },
+    {
+      "filename" : "vuze.arreferenceimage"
     }
   ]
 }

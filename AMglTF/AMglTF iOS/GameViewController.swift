@@ -59,6 +59,7 @@ class GameViewController: UIViewController, ARSessionDelegate {
         session.delegate = self
         
         // Create a session configuration
+        //let config = ARImageTrackingConfiguration()
         let config = ARWorldTrackingConfiguration()
 
         // Recognize Image
@@ -66,6 +67,7 @@ class GameViewController: UIViewController, ARSessionDelegate {
         guard let referenceImages = ARReferenceImage.referenceImages(inGroupNamed: "AR Resources", bundle: nil) else {
             fatalError("Missing expected asset catalog resources.")
         }
+        //config.trackingImages = referenceImages
         config.detectionImages = referenceImages
 
         sessionConfig = config
@@ -107,6 +109,9 @@ class GameViewController: UIViewController, ARSessionDelegate {
     
     // MARK: - ARSessionDelegate
     func session(_ session: ARSession, didUpdate anchors: [ARAnchor]) {
+        
+        print("update!")
+        
         sessionManager.markersExist[0] = false
         sessionManager.markersExist[1] = false
         sessionManager.markersExist[2] = false

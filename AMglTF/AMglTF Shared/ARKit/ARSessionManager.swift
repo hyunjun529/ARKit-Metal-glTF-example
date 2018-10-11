@@ -60,9 +60,9 @@ class ARSessionManager: Manager {
     let node005 = Prop(name: "watercraftPack_005")
     
     var markers: [String] = [
-        "Marker_0",
-        "Marker_2",
-        "Marker_10",
+        "battle_net",
+        "gprojector",
+        "transmit",
     ]
     
     var markersExist: [Bool] = [
@@ -239,10 +239,6 @@ class ARSessionManager: Manager {
         for i in 0...2 {
             if markersExist[i] {
                 markersNode[i].position = markersPosition[i]
-                scene.add(node: markersNode[i])
-            }
-            else {
-                scene.remove(node: markersNode[i])
             }
         }
     }
@@ -268,6 +264,10 @@ class ARSessionManager: Manager {
         node001.scale = float3(0.2, 0.2, 0.2)
         node003.scale = float3(0.2, 0.2, 0.2)
         node005.scale = float3(0.2, 0.2, 0.2)
+        
+        scene.add(node: node001)
+        scene.add(node: node003)
+        scene.add(node: node005)
         
         LoadMetal()
     }

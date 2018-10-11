@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Marker_2.png"
+      "filename" : "istat_menus.png"
     }
   ],
   "info" : {
@@ -10,8 +10,8 @@
     "author" : "xcode"
   },
   "properties" : {
-    "width" : 7,
-    "height" : 10,
+    "width" : 2,
+    "height" : 2,
     "unit" : "inches"
   }
 }
