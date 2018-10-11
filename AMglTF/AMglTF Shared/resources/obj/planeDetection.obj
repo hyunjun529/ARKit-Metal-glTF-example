@@ -1,0 +1,16 @@
+# Apple ModelIO OBJ File: planeDetection
+mtllib planeDetection.mtl
+g 
+v 0.5 -0.5 0
+v -0.5 0.5 0
+v -0.5 -0.5 0
+v 0.5 0.5 0
+vn 0 0 1
+vt 0.9999 0.000100017
+vt 0.0001 0.9999
+vt 0.0001 0.000100017
+vt 0.9999 0.9999
+usemtl material_1
+f 1/1/1 2/2/1 3/3/1
+f 1/1/1 4/4/1 2/2/1
+s off

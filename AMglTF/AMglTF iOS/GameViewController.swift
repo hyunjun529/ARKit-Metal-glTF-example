@@ -59,7 +59,7 @@ class GameViewController: UIViewController, ARSessionDelegate {
         session.delegate = self
         
         // Create a session configuration
-        //let config = ARImageTrackingConfiguration()
+        // don't use ARImageTracking, because we need planedetection
         let config = ARWorldTrackingConfiguration()
 
         // Recognize Image
@@ -67,7 +67,6 @@ class GameViewController: UIViewController, ARSessionDelegate {
         guard let referenceImages = ARReferenceImage.referenceImages(inGroupNamed: "AR Resources", bundle: nil) else {
             fatalError("Missing expected asset catalog resources.")
         }
-        //config.trackingImages = referenceImages
         config.detectionImages = referenceImages
 
         sessionConfig = config

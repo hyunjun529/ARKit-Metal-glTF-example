@@ -24,6 +24,12 @@
 		26680C9A2151059C0078624C /* Car_Diff.png in Resources */ = {isa = PBXBuildFile; fileRef = 26680C942151059C0078624C /* Car_Diff.png */; };
 		26680C9B215106DA0078624C /* ShaderTypes.h in Sources */ = {isa = PBXBuildFile; fileRef = 26C6132421466DF300A7FD6E /* ShaderTypes.h */; };
 		26680C9F215205280078624C /* DynamicBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26680C9D215205280078624C /* DynamicBuffer.swift */; };
+		26A9CFDF216F50F900BF2F8E /* planeDetection.obj in Resources */ = {isa = PBXBuildFile; fileRef = 26A9CFDC216F50F900BF2F8E /* planeDetection.obj */; };
+		26A9CFE0216F50F900BF2F8E /* planeDetection.obj in Resources */ = {isa = PBXBuildFile; fileRef = 26A9CFDC216F50F900BF2F8E /* planeDetection.obj */; };
+		26A9CFE1216F50F900BF2F8E /* tron-albedo.png in Resources */ = {isa = PBXBuildFile; fileRef = 26A9CFDD216F50F900BF2F8E /* tron-albedo.png */; };
+		26A9CFE2216F50F900BF2F8E /* tron-albedo.png in Resources */ = {isa = PBXBuildFile; fileRef = 26A9CFDD216F50F900BF2F8E /* tron-albedo.png */; };
+		26A9CFE3216F50F900BF2F8E /* planeDetection.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 26A9CFDE216F50F900BF2F8E /* planeDetection.mtl */; };
+		26A9CFE4216F50F900BF2F8E /* planeDetection.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 26A9CFDE216F50F900BF2F8E /* planeDetection.mtl */; };
 		26AC0218215CE6AB0004EEFE /* RiggedSimple0.bin in Resources */ = {isa = PBXBuildFile; fileRef = 26AC0216215CE6AB0004EEFE /* RiggedSimple0.bin */; };
 		26AC0219215CE6AB0004EEFE /* RiggedSimple0.bin in Resources */ = {isa = PBXBuildFile; fileRef = 26AC0216215CE6AB0004EEFE /* RiggedSimple0.bin */; };
 		26AC021A215CE6AB0004EEFE /* RiggedSimple.gltf in Resources */ = {isa = PBXBuildFile; fileRef = 26AC0217215CE6AB0004EEFE /* RiggedSimple.gltf */; };
@@ -132,6 +138,9 @@
 		26680C932151059C0078624C /* car-roughness.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "car-roughness.png"; sourceTree = "<group>"; };
 		26680C942151059C0078624C /* Car_Diff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Car_Diff.png; sourceTree = "<group>"; };
 		26680C9D215205280078624C /* DynamicBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicBuffer.swift; sourceTree = "<group>"; };
+		26A9CFDC216F50F900BF2F8E /* planeDetection.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = planeDetection.obj; path = ../../../../../Desktop/orientation/planeDetection.obj; sourceTree = "<group>"; };
+		26A9CFDD216F50F900BF2F8E /* tron-albedo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "tron-albedo.png"; path = "../../../../../Desktop/orientation/tron-albedo.png"; sourceTree = "<group>"; };
+		26A9CFDE216F50F900BF2F8E /* planeDetection.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = planeDetection.mtl; path = ../../../../../Desktop/orientation/planeDetection.mtl; sourceTree = "<group>"; };
 		26AC0216215CE6AB0004EEFE /* RiggedSimple0.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = RiggedSimple0.bin; sourceTree = "<group>"; };
 		26AC0217215CE6AB0004EEFE /* RiggedSimple.gltf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RiggedSimple.gltf; sourceTree = "<group>"; };
 		26AF4CBD214F4B5800798F58 /* plane.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = plane.obj; path = "AMglTF Shared/resources/obj/plane.obj"; sourceTree = SOURCE_ROOT; };
@@ -363,6 +372,9 @@
 				26CA14D02150E975001C04B8 /* Racetrack */,
 				261B5C9A216B867400036EEC /* axis.mtl */,
 				261B5C99216B867400036EEC /* axis.obj */,
+				26A9CFDE216F50F900BF2F8E /* planeDetection.mtl */,
+				26A9CFDC216F50F900BF2F8E /* planeDetection.obj */,
+				26A9CFDD216F50F900BF2F8E /* tron-albedo.png */,
 				261B5C9F216B895F00036EEC /* train.mtl */,
 				261B5CA0216B895F00036EEC /* train.obj */,
 				26AF4CBE214F4B5800798F58 /* plane.mtl */,
@@ -528,6 +540,8 @@
 				26AF4CC4214F4B7000798F58 /* ground.png in Resources */,
 				261A592021671B990098278C /* Toolbar.xcassets in Resources */,
 				26CA14DA2150E975001C04B8 /* oilcan.mtl in Resources */,
+				26A9CFDF216F50F900BF2F8E /* planeDetection.obj in Resources */,
+				26A9CFE1216F50F900BF2F8E /* tron-albedo.png in Resources */,
 				26680C992151059C0078624C /* Car_Diff.png in Resources */,
 				26CA14E02150E975001C04B8 /* racing-car.obj in Resources */,
 				26C6134A21466DF300A7FD6E /* ShaderTypes.h in Resources */,
@@ -538,6 +552,7 @@
 				26B2CC16216DC6A300219AEC /* Marker.xcassets in Resources */,
 				26B2CC24216DE11C00219AEC /* watercraftPack_001.mtl in Resources */,
 				26C6133621466DF300A7FD6E /* LaunchScreen.storyboard in Resources */,
+				26A9CFE3216F50F900BF2F8E /* planeDetection.mtl in Resources */,
 				26AC021A215CE6AB0004EEFE /* RiggedSimple.gltf in Resources */,
 				26AF4CC1214F4B5800798F58 /* plane.mtl in Resources */,
 				26CA14DC2150E975001C04B8 /* oilcan.obj in Resources */,
@@ -559,8 +574,10 @@
 				261B5CA2216B895F00036EEC /* train.mtl in Resources */,
 				26B2CC27216DE11C00219AEC /* watercraftPack_003.obj in Resources */,
 				26C6134421466DF300A7FD6E /* MacMain.storyboard in Resources */,
+				26A9CFE0216F50F900BF2F8E /* planeDetection.obj in Resources */,
 				26CA14DB2150E975001C04B8 /* oilcan.mtl in Resources */,
 				26CA14DF2150E975001C04B8 /* racing-car.mtl in Resources */,
+				26A9CFE4216F50F900BF2F8E /* planeDetection.mtl in Resources */,
 				261B5C9E216B867400036EEC /* axis.mtl in Resources */,
 				261B5CA4216B895F00036EEC /* train.obj in Resources */,
 				26B2CC2F216DE11C00219AEC /* watercraftPack_003.mtl in Resources */,
@@ -572,6 +589,7 @@
 				26B2CC33216DE11C00219AEC /* watercraftPack_005.mtl in Resources */,
 				26AC021B215CE6AB0004EEFE /* RiggedSimple.gltf in Resources */,
 				26CA14E12150E975001C04B8 /* racing-car.obj in Resources */,
+				26A9CFE2216F50F900BF2F8E /* tron-albedo.png in Resources */,
 				26AF4CC5214F4B7000798F58 /* ground.png in Resources */,
 				26C6134B21466DF300A7FD6E /* ShaderTypes.h in Resources */,
 				26AF4CC0214F4B5800798F58 /* plane.obj in Resources */,
