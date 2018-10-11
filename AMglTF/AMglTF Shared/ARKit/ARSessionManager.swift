@@ -55,6 +55,7 @@ class ARSessionManager: Manager {
     }
     
     let nodeAxis = Prop(name: "axis")
+    let nodePlaneDetection = Prop(name: "planeDetection")
     let node001 = Prop(name: "watercraftPack_001")
     let node003 = Prop(name: "watercraftPack_003")
     let node005 = Prop(name: "watercraftPack_005")
@@ -268,6 +269,10 @@ class ARSessionManager: Manager {
         scene.add(node: node001)
         scene.add(node: node003)
         scene.add(node: node005)
+        
+        // plane
+        nodePlaneDetection.scale = float3(0, 0, 1)
+        scene.add(node: nodePlaneDetection)
         
         LoadMetal()
     }

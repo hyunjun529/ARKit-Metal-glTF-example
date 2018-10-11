@@ -69,6 +69,9 @@ class GameViewController: UIViewController, ARSessionDelegate {
         }
         config.detectionImages = referenceImages
 
+        // plane detection
+        config.planeDetection = .horizontal
+        
         sessionConfig = config
         
         // Run the view's session
@@ -87,7 +90,7 @@ class GameViewController: UIViewController, ARSessionDelegate {
         
         
         // attach renderer to Debug Manager
-        guard let newDebugManager = DebugManager(scene: renderer.scene!) else {
+        guard let newDebugManager = DebugManager(scene: renderer.scene!, prop: sessionManager.nodePlaneDetection) else {
             print("Debug Manager cannot be initialized")
             return
         }
@@ -110,6 +113,18 @@ class GameViewController: UIViewController, ARSessionDelegate {
     func session(_ session: ARSession, didUpdate anchors: [ARAnchor]) {
         
         print("update!")
+        
+        for anchor in anchors {
+            guard let planeAnchor = anchor as? ARPlaneAnchor else { continue }
+            
+            print(planeAnchor)
+            print(planeAnchor.transform)
+            
+            sessionManager.nodePlaneDetection.scale = float3(planeAnchor.extent.x, 0.1, planeAnchor.extent.z) * 10
+            
+            var transform = planeAnchor.transform
+            sessionManager.nodePlaneDetection.position = float3(transform[3][0], transform[3][1], -transform[3][2]) * 10
+        }
         
         sessionManager.markersExist[0] = false
         sessionManager.markersExist[1] = false
