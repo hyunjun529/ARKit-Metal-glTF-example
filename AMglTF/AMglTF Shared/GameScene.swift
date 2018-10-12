@@ -16,7 +16,7 @@ class GameScene: Scene {
     override func setupScene() {        
         ground.tiling = 4
         ground.scale = float3(0.1, 0.1, 0.1)
-        //add(node: ground)
+        add(node: ground)
         
         worldOrientation.position = float3(0)
         add(node: worldOrientation)

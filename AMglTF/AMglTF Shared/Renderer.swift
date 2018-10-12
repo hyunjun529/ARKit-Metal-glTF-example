@@ -124,7 +124,7 @@ class Renderer: NSObject, MTKViewDelegate {
                 }
                 
                 
-                renderEncoder.setCullMode(.front)
+                //renderEncoder.setCullMode(.front)
                 
                 renderEncoder.setFrontFacing(.counterClockwise)
                 
