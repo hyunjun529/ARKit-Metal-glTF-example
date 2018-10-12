@@ -100,8 +100,8 @@ fragment float4 fragmentShader(ColorInOut in [[stage_in]],
     
     float3 lightPosition = float3(-1, -3, 4);
     float3 lightDirection = normalize(lightPosition);
-    float nDotl = max(0.001, saturate(dot(normalDirection, lightDirection)));
-    diffuseColor = baseColor + pow(baseColor * nDotl,  3);
+    float diffuseIntensity = saturate(dot(lightDirection, normalDirection));
+    diffuseColor = baseColor * 0.5 + (baseColor * diffuseIntensity);
     float4 color = float4(diffuseColor, 1);
     return color;
     
